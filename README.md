@@ -6,6 +6,8 @@
 
 ## 获取和启动
 
+玩家下载：[三端试玩版](https://github.com/skaleto/wuwa-backpack-battle/releases/tag/v0.1.0-demo.1)。Windows/macOS 包无需安装 Godot；Web 附件是需要 HTTP(S) 托管的部署包。启动方式、签名状态与 Web 联网前提见 [三端发布说明](docs/release/three-platform.md)。
+
 需要 Godot 4.7.2 与 Git LFS，素材通过 Git LFS 管理。
 
 ```bash

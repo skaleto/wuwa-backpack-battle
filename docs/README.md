@@ -8,6 +8,7 @@
 | 开发规范原文 | [开发历史](development/history.md) | 2026-10-29 整理前完整归档，非当前指令 |
 | 当前设计规则 | [设计准则](../DESIGN_PRINCIPLES.md) | 玩法、空间、视觉与体验验收 |
 | 设计准则原文 | [设计历史](design/history.md) | 含明确被覆盖的旧规则，非当前指令 |
+| 三端试玩包 | [三端发布说明](release/three-platform.md) | 下载运行、Web 部署与可复现导出 |
 | 发布与仓库 | [GitHub 与产物说明](release/github.md) | LFS、构建产物和发行边界 |
 | 项目结构与资源边界 | [结构说明](development/structure.md) | 当前入口、运行资源、冻结输入与构建清单 |
 | 招募设计 | [招募设计](design/recruitment.md) | 仍保留的功能设计依据 |
