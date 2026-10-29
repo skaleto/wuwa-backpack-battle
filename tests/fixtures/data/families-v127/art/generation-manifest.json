@@ -1,0 +1,789 @@
+{
+  "entries": [
+    {
+      "id": "relic_cutlery",
+      "prompt": "Use case: stylized-concept. ONE production ready transparent inventory item for our cute 2D Wuthering Waves fan backpack game. Reference is our approved art style only. Bright clean chibi chunky proportions, crisp dark aubergine/black outline and close dark contact shadows, clean cel shading and highlights. Complete silhouette with 8% transparent breathing room on every side; no platform, frame, badge, text, UI, watermark or unattached sparkles. Genuine transparent RGBA background. Preserve high resolution, readable at game scale. A neatly bundled silver folding spoon and fork with short cream handles, gold pivot buttons, and a narrow mint cloth strap around their middles. One coherent compact horizontal object, width twice height. Three-quarter top view. Simple useful basic travel utensil set, modest not magical.",
+      "references": [
+        "assets/skins/chibi/items_v125/relic_lunchbox.png"
+      ],
+      "source_generated_path": "private-source",
+      "output_path": "assets/skins/chibi/items_v127/relic_cutlery.png",
+      "original_concept": true,
+      "generator": "built_in_image_gen",
+      "name": "便携餐具",
+      "sha256": "0db62734185eb3f5013963a0b83b8416a7d95eb717094f6904a1e04487ed7f6c",
+      "width": 1774,
+      "height": 887,
+      "alpha_bounds": [
+        0,
+        85,
+        1702,
+        887
+      ],
+      "visible_alpha_bounds_16": [
+        80,
+        88,
+        1699,
+        827
+      ],
+      "generated_bytes_preserved": true,
+      "reference_hashes": {
+        "assets/skins/chibi/items_v125/relic_lunchbox.png": "ea8d04903f1134426ba0435a837cad2b108ec685c6e9b9c8cd6372a75165a58b"
+      }
+    },
+    {
+      "id": "relic_march_lunchbox",
+      "prompt": "Use case: stylized-concept. ONE production ready transparent inventory item for our cute 2D Wuthering Waves fan backpack game. Reference is our approved art style only. Bright clean chibi chunky proportions, crisp dark aubergine/black outline and close dark contact shadows, clean cel shading and highlights. Complete silhouette with 8% transparent breathing room on every side; no platform, frame, badge, text, UI, watermark or unattached sparkles. Genuine transparent RGBA background. Preserve high resolution, readable at game scale. A squat square two-tier jade green enamel travel lunchbox, cream gold lid opened slightly with rice and neatly packed field ration squares visible. A sturdy gold latch and folded spoon attached to its side. Clearly an upgraded version of the reference lunchbox, compact roughly square silhouette, 3/4 view, no medical icon. Rich appetizing food and solid dark seams.",
+      "references": [
+        "assets/skins/chibi/items_v125/relic_lunchbox.png"
+      ],
+      "source_generated_path": "private-source",
+      "output_path": "assets/skins/chibi/items_v127/relic_march_lunchbox.png",
+      "original_concept": true,
+      "generator": "built_in_image_gen",
+      "name": "行军饭盒",
+      "sha256": "61039c60f1187ac061b6f95c6c7c6bdd8b0d9b9fdfa1a693a07312d9f1dde98a",
+      "width": 1312,
+      "height": 1199,
+      "alpha_bounds": [
+        0,
+        35,
+        1266,
+        1199
+      ],
+      "visible_alpha_bounds_16": [
+        66,
+        38,
+        1264,
+        1173
+      ],
+      "generated_bytes_preserved": true,
+      "reference_hashes": {
+        "assets/skins/chibi/items_v125/relic_lunchbox.png": "ea8d04903f1134426ba0435a837cad2b108ec685c6e9b9c8cd6372a75165a58b"
+      }
+    },
+    {
+      "id": "relic_emergency_lunchbox",
+      "prompt": "Use case: stylized-concept. ONE production ready transparent inventory item for our cute 2D Wuthering Waves fan backpack game. Reference is our approved art style only. Bright clean chibi chunky proportions, crisp dark aubergine/black outline and close dark contact shadows, clean cel shading and highlights. Complete silhouette with 8% transparent breathing room on every side; no platform, frame, badge, text, UI, watermark or unattached sparkles. Genuine transparent RGBA background. Preserve high resolution, readable at game scale. A compact roughly square cream and coral-pink two-compartment travel nutrition box, open lid, golden nutrition cubes and a small green soup bowl inside. Folded cream spoon secured on lid. Upgraded cousin of the reference mint lunchbox, friendly comforting emergency food, no medical cross or text. Square silhouette, three-quarter top view. Soft coral differs clearly from green travel lunchbox.",
+      "references": [
+        "assets/skins/chibi/items_v125/relic_lunchbox.png"
+      ],
+      "source_generated_path": "private-source",
+      "output_path": "assets/skins/chibi/items_v127/relic_emergency_lunchbox.png",
+      "original_concept": true,
+      "generator": "built_in_image_gen",
+      "name": "应急餐盒",
+      "sha256": "95d1eb0dcf71a072816ad7e6234878f3cbede1cc1fcb25f6706f58e67759877c",
+      "width": 1254,
+      "height": 1254,
+      "alpha_bounds": [
+        49,
+        62,
+        1206,
+        1254
+      ],
+      "visible_alpha_bounds_16": [
+        82,
+        65,
+        1201,
+        1200
+      ],
+      "generated_bytes_preserved": true,
+      "reference_hashes": {
+        "assets/skins/chibi/items_v125/relic_lunchbox.png": "ea8d04903f1134426ba0435a837cad2b108ec685c6e9b9c8cd6372a75165a58b"
+      }
+    },
+    {
+      "id": "relic_tea_strainer",
+      "prompt": "Use case: stylized-concept. ONE production-ready inventory icon for our cute 2D storybook Wuthering Waves fan game. First reference sets approved crisp dark outline, close black contact shadows, bright pastel cel-shaded highlights, readable chunky chibi form. Additional reference is original ingredient design to subtly carry into new craft. Complete single object, 8% transparent margins. TRUE transparent RGBA background. No text, frame, tile, watermark, unrelated glow, pedestal or detached particles. A small round silver spherical tea infuser, perforation pattern simplified into five large openings, short gold clasp and one small amber water-lamp flower held at the clasp. Compact square silhouette. Three-quarter view, silver cream metal with soft mint reflections.",
+      "references": [
+        "assets/skins/chibi/items/tea.png",
+        "assets/research/crafting-v15/item-42310090.png"
+      ],
+      "source_generated_path": "private-source",
+      "output_path": "assets/skins/chibi/items_v127/relic_tea_strainer.png",
+      "original_concept": true,
+      "generator": "built_in_image_gen",
+      "name": "便携茶滤",
+      "sha256": "d25d3bdb47e061350c1413d47f6f8a3fe9e9c5190cc3446fc1710dba4d10587b",
+      "width": 1254,
+      "height": 1254,
+      "alpha_bounds": [
+        72,
+        93,
+        1216,
+        1254
+      ],
+      "visible_alpha_bounds_16": [
+        74,
+        229,
+        1212,
+        1000
+      ],
+      "generated_bytes_preserved": true,
+      "reference_hashes": {
+        "assets/skins/chibi/items/tea.png": "9cf21fcf6998247a44ae1ed2ffa9ef6315cfc9de4f8e87b44e36078f546e1ced",
+        "assets/research/crafting-v15/item-42310090.png": "3488e674199dbb835f0048073e7c5679192b9a49b7d72203a9f79fa89dcb35dd"
+      }
+    },
+    {
+      "id": "provision_strong_tea",
+      "prompt": "Use case: stylized-concept. ONE production-ready inventory icon for our cute 2D storybook Wuthering Waves fan game. First reference sets approved crisp dark outline, close black contact shadows, bright pastel cel-shaded highlights, readable chunky chibi form. Additional reference is original ingredient design to subtly carry into new craft. Complete single object, 8% transparent margins. TRUE transparent RGBA background. No text, frame, tile, watermark, unrelated glow, pedestal or detached particles. A tall narrow glass travel pitcher with dark green concentrated tea, amber water-lamp flowers steeping inside, cream gold stopper and small curved gold handle close to body. Upright silhouette twice as tall as wide, no separate cup. Tea visually rich emerald, original flower recognizable but simplified. Warm green healing feel.",
+      "references": [
+        "assets/skins/chibi/items/tea.png",
+        "assets/research/crafting-v15/item-42310090.png"
+      ],
+      "source_generated_path": "private-source",
+      "output_path": "assets/skins/chibi/items_v127/provision_strong_tea.png",
+      "original_concept": true,
+      "generator": "built_in_image_gen",
+      "name": "浓萃凉茶",
+      "sha256": "cc6f1d7f83ba2fa9979d8c11e7fbd14740e0d5a5e082ad4ee904a9ba22f104d1",
+      "width": 1024,
+      "height": 1536,
+      "alpha_bounds": [
+        0,
+        34,
+        994,
+        1459
+      ],
+      "visible_alpha_bounds_16": [
+        193,
+        36,
+        932,
+        1457
+      ],
+      "generated_bytes_preserved": true,
+      "reference_hashes": {
+        "assets/skins/chibi/items/tea.png": "9cf21fcf6998247a44ae1ed2ffa9ef6315cfc9de4f8e87b44e36078f546e1ced",
+        "assets/research/crafting-v15/item-42310090.png": "3488e674199dbb835f0048073e7c5679192b9a49b7d72203a9f79fa89dcb35dd"
+      }
+    },
+    {
+      "id": "provision_clear_tea",
+      "prompt": "Use case: stylized-concept. ONE production-ready inventory icon for our cute 2D storybook Wuthering Waves fan game. First reference sets approved crisp dark outline, close black contact shadows, bright pastel cel-shaded highlights, readable chunky chibi form. Additional reference is original ingredient design to subtly carry into new craft. Complete single object, 8% transparent margins. TRUE transparent RGBA background. No text, frame, tile, watermark, unrelated glow, pedestal or detached particles. A tall narrow glass travel pitcher with pale cyan clear tea, blue five-petaled iris at neck and slim leaves steeping inside, cream gold stopper, small handle hugging side. Upright silhouette twice as tall as wide, no separate cup. Clear mint liquid visibly different from concentrated dark emerald tea. Preserve blue pointed iris petals.",
+      "references": [
+        "assets/skins/chibi/items/tea.png",
+        "assets/research/crafting-v15/item-42300030.png"
+      ],
+      "source_generated_path": "private-source",
+      "output_path": "assets/skins/chibi/items_v127/provision_clear_tea.png",
+      "original_concept": true,
+      "generator": "built_in_image_gen",
+      "name": "澄心凉茶",
+      "sha256": "ad82c8c8f7834086e1cbff06b3b2d8e95d35a1ae5ddbdc75d50bcccc20f1f613",
+      "width": 1024,
+      "height": 1536,
+      "alpha_bounds": [
+        179,
+        0,
+        914,
+        1472
+      ],
+      "visible_alpha_bounds_16": [
+        183,
+        81,
+        905,
+        1461
+      ],
+      "generated_bytes_preserved": true,
+      "reference_hashes": {
+        "assets/skins/chibi/items/tea.png": "9cf21fcf6998247a44ae1ed2ffa9ef6315cfc9de4f8e87b44e36078f546e1ced",
+        "assets/research/crafting-v15/item-42300030.png": "8b24cdd0d9b70cc8210458bf795768041f59f1e3a2a6099c5339cb205576f116"
+      }
+    },
+    {
+      "id": "relic_clockwork",
+      "prompt": "Use case: stylized-concept. ONE production-ready inventory icon for our cute 2D storybook Wuthering Waves fan game. First reference sets approved crisp dark outline, close black contact shadows, bright pastel cel-shaded highlights, readable chunky chibi form. Additional reference is original ingredient design to subtly carry into new craft. Complete single object, 8% transparent margins. TRUE transparent RGBA background. No text, frame, tile, watermark, unrelated glow, pedestal or detached particles. A tiny round brass mainspring winding into one smooth tight spiral surrounding a modest small violet crystal. Cream gold outer ring, one mint winding key close to edge. Square compact useful mechanical component, simplified, no overdecorated magic.",
+      "references": [
+        "assets/skins/chibi/items_v125/relic_diverter.png",
+        "assets/research/crafting-v15/item-42500030.png"
+      ],
+      "source_generated_path": "private-source",
+      "output_path": "assets/skins/chibi/items_v127/relic_clockwork.png",
+      "original_concept": true,
+      "generator": "built_in_image_gen",
+      "name": "储能发条",
+      "sha256": "4e39ab082a1eab2e69c06c1ceb54581e73d1978cc1ccd8f3f7eefc1504af6e41",
+      "width": 1345,
+      "height": 1169,
+      "alpha_bounds": [
+        0,
+        55,
+        1291,
+        1125
+      ],
+      "visible_alpha_bounds_16": [
+        84,
+        92,
+        1287,
+        1076
+      ],
+      "generated_bytes_preserved": true,
+      "reference_hashes": {
+        "assets/skins/chibi/items_v125/relic_diverter.png": "95955ea39969de4a66fbbf13c899efb1b2f87ccbcf7d821dfbde450286e5749d",
+        "assets/research/crafting-v15/item-42500030.png": "a1da484fe878212875415b6483c94a0f04a46e61c5ae138a7df69313c2548791"
+      }
+    },
+    {
+      "id": "relic_capacitor",
+      "prompt": "Use case: stylized-concept. ONE production-ready inventory icon for our cute 2D storybook Wuthering Waves fan game. First reference sets approved crisp dark outline, close black contact shadows, bright pastel cel-shaded highlights, readable chunky chibi form. Additional reference is original ingredient design to subtly carry into new craft. Complete single object, 8% transparent margins. TRUE transparent RGBA background. No text, frame, tile, watermark, unrelated glow, pedestal or detached particles. A large compact square brass energy flywheel with TWO nested circular cream-gold rings around a recognizable asymmetrical cluster of pale purple crystals, mint enamel lower bracket and tightly contained violet glow in the central crystal only. Solid weight and tight dark crevice shadows. Upgraded mechanical cousin of reference gear, no pedestal.",
+      "references": [
+        "assets/skins/chibi/items_v125/relic_diverter.png",
+        "assets/research/crafting-v15/item-42500030.png"
+      ],
+      "source_generated_path": "private-source",
+      "output_path": "assets/skins/chibi/items_v127/relic_capacitor.png",
+      "original_concept": true,
+      "generator": "built_in_image_gen",
+      "name": "蓄能飞轮",
+      "sha256": "7604b13b529f49371a17f63bebb9994f7fd902dd106d43b1a488079436dca44c",
+      "width": 1254,
+      "height": 1254,
+      "alpha_bounds": [
+        0,
+        13,
+        1236,
+        1242
+      ],
+      "visible_alpha_bounds_16": [
+        25,
+        15,
+        1233,
+        1240
+      ],
+      "generated_bytes_preserved": true,
+      "reference_hashes": {
+        "assets/skins/chibi/items_v125/relic_diverter.png": "95955ea39969de4a66fbbf13c899efb1b2f87ccbcf7d821dfbde450286e5749d",
+        "assets/research/crafting-v15/item-42500030.png": "a1da484fe878212875415b6483c94a0f04a46e61c5ae138a7df69313c2548791"
+      }
+    },
+    {
+      "id": "relic_pulse_gear",
+      "prompt": "Use case: stylized-concept. ONE production-ready inventory icon for our cute 2D storybook Wuthering Waves fan game. First reference sets approved crisp dark outline, close black contact shadows, bright pastel cel-shaded highlights, readable chunky chibi form. Additional reference is original ingredient design to subtly carry into new craft. Complete single object, 8% transparent margins. TRUE transparent RGBA background. No text, frame, tile, watermark, unrelated glow, pedestal or detached particles. Three chunky cream-gold and mint gears joined along a STRAIGHT HORIZONTAL brass shaft, larger central gear containing a pale purple crystal, two smaller gears flanking it, thin turquoise energy conduit joining hubs. Elongated silhouette about 3 times wider than tall, not diagonal. All three gears visible as one integrated mechanism, close tight dark shadows.",
+      "references": [
+        "assets/skins/chibi/items_v125/relic_diverter.png",
+        "assets/research/crafting-v15/item-43020031.png"
+      ],
+      "source_generated_path": "private-source",
+      "output_path": "assets/skins/chibi/items_v127/relic_pulse_gear.png",
+      "original_concept": true,
+      "generator": "built_in_image_gen",
+      "name": "脉冲齿组",
+      "sha256": "900928a5cf4120eb2c0983e9d709d873361a19dac591468d80469913ca349aa9",
+      "width": 2172,
+      "height": 724,
+      "alpha_bounds": [
+        28,
+        10,
+        2144,
+        710
+      ],
+      "visible_alpha_bounds_16": [
+        31,
+        13,
+        2141,
+        708
+      ],
+      "generated_bytes_preserved": true,
+      "reference_hashes": {
+        "assets/skins/chibi/items_v125/relic_diverter.png": "95955ea39969de4a66fbbf13c899efb1b2f87ccbcf7d821dfbde450286e5749d",
+        "assets/research/crafting-v15/item-43020031.png": "98476d0e63b79ff64f8f5c306b5990723f2b9fcf230c939c4fa939f08e35fb05"
+      }
+    },
+    {
+      "id": "relic_diaphragm",
+      "prompt": "Use case: stylized-concept. ONE high-resolution transparent inventory sprite for our established cute Wuthering Waves fan backpack game. First reference is STYLE, subsequent references are ingredient identity hints. Match bright clean cel shading, dark aubergine/black crisp outlines and close contact shadows, cute chunky proportions and mint cream gold materials. Genuine transparent background, 8% clear margins, entire silhouette intact. No words, letter-like markings, UI, badges, frames, platform or floating decorative particles. A small round acoustic diaphragm, cream-gold ring surrounding a turquoise flexible concentric membrane, one small gold adjustment screw at edge. A useful simple mechanical component with a compact square silhouette; three-quarter view. No magical symbol or face.",
+      "references": [
+        "assets/skins/chibi/items_v125/relic_diverter.png"
+      ],
+      "source_generated_path": "private-source",
+      "output_path": "assets/skins/chibi/items_v127/relic_diaphragm.png",
+      "original_concept": true,
+      "generator": "built_in_image_gen",
+      "name": "共鸣振膜",
+      "sha256": "b2e2fa7c7af8259e8129c72b5d20e699702144679f45e10c9b54bb4bf007d1fe",
+      "width": 1310,
+      "height": 1200,
+      "alpha_bounds": [
+        39,
+        48,
+        1272,
+        1200
+      ],
+      "visible_alpha_bounds_16": [
+        96,
+        62,
+        1257,
+        1095
+      ],
+      "generated_bytes_preserved": true,
+      "reference_hashes": {
+        "assets/skins/chibi/items_v125/relic_diverter.png": "95955ea39969de4a66fbbf13c899efb1b2f87ccbcf7d821dfbde450286e5749d"
+      }
+    },
+    {
+      "id": "relic_recorder",
+      "prompt": "Use case: stylized-concept. ONE high-resolution transparent inventory sprite for our established cute Wuthering Waves fan backpack game. First reference is STYLE, subsequent references are ingredient identity hints. Match bright clean cel shading, dark aubergine/black crisp outlines and close contact shadows, cute chunky proportions and mint cream gold materials. Genuine transparent background, 8% clear margins, entire silhouette intact. No words, letter-like markings, UI, badges, frames, platform or floating decorative particles. A cute mechanical sound recorder built around the silver cylindrical memory tube in reference 2. Natural L silhouette: the upper left contains a small cream brass horn, lower left a compact mint housing, lower right the horizontal silver memory cylinder. TOP RIGHT quarter remains transparent. Three connected masses, no empty board behind. Roughly square overall, recognizable whole tube and trumpet horn.",
+      "references": [
+        "assets/skins/chibi/items/tuner.png",
+        "assets/research/wuwa/item.36000003.png"
+      ],
+      "source_generated_path": "private-source",
+      "output_path": "assets/skins/chibi/items_v127/relic_recorder.png",
+      "original_concept": true,
+      "generator": "built_in_image_gen",
+      "name": "回声录筒",
+      "sha256": "8696480425c1a0c4b18ed80f07555e37f5d21cd8f8f3a1bad4394e5f1bd93a08",
+      "width": 1254,
+      "height": 1254,
+      "alpha_bounds": [
+        0,
+        31,
+        1228,
+        1254
+      ],
+      "visible_alpha_bounds_16": [
+        26,
+        43,
+        1224,
+        1208
+      ],
+      "generated_bytes_preserved": true,
+      "reference_hashes": {
+        "assets/skins/chibi/items/tuner.png": "20ffdfb600666dbeea68dedb3c532b12e3fb85987bba294de05d5d491e97c8fd",
+        "assets/research/wuwa/item.36000003.png": "b4af03974b63a463000cdfeb5d19d4a9c05da2f8fb65065fe30786ad6a96f882"
+      }
+    },
+    {
+      "id": "relic_echo_relay",
+      "prompt": "Use case: stylized-concept. ONE high-resolution transparent inventory sprite for our established cute Wuthering Waves fan backpack game. First reference is STYLE, subsequent references are ingredient identity hints. Match bright clean cel shading, dark aubergine/black crisp outlines and close contact shadows, cute chunky proportions and mint cream gold materials. Genuine transparent background, 8% clear margins, entire silhouette intact. No words, letter-like markings, UI, badges, frames, platform or floating decorative particles. A cute mechanical relay tuning fork instrument. Natural L silhouette: a tall teal and cream-gold two-pronged tuning fork rises on LEFT, its chunky short mint foot extends to RIGHT along bottom holding one smaller fork angled horizontally. TOP RIGHT quadrant visibly empty transparent. No whole square box, no musical notes. Calm turquoise glow limited to fork metal tips.",
+      "references": [
+        "assets/skins/chibi/items_v125/relic_diverter.png"
+      ],
+      "source_generated_path": "private-source",
+      "output_path": "assets/skins/chibi/items_v127/relic_echo_relay.png",
+      "original_concept": true,
+      "generator": "built_in_image_gen",
+      "name": "接力音叉",
+      "sha256": "03459d8c5db91820eeaa2bb7e9715f9bb9acebc3a21f590adbae6546344bfb2f",
+      "width": 1585,
+      "height": 992,
+      "alpha_bounds": [
+        49,
+        14,
+        1525,
+        984
+      ],
+      "visible_alpha_bounds_16": [
+        264,
+        16,
+        1361,
+        981
+      ],
+      "generated_bytes_preserved": true,
+      "reference_hashes": {
+        "assets/skins/chibi/items_v125/relic_diverter.png": "95955ea39969de4a66fbbf13c899efb1b2f87ccbcf7d821dfbde450286e5749d"
+      }
+    },
+    {
+      "id": "relic_guard_plate",
+      "prompt": "Use case: stylized-concept. ONE high-resolution transparent inventory sprite for our established cute Wuthering Waves fan backpack game. First reference is STYLE, subsequent references are ingredient identity hints. Match bright clean cel shading, dark aubergine/black crisp outlines and close contact shadows, cute chunky proportions and mint cream gold materials. Genuine transparent background, 8% clear margins, entire silhouette intact. No words, letter-like markings, UI, badges, frames, platform or floating decorative particles. A simple compact upright silver and pale blue metal guard plate, gently bowed like a small shield or protective armor panel, cream rolled edge with four large gold rivets, subtle pale cyan reflected light. Height twice width. No crest, no heraldic text, no handles sticking far outward. Thick protective metal with crisp tight black shadow underneath its lower lip.",
+      "references": [
+        "assets/skins/chibi/items_v125/relic_diverter.png",
+        "assets/research/crafting-v15/item-43020011.png"
+      ],
+      "source_generated_path": "private-source",
+      "output_path": "assets/skins/chibi/items_v127/relic_guard_plate.png",
+      "original_concept": true,
+      "generator": "built_in_image_gen",
+      "name": "轻型护板",
+      "sha256": "fa11e41f6cd6bd495ac131c703eb4608c8521e0414f5cf2109f78c3835761a52",
+      "width": 1024,
+      "height": 1536,
+      "alpha_bounds": [
+        0,
+        36,
+        1004,
+        1536
+      ],
+      "visible_alpha_bounds_16": [
+        96,
+        117,
+        955,
+        1414
+      ],
+      "generated_bytes_preserved": true,
+      "reference_hashes": {
+        "assets/skins/chibi/items_v125/relic_diverter.png": "95955ea39969de4a66fbbf13c899efb1b2f87ccbcf7d821dfbde450286e5749d",
+        "assets/research/crafting-v15/item-43020011.png": "af6c3d311ed9e429c10b0c0ca95c1239aa2849a85d8a7bc1ce3c3c4efe805948"
+      }
+    },
+    {
+      "id": "relic_layered_guard",
+      "prompt": "Use case: stylized-concept. ONE high-resolution transparent inventory sprite for our established cute Wuthering Waves fan backpack game. First reference is STYLE, subsequent references are ingredient identity hints. Match bright clean cel shading, dark aubergine/black crisp outlines and close contact shadows, cute chunky proportions and mint cream gold materials. Genuine transparent background, 8% clear margins, entire silhouette intact. No words, letter-like markings, UI, badges, frames, platform or floating decorative particles. A thick square layered armor guard made of four overlapping silver-blue curved plates, gold rims and one softly raised central pale cyan boss. The plates are the object itself, not a frame. Compact square silhouette, strong dark overlap shadows, charmingly rounded thick edges; visually denser defensive upgrade to a simple guard plate, no spikes.",
+      "references": [
+        "assets/skins/chibi/items_v125/relic_diverter.png",
+        "assets/research/crafting-v15/item-43020011.png"
+      ],
+      "source_generated_path": "private-source",
+      "output_path": "assets/skins/chibi/items_v127/relic_layered_guard.png",
+      "original_concept": true,
+      "generator": "built_in_image_gen",
+      "name": "叠层护板",
+      "sha256": "5d8b53f9623b6bc6fe56390b50fb1fb5b103c832abec29a1548c5052510d44e0",
+      "width": 1308,
+      "height": 1202,
+      "alpha_bounds": [
+        40,
+        57,
+        1278,
+        1202
+      ],
+      "visible_alpha_bounds_16": [
+        43,
+        59,
+        1275,
+        1148
+      ],
+      "generated_bytes_preserved": true,
+      "reference_hashes": {
+        "assets/skins/chibi/items_v125/relic_diverter.png": "95955ea39969de4a66fbbf13c899efb1b2f87ccbcf7d821dfbde450286e5749d",
+        "assets/research/crafting-v15/item-43020011.png": "af6c3d311ed9e429c10b0c0ca95c1239aa2849a85d8a7bc1ce3c3c4efe805948"
+      }
+    },
+    {
+      "id": "relic_recoil_guard",
+      "prompt": "Use case: stylized-concept. ONE high-resolution transparent inventory sprite for our established cute Wuthering Waves fan backpack game. First reference is STYLE, subsequent references are ingredient identity hints. Match bright clean cel shading, dark aubergine/black crisp outlines and close contact shadows, cute chunky proportions and mint cream gold materials. Genuine transparent background, 8% clear margins, entire silhouette intact. No words, letter-like markings, UI, badges, frames, platform or floating decorative particles. A cute spring-loaded armor guard with natural L silhouette: rounded silver and pale blue vertical guard on LEFT, a sturdy gold coil spring behind it in LOWER RIGHT, short blunt cream bumper nose horizontally at bottom. TOP RIGHT quarter remains visibly transparent. Chunky clearly visible spring, dark contact shadows. Three-quarter side view, recognizable spring shield machinery, no text or symbols.",
+      "references": [
+        "assets/skins/chibi/items_v125/relic_diverter.png",
+        "assets/research/crafting-v15/item-43020011.png"
+      ],
+      "source_generated_path": "private-source",
+      "output_path": "assets/skins/chibi/items_v127/relic_recoil_guard.png",
+      "original_concept": true,
+      "generator": "built_in_image_gen",
+      "name": "回弹护板",
+      "sha256": "113829e90431b05d297106efa29d8762ddd6c8dd7338e2b0f9669c7c055eb233",
+      "width": 1356,
+      "height": 1159,
+      "alpha_bounds": [
+        0,
+        39,
+        1340,
+        1159
+      ],
+      "visible_alpha_bounds_16": [
+        127,
+        52,
+        1278,
+        1091
+      ],
+      "generated_bytes_preserved": true,
+      "reference_hashes": {
+        "assets/skins/chibi/items_v125/relic_diverter.png": "95955ea39969de4a66fbbf13c899efb1b2f87ccbcf7d821dfbde450286e5749d",
+        "assets/research/crafting-v15/item-43020011.png": "af6c3d311ed9e429c10b0c0ca95c1239aa2849a85d8a7bc1ce3c3c4efe805948"
+      }
+    },
+    {
+      "id": "relic_breaker_wedge",
+      "prompt": "Use case: stylized-concept. ONE high-resolution transparent game item for our existing cute 2D Wuthering Waves backpack fan game. First reference defines bright crisp cel shading, chibi chunky proportions, cream-gold metal, dark aubergine/black lineart and tight contact shadows. Second reference is ORIGINAL INGREDIENT, preserve its core crystal form/colors in the crafted object. 8% clear margins, entire object visible. TRUE transparent RGBA background. No text, label, frame, badge, rectangle backplate, platform or unattached particles. An upright slim metal wedge fitted with the recognizable red needle crystal cluster at its upper tip. Ivory gold grip/socket at lower half, black-red crystalline sharp top, cute chunky not realistic. Height about twice width. Point upward, simple basic tool; no blood.",
+      "references": [
+        "assets/skins/chibi/items_v125/relic_diverter.png",
+        "assets/research/crafting-v15/item-42500010.png"
+      ],
+      "source_generated_path": "private-source",
+      "output_path": "assets/skins/chibi/items_v127/relic_breaker_wedge.png",
+      "original_concept": true,
+      "generator": "built_in_image_gen",
+      "name": "红针破盾楔",
+      "sha256": "ec981d94db4de7e0574da8378d25b42c03a861912bf84139008d23d71623552f",
+      "width": 887,
+      "height": 1774,
+      "alpha_bounds": [
+        0,
+        34,
+        873,
+        1739
+      ],
+      "visible_alpha_bounds_16": [
+        238,
+        36,
+        697,
+        1735
+      ],
+      "generated_bytes_preserved": true,
+      "reference_hashes": {
+        "assets/skins/chibi/items_v125/relic_diverter.png": "95955ea39969de4a66fbbf13c899efb1b2f87ccbcf7d821dfbde450286e5749d",
+        "assets/research/crafting-v15/item-42500010.png": "84c54cc9fe006057004a02660b49fbf14f8e4c65d1879edbf807888f803d68e0"
+      }
+    },
+    {
+      "id": "relic_crack_driver",
+      "prompt": "Use case: stylized-concept. ONE high-resolution transparent game item for our existing cute 2D Wuthering Waves backpack fan game. First reference defines bright crisp cel shading, chibi chunky proportions, cream-gold metal, dark aubergine/black lineart and tight contact shadows. Second reference is ORIGINAL INGREDIENT, preserve its core crystal form/colors in the crafted object. 8% clear margins, entire object visible. TRUE transparent RGBA background. No text, label, frame, badge, rectangle backplate, platform or unattached particles. A compact spring-driven red crystal punch tool with a clear L silhouette: vertical red crystal punch and pale gold piston on LEFT, mint and gold winding motor projecting RIGHT from its LOWER END. TOP RIGHT quadrant transparent. Heavy simple mechanical armor-breaking tool with a small gold spring and bright red crystal tip. No baseboard.",
+      "references": [
+        "assets/skins/chibi/items_v125/relic_diverter.png",
+        "assets/research/crafting-v15/item-42500010.png"
+      ],
+      "source_generated_path": "private-source",
+      "output_path": "assets/skins/chibi/items_v127/relic_crack_driver.png",
+      "original_concept": true,
+      "generator": "built_in_image_gen",
+      "name": "裂盾冲头",
+      "sha256": "ead0a59be0548b47f6d737c2d3b37be163869b55ac3dfcaa6b083d901bb8a574",
+      "width": 1536,
+      "height": 1024,
+      "alpha_bounds": [
+        33,
+        1,
+        1454,
+        1000
+      ],
+      "visible_alpha_bounds_16": [
+        281,
+        8,
+        1276,
+        998
+      ],
+      "generated_bytes_preserved": true,
+      "reference_hashes": {
+        "assets/skins/chibi/items_v125/relic_diverter.png": "95955ea39969de4a66fbbf13c899efb1b2f87ccbcf7d821dfbde450286e5749d",
+        "assets/research/crafting-v15/item-42500010.png": "84c54cc9fe006057004a02660b49fbf14f8e4c65d1879edbf807888f803d68e0"
+      }
+    },
+    {
+      "id": "relic_breach_scope",
+      "prompt": "Use case: stylized-concept. ONE high-resolution transparent game item for our existing cute 2D Wuthering Waves backpack fan game. First reference defines bright crisp cel shading, chibi chunky proportions, cream-gold metal, dark aubergine/black lineart and tight contact shadows. Second reference is ORIGINAL INGREDIENT, preserve its core crystal form/colors in the crafted object. 8% clear margins, entire object visible. TRUE transparent RGBA background. No text, label, frame, badge, rectangle backplate, platform or unattached particles. A compact L shaped targeting scope: a HORIZONTAL ivory-gold short telescopic tube along TOP with one translucent RED CRYSTAL lens at LEFT, a chunky gold adjustment mount descends from its RIGHT end. LOWER LEFT quadrant transparent. Mint enamel highlights and two simple lens rings. Mechanical monocular device with small crimson crystal points integrated around front lens.",
+      "references": [
+        "assets/skins/chibi/items_v125/relic_diverter.png",
+        "assets/research/crafting-v15/item-42500010.png"
+      ],
+      "source_generated_path": "private-source",
+      "output_path": "assets/skins/chibi/items_v127/relic_breach_scope.png",
+      "original_concept": true,
+      "generator": "built_in_image_gen",
+      "name": "缺口瞄镜",
+      "sha256": "f326ae8a87a5758b9fe3e60c4e70a11e4048f84716f36fa375573bb7727bfa60",
+      "width": 1448,
+      "height": 1086,
+      "alpha_bounds": [
+        0,
+        23,
+        1399,
+        1062
+      ],
+      "visible_alpha_bounds_16": [
+        83,
+        25,
+        1395,
+        1059
+      ],
+      "generated_bytes_preserved": true,
+      "reference_hashes": {
+        "assets/skins/chibi/items_v125/relic_diverter.png": "95955ea39969de4a66fbbf13c899efb1b2f87ccbcf7d821dfbde450286e5749d",
+        "assets/research/crafting-v15/item-42500010.png": "84c54cc9fe006057004a02660b49fbf14f8e4c65d1879edbf807888f803d68e0"
+      }
+    },
+    {
+      "id": "relic_noise_lamp",
+      "prompt": "Use case: stylized-concept. ONE high-resolution transparent game item for our existing cute 2D Wuthering Waves backpack fan game. First reference defines bright crisp cel shading, chibi chunky proportions, cream-gold metal, dark aubergine/black lineart and tight contact shadows. Second reference is ORIGINAL INGREDIENT, preserve its core crystal form/colors in the crafted object. 8% clear margins, entire object visible. TRUE transparent RGBA background. No text, label, frame, badge, rectangle backplate, platform or unattached particles. A tall slender cream and gold sound-core lantern housing the recognizable GOLDEN FOUR-POINT CRYSTAL from reference 2, the crystal suspended inside clear honey glass, small gold carrying loop top, tiny ivory foot below. Height twice width, cozy pale-yellow inner light tightly contained in glass. No flame, no external glow halo.",
+      "references": [
+        "assets/skins/chibi/items/tuner.png",
+        "assets/research/crafting-v15/item-41100011.png"
+      ],
+      "source_generated_path": "private-source",
+      "output_path": "assets/skins/chibi/items_v127/relic_noise_lamp.png",
+      "original_concept": true,
+      "generator": "built_in_image_gen",
+      "name": "呓语灯",
+      "sha256": "18b72e93e4ea4cb3b73b42a91043e5da5e9f9f56555e91eca8a2c2647768b688",
+      "width": 887,
+      "height": 1774,
+      "alpha_bounds": [
+        96,
+        21,
+        833,
+        1742
+      ],
+      "visible_alpha_bounds_16": [
+        128,
+        23,
+        759,
+        1673
+      ],
+      "generated_bytes_preserved": true,
+      "reference_hashes": {
+        "assets/skins/chibi/items/tuner.png": "20ffdfb600666dbeea68dedb3c532b12e3fb85987bba294de05d5d491e97c8fd",
+        "assets/research/crafting-v15/item-41100011.png": "b0c02f3ecafbd28d2b41c3c2f0044f3ce40868fccaed41f5e2ba849c14fc3341"
+      }
+    },
+    {
+      "id": "relic_noise_chamber",
+      "prompt": "Use case: stylized-concept. ONE high-resolution transparent game item for our existing cute 2D Wuthering Waves backpack fan game. First reference defines bright crisp cel shading, chibi chunky proportions, cream-gold metal, dark aubergine/black lineart and tight contact shadows. Second reference is ORIGINAL INGREDIENT, preserve its core crystal form/colors in the crafted object. 8% clear margins, entire object visible. TRUE transparent RGBA background. No text, label, frame, badge, rectangle backplate, platform or unattached particles. A compact square acoustic resonance chamber with TWO golden four-point sound-core crystals in two side-by-side rounded glass cavities inside a cream-gold and muted violet mechanical body. Dark seams and neat gold sound conduits. Thick round-ended case, visible twin cores, bright contained amber light. No giant glow outside silhouette.",
+      "references": [
+        "assets/skins/chibi/items/tuner.png",
+        "assets/research/crafting-v15/item-41100011.png"
+      ],
+      "source_generated_path": "private-source",
+      "output_path": "assets/skins/chibi/items_v127/relic_noise_chamber.png",
+      "original_concept": true,
+      "generator": "built_in_image_gen",
+      "name": "叠响腔",
+      "sha256": "8d3799a9599d47a0bbebd3f3437b7d69410e02e3981868312820cba2b935daae",
+      "width": 1254,
+      "height": 1254,
+      "alpha_bounds": [
+        0,
+        55,
+        1236,
+        1254
+      ],
+      "visible_alpha_bounds_16": [
+        26,
+        68,
+        1231,
+        1198
+      ],
+      "generated_bytes_preserved": true,
+      "reference_hashes": {
+        "assets/skins/chibi/items/tuner.png": "20ffdfb600666dbeea68dedb3c532b12e3fb85987bba294de05d5d491e97c8fd",
+        "assets/research/crafting-v15/item-41100011.png": "b0c02f3ecafbd28d2b41c3c2f0044f3ce40868fccaed41f5e2ba849c14fc3341"
+      }
+    },
+    {
+      "id": "relic_noise_chime",
+      "prompt": "Use case: stylized-concept. ONE high-resolution transparent game item for our existing cute 2D Wuthering Waves backpack fan game. First reference defines bright crisp cel shading, chibi chunky proportions, cream-gold metal, dark aubergine/black lineart and tight contact shadows. Second reference is ORIGINAL INGREDIENT, preserve its core crystal form/colors in the crafted object. 8% clear margins, entire object visible. TRUE transparent RGBA background. No text, label, frame, badge, rectangle backplate, platform or unattached particles. A natural L silhouette sound chime: LEFT upright short ivory-gold bell support with a large downward-facing gold bell hanging at top-left; bottom gold arm extends RIGHT holding a golden four-point sound-core pendant near bottom-right. TOP RIGHT quadrant transparent. One integrated compact enchanted mechanical bell, warm amber reflections, no strings of little decorative stars.",
+      "references": [
+        "assets/skins/chibi/items/tuner.png",
+        "assets/research/crafting-v15/item-41100011.png"
+      ],
+      "source_generated_path": "private-source",
+      "output_path": "assets/skins/chibi/items_v127/relic_noise_chime.png",
+      "original_concept": true,
+      "generator": "built_in_image_gen",
+      "name": "余响铃",
+      "sha256": "294896ac12dfc6770a4ab2ca4b6cba7acb2f47df12ca438f41967b3d3c897553",
+      "width": 1278,
+      "height": 1230,
+      "alpha_bounds": [
+        0,
+        30,
+        1242,
+        1186
+      ],
+      "visible_alpha_bounds_16": [
+        73,
+        33,
+        1216,
+        1183
+      ],
+      "generated_bytes_preserved": true,
+      "reference_hashes": {
+        "assets/skins/chibi/items/tuner.png": "20ffdfb600666dbeea68dedb3c532b12e3fb85987bba294de05d5d491e97c8fd",
+        "assets/research/crafting-v15/item-41100011.png": "b0c02f3ecafbd28d2b41c3c2f0044f3ce40868fccaed41f5e2ba849c14fc3341"
+      }
+    },
+    {
+      "id": "relic_cooling_can",
+      "prompt": "Use case: stylized-concept. ONE finished high-resolution transparent game inventory sprite. Our existing Q/chibi Wuthering Waves backpack fan game uses the bright clean cel shaded style of image 1: crisp dark aubergine black lines, solid close contact shadows, cream-gold metal trim, chunky readable forms. Reference2 is the original purple coral ingredient; carry its pale branching pink-lavender form into the craft. Full silhouette, 8% empty margins, genuine transparent RGBA background. No text, frame, UI tile, watermark, platform, scattered external sparkles or decorative background. A slim upright cylindrical clear aqua glass cooling canister with rounded cream-gold lid and base, a short pale pink-lavender branching coral specimen submerged inside cyan cold fluid, small frosty rim. Height about twice width. Small mechanical seam and latch; no separate hose. A friendly basic cooling device with visible original coral specimen.",
+      "references": [
+        "assets/skins/chibi/items_v125/relic_diverter.png",
+        "assets/research/crafting-v15/item-42300100.png"
+      ],
+      "source_generated_path": "private-source",
+      "output_path": "assets/skins/chibi/items_v127/relic_cooling_can.png",
+      "original_concept": true,
+      "generator": "built_in_image_gen",
+      "name": "冷凝罐",
+      "sha256": "e7284827563c8256c3fd68e756408220e9408aba999d2d38ae5a2277ccf9cf84",
+      "width": 887,
+      "height": 1774,
+      "alpha_bounds": [
+        0,
+        64,
+        807,
+        1751
+      ],
+      "visible_alpha_bounds_16": [
+        82,
+        76,
+        804,
+        1714
+      ],
+      "generated_bytes_preserved": true,
+      "reference_hashes": {
+        "assets/skins/chibi/items_v125/relic_diverter.png": "95955ea39969de4a66fbbf13c899efb1b2f87ccbcf7d821dfbde450286e5749d",
+        "assets/research/crafting-v15/item-42300100.png": "e0175e46fd400b255b06860333eac19b41f51a767d8de45d9e5e2027720a7cba"
+      }
+    },
+    {
+      "id": "relic_frost_condenser",
+      "prompt": "Use case: stylized-concept. ONE finished high-resolution transparent game inventory sprite. Our existing Q/chibi Wuthering Waves backpack fan game uses the bright clean cel shaded style of image 1: crisp dark aubergine black lines, solid close contact shadows, cream-gold metal trim, chunky readable forms. Reference2 is the original purple coral ingredient; carry its pale branching pink-lavender form into the craft. Full silhouette, 8% empty margins, genuine transparent RGBA background. No text, frame, UI tile, watermark, platform, scattered external sparkles or decorative background. A compact roughly square twin-canister cooling condenser: two chunky upright translucent aqua tanks containing pale lavender branching coral, joined closely by a short cream-gold pipe over top and a mint mechanical base. A few ice-blue crystalline frost facets confined to seams. Clear twin tanks, rich dark contacts, entire object intact, no ground platform.",
+      "references": [
+        "assets/skins/chibi/items_v125/relic_diverter.png",
+        "assets/research/crafting-v15/item-42300100.png"
+      ],
+      "source_generated_path": "private-source",
+      "output_path": "assets/skins/chibi/items_v127/relic_frost_condenser.png",
+      "original_concept": true,
+      "generator": "built_in_image_gen",
+      "name": "寒潮凝结器",
+      "sha256": "1c3cf2925f745fbb822098273f4f83e67663a9f6e2358bd63a936c52a636b349",
+      "width": 1254,
+      "height": 1254,
+      "alpha_bounds": [
+        0,
+        30,
+        1206,
+        1254
+      ],
+      "visible_alpha_bounds_16": [
+        57,
+        32,
+        1202,
+        1232
+      ],
+      "generated_bytes_preserved": true,
+      "reference_hashes": {
+        "assets/skins/chibi/items_v125/relic_diverter.png": "95955ea39969de4a66fbbf13c899efb1b2f87ccbcf7d821dfbde450286e5749d",
+        "assets/research/crafting-v15/item-42300100.png": "e0175e46fd400b255b06860333eac19b41f51a767d8de45d9e5e2027720a7cba"
+      }
+    },
+    {
+      "id": "relic_shatter_prism",
+      "prompt": "Use case: stylized-concept. ONE finished high-resolution transparent game inventory sprite. Our existing Q/chibi Wuthering Waves backpack fan game uses the bright clean cel shaded style of image 1: crisp dark aubergine black lines, solid close contact shadows, cream-gold metal trim, chunky readable forms. Reference2 is the original purple coral ingredient; carry its pale branching pink-lavender form into the craft. Full silhouette, 8% empty margins, genuine transparent RGBA background. No text, frame, UI tile, watermark, platform, scattered external sparkles or decorative background. A compact natural L silhouette cryo-crystal prism device: tall pale cyan translucent triangular prism in cream-gold clamp on LEFT, a short lower gold foot extends RIGHT with a small pink-lavender branching coral ampoule integrated at lower right. TOP RIGHT quadrant transparent. Sharply cut icy facets with modest pink core reflection, chunkily cute and readable; no extra detached shards.",
+      "references": [
+        "assets/skins/chibi/items_v125/relic_diverter.png",
+        "assets/research/crafting-v15/item-42300100.png"
+      ],
+      "source_generated_path": "private-source",
+      "output_path": "assets/skins/chibi/items_v127/relic_shatter_prism.png",
+      "original_concept": true,
+      "generator": "built_in_image_gen",
+      "name": "碎霜棱镜",
+      "sha256": "b79f2750b6fbcae5faab33c6108783f2bd913419c9c8c016f7d0caf7c18b3904",
+      "width": 1312,
+      "height": 1199,
+      "alpha_bounds": [
+        0,
+        20,
+        1290,
+        1179
+      ],
+      "visible_alpha_bounds_16": [
+        156,
+        22,
+        1183,
+        1177
+      ],
+      "generated_bytes_preserved": true,
+      "reference_hashes": {
+        "assets/skins/chibi/items_v125/relic_diverter.png": "95955ea39969de4a66fbbf13c899efb1b2f87ccbcf7d821dfbde450286e5749d",
+        "assets/research/crafting-v15/item-42300100.png": "e0175e46fd400b255b06860333eac19b41f51a767d8de45d9e5e2027720a7cba"
+      }
+    }
+  ],
+  "tool": "built_in_image_gen",
+  "count": 24,
+  "note": "24原创组合器件，原作材料沿用项目已有数据源并作为参考；未改写生成图像像素。"
+}

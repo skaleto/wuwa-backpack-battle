@@ -1,0 +1,198 @@
+{
+	"bags": [
+		{
+			"cost_basis": "known_free",
+			"kind": "pouch",
+			"level": 0,
+			"paid_cost": 0,
+			"rotation": 0,
+			"tuning": "",
+			"uid": "old-bag0-0",
+			"x": 0,
+			"y": 0
+		},
+		{
+			"cost_basis": "known_free",
+			"kind": "pouch",
+			"level": 0,
+			"paid_cost": 0,
+			"rotation": 0,
+			"tuning": "",
+			"uid": "old-bag2-0",
+			"x": 2,
+			"y": 0
+		},
+		{
+			"cost_basis": "known_free",
+			"kind": "pouch",
+			"level": 0,
+			"paid_cost": 0,
+			"rotation": 0,
+			"tuning": "",
+			"uid": "old-bag4-0",
+			"x": 4,
+			"y": 0
+		},
+		{
+			"cost_basis": "known_free",
+			"kind": "pouch",
+			"level": 0,
+			"paid_cost": 0,
+			"rotation": 0,
+			"tuning": "",
+			"uid": "old-bag6-0",
+			"x": 6,
+			"y": 0
+		},
+		{
+			"cost_basis": "known_free",
+			"kind": "pouch",
+			"level": 0,
+			"paid_cost": 0,
+			"rotation": 0,
+			"tuning": "",
+			"uid": "old-bag0-2",
+			"x": 0,
+			"y": 2
+		},
+		{
+			"cost_basis": "known_free",
+			"kind": "pouch",
+			"level": 0,
+			"paid_cost": 0,
+			"rotation": 0,
+			"tuning": "",
+			"uid": "old-bag2-2",
+			"x": 2,
+			"y": 2
+		},
+		{
+			"cost_basis": "known_free",
+			"kind": "pouch",
+			"level": 0,
+			"paid_cost": 0,
+			"rotation": 0,
+			"tuning": "",
+			"uid": "old-bag4-2",
+			"x": 4,
+			"y": 2
+		},
+		{
+			"cost_basis": "known_free",
+			"kind": "pouch",
+			"level": 0,
+			"paid_cost": 0,
+			"rotation": 0,
+			"tuning": "",
+			"uid": "old-bag6-2",
+			"x": 6,
+			"y": 2
+		},
+		{
+			"cost_basis": "known_free",
+			"kind": "pouch",
+			"level": 0,
+			"paid_cost": 0,
+			"rotation": 0,
+			"tuning": "",
+			"uid": "old-bag0-4",
+			"x": 0,
+			"y": 4
+		},
+		{
+			"cost_basis": "known_free",
+			"kind": "pouch",
+			"level": 0,
+			"paid_cost": 0,
+			"rotation": 0,
+			"tuning": "",
+			"uid": "old-bag2-4",
+			"x": 2,
+			"y": 4
+		},
+		{
+			"cost_basis": "known_free",
+			"kind": "pouch",
+			"level": 0,
+			"paid_cost": 0,
+			"rotation": 0,
+			"tuning": "",
+			"uid": "old-bag4-4",
+			"x": 4,
+			"y": 4
+		},
+		{
+			"cost_basis": "known_free",
+			"kind": "pouch",
+			"level": 0,
+			"paid_cost": 0,
+			"rotation": 0,
+			"tuning": "",
+			"uid": "old-bag6-4",
+			"x": 6,
+			"y": 4
+		}
+	],
+	"catalogue_hash": "7c6aa6bc6a891ebbf56c5b38f3a1bb2872aea2cea8ff3b3456c999f1455206cc",
+	"gold": 9,
+	"golden_acquired": false,
+	"history": [],
+	"items": [
+		{
+			"cost_basis": "known_free",
+			"kind": "w_sword",
+			"level": 0,
+			"paid_cost": 0,
+			"rotation": 0,
+			"tuning": "",
+			"uid": "old-sword",
+			"x": 5,
+			"y": 5
+		}
+	],
+	"leader": "aemeath",
+	"losses": 0,
+	"pending_gifts": [],
+	"pending_rearrange": [],
+	"phase": "shop",
+	"pool_mode": "full",
+	"primary": "old-sword",
+	"recruited_round": 0,
+	"refreshes": 0,
+	"relay": [],
+	"roster": [],
+	"round": 1,
+	"ruleset": "wuwa-pack-v5",
+	"seed": 1372467976,
+	"serial": 100,
+	"shop": [
+		{
+			"kind": "w_sword",
+			"locked": false
+		},
+		{
+			"kind": "echo_glacio",
+			"locked": false
+		},
+		{
+			"kind": "mat_42500030",
+			"locked": false
+		},
+		{
+			"kind": "echo_spectro",
+			"locked": false
+		},
+		{
+			"kind": "mat_42300050",
+			"locked": false
+		},
+		{
+			"kind": "corner",
+			"locked": false
+		}
+	],
+	"stash": [],
+	"supports": [],
+	"version": 5,
+	"wins": 0
+}

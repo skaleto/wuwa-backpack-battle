@@ -1,0 +1,1170 @@
+{
+  "version": 128,
+  "description": "16件鸣潮原作物品与28条本作改编合成；沿用8家族、三增益两减益。",
+  "new_items": {
+    "mat_42310060": {
+      "name": "清芬草",
+      "category": "material",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "stars": [],
+      "source_id": "42310060",
+      "source_page": "https://mc.appfeng.com/item/42310060",
+      "canonical_effect": "可用于烹饪的草本材料，清芬茶以其冲泡。",
+      "original_summary": "可用于烹饪的草本材料，清芬茶以其冲泡。",
+      "profile": {
+        "tier": 1,
+        "cost": 2,
+        "shop_price": 2,
+        "shop_round": 1,
+        "craft_only": false,
+        "family": "tea",
+        "supply_anchor": "field_notes",
+        "ownExtra": "每5秒恢复1体力。常驻，不消耗。",
+        "baseText": "无自然攻击。",
+        "supportText": "每5秒恢复1体力。",
+        "starText": "无额外星位规则。",
+        "route": "原作物品改编",
+        "capabilities": [
+          "stamina"
+        ],
+        "material_effect": {
+          "trigger": "clock",
+          "action": "stamina",
+          "period": 5,
+          "value": 1,
+          "category": "",
+          "count": 1
+        }
+      }
+    },
+    "mat_42310070": {
+      "name": "香柠草",
+      "category": "material",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "stars": [],
+      "source_id": "42310070",
+      "source_page": "https://mc.appfeng.com/item/42310070",
+      "canonical_effect": "带有柠檬清香的烹饪材料，是今州烩的原作食材之一。",
+      "original_summary": "带有柠檬清香的烹饪材料，是今州烩的原作食材之一。",
+      "profile": {
+        "tier": 1,
+        "cost": 2,
+        "shop_price": 2,
+        "shop_round": 1,
+        "craft_only": false,
+        "family": "food",
+        "supply_anchor": "mat_42500030",
+        "ownExtra": "每8秒获得1充能。常驻，不消耗。",
+        "baseText": "无自然攻击。",
+        "supportText": "每8秒获得1充能。",
+        "starText": "无额外星位规则。",
+        "route": "原作物品改编",
+        "capabilities": [
+          "charge"
+        ],
+        "material_effect": {
+          "trigger": "clock",
+          "action": "charge",
+          "period": 8,
+          "value": 1,
+          "category": "",
+          "count": 1
+        }
+      }
+    },
+    "mat_42310030": {
+      "name": "夜息香",
+      "category": "material",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "stars": [],
+      "source_id": "42310030",
+      "source_page": "https://mc.appfeng.com/item/42310030",
+      "canonical_effect": "具有清凉提神气味的烹饪草本。",
+      "original_summary": "具有清凉提神气味的烹饪草本。",
+      "profile": {
+        "tier": 1,
+        "cost": 2,
+        "shop_price": 2,
+        "shop_round": 1,
+        "craft_only": false,
+        "family": "tea",
+        "supply_anchor": "mat_43020051",
+        "ownExtra": "每6秒获得1迅捷，持续6秒。常驻，不消耗。",
+        "baseText": "无自然攻击。",
+        "supportText": "每6秒获得1迅捷，持续6秒。",
+        "starText": "无额外星位规则。",
+        "route": "原作物品改编",
+        "capabilities": [
+          "haste"
+        ],
+        "material_effect": {
+          "trigger": "clock",
+          "action": "haste",
+          "period": 6,
+          "value": 1,
+          "category": "",
+          "count": 1
+        }
+      }
+    },
+    "mat_42310220": {
+      "name": "银雪莲",
+      "category": "material",
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "stars": [],
+      "source_id": "42310220",
+      "source_page": "https://mc.appfeng.com/item/42310220",
+      "canonical_effect": "生长于寒冷地区的银雪莲可使身体温暖；也是雪莲酥的原作食材。",
+      "original_summary": "生长于寒冷地区的银雪莲可使身体温暖；也是雪莲酥的原作食材。",
+      "profile": {
+        "tier": 2,
+        "cost": 3,
+        "shop_price": 3,
+        "shop_round": 1,
+        "craft_only": false,
+        "family": "tea",
+        "supply_anchor": "mat_42300030",
+        "ownExtra": "每8秒净化1层减益。常驻，不消耗。",
+        "baseText": "无自然攻击。",
+        "supportText": "每8秒净化1层减益。",
+        "starText": "无额外星位规则。",
+        "route": "原作物品改编",
+        "capabilities": [
+          "cleanse"
+        ],
+        "material_effect": {
+          "trigger": "clock",
+          "action": "cleanse",
+          "period": 8,
+          "value": 1,
+          "category": "",
+          "count": 1
+        }
+      }
+    },
+    "mat_42300110": {
+      "name": "金铃子",
+      "category": "material",
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "stars": [],
+      "source_id": "42300110",
+      "source_page": "https://mc.appfeng.com/item/42300110",
+      "canonical_effect": "味道苦涩的瓜果，在今州常与清热解毒、忆苦思甜联系在一起。",
+      "original_summary": "味道苦涩的瓜果，在今州常与清热解毒、忆苦思甜联系在一起。",
+      "profile": {
+        "tier": 1,
+        "cost": 2,
+        "shop_price": 2,
+        "shop_round": 1,
+        "craft_only": false,
+        "family": "tea",
+        "supply_anchor": "mat_42300030",
+        "ownExtra": "每12秒净化1层减益。常驻，不消耗。",
+        "baseText": "无自然攻击。",
+        "supportText": "每12秒净化1层减益并治疗1。",
+        "starText": "无额外星位规则。",
+        "route": "原作物品改编",
+        "capabilities": [
+          "cleanse"
+        ],
+        "material_effect": {
+          "trigger": "clock",
+          "action": "cleanse",
+          "period": 12,
+          "value": 1,
+          "category": "",
+          "count": 1
+        },
+        "healPeriod": 12,
+        "healAmount": 1
+      }
+    },
+    "mat_42300020": {
+      "name": "木莲",
+      "category": "material",
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "stars": [],
+      "source_id": "42300020",
+      "source_page": "https://mc.appfeng.com/item/42300020",
+      "canonical_effect": "攀援生长的灌木，其果实可制作糖水。",
+      "original_summary": "攀援生长的灌木，其果实可制作糖水。",
+      "profile": {
+        "tier": 1,
+        "cost": 2,
+        "shop_price": 2,
+        "shop_round": 1,
+        "craft_only": false,
+        "family": "food",
+        "supply_anchor": "mat_42310090",
+        "ownExtra": "每12秒治疗3。常驻，不消耗。",
+        "baseText": "无自然攻击。",
+        "supportText": "每12秒治疗3。",
+        "starText": "无额外星位规则。",
+        "route": "原作物品改编",
+        "capabilities": [
+          "healing"
+        ],
+        "material_effect": {
+          "trigger": "clock",
+          "action": "heal",
+          "period": 12,
+          "value": 3,
+          "category": "",
+          "count": 1
+        }
+      }
+    },
+    "mat_42310080": {
+      "name": "蚀夜幽兰",
+      "category": "material",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "stars": [],
+      "source_id": "42310080",
+      "source_page": "https://mc.appfeng.com/item/42310080",
+      "canonical_effect": "在无音区边缘绽放的腐生植物，从腐败之物汲取养分。",
+      "original_summary": "在无音区边缘绽放的腐生植物，从腐败之物汲取养分。",
+      "profile": {
+        "tier": 2,
+        "cost": 3,
+        "shop_price": 3,
+        "shop_round": 1,
+        "craft_only": false,
+        "family": "noise",
+        "supply_anchor": "mat_41100011",
+        "ownExtra": "每7秒附加1光噪。常驻，不消耗。",
+        "baseText": "无自然攻击。",
+        "supportText": "每7秒附加1光噪。",
+        "starText": "无额外星位规则。",
+        "route": "原作物品改编",
+        "capabilities": [
+          "noise"
+        ],
+        "material_effect": {
+          "trigger": "clock",
+          "action": "noise",
+          "period": 7,
+          "value": 1,
+          "category": "",
+          "count": 1
+        }
+      }
+    },
+    "mat_42310100": {
+      "name": "月藻",
+      "category": "material",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "stars": [],
+      "source_id": "42310100",
+      "source_page": "https://mc.appfeng.com/item/42310100",
+      "canonical_effect": "河川石缝中的狸藻，花蕊分泌芳香黏质诱捕飞虫。",
+      "original_summary": "河川石缝中的狸藻，花蕊分泌芳香黏质诱捕飞虫。",
+      "profile": {
+        "tier": 1,
+        "cost": 2,
+        "shop_price": 2,
+        "shop_round": 1,
+        "craft_only": false,
+        "family": "frost",
+        "supply_anchor": "mat_42300100",
+        "ownExtra": "每8秒附加1霜渐。常驻，不消耗。",
+        "baseText": "无自然攻击。",
+        "supportText": "每8秒附加1霜渐。",
+        "starText": "无额外星位规则。",
+        "route": "原作物品改编",
+        "capabilities": [
+          "frost"
+        ],
+        "material_effect": {
+          "trigger": "clock",
+          "action": "frost",
+          "period": 8,
+          "value": 1,
+          "category": "",
+          "count": 1
+        }
+      }
+    },
+    "mat_42300080": {
+      "name": "云芝",
+      "category": "material",
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "stars": [],
+      "source_id": "42300080",
+      "source_page": "https://mc.appfeng.com/item/42300080",
+      "canonical_effect": "与古木伴生的特殊菌类，今州医典记载其药性与疗效。",
+      "original_summary": "与古木伴生的特殊菌类，今州医典记载其药性与疗效。",
+      "profile": {
+        "tier": 2,
+        "cost": 3,
+        "shop_price": 3,
+        "shop_round": 1,
+        "craft_only": false,
+        "family": "tea",
+        "supply_anchor": "mat_42310090",
+        "ownExtra": "每8秒治疗3。常驻，不消耗。",
+        "baseText": "无自然攻击。",
+        "supportText": "每8秒治疗3。",
+        "starText": "无额外星位规则。",
+        "route": "原作物品改编",
+        "capabilities": [
+          "healing"
+        ],
+        "material_effect": {
+          "trigger": "clock",
+          "action": "heal",
+          "period": 8,
+          "value": 3,
+          "category": "",
+          "count": 1
+        }
+      }
+    },
+    "mat_42300090": {
+      "name": "傲寒钟",
+      "category": "material",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "stars": [],
+      "source_id": "42300090",
+      "source_page": "https://mc.appfeng.com/item/42300090",
+      "canonical_effect": "盛开在高岸的清冷之花；传说古钟轰鸣时可从冰雪中复苏。",
+      "original_summary": "盛开在高岸的清冷之花；传说古钟轰鸣时可从冰雪中复苏。",
+      "profile": {
+        "tier": 2,
+        "cost": 3,
+        "shop_price": 3,
+        "shop_round": 1,
+        "craft_only": false,
+        "family": "frost",
+        "supply_anchor": "mat_42300100",
+        "ownExtra": "每6秒附加1霜渐。常驻，不消耗。",
+        "baseText": "无自然攻击。",
+        "supportText": "每6秒附加1霜渐。",
+        "starText": "无额外星位规则。",
+        "route": "原作物品改编",
+        "capabilities": [
+          "frost"
+        ],
+        "material_effect": {
+          "trigger": "clock",
+          "action": "frost",
+          "period": 6,
+          "value": 1,
+          "category": "",
+          "count": 1
+        }
+      }
+    },
+    "mat_42500020": {
+      "name": "辉萤石",
+      "category": "material",
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "stars": [],
+      "source_id": "42500020",
+      "source_page": "https://mc.appfeng.com/item/42500020",
+      "canonical_effect": "虎口矿洞中的半透明蓝色矿物，硬度与稳定性上佳。",
+      "original_summary": "虎口矿洞中的半透明蓝色矿物，硬度与稳定性上佳。",
+      "profile": {
+        "tier": 1,
+        "cost": 2,
+        "shop_price": 2,
+        "shop_round": 1,
+        "craft_only": false,
+        "family": "defense",
+        "supply_anchor": "mat_43020011",
+        "ownExtra": "每9秒获得3护盾。常驻，不消耗。",
+        "baseText": "无自然攻击。",
+        "supportText": "每9秒获得3护盾。",
+        "starText": "无额外星位规则。",
+        "route": "原作物品改编",
+        "capabilities": [
+          "shielding"
+        ],
+        "material_effect": {
+          "trigger": "clock",
+          "action": "shield",
+          "period": 9,
+          "value": 3,
+          "category": "",
+          "count": 1
+        }
+      }
+    },
+    "mat_42500040": {
+      "name": "植珀",
+      "category": "material",
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "stars": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "source_id": "42500040",
+      "source_page": "https://mc.appfeng.com/item/42500040",
+      "canonical_effect": "无音区死亡植物融入岩石形成的矿物，保留木本结构，与琥珀无关。",
+      "original_summary": "无音区死亡植物融入岩石形成的矿物，保留木本结构，与琥珀无关。",
+      "profile": {
+        "tier": 1,
+        "cost": 2,
+        "shop_price": 2,
+        "shop_round": 1,
+        "craft_only": false,
+        "family": "acoustics",
+        "supply_anchor": "tuner",
+        "ownExtra": "每8秒使★剩余冷却最长的声骸提前0.6秒。常驻，不消耗。",
+        "baseText": "无自然攻击。",
+        "supportText": "每8秒使★剩余冷却最长的声骸提前0.6秒。",
+        "starText": "★声骸获得周期推进；无待冷却声骸时不发动。",
+        "route": "原作物品改编",
+        "capabilities": [
+          "echo"
+        ],
+        "material_effect": {
+          "trigger": "clock",
+          "action": "advance",
+          "period": 8,
+          "value": 0.6,
+          "category": "echo",
+          "count": 1
+        },
+        "star_categories": [
+          "echo"
+        ]
+      }
+    },
+    "mat_41400074": {
+      "name": "留音声核",
+      "category": "material",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "stars": [
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "source_id": "41400074",
+      "source_page": "https://mc.appfeng.com/item/41400074",
+      "canonical_effect": "辉萤军势掉落的声核，能将附近的声音封存在冰中。",
+      "original_summary": "辉萤军势掉落的声核，能将附近的声音封存在冰中。",
+      "profile": {
+        "tier": 3,
+        "cost": 5,
+        "shop_price": 5,
+        "shop_round": 5,
+        "craft_only": false,
+        "family": "frost",
+        "supply_anchor": "mat_42300100",
+        "ownExtra": "常驻，不消耗。",
+        "baseText": "无自然攻击。",
+        "supportText": "每8秒附加1霜渐。",
+        "starText": "★声骸自然攻击时，敌方至少2霜渐或已冻结：追加2伤害，间隔5秒。",
+        "route": "原作物品改编",
+        "capabilities": [
+          "frost"
+        ],
+        "frostPeriod": 8,
+        "star_categories": [
+          "echo"
+        ],
+        "family_effect": {
+          "trigger": "star_attack",
+          "action": "conditional_damage",
+          "category": "echo",
+          "condition": "frost",
+          "frost_min": 2,
+          "value": 2,
+          "period": 5
+        }
+      }
+    },
+    "mat_41400054": {
+      "name": "呼啸岩拳",
+      "category": "material",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "stars": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "source_id": "41400054",
+      "source_page": "https://mc.appfeng.com/item/41400054",
+      "canonical_effect": "飞廉之猩的重岩拳头，残留呼啸的力量；用于原作共鸣者突破。",
+      "original_summary": "飞廉之猩的重岩拳头，残留呼啸的力量；用于原作共鸣者突破。",
+      "profile": {
+        "tier": 4,
+        "cost": 5,
+        "shop_price": 5,
+        "shop_round": 6,
+        "craft_only": false,
+        "family": "breaker",
+        "supply_anchor": "mat_42500010",
+        "ownExtra": "每7秒使★基础伤害最高的武器下次攻击先削5盾。常驻，不消耗。",
+        "baseText": "无自然攻击。",
+        "supportText": "开战获得4护盾；每7秒使★基础伤害最高的武器下次攻击先削5盾。",
+        "starText": "★武器自然攻击无盾敌人时追加2伤害，间隔4秒。",
+        "route": "原作物品改编",
+        "capabilities": [
+          "break_shield"
+        ],
+        "material_effect": {
+          "trigger": "clock",
+          "action": "break",
+          "period": 7,
+          "value": 5,
+          "category": "weapon",
+          "count": 1
+        },
+        "openingShield": 4,
+        "star_categories": [
+          "weapon"
+        ],
+        "family_effect": {
+          "trigger": "star_attack",
+          "action": "conditional_damage",
+          "condition": "unshielded",
+          "value": 2,
+          "period": 4
+        }
+      }
+    },
+    "provision_jinzhou_stew": {
+      "name": "今州烩",
+      "category": "provision",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "stars": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "source_id": "80000014",
+      "source_page": "https://mc.appfeng.com/item/80000014",
+      "canonical_effect": "原作以兽肉、香柠草、伞下客和鸟蛋烹饪，提高攻击与暴击。",
+      "original_summary": "原作以兽肉、香柠草、伞下客和鸟蛋烹饪，提高攻击与暴击。",
+      "profile": {
+        "tier": 2,
+        "cost": 4,
+        "shop_price": 4,
+        "shop_round": 1,
+        "craft_only": true,
+        "family": "food",
+        "supply_anchor": "spicy_meat",
+        "ownExtra": "开战获得1充能；每7秒使★基础伤害最高的武器下次自然攻击总伤害+2。常驻，不消耗。",
+        "baseText": "无自然攻击。",
+        "supportText": "开战获得1充能；每7秒使★基础伤害最高的武器下次自然攻击总伤害+2。",
+        "starText": "★武器获得单次攻击加值；不重复累积。",
+        "route": "原作物品改编",
+        "capabilities": [
+          "charge"
+        ],
+        "material_effect": {
+          "trigger": "clock",
+          "action": "flat",
+          "period": 7,
+          "value": 2,
+          "category": "weapon",
+          "count": 1
+        },
+        "opening_charge": 1,
+        "star_categories": [
+          "weapon"
+        ],
+        "cyclic_supply": true
+      }
+    },
+    "provision_snow_lotus_pastry": {
+      "name": "雪莲酥",
+      "category": "provision",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "stars": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "source_id": "80000033",
+      "source_page": "https://mc.appfeng.com/item/80000033",
+      "canonical_effect": "原作以银雪莲、面粉与糖烹饪，提高暴击伤害。",
+      "original_summary": "原作以银雪莲、面粉与糖烹饪，提高暴击伤害。",
+      "profile": {
+        "tier": 3,
+        "cost": 5,
+        "shop_price": 5,
+        "shop_round": 1,
+        "craft_only": true,
+        "family": "food",
+        "supply_anchor": "mat_43020021",
+        "ownExtra": "每8秒使★基础伤害最高的武器下次充能攻击总伤害+4。常驻，不消耗。",
+        "baseText": "无自然攻击。",
+        "supportText": "每8秒治疗1，并使★基础伤害最高的武器下次充能攻击总伤害+4。",
+        "starText": "★武器的充能攻击获得加值；普通攻击不消耗准备。",
+        "route": "原作物品改编",
+        "capabilities": [
+          "healing",
+          "charge"
+        ],
+        "material_effect": {
+          "trigger": "clock",
+          "action": "charged",
+          "period": 8,
+          "value": 4,
+          "category": "weapon",
+          "count": 1
+        },
+        "healPeriod": 8,
+        "healAmount": 1,
+        "star_categories": [
+          "weapon"
+        ],
+        "cyclic_supply": true
+      }
+    }
+  },
+  "recipes": [
+    {
+      "id": "W128-01",
+      "base": "mat_42310060",
+      "materials": [
+        "relic_tea_strainer"
+      ],
+      "target": "tea",
+      "family": "tea",
+      "route": "茶饮与药草",
+      "round_min": 1,
+      "fee": 0,
+      "type": "original_adaptation",
+      "trade": "本作改编配方：清芬草滤泡成茶；回耐与缓慢治疗换成开战生命上限，三格压成一格。"
+    },
+    {
+      "id": "W128-02",
+      "base": "cool_tea",
+      "materials": [
+        "mat_42310060"
+      ],
+      "target": "provision_strong_tea",
+      "family": "tea",
+      "route": "茶饮与药草",
+      "round_min": 1,
+      "fee": 0,
+      "type": "original_adaptation",
+      "trade": "本作改编配方：凉茶加入清芬草浓萃；保留迅捷，回耐转为更强周期治疗。"
+    },
+    {
+      "id": "W128-03",
+      "base": "spicy_meat",
+      "materials": [
+        "mat_42310070"
+      ],
+      "target": "provision_jinzhou_stew",
+      "family": "food",
+      "route": "补给与餐具",
+      "round_min": 1,
+      "fee": 0,
+      "type": "original_adaptation",
+      "trade": "本作改编配方：辛香肉片加入香柠草改编成今州烩；保留开场充能，周期充能转为武器攻击准备。"
+    },
+    {
+      "id": "W128-04",
+      "base": "relic_lunchbox",
+      "materials": [
+        "mat_42310070"
+      ],
+      "target": "relic_march_lunchbox",
+      "family": "food",
+      "route": "补给与餐具",
+      "round_min": 1,
+      "fee": 0,
+      "type": "original_adaptation",
+      "trade": "本作改编配方：饭盒加入辛香配餐；周期充能换持续回耐与减耗，总占格不变。"
+    },
+    {
+      "id": "W128-05",
+      "base": "daily_tea",
+      "materials": [
+        "mat_42310030"
+      ],
+      "target": "cool_tea",
+      "family": "tea",
+      "route": "茶饮与药草",
+      "round_min": 1,
+      "fee": 0,
+      "type": "original_adaptation",
+      "trade": "本作改编配方：清茶以夜息香调饮；周期迅捷换凉茶持续治疗，保留开场迅捷。"
+    },
+    {
+      "id": "W128-06",
+      "base": "cool_tea",
+      "materials": [
+        "mat_42310030"
+      ],
+      "target": "provision_clear_tea",
+      "family": "tea",
+      "route": "茶饮与药草",
+      "round_min": 1,
+      "fee": 0,
+      "type": "original_adaptation",
+      "trade": "本作改编配方：清凉草本调入凉茶；周期迅捷转为净化，保留治疗。"
+    },
+    {
+      "id": "W128-07",
+      "base": "mat_42310220",
+      "materials": [
+        "nutrition"
+      ],
+      "target": "provision_snow_lotus_pastry",
+      "family": "food",
+      "route": "补给与餐具",
+      "round_min": 1,
+      "fee": 0,
+      "type": "original_adaptation",
+      "trade": "本作改编配方：以营养块作本作甜点基底，加入银雪莲；净化与急救换微量治疗和充能攻击准备。"
+    },
+    {
+      "id": "W128-08",
+      "base": "mat_42310220",
+      "materials": [
+        "mat_42300020"
+      ],
+      "target": "provision_snow_lotus_pastry",
+      "family": "food",
+      "route": "补给与餐具",
+      "round_min": 1,
+      "fee": 0,
+      "type": "original_adaptation",
+      "trade": "本作改编：木莲糖水调成雪莲酥；净化改为充能攻击准备，治疗变少。"
+    },
+    {
+      "id": "W128-09",
+      "base": "cool_tea",
+      "materials": [
+        "mat_42300110"
+      ],
+      "target": "provision_clear_tea",
+      "family": "tea",
+      "route": "茶饮与药草",
+      "round_min": 1,
+      "fee": 0,
+      "type": "original_adaptation",
+      "trade": "本作改编配方：苦瓜入茶；保留治疗与迅捷，将金铃子净化缩短到每8秒。"
+    },
+    {
+      "id": "W128-10",
+      "base": "relic_lunchbox",
+      "materials": [
+        "mat_42300110"
+      ],
+      "target": "relic_emergency_lunchbox",
+      "family": "food",
+      "route": "补给与餐具",
+      "round_min": 1,
+      "fee": 0,
+      "type": "original_adaptation",
+      "trade": "本作改编配方：饭盒加入苦味药食；保留回耐，周期净化转为一次低生命急救。"
+    },
+    {
+      "id": "W128-11",
+      "base": "soup",
+      "materials": [
+        "mat_42300020"
+      ],
+      "target": "relic_lunchbox",
+      "family": "food",
+      "route": "补给与餐具",
+      "round_min": 1,
+      "fee": 0,
+      "type": "original_adaptation",
+      "trade": "本作改编配方：鱼汤配木莲糖水装盒；保留回耐，糖水治疗转为不同补给接力。"
+    },
+    {
+      "id": "W128-12",
+      "base": "cool_tea",
+      "materials": [
+        "mat_42300020"
+      ],
+      "target": "provision_strong_tea",
+      "family": "tea",
+      "route": "茶饮与药草",
+      "round_min": 1,
+      "fee": 0,
+      "type": "original_adaptation",
+      "trade": "本作改编配方：木莲糖水调入凉茶；双路治疗合为每6秒治疗5，保留开场迅捷。"
+    },
+    {
+      "id": "W128-13",
+      "base": "relic_noise_lamp",
+      "materials": [
+        "mat_42310080"
+      ],
+      "target": "relic_noise_chamber",
+      "family": "noise",
+      "route": "光噪组件",
+      "round_min": 1,
+      "fee": 0,
+      "type": "original_adaptation",
+      "trade": "本作改编配方：腐生花材装入声核腔作本作共鸣培养基；两路附噪整合为每3秒一层。"
+    },
+    {
+      "id": "W128-14",
+      "base": "mat_41100011",
+      "materials": [
+        "mat_42310080"
+      ],
+      "target": "relic_noise_lamp",
+      "family": "noise",
+      "route": "光噪组件",
+      "round_min": 1,
+      "fee": 0,
+      "type": "original_adaptation",
+      "trade": "本作改编配方：声核与蚀夜幽兰制成呓语灯；两路附噪转为每8秒一层，节约占格但总频率下降。"
+    },
+    {
+      "id": "W128-15",
+      "base": "mat_42310100",
+      "materials": [
+        "relic_tea_strainer"
+      ],
+      "target": "relic_cooling_can",
+      "family": "frost",
+      "route": "霜渐组件",
+      "round_min": 1,
+      "fee": 0,
+      "type": "original_adaptation",
+      "trade": "本作改编配方：月藻黏质装入滤罐，改编迟滞为霜渐；保留每8秒附霜和微量治疗，三格压成两格。"
+    },
+    {
+      "id": "W128-16",
+      "base": "relic_cooling_can",
+      "materials": [
+        "mat_42310100"
+      ],
+      "target": "relic_frost_condenser",
+      "family": "frost",
+      "route": "霜渐组件",
+      "round_min": 1,
+      "fee": 0,
+      "type": "original_adaptation",
+      "trade": "本作改编配方：冷凝罐补充月藻迟滞介质；整合附霜并增加武器三击协同。"
+    },
+    {
+      "id": "W128-17",
+      "base": "mat_42300080",
+      "materials": [
+        "relic_tea_strainer"
+      ],
+      "target": "provision_strong_tea",
+      "family": "tea",
+      "route": "茶饮与药草",
+      "round_min": 1,
+      "fee": 0,
+      "type": "original_adaptation",
+      "trade": "本作改编：云芝浓萃药茶；治疗4/8秒变5/6秒，开场迅捷，占格不变。"
+    },
+    {
+      "id": "W128-18",
+      "base": "relic_lunchbox",
+      "materials": [
+        "mat_42300080"
+      ],
+      "target": "relic_emergency_lunchbox",
+      "family": "food",
+      "route": "补给与餐具",
+      "round_min": 1,
+      "fee": 0,
+      "type": "original_adaptation",
+      "trade": "本作改编配方：饭盒加入云芝药食；周期小治疗改为低生命急救，保留并增强回耐。"
+    },
+    {
+      "id": "W128-19",
+      "base": "mat_42300090",
+      "materials": [
+        "relic_tea_strainer"
+      ],
+      "target": "relic_cooling_can",
+      "family": "frost",
+      "route": "霜渐组件",
+      "round_min": 1,
+      "fee": 0,
+      "type": "original_adaptation",
+      "trade": "本作改编配方：傲寒钟装入冷凝滤罐；附霜频率降低，保留微量治疗并接入冷凝器分支。"
+    },
+    {
+      "id": "W128-20",
+      "base": "relic_cooling_can",
+      "materials": [
+        "mat_42300090"
+      ],
+      "target": "relic_frost_condenser",
+      "family": "frost",
+      "route": "霜渐组件",
+      "round_min": 1,
+      "fee": 0,
+      "type": "original_adaptation",
+      "trade": "本作改编配方：冷凝罐加入耐寒花材；两路附霜压缩为周期与武器三击协同。"
+    },
+    {
+      "id": "W128-21",
+      "base": "relic_guard_plate",
+      "materials": [
+        "mat_42500020"
+      ],
+      "target": "relic_layered_guard",
+      "family": "defense",
+      "route": "防护构件",
+      "round_min": 1,
+      "fee": 0,
+      "type": "original_adaptation",
+      "trade": "本作改编配方：稳定辉萤石加固护板；两路护盾合成每6秒5点，减少节奏分散。"
+    },
+    {
+      "id": "W128-22",
+      "base": "relic_breaker_wedge",
+      "materials": [
+        "mat_42500020"
+      ],
+      "target": "relic_crack_driver",
+      "family": "breaker",
+      "route": "破甲构件",
+      "round_min": 1,
+      "fee": 0,
+      "type": "original_adaptation",
+      "trade": "本作改编配方：硬质辉萤石强化楔头；矿石周期护盾换更强削盾，保留楔头开场盾。"
+    },
+    {
+      "id": "W128-23",
+      "base": "relic_diaphragm",
+      "materials": [
+        "mat_42500040"
+      ],
+      "target": "relic_recorder",
+      "family": "acoustics",
+      "route": "声学器件",
+      "round_min": 1,
+      "fee": 0,
+      "type": "original_adaptation",
+      "trade": "本作改编：植珀作留声载体；双路推进转为基础推进与两次声骸攻击后的重演。"
+    },
+    {
+      "id": "W128-24",
+      "base": "relic_guard_plate",
+      "materials": [
+        "mat_42500040"
+      ],
+      "target": "relic_layered_guard",
+      "family": "defense",
+      "route": "防护构件",
+      "round_min": 1,
+      "fee": 0,
+      "type": "original_adaptation",
+      "trade": "本作改编配方：植珀结构嵌入护板；放弃声骸推进，换持续护盾。"
+    },
+    {
+      "id": "W128-25",
+      "base": "weapon_21020074",
+      "materials": [
+        "mat_41400074"
+      ],
+      "target": "weapon_21020086",
+      "family": "frost",
+      "route": "霜渐组件",
+      "round_min": 1,
+      "fee": 0,
+      "type": "original_adaptation",
+      "trade": "本作改编：飞景以冰中留音重铸灼霜；损失输出，换控制与8→4格。"
+    },
+    {
+      "id": "W128-27",
+      "base": "weapon_21040044",
+      "materials": [
+        "mat_41400054"
+      ],
+      "target": "weapon_21040015",
+      "family": "breaker",
+      "route": "破甲构件",
+      "round_min": 1,
+      "fee": 0,
+      "type": "original_adaptation",
+      "trade": "本作改编：袍泽之固嵌岩拳重铸擎渊怒涛；削盾换输出，失4开场盾，4→2格。"
+    },
+    {
+      "id": "W128-29",
+      "base": "provision_jinzhou_stew",
+      "materials": [
+        "relic_cutlery"
+      ],
+      "target": "relic_march_lunchbox",
+      "family": "food",
+      "route": "补给与餐具",
+      "round_min": 1,
+      "fee": 0,
+      "type": "original_adaptation",
+      "trade": "本作改编配方：今州烩打包为行军餐；武器攻击准备与充能换持续回耐、减耗和配餐接力。"
+    },
+    {
+      "id": "W128-30",
+      "base": "relic_lunchbox",
+      "materials": [
+        "provision_snow_lotus_pastry"
+      ],
+      "target": "relic_emergency_lunchbox",
+      "family": "food",
+      "route": "补给与餐具",
+      "round_min": 1,
+      "fee": 0,
+      "type": "original_adaptation",
+      "trade": "本作改编配方：餐盒装入雪莲酥作应急配餐；充能攻击准备换一次低生命急救，保留回耐。"
+    }
+  ]
+}

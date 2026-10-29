@@ -1,0 +1,73 @@
+{
+  "status": "User approved audition 31 on 2026-10-20; installed in game V98.",
+  "sources": [
+    {
+      "file": "originals/Sum_SHTrumpet_sus_A#3_v1_rr1.wav",
+      "url": "https://raw.githubusercontent.com/sgossner/VSCO-2-CE/440300901dfe9275fd84e0b7763af1f8443ae62e/Brass/Trumpet/sus/Sum_SHTrumpet_sus_A%233_v1_rr1.wav",
+      "sha256": "0a432ceeddcecea962e2e0ebb5c3e80be3d3f251d38c5d4ddc0df4089e97351b",
+      "author": "Sam Gossner / Versilian Studios",
+      "license": "CC0-1.0",
+      "source_page": "https://github.com/sgossner/VSCO-2-CE"
+    },
+    {
+      "file": "originals/Sum_SHTrumpet_sus_D4_v1_rr1.wav",
+      "url": "https://raw.githubusercontent.com/sgossner/VSCO-2-CE/440300901dfe9275fd84e0b7763af1f8443ae62e/Brass/Trumpet/sus/Sum_SHTrumpet_sus_D4_v1_rr1.wav",
+      "sha256": "fa4a3f77ead22cb58afdaa1732b9b6c8ec6033708ae339df6446a56c1b7cc8e9",
+      "author": "Sam Gossner / Versilian Studios",
+      "license": "CC0-1.0",
+      "source_page": "https://github.com/sgossner/VSCO-2-CE"
+    },
+    {
+      "file": "originals/Sum_SHTrumpet_sus_F4_v1_rr1.wav",
+      "source_path": "Brass/Trumpet/sus/Sum_SHTrumpet_sus_F4_v1_rr1.wav",
+      "download_url": "https://raw.githubusercontent.com/sgossner/VSCO-2-CE/440300901dfe9275fd84e0b7763af1f8443ae62e/Brass/Trumpet/sus/Sum_SHTrumpet_sus_F4_v1_rr1.wav",
+      "source_commit": "440300901dfe9275fd84e0b7763af1f8443ae62e",
+      "sha256": "81954b71f23a9ebe3ea02c7c9c6cfb68a3904a965bc916bc27f061e643604992",
+      "author": "Sam Gossner / Versilian Studios, VSCO 2 Community Edition",
+      "license": "CC0-1.0",
+      "source_page": "https://github.com/sgossner/VSCO-2-CE"
+    }
+  ],
+  "notes": [
+    {
+      "note": "A#3",
+      "source": "Sum_SHTrumpet_sus_A#3_v1_rr1.wav",
+      "onset": 0.0,
+      "body_duration": 0.19,
+      "release_source_start": 18.23,
+      "release_gain": 1.6,
+      "crossfade_seconds": 0.055,
+      "gain_db": 5.901865376406757,
+      "duration": 0.665
+    },
+    {
+      "note": "D4",
+      "source": "Sum_SHTrumpet_sus_D4_v1_rr1.wav",
+      "onset": 0.225,
+      "body_duration": 0.205,
+      "release_source_start": 15.48,
+      "release_gain": 1.4469135999679565,
+      "crossfade_seconds": 0.055,
+      "gain_db": -3.315289882842265,
+      "duration": 0.68
+    },
+    {
+      "note": "F4",
+      "source": "Sum_SHTrumpet_sus_F4_v1_rr1.wav",
+      "onset": 0.475,
+      "body_duration": 0.57,
+      "release_source_start": 12.59,
+      "release_gain": 1.5551400184631348,
+      "crossfade_seconds": 0.055,
+      "gain_db": 0.09033163015913814,
+      "duration": 1.045
+    }
+  ],
+  "applause_source": "originals/09_win_applause.wav",
+  "applause_sha256": "2ba6d5b1ef49693f9928b81c2585a3ff9e508cd9fa2fa93a638cfe5a7e2a7d14",
+  "applause_onset": 0.64,
+  "applause_gain_db": -8,
+  "mix_gain_db": 0.0,
+  "processing": "Original-pitch sustain recordings with retained natural releases; 55ms splice crossfades; 10ms onset rounding; 6.5kHz second-order lowpass; fixed gains. No oscillator synthesis, added melody, artificial reverb or pitch/time shifting.",
+  "output_sha256": "f6d8b51093f234bd21e8f1d96ccf2ed7843c5830ab423b312511f16e8c4f9864"
+}

@@ -1,0 +1,1038 @@
+{
+  "items": {
+    "windblade": {
+      "name": "青岚长刃",
+      "element": "aero",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "price": 5,
+      "rarity": 1,
+      "icon": "sword",
+      "art": "天之苍苍",
+      "cooldown": 2.4,
+      "stamina": 1.2,
+      "damage": 11,
+      "energy": 5,
+      "tags": [
+        "weapon"
+      ],
+      "stars": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          2,
+          -1
+        ]
+      ],
+      "target": "aero",
+      "star_mode": "speed",
+      "desc": "气动物品占星位：此武器冷却缩短 8%。"
+    },
+    "pistol": {
+      "name": "熔火信号枪",
+      "element": "fusion",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "price": 4,
+      "rarity": 1,
+      "icon": "pistol",
+      "art": "鸣动仪-25型",
+      "cooldown": 1.8,
+      "stamina": 1,
+      "damage": 7,
+      "energy": 4,
+      "tags": [
+        "weapon"
+      ],
+      "stars": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "target": "echo",
+      "star_mode": "attack",
+      "desc": "星位上的声骸：此武器伤害 +2。"
+    },
+    "string": {
+      "name": "牵丝雷偶",
+      "element": "electro",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "price": 5,
+      "rarity": 1,
+      "icon": "puppet",
+      "art": "掣傀之手",
+      "cooldown": 2.9,
+      "damage": 4,
+      "mark": 2,
+      "energy": 7,
+      "tags": [
+        "echo"
+      ],
+      "stars": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "target": "weapon",
+      "star_mode": "energy",
+      "desc": "星位上的武器每次攻击额外获得 3 协奏。"
+    },
+    "leaf": {
+      "name": "生息枝芽",
+      "element": "spectro",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "price": 4,
+      "rarity": 1,
+      "icon": "leaf",
+      "art": "漪澜浮录",
+      "cooldown": 3.3,
+      "heal": 7,
+      "energy": 7,
+      "tags": [
+        "echo",
+        "heal"
+      ],
+      "stars": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "target": "different",
+      "star_mode": "energy",
+      "desc": "异属性物品占星位：每次触发额外获得 3 协奏。"
+    },
+    "bell": {
+      "name": "守岸铜铃",
+      "element": "spectro",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "price": 5,
+      "rarity": 1,
+      "icon": "bell",
+      "cooldown": 3.8,
+      "shield": 12,
+      "energy": 5,
+      "tags": [
+        "echo"
+      ],
+      "stars": [
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "target": "heal",
+      "star_mode": "shield",
+      "desc": "治疗物品占星位：每次护盾 +3。"
+    },
+    "feather": {
+      "name": "巡风羽",
+      "element": "aero",
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "price": 3,
+      "rarity": 1,
+      "icon": "feather",
+      "cooldown": 4,
+      "stamina_restore": 0.7,
+      "energy": 5,
+      "tags": [
+        "accessory"
+      ],
+      "stars": [
+        [
+          0,
+          -1
+        ]
+      ],
+      "target": "aero",
+      "star_mode": "speed_target",
+      "desc": "星位上的气动物品冷却缩短 12%。"
+    },
+    "battery": {
+      "name": "雷鸣棱晶",
+      "element": "electro",
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "price": 3,
+      "rarity": 1,
+      "icon": "crystal",
+      "cooldown": 3.5,
+      "mark": 1,
+      "energy": 7,
+      "tags": [
+        "accessory"
+      ],
+      "stars": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "target": "weapon",
+      "star_mode": "energy_target",
+      "desc": "星位上的武器额外获得 3 协奏。"
+    },
+    "prism": {
+      "name": "协奏晶簇",
+      "element": "spectro",
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "price": 3,
+      "rarity": 1,
+      "icon": "prism",
+      "cooldown": 3.6,
+      "shield": 3,
+      "energy": 10,
+      "tags": [
+        "accessory"
+      ],
+      "stars": [
+        [
+          0,
+          -1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "target": "different",
+      "star_mode": "energy",
+      "desc": "异属性物品占星位：额外获得 3 协奏。"
+    },
+    "flame": {
+      "name": "燎原声骸",
+      "element": "fusion",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "price": 7,
+      "rarity": 2,
+      "icon": "fire",
+      "cooldown": 4.8,
+      "damage": 10,
+      "burn": 2,
+      "energy": 8,
+      "tags": [
+        "echo"
+      ],
+      "stars": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          2,
+          -1
+        ]
+      ],
+      "target": "fusion",
+      "star_mode": "attack",
+      "desc": "热熔物品占星位：每次伤害 +2。"
+    },
+    "turtle": {
+      "name": "霜甲小龟",
+      "element": "glacio",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "price": 5,
+      "rarity": 1,
+      "icon": "turtle",
+      "cooldown": 4,
+      "shield": 9,
+      "cleanse": 2,
+      "energy": 5,
+      "tags": [
+        "echo"
+      ],
+      "stars": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "target": "heal",
+      "star_mode": "shield",
+      "desc": "治疗物品占星位：每次护盾 +3。"
+    },
+    "heron": {
+      "name": "振翅白鹭",
+      "element": "aero",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "price": 7,
+      "rarity": 2,
+      "icon": "bird",
+      "cooldown": 3,
+      "damage": 8,
+      "energy": 10,
+      "tags": [
+        "echo"
+      ],
+      "stars": [
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "target": "aero",
+      "star_mode": "energy",
+      "desc": "气动物品占星位：额外获得 3 协奏。"
+    },
+    "crown": {
+      "name": "无常雷冠",
+      "element": "electro",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "price": 7,
+      "rarity": 2,
+      "icon": "crown",
+      "cooldown": 4.1,
+      "damage": 6,
+      "mark": 3,
+      "energy": 8,
+      "tags": [
+        "echo"
+      ],
+      "stars": [
+        [
+          0,
+          -1
+        ],
+        [
+          2,
+          -1
+        ]
+      ],
+      "target": "electro",
+      "star_mode": "energy",
+      "desc": "导电物品占星位：额外获得 3 协奏。"
+    },
+    "flower": {
+      "name": "春生花冠",
+      "element": "spectro",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "price": 7,
+      "rarity": 2,
+      "icon": "flower",
+      "cooldown": 4,
+      "heal": 6,
+      "shield": 5,
+      "energy": 8,
+      "tags": [
+        "echo",
+        "heal"
+      ],
+      "stars": [
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "target": "different",
+      "star_mode": "energy",
+      "desc": "异属性物品占星位：额外获得 3 协奏。"
+    },
+    "dagger": {
+      "name": "夜行短刃",
+      "element": "havoc",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "price": 5,
+      "rarity": 1,
+      "icon": "dagger",
+      "art": "裁竹",
+      "cooldown": 2.1,
+      "stamina": 1,
+      "damage": 8,
+      "pierce": 0.5,
+      "energy": 4,
+      "tags": [
+        "weapon"
+      ],
+      "stars": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "target": "weapon",
+      "star_mode": "crit",
+      "desc": "武器占星位：此武器暴击率 +8%。"
+    },
+    "tea": {
+      "name": "今州花茶",
+      "element": "spectro",
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "price": 2,
+      "rarity": 1,
+      "icon": "tea",
+      "cooldown": 4,
+      "heal": 4,
+      "energy": 2,
+      "regen": 0.2,
+      "tags": [
+        "food",
+        "heal"
+      ],
+      "stars": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          -1,
+          0
+        ]
+      ],
+      "target": "weapon",
+      "star_mode": "regen",
+      "desc": "每个星位武器使体力回复额外 +0.08/秒。"
+    },
+    "metronome": {
+      "name": "节拍调谐器",
+      "element": "neutral",
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "price": 4,
+      "rarity": 1,
+      "icon": "tuning",
+      "cooldown": 4.2,
+      "energy": 7,
+      "tags": [
+        "accessory"
+      ],
+      "stars": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "target": "echo",
+      "star_mode": "speed_target",
+      "desc": "星位上的声骸冷却缩短 12%。"
+    },
+    "banner": {
+      "name": "长风战旗",
+      "element": "aero",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "price": 6,
+      "rarity": 2,
+      "icon": "flag",
+      "cooldown": 4.5,
+      "buff": 5,
+      "energy": 6,
+      "tags": [
+        "accessory"
+      ],
+      "stars": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          2,
+          -1
+        ]
+      ],
+      "target": "weapon",
+      "star_mode": "attack_target",
+      "desc": "星位上的武器伤害 +2。"
+    },
+    "lens": {
+      "name": "净频透镜",
+      "element": "glacio",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "price": 4,
+      "rarity": 1,
+      "icon": "lens",
+      "cooldown": 4,
+      "shield": 4,
+      "cleanse": 4,
+      "energy": 5,
+      "tags": [
+        "accessory"
+      ],
+      "stars": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "target": "echo",
+      "star_mode": "energy",
+      "desc": "声骸占星位：额外获得 3 协奏。"
+    },
+    "gale": {
+      "name": "长风破阵刃",
+      "element": "aero",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "price": 10,
+      "rarity": 3,
+      "icon": "sword",
+      "art": "天之苍苍",
+      "cooldown": 2.2,
+      "stamina": 1.1,
+      "damage": 19,
+      "energy": 8,
+      "tags": [
+        "weapon"
+      ],
+      "stars": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          2,
+          -1
+        ]
+      ],
+      "target": "aero",
+      "star_mode": "speed",
+      "desc": "气动物品占星位：此武器冷却缩短 8%。",
+      "crafted": true
+    },
+    "stormstring": {
+      "name": "雷霆牵丝偶",
+      "element": "electro",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "price": 9,
+      "rarity": 3,
+      "icon": "puppet",
+      "art": "掣傀之手",
+      "cooldown": 2.5,
+      "damage": 7,
+      "mark": 3,
+      "energy": 11,
+      "tags": [
+        "echo"
+      ],
+      "stars": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "target": "weapon",
+      "star_mode": "energy",
+      "desc": "星位上的武器每次攻击额外获得 3 协奏。",
+      "crafted": true
+    },
+    "spring": {
+      "name": "春生之枝",
+      "element": "spectro",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "price": 8,
+      "rarity": 3,
+      "icon": "leaf",
+      "art": "漪澜浮录",
+      "cooldown": 2.8,
+      "heal": 11,
+      "energy": 10,
+      "tags": [
+        "echo",
+        "heal"
+      ],
+      "stars": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "target": "different",
+      "star_mode": "energy",
+      "desc": "异属性物品占星位：每次触发额外获得 3 协奏。",
+      "crafted": true
+    },
+    "blazepistol": {
+      "name": "燎原信号枪",
+      "element": "fusion",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "price": 11,
+      "rarity": 3,
+      "icon": "pistol",
+      "art": "鸣动仪-25型",
+      "cooldown": 2.4,
+      "stamina": 1.1,
+      "damage": 14,
+      "energy": 7,
+      "tags": [
+        "weapon"
+      ],
+      "stars": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "target": "echo",
+      "star_mode": "attack",
+      "desc": "星位上的声骸：此武器伤害 +2。",
+      "burn": 2,
+      "crafted": true
+    },
+    "satchel": {
+      "name": "旅行背包",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "element": "neutral",
+      "price": 0,
+      "tags": [
+        "bag"
+      ],
+      "desc": "提供 3×3 个行囊格。"
+    },
+    "pouch": {
+      "name": "扩容口袋",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "element": "neutral",
+      "price": 5,
+      "tags": [
+        "bag"
+      ],
+      "rarity": 1,
+      "desc": "提供 3×2 个行囊格，可旋转。"
+    }
+  },
+  "characters": {
+    "jiyan": {
+      "name": "忌炎",
+      "sprite": 0,
+      "element": "aero",
+      "starter": "windblade",
+      "passive": "气动伤害 +15% · 暴击额外协奏",
+      "burst": "苍龙破阵",
+      "burst_damage": 24
+    },
+    "yinlin": {
+      "name": "吟霖",
+      "sprite": 1,
+      "element": "electro",
+      "starter": "string",
+      "passive": "感电最多 8 层 · 声骸额外协奏",
+      "burst": "千面雷网",
+      "burst_damage": 15
+    },
+    "verina": {
+      "name": "维里奈",
+      "sprite": 2,
+      "element": "spectro",
+      "starter": "leaf",
+      "passive": "治疗 +20% · 回复额外协奏",
+      "burst": "万物生息",
+      "burst_heal": 16,
+      "burst_shield": 10
+    }
+  },
+  "recipes": [
+    {
+      "a": "windblade",
+      "b": "feather",
+      "result": "gale"
+    },
+    {
+      "a": "string",
+      "b": "battery",
+      "result": "stormstring"
+    },
+    {
+      "a": "leaf",
+      "b": "tea",
+      "result": "spring"
+    },
+    {
+      "a": "pistol",
+      "b": "flame",
+      "result": "blazepistol"
+    }
+  ]
+}

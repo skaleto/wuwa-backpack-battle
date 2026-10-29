@@ -1,0 +1,18 @@
+[
+  {
+    "path": "assets/ui/workbench/workbench.png",
+    "generator": "built_in_image_gen",
+    "reference": "build/qa/lobby-v136-concepts/02-workbench.png",
+    "raw_path": "private-source",
+    "prompt": "art_sources/prompts/v137/workbench.txt",
+    "sha256": "c1fbe16e7717d198a8b8ba00728aaa8e6b7072f49080841bf392a105aacd3104"
+  },
+  {
+    "path": "assets/ui/workbench/controls.png",
+    "generator": "built_in_image_gen",
+    "reference": "build/qa/lobby-v136-concepts/02-workbench.png",
+    "raw_path": "private-source",
+    "prompt": "art_sources/prompts/v137/controls.txt",
+    "sha256": "2e99598d94e5b9572cdce58b2a3f864f1ef0cfdaf637d1ec06d9d9d5a93c0db0"
+  }
+]

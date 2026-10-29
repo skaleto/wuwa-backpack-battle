@@ -1,0 +1,21 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": ["oss:PutObject", "oss:GetObject"],
+      "Resource": ["acs:oss:*:*:REPLACE_BUCKET/test/pools/*"]
+    },
+    {
+      "Effect": "Allow",
+      "Action": ["oss:ListObjects"],
+      "Resource": ["acs:oss:*:*:REPLACE_BUCKET"],
+      "Condition": {"StringLike": {"oss:Prefix": ["test/pools/*"]}}
+    },
+    {
+      "Effect": "Deny",
+      "Action": ["oss:DeleteObject", "oss:DeleteObjectVersion", "oss:PutObjectAcl", "oss:PutBucketAcl", "oss:PutBucketVersioning"],
+      "Resource": ["acs:oss:*:*:REPLACE_BUCKET", "acs:oss:*:*:REPLACE_BUCKET/*"]
+    }
+  ]
+}

@@ -1,0 +1,274 @@
+{
+  "build": {
+    "bags": [
+      {
+        "cost_basis": "known_free",
+        "kind": "satchel",
+        "level": 0,
+        "paid_cost": 0,
+        "rotation": 0,
+        "tuning": "",
+        "uid": "b1",
+        "x": 1,
+        "y": 1
+      },
+      {
+        "cost_basis": "actual",
+        "kind": "corner",
+        "level": 0,
+        "paid_cost": 2,
+        "rotation": 0,
+        "tuning": "",
+        "uid": "i3",
+        "x": 4,
+        "y": 1
+      },
+      {
+        "cost_basis": "actual",
+        "kind": "pouch",
+        "level": 0,
+        "paid_cost": 2,
+        "rotation": 0,
+        "tuning": "",
+        "uid": "i9",
+        "x": 6,
+        "y": 1
+      },
+      {
+        "cost_basis": "actual",
+        "kind": "pouch",
+        "level": 0,
+        "paid_cost": 2,
+        "rotation": 0,
+        "tuning": "",
+        "uid": "i15",
+        "x": 3,
+        "y": 3
+      },
+      {
+        "cost_basis": "actual",
+        "kind": "corner",
+        "level": 0,
+        "paid_cost": 2,
+        "rotation": 1,
+        "tuning": "",
+        "uid": "i11",
+        "x": 5,
+        "y": 0
+      },
+      {
+        "cost_basis": "actual",
+        "kind": "travel",
+        "level": 0,
+        "paid_cost": 4,
+        "rotation": 0,
+        "tuning": "",
+        "uid": "i19",
+        "x": 5,
+        "y": 3
+      },
+      {
+        "cost_basis": "actual",
+        "kind": "strip",
+        "level": 0,
+        "paid_cost": 2,
+        "rotation": 0,
+        "tuning": "",
+        "uid": "i23",
+        "x": 2,
+        "y": 3
+      },
+      {
+        "cost_basis": "actual",
+        "kind": "travel",
+        "level": 0,
+        "paid_cost": 4,
+        "rotation": 1,
+        "tuning": "",
+        "uid": "i27",
+        "x": 0,
+        "y": 3
+      },
+      {
+        "cost_basis": "actual",
+        "kind": "corner",
+        "level": 0,
+        "paid_cost": 2,
+        "rotation": 1,
+        "tuning": "",
+        "uid": "i31",
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "catalogue_hash": "b93de1c216fce6e362d7cc62b88af51f9da7b53b9745cccdbf0e570892f21e4c",
+    "golden_acquired": false,
+    "items": [
+      {
+        "cost_basis": "actual",
+        "kind": "cool_tea",
+        "level": 0,
+        "paid_cost": 2,
+        "rotation": 0,
+        "tuning": "",
+        "uid": "i21",
+        "x": 1,
+        "y": 2
+      },
+      {
+        "cost_basis": "actual",
+        "kind": "inferno",
+        "level": 0,
+        "paid_cost": 8,
+        "rotation": 1,
+        "tuning": "",
+        "uid": "i24",
+        "x": 0,
+        "y": 3
+      },
+      {
+        "cost_basis": "actual",
+        "kind": "weapon_21020076",
+        "level": 0,
+        "paid_cost": 9,
+        "rotation": 0,
+        "tuning": "",
+        "uid": "i26",
+        "x": 2,
+        "y": 2
+      },
+      {
+        "cost_basis": "actual",
+        "kind": "echo_wankui",
+        "level": 0,
+        "paid_cost": 11,
+        "rotation": 0,
+        "tuning": "",
+        "uid": "i16",
+        "x": 5,
+        "y": 3
+      },
+      {
+        "cost_basis": "actual",
+        "kind": "thundering",
+        "level": 0,
+        "paid_cost": 7,
+        "rotation": 2,
+        "tuning": "",
+        "uid": "i30",
+        "x": 2,
+        "y": 3
+      },
+      {
+        "cost_basis": "actual",
+        "kind": "weapon_21020045",
+        "level": 0,
+        "paid_cost": 9,
+        "rotation": 0,
+        "salvage_credit": 2,
+        "tuning": "",
+        "uid": "i18",
+        "x": 2,
+        "y": 1
+      },
+      {
+        "cost_basis": "actual",
+        "kind": "echo_glacio",
+        "level": 0,
+        "paid_cost": 2,
+        "rotation": 2,
+        "tuning": "",
+        "uid": "i8",
+        "x": 7,
+        "y": 1
+      }
+    ],
+    "leader": "aemeath",
+    "name": "爱弥斯的行囊",
+    "owner": "native-1791908446.16964-1407945755",
+    "pool_mode": "focused",
+    "primary": "i18",
+    "relay": [],
+    "roster": [],
+    "round": 6,
+    "ruleset": "wuwa-pack-v5",
+    "simulation_version": "resonance-v93",
+    "supports": [],
+    "version": 5
+  },
+  "duration": 11.1,
+  "round": 6,
+  "totals": [
+    {
+      "bursts": 0,
+      "concerto_generated": 0.0,
+      "concerto_wasted": 0.0,
+      "damage": 181.012,
+      "damage_by_uid": {
+        "i16": 18.9,
+        "i18": 73.832,
+        "i24": 14.62,
+        "i26": 41.28,
+        "i30": 26.38,
+        "i8": 6.0
+      },
+      "energy_generated": 0.0,
+      "energy_wasted": 0.0,
+      "fatigue": 0.0,
+      "first_burst": -1.0,
+      "first_intro": -1.0,
+      "heal": 0.0,
+      "intros": 0,
+      "outros": 0,
+      "relays": 0,
+      "resource_wasted": {
+        "concerto": 0.0,
+        "energy": 0.0
+      },
+      "resource_weighted": {
+        "concerto": 0.0,
+        "energy": 0.0
+      },
+      "shield": 27.0,
+      "stamina_wait_by_uid": {},
+      "stamina_wait_seconds": 0.0,
+      "tired": 0
+    },
+    {
+      "bursts": 0,
+      "concerto_generated": 0.0,
+      "concerto_wasted": 0.0,
+      "damage": 191.25,
+      "damage_by_uid": {
+        "i12": 15.62,
+        "i14": 12.0,
+        "i22": 51.55,
+        "i25": 11.0,
+        "i31": 37.8,
+        "i32": 63.28
+      },
+      "energy_generated": 0.0,
+      "energy_wasted": 0.0,
+      "fatigue": 0.0,
+      "first_burst": -1.0,
+      "first_intro": -1.0,
+      "heal": 6.0,
+      "intros": 0,
+      "outros": 0,
+      "relays": 0,
+      "resource_wasted": {
+        "concerto": 0.0,
+        "energy": 0.0
+      },
+      "resource_weighted": {
+        "concerto": 0.0,
+        "energy": 0.0
+      },
+      "shield": 26.0,
+      "stamina_wait_by_uid": {},
+      "stamina_wait_seconds": 0.0,
+      "tired": 0
+    }
+  ],
+  "winner": -1
+}

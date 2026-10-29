@@ -1,0 +1,9514 @@
+{
+  "title": "三增益两减益物品设计",
+  "version": "讨论稿 v2",
+  "date": "2026-10-13",
+  "items": [
+    {
+      "id": "w_broadblade",
+      "name": "戍关长刃·定军",
+      "cat": "武器",
+      "tags": [
+        "武器",
+        "攻击",
+        "充能"
+      ],
+      "route": "重击",
+      "role": "启动",
+      "price": 4,
+      "current_price": 4,
+      "base": "8.4伤害 / 2.8秒\n普通攻击后充能+1",
+      "stars": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "accept": "攻击",
+      "trigger": "目标普通攻击",
+      "benefit": "充能+1，共享2秒间隔",
+      "limit": "",
+      "round": 1,
+      "cd": 2.8,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "cells": 3,
+      "obtain": "商店",
+      "counter": "",
+      "image": "private-source",
+      "image_source": "https://mc.appfeng.com/weapon/21010053",
+      "source_id": "w_broadblade",
+      "art": "现有Q版图",
+      "origin": "现有物品重设",
+      "damage": 8.4,
+      "craft": [
+        "R01",
+        "R02",
+        "R03"
+      ]
+    },
+    {
+      "id": "weapon_21010044",
+      "name": "永夜长明",
+      "cat": "武器",
+      "tags": [
+        "武器",
+        "攻击",
+        "充能"
+      ],
+      "route": "重击",
+      "role": "分支",
+      "price": 6,
+      "current_price": 7,
+      "base": "10.08伤害 / 2.8秒\n普通攻击后充能+1。主武充能攻击额外消耗最多2层光噪，每层6伤",
+      "stars": [
+        [
+          0,
+          1
+        ],
+        [
+          3,
+          1
+        ]
+      ],
+      "accept": "攻击",
+      "trigger": "目标普通攻击",
+      "benefit": "充能+1，共享2秒间隔",
+      "limit": "消耗光噪换即时伤害，减少后续持续伤害",
+      "round": 2,
+      "cd": 2.8,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "cells": 4,
+      "obtain": "合成",
+      "counter": "",
+      "image": "private-source",
+      "image_source": "https://mc.appfeng.com/weapon/21010044",
+      "source_id": "weapon_21010044",
+      "art": "现有Q版图",
+      "origin": "现有物品重设",
+      "damage": 10.08,
+      "craft": [],
+      "recipe": "R01"
+    },
+    {
+      "id": "discord",
+      "name": "异响空灵",
+      "cat": "武器",
+      "tags": [
+        "武器",
+        "攻击",
+        "迅捷"
+      ],
+      "route": "联动",
+      "role": "分支",
+      "price": 6,
+      "current_price": 7,
+      "base": "10.08伤害 / 2.8秒\n普通攻击后迅捷+1",
+      "stars": [
+        [
+          0,
+          2
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "accept": "攻击",
+      "trigger": "目标普通攻击",
+      "benefit": "迅捷+1，共享3秒间隔",
+      "limit": "失去定军的自产充能，保留通用充能受益",
+      "round": 2,
+      "cd": 2.8,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "cells": 4,
+      "obtain": "合成",
+      "counter": "",
+      "image": "private-source",
+      "image_source": "https://mc.appfeng.com/weapon/21010024",
+      "source_id": "discord",
+      "art": "现有Q版图",
+      "origin": "现有物品重设",
+      "damage": 10.08,
+      "craft": [],
+      "recipe": "R02"
+    },
+    {
+      "id": "weapon_21010034",
+      "name": "重破刃-41型",
+      "cat": "武器",
+      "tags": [
+        "武器",
+        "攻击",
+        "破盾"
+      ],
+      "route": "通用对策",
+      "role": "分支",
+      "price": 6,
+      "current_price": 7,
+      "base": "7.84伤害 / 2.8秒\n每次普通攻击额外削盾8",
+      "stars": [
+        [
+          0,
+          1
+        ],
+        [
+          3,
+          1
+        ]
+      ],
+      "accept": "攻击",
+      "trigger": "目标普通攻击",
+      "benefit": "充能+1，共享3秒间隔",
+      "limit": "基础DPS低于常规分支。削盾不溢出生命",
+      "round": 2,
+      "cd": 2.8,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "cells": 4,
+      "obtain": "合成",
+      "counter": "护盾",
+      "image": "private-source",
+      "image_source": "https://mc.appfeng.com/weapon/21010034",
+      "source_id": "weapon_21010034",
+      "art": "现有Q版图",
+      "origin": "现有物品重设",
+      "damage": 7.84,
+      "craft": [],
+      "recipe": "R03"
+    },
+    {
+      "id": "w_sword",
+      "name": "戍关迅刀·镇海",
+      "cat": "武器",
+      "tags": [
+        "武器",
+        "攻击",
+        "迅捷"
+      ],
+      "route": "联动",
+      "role": "启动",
+      "price": 4,
+      "current_price": 4,
+      "base": "5.4伤害 / 1.8秒\n普通攻击后迅捷+1",
+      "stars": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "accept": "补给",
+      "trigger": "目标使用",
+      "benefit": "迅捷+2",
+      "limit": "补给每场一次，不能持续无限续速",
+      "round": 1,
+      "cd": 1.8,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "cells": 3,
+      "obtain": "商店",
+      "counter": "",
+      "image": "private-source",
+      "image_source": "https://mc.appfeng.com/weapon/21020053",
+      "source_id": "w_sword",
+      "art": "现有Q版图",
+      "origin": "现有物品重设",
+      "damage": 5.4,
+      "craft": [
+        "R04",
+        "R05"
+      ]
+    },
+    {
+      "id": "weapon_21020044",
+      "name": "不归孤军",
+      "cat": "武器",
+      "tags": [
+        "武器",
+        "攻击",
+        "充能"
+      ],
+      "route": "重击",
+      "role": "分支",
+      "price": 6,
+      "current_price": 7,
+      "base": "6.48伤害 / 1.8秒\n普通攻击后充能+1",
+      "stars": [
+        [
+          0,
+          2
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "accept": "攻击",
+      "trigger": "目标普通攻击",
+      "benefit": "充能+1，共享3秒间隔",
+      "limit": "用快刀走充能，单次强化低于长刃",
+      "round": 2,
+      "cd": 1.8,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "cells": 4,
+      "obtain": "合成",
+      "counter": "",
+      "image": "private-source",
+      "image_source": "https://mc.appfeng.com/weapon/21020044",
+      "source_id": "weapon_21020044",
+      "art": "现有Q版图",
+      "origin": "现有物品重设",
+      "damage": 6.48,
+      "craft": [],
+      "recipe": "R04"
+    },
+    {
+      "id": "weapon_21020034",
+      "name": "瞬斩刀-18型",
+      "cat": "武器",
+      "tags": [
+        "武器",
+        "攻击",
+        "破盾"
+      ],
+      "route": "通用对策",
+      "role": "分支",
+      "price": 6,
+      "current_price": 7,
+      "base": "5.04伤害 / 1.8秒\n每次普通攻击额外削盾6",
+      "stars": [
+        [
+          0,
+          2
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "accept": "补给",
+      "trigger": "目标使用",
+      "benefit": "迅捷+2",
+      "limit": "基础DPS低于不归孤军，打无盾对手收益下降",
+      "round": 2,
+      "cd": 1.8,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "cells": 4,
+      "obtain": "合成",
+      "counter": "护盾",
+      "image": "private-source",
+      "image_source": "https://mc.appfeng.com/weapon/21020034",
+      "source_id": "weapon_21020034",
+      "art": "现有Q版图",
+      "origin": "现有物品重设",
+      "damage": 5.04,
+      "craft": [],
+      "recipe": "R05"
+    },
+    {
+      "id": "w_rectifier",
+      "name": "戍关音感仪·留光",
+      "cat": "武器",
+      "tags": [
+        "武器",
+        "攻击",
+        "迅捷"
+      ],
+      "route": "联动",
+      "role": "启动",
+      "price": 4,
+      "current_price": 4,
+      "base": "6.6伤害 / 2.2秒\n普通攻击后迅捷+1",
+      "stars": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "accept": "声骸",
+      "trigger": "目标普通发动",
+      "benefit": "迅捷+1，共享3秒间隔",
+      "limit": "治疗声骸也可发动，不要求攻击",
+      "round": 1,
+      "cd": 2.2,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cells": 4,
+      "obtain": "商店",
+      "counter": "",
+      "image": "private-source",
+      "image_source": "https://mc.appfeng.com/weapon/21050053",
+      "source_id": "w_rectifier",
+      "art": "现有Q版图",
+      "origin": "现有物品重设",
+      "damage": 6.6,
+      "craft": [
+        "R06",
+        "R07"
+      ]
+    },
+    {
+      "id": "weapon_21050044",
+      "name": "今州守望",
+      "cat": "武器",
+      "tags": [
+        "武器",
+        "攻击",
+        "迅捷"
+      ],
+      "route": "联动",
+      "role": "分支",
+      "price": 6,
+      "current_price": 7,
+      "base": "7.92伤害 / 2.2秒\n普通攻击后迅捷+1。迅捷满6层时本次普通攻击额外+2伤",
+      "stars": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "accept": "声骸",
+      "trigger": "目标普通发动",
+      "benefit": "迅捷+1，共享2秒间隔",
+      "limit": "满层伤害在攻击前判断。加速不降低体力消耗",
+      "round": 2,
+      "cd": 2.2,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cells": 4,
+      "obtain": "合成",
+      "counter": "",
+      "image": "private-source",
+      "image_source": "https://mc.appfeng.com/weapon/21050044",
+      "source_id": "weapon_21050044",
+      "art": "现有Q版图",
+      "origin": "现有物品重设",
+      "damage": 7.92,
+      "craft": [],
+      "recipe": "R06"
+    },
+    {
+      "id": "rectifier25",
+      "name": "鸣动仪-25型",
+      "cat": "武器",
+      "tags": [
+        "武器",
+        "攻击",
+        "护盾"
+      ],
+      "route": "守御",
+      "role": "分支",
+      "price": 6,
+      "current_price": 7,
+      "base": "7.26伤害 / 2.2秒\n普通攻击后获得3护盾",
+      "stars": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "accept": "治疗",
+      "trigger": "目标有效普通治疗",
+      "benefit": "护盾+3，共享3秒间隔",
+      "limit": "牺牲迅捷来源，护盾受总上限约束",
+      "round": 2,
+      "cd": 2.2,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cells": 4,
+      "obtain": "合成",
+      "counter": "",
+      "image": "private-source",
+      "image_source": "https://mc.appfeng.com/weapon/21050034",
+      "source_id": "rectifier25",
+      "art": "现有Q版图",
+      "origin": "现有物品重设",
+      "damage": 7.26,
+      "craft": [],
+      "recipe": "R07"
+    },
+    {
+      "id": "w_pistol",
+      "name": "戍关佩枪·平云",
+      "cat": "武器",
+      "tags": [
+        "武器",
+        "攻击"
+      ],
+      "route": "通用",
+      "role": "启动",
+      "price": 4,
+      "current_price": 4,
+      "base": "6.0伤害 / 2.0秒\n无额外状态",
+      "stars": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "accept": "补给",
+      "trigger": "目标使用",
+      "benefit": "护盾+3",
+      "limit": "适合作为转型基底",
+      "round": 1,
+      "cd": 2.0,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "cells": 2,
+      "obtain": "商店",
+      "counter": "",
+      "image": "private-source",
+      "image_source": "https://mc.appfeng.com/weapon/21030053",
+      "source_id": "w_pistol",
+      "art": "现有Q版图",
+      "origin": "现有物品重设",
+      "damage": 6.0,
+      "craft": [
+        "R08",
+        "R09"
+      ]
+    },
+    {
+      "id": "weapon_21030024",
+      "name": "华彩乐段",
+      "cat": "武器",
+      "tags": [
+        "武器",
+        "攻击",
+        "迅捷"
+      ],
+      "route": "联动",
+      "role": "分支",
+      "price": 6,
+      "current_price": 7,
+      "base": "7.2伤害 / 2.0秒\n普通攻击后迅捷+1。迅捷至少4层时本武器体力消耗−20%",
+      "stars": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "accept": "补给",
+      "trigger": "目标使用",
+      "benefit": "迅捷+2",
+      "limit": "收益集中在维持迅捷",
+      "round": 2,
+      "cd": 2.0,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "cells": 3,
+      "obtain": "合成",
+      "counter": "",
+      "image": "private-source",
+      "image_source": "https://mc.appfeng.com/weapon/21030024",
+      "source_id": "weapon_21030024",
+      "art": "现有Q版图",
+      "origin": "现有物品重设",
+      "damage": 7.2,
+      "craft": [],
+      "recipe": "R08"
+    },
+    {
+      "id": "weapon_21030034",
+      "name": "穿击枪-26型",
+      "cat": "武器",
+      "tags": [
+        "武器",
+        "攻击",
+        "破盾"
+      ],
+      "route": "通用对策",
+      "role": "分支",
+      "price": 6,
+      "current_price": 7,
+      "base": "5.6伤害 / 2.0秒\n每次普通攻击额外削盾5",
+      "stars": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "accept": "补给",
+      "trigger": "目标使用",
+      "benefit": "护盾+4",
+      "limit": "基础DPS低于常规分支",
+      "round": 2,
+      "cd": 2.0,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "cells": 3,
+      "obtain": "合成",
+      "counter": "护盾",
+      "image": "private-source",
+      "image_source": "https://mc.appfeng.com/weapon/21030034",
+      "source_id": "weapon_21030034",
+      "art": "现有Q版图",
+      "origin": "现有物品重设",
+      "damage": 5.6,
+      "craft": [],
+      "recipe": "R09"
+    },
+    {
+      "id": "w_gauntlet",
+      "name": "戍关臂铠·拔山",
+      "cat": "武器",
+      "tags": [
+        "武器",
+        "攻击",
+        "护盾"
+      ],
+      "route": "守御",
+      "role": "启动",
+      "price": 4,
+      "current_price": 4,
+      "base": "4.8伤害 / 1.6秒\n普通攻击后获得2护盾",
+      "stars": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "accept": "治疗",
+      "trigger": "目标有效普通治疗",
+      "benefit": "护盾+2，共享4秒间隔",
+      "limit": "",
+      "round": 1,
+      "cd": 1.6,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "cells": 2,
+      "obtain": "商店",
+      "counter": "",
+      "image": "private-source",
+      "image_source": "https://mc.appfeng.com/weapon/21040053",
+      "source_id": "w_gauntlet",
+      "art": "现有Q版图",
+      "origin": "现有物品重设",
+      "damage": 4.8,
+      "craft": [
+        "R10"
+      ]
+    },
+    {
+      "id": "weapon_21040034",
+      "name": "钢影拳-21丁型",
+      "cat": "武器",
+      "tags": [
+        "武器",
+        "攻击",
+        "护盾"
+      ],
+      "route": "守御",
+      "role": "分支",
+      "price": 6,
+      "current_price": 7,
+      "base": "5.28伤害 / 1.6秒\n普通攻击后获得3护盾",
+      "stars": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "accept": "治疗",
+      "trigger": "目标有效普通治疗",
+      "benefit": "护盾+4，共享4秒间隔",
+      "limit": "大量叠盾会占用输出空间",
+      "round": 2,
+      "cd": 1.6,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "cells": 2,
+      "obtain": "合成",
+      "counter": "",
+      "image": "private-source",
+      "image_source": "https://mc.appfeng.com/weapon/21040034",
+      "source_id": "weapon_21040034",
+      "art": "现有Q版图",
+      "origin": "现有物品重设",
+      "damage": 5.28,
+      "craft": [],
+      "recipe": "R10"
+    },
+    {
+      "id": "whiff",
+      "name": "呼咻咻",
+      "cat": "声骸",
+      "tags": [
+        "声骸",
+        "攻击"
+      ],
+      "route": "通用",
+      "role": "启动",
+      "price": 2,
+      "current_price": 2,
+      "base": "每4秒攻击两段，合计6伤",
+      "stars": [],
+      "accept": "",
+      "trigger": "",
+      "benefit": "",
+      "limit": "两段只算一次发动",
+      "round": 1,
+      "cd": 4,
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "cells": 1,
+      "obtain": "商店",
+      "counter": "",
+      "image": "private-source",
+      "image_source": "https://mc.appfeng.com/monster/310000100",
+      "source_id": "whiff",
+      "art": "现有Q版图",
+      "origin": "现有物品重设",
+      "damage": 0,
+      "craft": [
+        "R11"
+      ],
+      "echo_cost": 1,
+      "cost_source": "https://wuthering.gg/zh-Hans/echos",
+      "quality": "绿·基础",
+      "shape_basis": "小型主体，1×1；装饰与阴影不计格"
+    },
+    {
+      "id": "zig",
+      "name": "阿嗞嗞",
+      "cat": "声骸",
+      "tags": [
+        "声骸",
+        "攻击",
+        "迅捷"
+      ],
+      "route": "联动",
+      "role": "启动",
+      "price": 2,
+      "current_price": 3,
+      "base": "每4秒攻击2伤，迅捷+1",
+      "stars": [],
+      "accept": "",
+      "trigger": "",
+      "benefit": "",
+      "limit": "直接伤害低于呼咻咻",
+      "round": 1,
+      "cd": 4,
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "cells": 1,
+      "obtain": "商店",
+      "counter": "",
+      "image": "private-source",
+      "image_source": "https://mc.appfeng.com/monster/310000090",
+      "source_id": "zig",
+      "art": "现有Q版图",
+      "origin": "现有物品重设",
+      "damage": 0,
+      "craft": [],
+      "echo_cost": 1,
+      "cost_source": "https://wuthering.gg/zh-Hans/echos",
+      "quality": "绿·基础",
+      "shape_basis": "小型主体，1×1；装饰与阴影不计格"
+    },
+    {
+      "id": "turtle",
+      "name": "寒霜陆龟",
+      "cat": "声骸",
+      "tags": [
+        "声骸",
+        "治疗"
+      ],
+      "route": "通用",
+      "role": "启动",
+      "price": 2,
+      "current_price": 2,
+      "base": "每4秒治疗4",
+      "stars": [],
+      "accept": "",
+      "trigger": "",
+      "benefit": "",
+      "limit": "满血不算有效治疗",
+      "round": 1,
+      "cd": 4,
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "cells": 1,
+      "obtain": "商店",
+      "counter": "",
+      "image": "private-source",
+      "image_source": "https://mc.appfeng.com/monster/310000270",
+      "source_id": "turtle",
+      "art": "现有Q版图",
+      "origin": "现有物品重设",
+      "damage": 0,
+      "craft": [
+        "R12"
+      ],
+      "echo_cost": 1,
+      "cost_source": "https://wuthering.gg/zh-Hans/echos",
+      "quality": "绿·基础",
+      "shape_basis": "小型主体，1×1；装饰与阴影不计格"
+    },
+    {
+      "id": "rocksteady",
+      "name": "坚岩斗士",
+      "cat": "声骸",
+      "tags": [
+        "声骸",
+        "攻击",
+        "护盾"
+      ],
+      "route": "守御",
+      "role": "强化",
+      "price": 4,
+      "current_price": 4,
+      "base": "每5秒攻击3伤，获得4护盾",
+      "stars": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "accept": "治疗",
+      "trigger": "目标有效普通治疗",
+      "benefit": "护盾+2，共享4秒间隔",
+      "limit": "",
+      "round": 2,
+      "cd": 5,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cells": 4,
+      "obtain": "商店",
+      "counter": "",
+      "image": "private-source",
+      "image_source": "https://mc.appfeng.com/monster/320000010",
+      "source_id": "rocksteady",
+      "art": "现有Q版图",
+      "origin": "现有物品重设",
+      "damage": 0,
+      "craft": [
+        "R13"
+      ],
+      "echo_cost": 3,
+      "cost_source": "https://wuthering.gg/zh-Hans/echos",
+      "quality": "蓝·进阶",
+      "shape_basis": "躯干或收翅轮廓近方形，2×2"
+    },
+    {
+      "id": "feilian",
+      "name": "飞廉之猩",
+      "cat": "声骸",
+      "tags": [
+        "声骸",
+        "攻击",
+        "充能"
+      ],
+      "route": "重击",
+      "role": "强化",
+      "price": 7,
+      "current_price": 7,
+      "base": "每6秒攻击12伤，充能+2",
+      "stars": [
+        [
+          1,
+          -2
+        ]
+      ],
+      "accept": "武器",
+      "trigger": "目标普通攻击",
+      "benefit": "充能+1，共享4秒间隔",
+      "limit": "远星隔一格，需留合适摆法。没有专属购买限制",
+      "round": 3,
+      "cd": 6,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cells": 4,
+      "obtain": "商店",
+      "counter": "",
+      "image": "private-source",
+      "image_source": "https://mc.appfeng.com/monster/330000050",
+      "source_id": "feilian",
+      "art": "现有Q版图",
+      "origin": "现有物品重设",
+      "damage": 0,
+      "craft": [],
+      "echo_cost": 4,
+      "cost_source": "https://wuthering.gg/zh-Hans/echos",
+      "quality": "金·核心",
+      "shape_basis": "蹲伏主体与盘绕躯干近方形，2×2；以高价和慢CD承担核心预算"
+    },
+    {
+      "id": "thundering",
+      "name": "云闪之鳞",
+      "cat": "声骸",
+      "tags": [
+        "声骸",
+        "攻击",
+        "迅捷"
+      ],
+      "route": "联动",
+      "role": "强化",
+      "price": 7,
+      "current_price": 7,
+      "base": "每5秒攻击8伤，迅捷+1",
+      "stars": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "accept": "攻击",
+      "trigger": "目标普通攻击",
+      "benefit": "迅捷+1，共享4秒间隔",
+      "limit": "",
+      "round": 3,
+      "cd": 5,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cells": 4,
+      "obtain": "商店",
+      "counter": "",
+      "image": "private-source",
+      "image_source": "https://mc.appfeng.com/monster/340000080",
+      "source_id": "thundering",
+      "art": "现有Q版图",
+      "origin": "现有物品重设",
+      "damage": 0,
+      "craft": [],
+      "echo_cost": 4,
+      "cost_source": "https://wuthering.gg/zh-Hans/echos",
+      "quality": "金·核心",
+      "shape_basis": "蹲伏主体与盘绕躯干近方形，2×2；以高价和慢CD承担核心预算"
+    },
+    {
+      "id": "violet",
+      "name": "紫羽鹭",
+      "cat": "声骸",
+      "tags": [
+        "声骸",
+        "攻击",
+        "反击"
+      ],
+      "route": "守御",
+      "role": "对策",
+      "price": 4,
+      "current_price": 4,
+      "base": "每5秒攻击3伤。己方护盾吸收敌方普通攻击后反击3伤，共享1.5秒间隔",
+      "stars": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "accept": "护盾",
+      "trigger": "目标普通发动实际增加护盾",
+      "benefit": "额外护盾+2，共享4秒间隔",
+      "limit": "反击不再触发反击或星位。自身不独立提供护盾",
+      "round": 2,
+      "cd": 5,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cells": 4,
+      "obtain": "商店",
+      "counter": "频繁攻击",
+      "image": "private-source",
+      "image_source": "https://mc.appfeng.com/monster/320000020",
+      "source_id": "violet",
+      "art": "现有Q版图",
+      "origin": "现有物品重设",
+      "damage": 0,
+      "craft": [],
+      "echo_cost": 3,
+      "cost_source": "https://wuthering.gg/zh-Hans/echos",
+      "quality": "蓝·进阶",
+      "shape_basis": "躯干或收翅轮廓近方形，2×2"
+    },
+    {
+      "id": "bellborne",
+      "name": "鸣钟之龟",
+      "cat": "声骸",
+      "tags": [
+        "声骸",
+        "攻击"
+      ],
+      "route": "守御",
+      "role": "核心",
+      "price": 8,
+      "current_price": 7,
+      "base": "每7秒攻击6伤，并消耗己方最多8护盾，每点增加1.5伤",
+      "stars": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "accept": "护盾",
+      "trigger": "目标普通发动实际增加护盾",
+      "benefit": "额外护盾+2，共享4秒间隔",
+      "limit": "消耗盾后防御下降。没有盾仍打6伤",
+      "round": 3,
+      "cd": 7,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "cells": 6,
+      "obtain": "商店",
+      "counter": "",
+      "image": "private-source",
+      "image_source": "https://mc.appfeng.com/monster/340000020",
+      "source_id": "bellborne",
+      "art": "现有Q版图",
+      "origin": "现有物品重设",
+      "damage": 0,
+      "craft": [],
+      "echo_cost": 4,
+      "cost_source": "https://wuthering.gg/zh-Hans/echos",
+      "quality": "金·核心",
+      "shape_basis": "龟壳／车身／展开双翼偏宽，3×2"
+    },
+    {
+      "id": "inferno",
+      "name": "燎照之骑",
+      "cat": "声骸",
+      "tags": [
+        "声骸",
+        "攻击",
+        "破盾"
+      ],
+      "route": "通用对策",
+      "role": "对策",
+      "price": 7,
+      "current_price": 7,
+      "base": "每6秒攻击8伤，额外削盾10",
+      "stars": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "accept": "武器",
+      "trigger": "目标普通攻击",
+      "benefit": "额外削盾2，共享3秒间隔",
+      "limit": "付出6格与7币，破盾之外的直接输出较低",
+      "round": 3,
+      "cd": 6,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "cells": 6,
+      "obtain": "商店",
+      "counter": "护盾",
+      "image": "private-source",
+      "image_source": "https://mc.appfeng.com/monster/330000020",
+      "source_id": "inferno",
+      "art": "现有Q版图",
+      "origin": "现有物品重设",
+      "damage": 0,
+      "craft": [],
+      "echo_cost": 4,
+      "cost_source": "https://wuthering.gg/zh-Hans/echos",
+      "quality": "金·核心",
+      "shape_basis": "龟壳／车身／展开双翼偏宽，3×2"
+    },
+    {
+      "id": "dreamless",
+      "name": "无妄者",
+      "cat": "声骸",
+      "tags": [
+        "声骸",
+        "攻击"
+      ],
+      "route": "通用",
+      "role": "终结",
+      "price": 8,
+      "current_price": 8,
+      "base": "每7秒攻击14伤。敌方生命低于35%时额外+6伤",
+      "stars": [],
+      "accept": "",
+      "trigger": "",
+      "benefit": "",
+      "limit": "不附加第三种减益。不依赖专属角色",
+      "round": 3,
+      "cd": 7,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "cells": 6,
+      "obtain": "商店",
+      "counter": "",
+      "image": "private-source",
+      "image_source": "https://mc.appfeng.com/monster/340000070",
+      "source_id": "dreamless",
+      "art": "现有Q版图",
+      "origin": "现有物品重设",
+      "damage": 0,
+      "craft": [],
+      "echo_cost": 4,
+      "cost_source": "https://wuthering.gg/zh-Hans/echos",
+      "quality": "金·核心",
+      "shape_basis": "龟壳／车身／展开双翼偏宽，3×2"
+    },
+    {
+      "id": "cyan_heron",
+      "name": "青羽鹭",
+      "cat": "声骸",
+      "tags": [
+        "声骸",
+        "攻击",
+        "霜渐"
+      ],
+      "route": "通用",
+      "role": "施效",
+      "price": 4,
+      "current_price": 4,
+      "base": "每6秒攻击5伤，施加1层霜渐",
+      "stars": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "accept": "攻击",
+      "trigger": "目标普通攻击",
+      "benefit": "霜渐+1，共享6秒间隔",
+      "limit": "四格换伤害与更快施效",
+      "round": 2,
+      "cd": 6,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cells": 4,
+      "obtain": "商店",
+      "counter": "武器加速/慢速关键攻击",
+      "image": "private-source",
+      "image_source": "https://mc.appfeng.com/monster/320000030",
+      "source_id": "cyan_heron",
+      "art": "现有Q版图",
+      "origin": "现有物品重设",
+      "damage": 0,
+      "craft": [],
+      "echo_cost": 3,
+      "cost_source": "https://wuthering.gg/zh-Hans/echos",
+      "quality": "蓝·进阶",
+      "shape_basis": "躯干或收翅轮廓近方形，2×2"
+    },
+    {
+      "id": "echo_vanguard",
+      "name": "先锋幼岩",
+      "cat": "声骸",
+      "tags": [
+        "声骸",
+        "攻击",
+        "破盾"
+      ],
+      "route": "重击/通用",
+      "role": "启动对策",
+      "price": 2,
+      "current_price": null,
+      "base": "每5秒攻击3伤，额外削盾4",
+      "stars": [
+        [
+          0,
+          -2
+        ]
+      ],
+      "accept": "武器",
+      "trigger": "目标普通攻击",
+      "benefit": "充能+1，共享4秒间隔",
+      "limit": "两格远星，直接伤害低",
+      "round": 1,
+      "cd": 5,
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "cells": 1,
+      "obtain": "商店",
+      "counter": "护盾",
+      "image": "private-source",
+      "image_source": "https://mc.appfeng.com/monster/310000010",
+      "source_id": "echo_vanguard",
+      "art": "原生参考图，待Q版适配",
+      "origin": "新增原生物品",
+      "damage": 0,
+      "craft": [],
+      "echo_cost": 1,
+      "cost_source": "https://wuthering.gg/zh-Hans/echos",
+      "quality": "绿·基础",
+      "shape_basis": "小型主体，1×1；装饰与阴影不计格"
+    },
+    {
+      "id": "echo_glacio",
+      "name": "冷凝棱镜",
+      "cat": "声骸",
+      "tags": [
+        "声骸",
+        "攻击",
+        "霜渐"
+      ],
+      "route": "通用",
+      "role": "启动施效",
+      "price": 2,
+      "current_price": null,
+      "base": "每7秒攻击1伤，施加1层霜渐",
+      "stars": [],
+      "accept": "",
+      "trigger": "",
+      "benefit": "",
+      "limit": "一格低价，但叠层慢",
+      "round": 1,
+      "cd": 7,
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "cells": 1,
+      "obtain": "商店",
+      "counter": "武器加速/慢速关键攻击",
+      "image": "private-source",
+      "image_source": "https://mc.appfeng.com/monster/310000140",
+      "source_id": "echo_glacio",
+      "art": "原生参考图，待Q版适配",
+      "origin": "新增原生物品",
+      "damage": 0,
+      "craft": [
+        "R14"
+      ],
+      "echo_cost": 1,
+      "cost_source": "https://wuthering.gg/zh-Hans/echos",
+      "quality": "绿·基础",
+      "shape_basis": "小型主体，1×1；装饰与阴影不计格"
+    },
+    {
+      "id": "echo_spectro",
+      "name": "衍射棱镜",
+      "cat": "声骸",
+      "tags": [
+        "声骸",
+        "攻击",
+        "光噪"
+      ],
+      "route": "通用",
+      "role": "启动施效",
+      "price": 2,
+      "current_price": null,
+      "base": "每6秒攻击1伤，施加1层光噪",
+      "stars": [],
+      "accept": "",
+      "trigger": "",
+      "benefit": "",
+      "limit": "无星位需求，但施效慢",
+      "round": 1,
+      "cd": 6,
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "cells": 1,
+      "obtain": "商店",
+      "counter": "",
+      "image": "private-source",
+      "image_source": "https://mc.appfeng.com/monster/310000160",
+      "source_id": "echo_spectro",
+      "art": "原生参考图，待Q版适配",
+      "origin": "新增原生物品",
+      "damage": 0,
+      "craft": [],
+      "echo_cost": 1,
+      "cost_source": "https://wuthering.gg/zh-Hans/echos",
+      "quality": "绿·基础",
+      "shape_basis": "小型主体，1×1；装饰与阴影不计格"
+    },
+    {
+      "id": "echo_butterfly",
+      "name": "游弋蝶",
+      "cat": "声骸",
+      "tags": [
+        "声骸",
+        "治疗",
+        "净化"
+      ],
+      "route": "通用",
+      "role": "对策",
+      "price": 3,
+      "current_price": null,
+      "base": "每5秒治疗1，并清除己方1层减益",
+      "stars": [
+        [
+          2,
+          0
+        ]
+      ],
+      "accept": "补给",
+      "trigger": "目标使用",
+      "benefit": "额外净化1层",
+      "limit": "无减益时净化无收益，治疗低于陆龟",
+      "round": 1,
+      "cd": 5,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "cells": 2,
+      "obtain": "商店",
+      "counter": "光噪/霜渐",
+      "image": "private-source",
+      "image_source": "https://mc.appfeng.com/monster/310000180",
+      "source_id": "echo_butterfly",
+      "art": "原生参考图，待Q版适配",
+      "origin": "新增原生物品",
+      "damage": 0,
+      "craft": [],
+      "echo_cost": 1,
+      "cost_source": "https://wuthering.gg/zh-Hans/echos",
+      "quality": "绿·基础",
+      "shape_basis": "展开翅膀偏宽，2×1；现有参考头像裁切，完整轮廓待美术确认"
+    },
+    {
+      "id": "electro_coin",
+      "name": "导电-锈蚀古币",
+      "cat": "遗物",
+      "tags": [
+        "遗物",
+        "充能"
+      ],
+      "route": "重击",
+      "role": "启动",
+      "price": 3,
+      "current_price": 3,
+      "base": "无独立攻击",
+      "stars": [
+        [
+          1,
+          0
+        ],
+        [
+          -2,
+          0
+        ]
+      ],
+      "accept": "攻击",
+      "trigger": "目标普通攻击",
+      "benefit": "充能+1，共享3秒间隔",
+      "limit": "攻击武器与攻击声骸均可提供事件",
+      "round": 1,
+      "cd": 0,
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "cells": 1,
+      "obtain": "商店",
+      "counter": "",
+      "image": "private-source",
+      "image_source": "https://mc.appfeng.com/item/71500003",
+      "source_id": "electro_coin",
+      "art": "现有Q版图",
+      "origin": "现有物品重设",
+      "damage": 0,
+      "craft": []
+    },
+    {
+      "id": "aero_coin",
+      "name": "气动-锈蚀古币",
+      "cat": "遗物",
+      "tags": [
+        "遗物",
+        "迅捷"
+      ],
+      "route": "联动",
+      "role": "启动",
+      "price": 2,
+      "current_price": 3,
+      "base": "无独立攻击",
+      "stars": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "accept": "补给",
+      "trigger": "目标使用",
+      "benefit": "迅捷+2",
+      "limit": "补给只触发一次，需要常规来源续速",
+      "round": 1,
+      "cd": 0,
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "cells": 1,
+      "obtain": "商店",
+      "counter": "",
+      "image": "private-source",
+      "image_source": "https://mc.appfeng.com/item/71500004",
+      "source_id": "aero_coin",
+      "art": "现有Q版图",
+      "origin": "现有物品重设",
+      "damage": 0,
+      "craft": []
+    },
+    {
+      "id": "spectro_coin",
+      "name": "衍射-锈蚀古币",
+      "cat": "遗物",
+      "tags": [
+        "遗物",
+        "光噪"
+      ],
+      "route": "通用",
+      "role": "施效",
+      "price": 2,
+      "current_price": 3,
+      "base": "无独立攻击",
+      "stars": [
+        [
+          1,
+          0
+        ],
+        [
+          -2,
+          0
+        ]
+      ],
+      "accept": "攻击",
+      "trigger": "目标普通攻击",
+      "benefit": "光噪+1，同族共享2秒间隔",
+      "limit": "只处理普通攻击，不吃反击、震击追加段或持续伤害",
+      "round": 1,
+      "cd": 0,
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "cells": 1,
+      "obtain": "商店",
+      "counter": "",
+      "image": "private-source",
+      "image_source": "https://mc.appfeng.com/item/71500005",
+      "source_id": "spectro_coin",
+      "art": "现有Q版图",
+      "origin": "现有物品重设",
+      "damage": 0,
+      "craft": []
+    },
+    {
+      "id": "contract",
+      "name": "眷属-珍奇契约",
+      "cat": "遗物",
+      "tags": [
+        "遗物",
+        "迅捷"
+      ],
+      "route": "联动",
+      "role": "强化",
+      "price": 3,
+      "current_price": 6,
+      "base": "无独立攻击",
+      "stars": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "accept": "声骸",
+      "trigger": "目标普通发动",
+      "benefit": "迅捷+1，同族共享3秒间隔",
+      "limit": "星位可以放治疗声骸，不限攻击",
+      "round": 1,
+      "cd": 0,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "cells": 2,
+      "obtain": "商店",
+      "counter": "",
+      "image": "private-source",
+      "image_source": "https://mc.appfeng.com/item/71500011",
+      "source_id": "contract",
+      "art": "现有Q版图",
+      "origin": "现有物品重设",
+      "damage": 0,
+      "craft": [
+        "R15"
+      ]
+    },
+    {
+      "id": "lamp",
+      "name": "那映照虚幻的燃灯",
+      "cat": "遗物",
+      "tags": [
+        "遗物",
+        "充能"
+      ],
+      "route": "守御/重击",
+      "role": "混合",
+      "price": 4,
+      "current_price": 9,
+      "base": "无独立攻击",
+      "stars": [
+        [
+          -2,
+          0
+        ],
+        [
+          -2,
+          1
+        ]
+      ],
+      "accept": "护盾",
+      "trigger": "目标普通发动实际增加护盾",
+      "benefit": "充能+1，共享3秒间隔",
+      "limit": "仅一组星位。供盾换充能，主武自动消费",
+      "round": 1,
+      "cd": 0,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "cells": 2,
+      "obtain": "商店",
+      "counter": "",
+      "image": "private-source",
+      "image_source": "https://mc.appfeng.com/item/71500107",
+      "source_id": "lamp",
+      "art": "现有Q版图",
+      "origin": "现有物品重设",
+      "damage": 0,
+      "craft": []
+    },
+    {
+      "id": "flower",
+      "name": "盛放的永恒",
+      "cat": "遗物",
+      "tags": [
+        "遗物",
+        "护盾"
+      ],
+      "route": "守御",
+      "role": "强化",
+      "price": 3,
+      "current_price": 0,
+      "base": "每6秒获得3护盾",
+      "stars": [
+        [
+          0,
+          -1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "accept": "治疗",
+      "trigger": "自身普通发动",
+      "benefit": "每个匹配治疗物品额外+1盾，最多+2",
+      "limit": "静态摆放加成。自身有真实供盾CD，可驱动护盾星位",
+      "round": 1,
+      "cd": 6,
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "cells": 1,
+      "obtain": "商店",
+      "counter": "",
+      "image": "private-source",
+      "image_source": "https://wiki.biligame.com/wutheringwaves/%E5%85%B1%E9%B8%A3%E8%80%85/%E7%BB%B4%E9%87%8C%E5%A5%88",
+      "source_id": "flower",
+      "art": "现有Q版图",
+      "origin": "现有物品重设",
+      "damage": 0,
+      "craft": []
+    },
+    {
+      "id": "answer",
+      "name": "那万变无常的解答",
+      "cat": "遗物",
+      "tags": [
+        "遗物",
+        "破盾"
+      ],
+      "route": "通用对策",
+      "role": "对策",
+      "price": 3,
+      "current_price": 9,
+      "base": "无独立攻击",
+      "stars": [
+        [
+          0,
+          -2
+        ],
+        [
+          1,
+          -2
+        ]
+      ],
+      "accept": "武器",
+      "trigger": "目标普通攻击",
+      "benefit": "该攻击额外削盾4，共享2秒间隔",
+      "limit": "占4格且不增加对生命伤害。全角色可买",
+      "round": 1,
+      "cd": 0,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cells": 4,
+      "obtain": "商店",
+      "counter": "护盾",
+      "image": "private-source",
+      "image_source": "https://mc.appfeng.com/item/71500064",
+      "source_id": "answer",
+      "art": "现有Q版图",
+      "origin": "现有物品重设",
+      "damage": 0,
+      "craft": []
+    },
+    {
+      "id": "glasses",
+      "name": "监测眼镜",
+      "cat": "遗物",
+      "tags": [
+        "遗物",
+        "净化"
+      ],
+      "route": "通用对策",
+      "role": "对策",
+      "price": 3,
+      "current_price": 0,
+      "base": "每6秒净化己方1层減益",
+      "stars": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "accept": "补给",
+      "trigger": "目标使用",
+      "benefit": "额外净化1层",
+      "limit": "无减益对手时这3币和2格不提供伤害",
+      "round": 1,
+      "cd": 6,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "cells": 2,
+      "obtain": "商店",
+      "counter": "光噪/霜渐",
+      "image": "private-source",
+      "image_source": "https://wiki.biligame.com/wutheringwaves/%E5%85%B1%E9%B8%A3%E8%80%85/%E7%BB%B4%E9%87%8C%E5%A5%88",
+      "source_id": "glasses",
+      "art": "现有Q版图",
+      "origin": "现有物品重设",
+      "damage": 0,
+      "craft": []
+    },
+    {
+      "id": "tea",
+      "name": "清芬茶",
+      "cat": "补给",
+      "tags": [
+        "补给",
+        "生命上限"
+      ],
+      "route": "通用",
+      "role": "启动",
+      "price": 2,
+      "current_price": 2,
+      "base": "开战增加15生命上限，并等量增加当前生命",
+      "stars": [],
+      "accept": "",
+      "trigger": "",
+      "benefit": "",
+      "limit": "每场一次，战后消耗。不算治疗",
+      "round": 1,
+      "cd": 0,
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "cells": 1,
+      "obtain": "商店",
+      "counter": "",
+      "image": "private-source",
+      "image_source": "https://mc.appfeng.com/item/80000008",
+      "source_id": "tea",
+      "art": "现有Q版图",
+      "origin": "现有物品重设",
+      "damage": 0,
+      "craft": [
+        "R16"
+      ]
+    },
+    {
+      "id": "soup",
+      "name": "清芬鱼汤",
+      "cat": "补给",
+      "tags": [
+        "补给",
+        "体力"
+      ],
+      "route": "联动/通用",
+      "role": "启动",
+      "price": 2,
+      "current_price": 2,
+      "base": "体力首次低于3时恢复4体力",
+      "stars": [],
+      "accept": "",
+      "trigger": "",
+      "benefit": "",
+      "limit": "每场一次，战后消耗",
+      "round": 1,
+      "cd": 0,
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "cells": 1,
+      "obtain": "商店",
+      "counter": "",
+      "image": "private-source",
+      "image_source": "https://mc.appfeng.com/item/80000019",
+      "source_id": "soup",
+      "art": "现有Q版图",
+      "origin": "现有物品重设",
+      "damage": 0,
+      "craft": [
+        "R17"
+      ]
+    },
+    {
+      "id": "nutrition",
+      "name": "初级营养块",
+      "cat": "补给",
+      "tags": [
+        "补给",
+        "治疗"
+      ],
+      "route": "通用",
+      "role": "启动",
+      "price": 2,
+      "current_price": 2,
+      "base": "生命低于50%时治疗18",
+      "stars": [],
+      "accept": "",
+      "trigger": "",
+      "benefit": "",
+      "limit": "每场一次。多份逐个复核阈值，战后消耗",
+      "round": 1,
+      "cd": 0,
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "cells": 1,
+      "obtain": "商店",
+      "counter": "",
+      "image": "private-source",
+      "image_source": "https://mc.appfeng.com/item/42100017",
+      "source_id": "nutrition",
+      "art": "现有Q版图",
+      "origin": "现有物品重设",
+      "damage": 0,
+      "craft": [
+        "R18",
+        "R18"
+      ]
+    },
+    {
+      "id": "revive",
+      "name": "初级复苏吸雾",
+      "cat": "补给",
+      "tags": [
+        "补给",
+        "治疗",
+        "净化"
+      ],
+      "route": "通用对策",
+      "role": "对策",
+      "price": 2,
+      "current_price": 4,
+      "base": "首次受到减益时治疗6，净化1层",
+      "stars": [],
+      "accept": "",
+      "trigger": "",
+      "benefit": "",
+      "limit": "满血仍可净化。每场一次，战后消耗",
+      "round": 1,
+      "cd": 0,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "cells": 2,
+      "obtain": "商店",
+      "counter": "光噪/霜渐",
+      "image": "private-source",
+      "image_source": "https://mc.appfeng.com/item/42100013",
+      "source_id": "revive",
+      "art": "现有Q版图",
+      "origin": "现有物品重设",
+      "damage": 0,
+      "craft": []
+    },
+    {
+      "id": "maocai",
+      "name": "今州冒菜",
+      "cat": "补给",
+      "tags": [
+        "补给",
+        "护盾"
+      ],
+      "route": "守御",
+      "role": "启动",
+      "price": 2,
+      "current_price": 4,
+      "base": "开战获得12护盾",
+      "stars": [],
+      "accept": "",
+      "trigger": "",
+      "benefit": "",
+      "limit": "占4格。每场一次，战后消耗",
+      "round": 1,
+      "cd": 0,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cells": 4,
+      "obtain": "商店",
+      "counter": "",
+      "image": "private-source",
+      "image_source": "https://mc.appfeng.com/item/80000025",
+      "source_id": "maocai",
+      "art": "现有Q版图",
+      "origin": "现有物品重设",
+      "damage": 0,
+      "craft": []
+    },
+    {
+      "id": "rations",
+      "name": "戍边粮",
+      "cat": "补给",
+      "tags": [
+        "补给",
+        "体力"
+      ],
+      "route": "联动/通用",
+      "role": "启动",
+      "price": 2,
+      "current_price": 2,
+      "base": "本场武器体力消耗−15%",
+      "stars": [],
+      "accept": "",
+      "trigger": "",
+      "benefit": "",
+      "limit": "同名不叠加。每场一次，战后消耗",
+      "round": 1,
+      "cd": 0,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "cells": 2,
+      "obtain": "商店",
+      "counter": "",
+      "image": "private-source",
+      "image_source": "https://mc.appfeng.com/item/80000005",
+      "source_id": "rations",
+      "art": "现有Q版图",
+      "origin": "现有物品重设",
+      "damage": 0,
+      "craft": [
+        "R17"
+      ]
+    },
+    {
+      "id": "daily_tea",
+      "name": "每日清茶",
+      "cat": "补给",
+      "tags": [
+        "补给",
+        "迅捷"
+      ],
+      "route": "联动",
+      "role": "启动",
+      "price": 2,
+      "current_price": null,
+      "base": "开战迅捷+2",
+      "stars": [],
+      "accept": "",
+      "trigger": "",
+      "benefit": "",
+      "limit": "需要其他来源续速。每场一次，战后消耗",
+      "round": 1,
+      "cd": 0,
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "cells": 1,
+      "obtain": "商店",
+      "counter": "",
+      "image": "private-source",
+      "image_source": "https://mc.appfeng.com/item/80000006",
+      "source_id": "daily_tea",
+      "art": "原生参考图，待Q版适配",
+      "origin": "新增原生物品",
+      "damage": 0,
+      "craft": []
+    },
+    {
+      "id": "salt_tea",
+      "name": "咸奶茶",
+      "cat": "补给",
+      "tags": [
+        "补给",
+        "护盾"
+      ],
+      "route": "守御/通用",
+      "role": "启动",
+      "price": 2,
+      "current_price": null,
+      "base": "生命首次低于60%时获得8护盾",
+      "stars": [],
+      "accept": "",
+      "trigger": "",
+      "benefit": "",
+      "limit": "一格应急盾，小于冒菜。每场一次，战后消耗",
+      "round": 1,
+      "cd": 0,
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "cells": 1,
+      "obtain": "商店",
+      "counter": "",
+      "image": "private-source",
+      "image_source": "https://mc.appfeng.com/item/80000007",
+      "source_id": "salt_tea",
+      "art": "原生参考图，待Q版适配",
+      "origin": "新增原生物品",
+      "damage": 0,
+      "craft": []
+    },
+    {
+      "id": "spicy_meat",
+      "name": "辛香肉片",
+      "cat": "补给",
+      "tags": [
+        "补给",
+        "充能"
+      ],
+      "route": "重击",
+      "role": "启动",
+      "price": 2,
+      "current_price": null,
+      "base": "开战充能+3",
+      "stars": [],
+      "accept": "",
+      "trigger": "",
+      "benefit": "",
+      "limit": "占2格。每场一次，战后消耗",
+      "round": 1,
+      "cd": 0,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "cells": 2,
+      "obtain": "商店",
+      "counter": "",
+      "image": "private-source",
+      "image_source": "https://mc.appfeng.com/item/80000011",
+      "source_id": "spicy_meat",
+      "art": "原生参考图，待Q版适配",
+      "origin": "新增原生物品",
+      "damage": 0,
+      "craft": []
+    },
+    {
+      "id": "cool_tea",
+      "name": "舒云秘制凉茶",
+      "cat": "补给",
+      "tags": [
+        "补给",
+        "迅捷",
+        "净化"
+      ],
+      "route": "联动/通用",
+      "role": "加工",
+      "price": 4,
+      "current_price": null,
+      "base": "开战后第6秒迅捷+2，并净化3层",
+      "stars": [],
+      "accept": "",
+      "trigger": "",
+      "benefit": "",
+      "limit": "消耗清芬茶后失去生命上限收益。每场一次，战后消耗",
+      "round": 2,
+      "cd": 0,
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "cells": 1,
+      "obtain": "合成",
+      "counter": "光噪/霜渐",
+      "image": "private-source",
+      "image_source": "https://mc.appfeng.com/item/80000009",
+      "source_id": "cool_tea",
+      "art": "原生参考图，待Q版适配",
+      "origin": "新增原生物品",
+      "damage": 0,
+      "craft": [],
+      "recipe": "R16"
+    },
+    {
+      "id": "dragon_food",
+      "name": "龙抬头",
+      "cat": "补给",
+      "tags": [
+        "补给",
+        "护盾",
+        "体力"
+      ],
+      "route": "守御/联动",
+      "role": "加工",
+      "price": 4,
+      "current_price": null,
+      "base": "开战获得14护盾，本场武器体力消耗−15%",
+      "stars": [],
+      "accept": "",
+      "trigger": "",
+      "benefit": "",
+      "limit": "与戍边粮减耗不叠加。失去鱼汤应急体力。每场一次，战后消耗",
+      "round": 2,
+      "cd": 0,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "cells": 2,
+      "obtain": "合成",
+      "counter": "",
+      "image": "private-source",
+      "image_source": "https://mc.appfeng.com/item/80000026",
+      "source_id": "dragon_food",
+      "art": "原生参考图，待Q版适配",
+      "origin": "新增原生物品",
+      "damage": 0,
+      "craft": [],
+      "recipe": "R17"
+    },
+    {
+      "id": "mat_43020041",
+      "name": "海蚀嵌合体210",
+      "cat": "材料",
+      "tags": [
+        "材料"
+      ],
+      "route": "通用",
+      "role": "合成材料",
+      "price": 2,
+      "current_price": 3,
+      "base": "无战斗效果",
+      "stars": [],
+      "accept": "",
+      "trigger": "",
+      "benefit": "",
+      "limit": "对应配方开放时进入材料位",
+      "round": 2,
+      "cd": 0,
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "cells": 1,
+      "obtain": "商店",
+      "counter": "",
+      "image": "private-source",
+      "image_source": "https://mc.appfeng.com/item/43020041",
+      "source_id": "mat_43020041",
+      "art": "现有Q版图",
+      "origin": "现有物品重设",
+      "damage": 0,
+      "craft": [
+        "R01"
+      ]
+    },
+    {
+      "id": "mat_43020031",
+      "name": "慢板涡流",
+      "cat": "材料",
+      "tags": [
+        "材料"
+      ],
+      "route": "通用",
+      "role": "合成材料",
+      "price": 2,
+      "current_price": 3,
+      "base": "无战斗效果",
+      "stars": [],
+      "accept": "",
+      "trigger": "",
+      "benefit": "",
+      "limit": "对应配方开放时进入材料位",
+      "round": 2,
+      "cd": 0,
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "cells": 1,
+      "obtain": "商店",
+      "counter": "",
+      "image": "private-source",
+      "image_source": "https://mc.appfeng.com/item/43020031",
+      "source_id": "mat_43020031",
+      "art": "现有Q版图",
+      "origin": "现有物品重设",
+      "damage": 0,
+      "craft": [
+        "R02",
+        "R06"
+      ]
+    },
+    {
+      "id": "mat_42300100",
+      "name": "紫珊瑚",
+      "cat": "材料",
+      "tags": [
+        "材料"
+      ],
+      "route": "通用",
+      "role": "合成材料",
+      "price": 2,
+      "current_price": 2,
+      "base": "无战斗效果",
+      "stars": [],
+      "accept": "",
+      "trigger": "",
+      "benefit": "",
+      "limit": "对应配方开放时进入材料位",
+      "round": 2,
+      "cd": 0,
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "cells": 1,
+      "obtain": "商店",
+      "counter": "",
+      "image": "private-source",
+      "image_source": "https://mc.appfeng.com/item/42300100",
+      "source_id": "mat_42300100",
+      "art": "现有Q版图",
+      "origin": "现有物品重设",
+      "damage": 0,
+      "craft": [
+        "R03",
+        "R05",
+        "R07",
+        "R09"
+      ]
+    },
+    {
+      "id": "mat_43020011",
+      "name": "惰性金属液滴",
+      "cat": "材料",
+      "tags": [
+        "材料"
+      ],
+      "route": "通用",
+      "role": "合成材料",
+      "price": 2,
+      "current_price": 3,
+      "base": "无战斗效果",
+      "stars": [],
+      "accept": "",
+      "trigger": "",
+      "benefit": "",
+      "limit": "对应配方开放时进入材料位",
+      "round": 2,
+      "cd": 0,
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "cells": 1,
+      "obtain": "商店",
+      "counter": "",
+      "image": "private-source",
+      "image_source": "https://mc.appfeng.com/item/43020011",
+      "source_id": "mat_43020011",
+      "art": "现有Q版图",
+      "origin": "现有物品重设",
+      "damage": 0,
+      "craft": [
+        "R04"
+      ]
+    },
+    {
+      "id": "mat_43020021",
+      "name": "含杂晶化燃素",
+      "cat": "材料",
+      "tags": [
+        "材料"
+      ],
+      "route": "通用",
+      "role": "合成材料",
+      "price": 2,
+      "current_price": 3,
+      "base": "无战斗效果",
+      "stars": [],
+      "accept": "",
+      "trigger": "",
+      "benefit": "",
+      "limit": "对应配方开放时进入材料位",
+      "round": 2,
+      "cd": 0,
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "cells": 1,
+      "obtain": "商店",
+      "counter": "",
+      "image": "private-source",
+      "image_source": "https://mc.appfeng.com/item/43020021",
+      "source_id": "mat_43020021",
+      "art": "现有Q版图",
+      "origin": "现有物品重设",
+      "damage": 0,
+      "craft": [
+        "R08"
+      ]
+    },
+    {
+      "id": "mat_43020051",
+      "name": "声律种核",
+      "cat": "材料",
+      "tags": [
+        "材料"
+      ],
+      "route": "通用",
+      "role": "合成材料",
+      "price": 2,
+      "current_price": 3,
+      "base": "无战斗效果",
+      "stars": [],
+      "accept": "",
+      "trigger": "",
+      "benefit": "",
+      "limit": "对应配方开放时进入材料位",
+      "round": 2,
+      "cd": 0,
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "cells": 1,
+      "obtain": "商店",
+      "counter": "",
+      "image": "private-source",
+      "image_source": "https://mc.appfeng.com/item/43020051",
+      "source_id": "mat_43020051",
+      "art": "现有Q版图",
+      "origin": "现有物品重设",
+      "damage": 0,
+      "craft": [
+        "R10"
+      ]
+    },
+    {
+      "id": "tube",
+      "name": "高级密音筒",
+      "cat": "材料",
+      "tags": [
+        "材料"
+      ],
+      "route": "通用",
+      "role": "合成材料",
+      "price": 2,
+      "current_price": 3,
+      "base": "无战斗效果",
+      "stars": [],
+      "accept": "",
+      "trigger": "",
+      "benefit": "",
+      "limit": "对应配方开放时进入材料位",
+      "round": 2,
+      "cd": 0,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "cells": 2,
+      "obtain": "商店",
+      "counter": "",
+      "image": "private-source",
+      "image_source": "https://mc.appfeng.com/item/36000003",
+      "source_id": "tube",
+      "art": "现有Q版图",
+      "origin": "现有物品重设",
+      "damage": 0,
+      "craft": [
+        "R13",
+        "R15"
+      ]
+    },
+    {
+      "id": "tuner",
+      "name": "特级调谐器",
+      "cat": "材料",
+      "tags": [
+        "材料"
+      ],
+      "route": "通用",
+      "role": "合成材料",
+      "price": 2,
+      "current_price": 3,
+      "base": "无战斗效果",
+      "stars": [],
+      "accept": "",
+      "trigger": "",
+      "benefit": "",
+      "limit": "对应配方开放时进入材料位",
+      "round": 2,
+      "cd": 0,
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "cells": 1,
+      "obtain": "商店",
+      "counter": "",
+      "image": "private-source",
+      "image_source": "https://mc.appfeng.com/item/36000014",
+      "source_id": "tuner",
+      "art": "现有Q版图",
+      "origin": "现有物品重设",
+      "damage": 0,
+      "craft": [
+        "R11",
+        "R12",
+        "R14"
+      ]
+    },
+    {
+      "id": "mat_42310090",
+      "name": "水灯花",
+      "cat": "材料",
+      "tags": [
+        "材料"
+      ],
+      "route": "通用",
+      "role": "合成材料",
+      "price": 2,
+      "current_price": 2,
+      "base": "无战斗效果",
+      "stars": [],
+      "accept": "",
+      "trigger": "",
+      "benefit": "",
+      "limit": "对应配方开放时进入材料位",
+      "round": 2,
+      "cd": 0,
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "cells": 1,
+      "obtain": "商店",
+      "counter": "",
+      "image": "private-source",
+      "image_source": "https://mc.appfeng.com/item/42310090",
+      "source_id": "mat_42310090",
+      "art": "现有Q版图",
+      "origin": "现有物品重设",
+      "damage": 0,
+      "craft": [
+        "R16"
+      ]
+    },
+    {
+      "id": "satchel",
+      "name": "初始行囊",
+      "cat": "口袋",
+      "tags": [
+        "口袋"
+      ],
+      "route": "通用",
+      "role": "空间",
+      "price": 0,
+      "current_price": 0,
+      "base": "提供6格",
+      "stars": [],
+      "accept": "",
+      "trigger": "",
+      "benefit": "",
+      "limit": "初始免费",
+      "round": 1,
+      "cd": 0,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "cells": 6,
+      "obtain": "初始",
+      "counter": "",
+      "image": "private-source",
+      "image_source": "",
+      "source_id": "satchel",
+      "art": "现有Q版图",
+      "origin": "现有物品重设",
+      "damage": 0,
+      "craft": []
+    },
+    {
+      "id": "pouch",
+      "name": "普通口袋",
+      "cat": "口袋",
+      "tags": [
+        "口袋"
+      ],
+      "route": "通用",
+      "role": "空间",
+      "price": 3,
+      "current_price": 3,
+      "base": "提供4格，开战每个实际占用格+2盾",
+      "stars": [],
+      "accept": "",
+      "trigger": "",
+      "benefit": "",
+      "limit": "跨袋只数覆盖格",
+      "round": 1,
+      "cd": 0,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cells": 4,
+      "obtain": "口袋货位",
+      "counter": "",
+      "image": "private-source",
+      "image_source": "",
+      "source_id": "pouch",
+      "art": "现有Q版图",
+      "origin": "现有物品重设",
+      "damage": 0,
+      "craft": []
+    },
+    {
+      "id": "strip",
+      "name": "长条挂袋",
+      "cat": "口袋",
+      "tags": [
+        "口袋"
+      ],
+      "route": "通用",
+      "role": "空间",
+      "price": 3,
+      "current_price": 3,
+      "base": "提供3格，覆盖物品CD−10%×覆盖比例",
+      "stars": [],
+      "accept": "",
+      "trigger": "",
+      "benefit": "",
+      "limit": "不影响固定间隔与状态计时",
+      "round": 1,
+      "cd": 0,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "cells": 3,
+      "obtain": "口袋货位",
+      "counter": "",
+      "image": "private-source",
+      "image_source": "",
+      "source_id": "strip",
+      "art": "现有Q版图",
+      "origin": "现有物品重设",
+      "damage": 0,
+      "craft": []
+    },
+    {
+      "id": "corner",
+      "name": "折角袋",
+      "cat": "口袋",
+      "tags": [
+        "口袋"
+      ],
+      "route": "通用",
+      "role": "空间",
+      "price": 3,
+      "current_price": 3,
+      "base": "提供3格，声骸直接伤害/治疗/护盾+15%×覆盖比例",
+      "stars": [],
+      "accept": "",
+      "trigger": "",
+      "benefit": "",
+      "limit": "不增加效应层数或触发次数",
+      "round": 1,
+      "cd": 0,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cells": 3,
+      "obtain": "口袋货位",
+      "counter": "",
+      "image": "private-source",
+      "image_source": "",
+      "source_id": "corner",
+      "art": "现有Q版图",
+      "origin": "现有物品重设",
+      "damage": 0,
+      "craft": []
+    },
+    {
+      "id": "travel",
+      "name": "旅行附包",
+      "cat": "口袋",
+      "tags": [
+        "口袋"
+      ],
+      "route": "通用",
+      "role": "空间",
+      "price": 5,
+      "current_price": 5,
+      "base": "提供6格，武器基础伤害+8%×覆盖比例",
+      "stars": [],
+      "accept": "",
+      "trigger": "",
+      "benefit": "",
+      "limit": "不放大削盾、光噪、反击",
+      "round": 3,
+      "cd": 0,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "cells": 6,
+      "obtain": "口袋货位",
+      "counter": "",
+      "image": "private-source",
+      "image_source": "",
+      "source_id": "travel",
+      "art": "现有Q版图",
+      "origin": "现有物品重设",
+      "damage": 0,
+      "craft": []
+    },
+    {
+      "id": "whiff_fast",
+      "name": "呼咻咻·迅捷",
+      "cat": "声骸",
+      "tags": [
+        "声骸",
+        "攻击"
+      ],
+      "route": "通用",
+      "role": "合成形态",
+      "price": 4,
+      "current_price": null,
+      "base": "每3秒攻击两段，合计4伤",
+      "stars": [],
+      "accept": "",
+      "trigger": "",
+      "benefit": "",
+      "limit": "直接DPS从1.5降到1.33，换更频繁的普通发动",
+      "round": 2,
+      "cd": 3,
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "cells": 1,
+      "obtain": "合成",
+      "counter": "",
+      "image": "private-source",
+      "image_source": "https://mc.appfeng.com/monster/310000100",
+      "source_id": "whiff",
+      "art": "暂用基底Q版图",
+      "origin": "本作合成形态",
+      "damage": 0,
+      "craft": [],
+      "echo_cost": 1,
+      "cost_source": "https://wuthering.gg/zh-Hans/echos",
+      "quality": "蓝·强化",
+      "shape_basis": "小型主体，1×1；装饰与阴影不计格",
+      "recipe": "R11"
+    },
+    {
+      "id": "turtle_clean",
+      "name": "寒霜陆龟·净化",
+      "cat": "声骸",
+      "tags": [
+        "声骸",
+        "治疗",
+        "净化"
+      ],
+      "route": "通用",
+      "role": "合成形态",
+      "price": 4,
+      "current_price": null,
+      "base": "每4秒治疗3，并净化己方1层减益",
+      "stars": [],
+      "accept": "",
+      "trigger": "",
+      "benefit": "",
+      "limit": "治疗4降为3，换净化。满血仍可净化",
+      "round": 2,
+      "cd": 4,
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "cells": 1,
+      "obtain": "合成",
+      "counter": "光噪/霜渐",
+      "image": "private-source",
+      "image_source": "https://mc.appfeng.com/monster/310000270",
+      "source_id": "turtle",
+      "art": "暂用基底Q版图",
+      "origin": "本作合成形态",
+      "damage": 0,
+      "craft": [],
+      "echo_cost": 1,
+      "cost_source": "https://wuthering.gg/zh-Hans/echos",
+      "quality": "蓝·强化",
+      "shape_basis": "小型主体，1×1；装饰与阴影不计格",
+      "recipe": "R12"
+    },
+    {
+      "id": "rock_wall",
+      "name": "坚岩斗士·壁垒",
+      "cat": "声骸",
+      "tags": [
+        "声骸",
+        "攻击",
+        "护盾"
+      ],
+      "route": "守御",
+      "role": "合成形态",
+      "price": 6,
+      "current_price": null,
+      "base": "每5秒攻击1伤，获得8护盾",
+      "stars": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "accept": "治疗",
+      "trigger": "目标有效普通治疗",
+      "benefit": "护盾+2，共享4秒间隔",
+      "limit": "直接伤害下降，偏向盾击供给",
+      "round": 3,
+      "cd": 5,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cells": 4,
+      "obtain": "合成",
+      "counter": "",
+      "image": "private-source",
+      "image_source": "https://mc.appfeng.com/monster/320000010",
+      "source_id": "rocksteady",
+      "art": "暂用基底Q版图",
+      "origin": "本作合成形态",
+      "damage": 0,
+      "craft": [],
+      "echo_cost": 3,
+      "cost_source": "https://wuthering.gg/zh-Hans/echos",
+      "quality": "紫·精制",
+      "shape_basis": "躯干或收翅轮廓近方形，2×2",
+      "recipe": "R13"
+    },
+    {
+      "id": "glacio_focus",
+      "name": "冷凝棱镜·凝聚",
+      "cat": "声骸",
+      "tags": [
+        "声骸",
+        "霜渐"
+      ],
+      "route": "通用",
+      "role": "合成形态",
+      "price": 4,
+      "current_price": null,
+      "base": "每6秒施加2层霜渐",
+      "stars": [],
+      "accept": "",
+      "trigger": "",
+      "benefit": "",
+      "limit": "保留方形1格。失去直接攻击，不能再匹配攻击星位；投入材料换施效",
+      "round": 2,
+      "cd": 6,
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "cells": 1,
+      "obtain": "合成",
+      "counter": "武器加速/慢速关键攻击",
+      "image": "private-source",
+      "image_source": "https://mc.appfeng.com/monster/310000140",
+      "source_id": "echo_glacio",
+      "art": "暂用基底原生图，待Q版适配",
+      "origin": "本作合成形态",
+      "damage": 0,
+      "craft": [],
+      "echo_cost": 1,
+      "cost_source": "https://wuthering.gg/zh-Hans/echos",
+      "quality": "蓝·强化",
+      "shape_basis": "小型主体，1×1；装饰与阴影不计格",
+      "recipe": "R14"
+    },
+    {
+      "id": "contract_echo",
+      "name": "珍奇契约·回响",
+      "cat": "遗物",
+      "tags": [
+        "遗物",
+        "迅捷"
+      ],
+      "route": "联动",
+      "role": "合成形态",
+      "price": 5,
+      "current_price": null,
+      "base": "每6秒发动一次。迅捷至少4层时追加3伤",
+      "stars": [
+        [
+          -2,
+          0
+        ],
+        [
+          -2,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "accept": "声骸",
+      "trigger": "目标普通发动",
+      "benefit": "迅捷+1，同族共享3秒间隔",
+      "limit": "扩大星位。追击属于派生，不接受攻击星位；不自触发声骸星位",
+      "round": 2,
+      "cd": 6,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "cells": 2,
+      "obtain": "合成",
+      "counter": "",
+      "image": "private-source",
+      "image_source": "https://mc.appfeng.com/item/71500011",
+      "source_id": "contract",
+      "art": "暂用基底Q版图",
+      "origin": "本作合成形态",
+      "damage": 0,
+      "craft": [],
+      "recipe": "R15"
+    },
+    {
+      "id": "nutrition_dense",
+      "name": "浓缩营养块",
+      "cat": "补给",
+      "tags": [
+        "补给",
+        "治疗"
+      ],
+      "route": "通用",
+      "role": "合成形态",
+      "price": 4,
+      "current_price": null,
+      "base": "生命低于50%时治疗30",
+      "stars": [],
+      "accept": "",
+      "trigger": "",
+      "benefit": "",
+      "limit": "两份最大36治疗压成30，省1格，最多少一次治疗事件。战后消耗",
+      "round": 1,
+      "cd": 0,
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "cells": 1,
+      "obtain": "合成",
+      "counter": "",
+      "image": "private-source",
+      "image_source": "https://mc.appfeng.com/item/42100017",
+      "source_id": "nutrition",
+      "art": "暂用基底Q版图",
+      "origin": "本作合成形态",
+      "damage": 0,
+      "craft": [],
+      "recipe": "R18"
+    }
+  ],
+  "recipes": [
+    {
+      "id": "R01",
+      "inputs": [
+        "w_broadblade",
+        "mat_43020041"
+      ],
+      "out": "weapon_21010044",
+      "round": 2,
+      "change": "充能路线增加光噪消耗",
+      "loss": "增加1格，需重摆星位。供能声骸保留"
+    },
+    {
+      "id": "R02",
+      "inputs": [
+        "w_broadblade",
+        "mat_43020031"
+      ],
+      "out": "discord",
+      "round": 2,
+      "change": "充能基底转迅捷",
+      "loss": "失去自产充能，星位改成远星"
+    },
+    {
+      "id": "R03",
+      "inputs": [
+        "w_broadblade",
+        "mat_42300100"
+      ],
+      "out": "weapon_21010034",
+      "round": 2,
+      "change": "转为破盾长刃",
+      "loss": "直接DPS低于常规合成，失去自产充能"
+    },
+    {
+      "id": "R04",
+      "inputs": [
+        "w_sword",
+        "mat_43020011"
+      ],
+      "out": "weapon_21020044",
+      "round": 2,
+      "change": "快刀转为充能",
+      "loss": "失去自产迅捷，增加1格"
+    },
+    {
+      "id": "R05",
+      "inputs": [
+        "w_sword",
+        "mat_42300100"
+      ],
+      "out": "weapon_21020034",
+      "round": 2,
+      "change": "转为破盾快刀",
+      "loss": "失去自产迅捷，基础伤害让步"
+    },
+    {
+      "id": "R06",
+      "inputs": [
+        "w_rectifier",
+        "mat_43020031"
+      ],
+      "out": "weapon_21050044",
+      "round": 2,
+      "change": "满迅捷时增加攻击收益",
+      "loss": "仍需声骸与体力，满层收益不保证常驻"
+    },
+    {
+      "id": "R07",
+      "inputs": [
+        "w_rectifier",
+        "mat_42300100"
+      ],
+      "out": "rectifier25",
+      "round": 2,
+      "change": "迅捷基底转供盾",
+      "loss": "星位改接受治疗，需重配伙伴"
+    },
+    {
+      "id": "R08",
+      "inputs": [
+        "w_pistol",
+        "mat_43020021"
+      ],
+      "out": "weapon_21030024",
+      "round": 2,
+      "change": "转为迅捷与节能",
+      "loss": "增加1格，维持迅捷才能节能"
+    },
+    {
+      "id": "R09",
+      "inputs": [
+        "w_pistol",
+        "mat_42300100"
+      ],
+      "out": "weapon_21030034",
+      "round": 2,
+      "change": "转为通用破盾",
+      "loss": "对无盾敌人收益低于常规分支"
+    },
+    {
+      "id": "R10",
+      "inputs": [
+        "w_gauntlet",
+        "mat_43020051"
+      ],
+      "out": "weapon_21040034",
+      "round": 2,
+      "change": "增加周期供盾",
+      "loss": "输出提升较小，仍被破盾针对"
+    },
+    {
+      "id": "R11",
+      "inputs": [
+        "whiff",
+        "tuner"
+      ],
+      "out": "whiff_fast",
+      "round": 2,
+      "change": "用直接伤害换发动频率",
+      "loss": "6伤/4秒变4伤/3秒"
+    },
+    {
+      "id": "R12",
+      "inputs": [
+        "turtle",
+        "tuner"
+      ],
+      "out": "turtle_clean",
+      "round": 2,
+      "change": "加入减益对策",
+      "loss": "治疗4变3"
+    },
+    {
+      "id": "R13",
+      "inputs": [
+        "rocksteady",
+        "tube"
+      ],
+      "out": "rock_wall",
+      "round": 3,
+      "change": "把攻击预算转成盾",
+      "loss": "3伤4盾变1伤8盾；仍是3C，蓝品质升紫"
+    },
+    {
+      "id": "R14",
+      "inputs": [
+        "echo_glacio",
+        "tuner"
+      ],
+      "out": "glacio_focus",
+      "round": 2,
+      "change": "更快施加霜渐",
+      "loss": "仍是1C方形1格，失去攻击标签，绿品质升蓝"
+    },
+    {
+      "id": "R15",
+      "inputs": [
+        "contract",
+        "tube"
+      ],
+      "out": "contract_echo",
+      "round": 2,
+      "change": "扩展远星并将迅捷转追击",
+      "loss": "多花2币。仍有同族间隔，不能靠复制件无限加速"
+    },
+    {
+      "id": "R16",
+      "inputs": [
+        "tea",
+        "mat_42310090"
+      ],
+      "out": "cool_tea",
+      "round": 2,
+      "change": "净化与延后续速",
+      "loss": "失去清芬茶生命上限。配方为本作改编"
+    },
+    {
+      "id": "R17",
+      "inputs": [
+        "soup",
+        "rations"
+      ],
+      "out": "dragon_food",
+      "round": 2,
+      "change": "压成2格，增加开场盾并保留减耗",
+      "loss": "失去应急回体，原3格变2格。本作配方"
+    },
+    {
+      "id": "R18",
+      "inputs": [
+        "nutrition",
+        "nutrition"
+      ],
+      "out": "nutrition_dense",
+      "round": 1,
+      "change": "两份药品压成1格",
+      "loss": "最大治疗36变30，最多两次事件变一次"
+    }
+  ],
+  "examples": [
+    {
+      "id": "C1",
+      "name": "重击配光噪",
+      "leader": "忌炎",
+      "ids": [
+        "w_broadblade",
+        "whiff",
+        "spectro_coin"
+      ],
+      "pos": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "links": [
+        [
+          "w_broadblade",
+          "whiff"
+        ],
+        [
+          "spectro_coin",
+          "w_broadblade"
+        ]
+      ],
+      "phase": "基础三件",
+      "flow": "①攻击和②发动提供充能。③把①普通攻击转成光噪；满充能由①自动消费。",
+      "craft": "R01",
+      "after": "合成永夜，增加1格并重摆伙伴，可把光噪换成即时伤害。",
+      "trade": "先买第三件施效，还是买材料和更大口袋？",
+      "move": "把②移出①星位：仍攻击，但少一条充能来源。",
+      "bag_cost": 3,
+      "bags": [
+        {
+          "kind": "satchel",
+          "x": 0,
+          "y": 0,
+          "rotation": 0
+        },
+        {
+          "kind": "pouch",
+          "x": 3,
+          "y": 0,
+          "rotation": 0
+        }
+      ],
+      "cells": 5,
+      "price": 8,
+      "free_weapon": "w_broadblade",
+      "additional": 7
+    },
+    {
+      "id": "C2",
+      "name": "重击配霜渐",
+      "leader": "忌炎",
+      "ids": [
+        "w_broadblade",
+        "whiff",
+        "echo_glacio"
+      ],
+      "pos": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          3,
+          1
+        ]
+      ],
+      "links": [
+        [
+          "w_broadblade",
+          "whiff"
+        ],
+        [
+          "w_broadblade",
+          "echo_glacio"
+        ]
+      ],
+      "phase": "基础三件",
+      "flow": "②③普通攻击都能给①的星位提供事件。③另外挂霜渐，延缓对方关键攻击。",
+      "craft": "R14",
+      "after": "冷凝棱镜合成凝聚形态后叠霜更快，但失去攻击标签，不再给①充能。",
+      "trade": "强化控制会切断一条充能关系，不能只看品质。",
+      "move": "③不在①星位时仍挂霜渐，但不再贡献星位充能。",
+      "bag_cost": 0,
+      "bags": [
+        {
+          "kind": "satchel",
+          "x": 1,
+          "y": 0,
+          "rotation": 0
+        }
+      ],
+      "cells": 5,
+      "price": 8,
+      "free_weapon": "w_broadblade",
+      "additional": 4
+    },
+    {
+      "id": "C3",
+      "name": "联动配光噪",
+      "leader": "吟霖",
+      "ids": [
+        "w_rectifier",
+        "whiff",
+        "spectro_coin"
+      ],
+      "pos": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "links": [
+        [
+          "w_rectifier",
+          "whiff"
+        ],
+        [
+          "spectro_coin",
+          "whiff"
+        ]
+      ],
+      "phase": "基础三件",
+      "flow": "①攻击与②发动共同维持迅捷；③按②普通发动施加光噪。追击不额外叠层。",
+      "craft": "R06 / R11",
+      "after": "今州守望在迅捷满层时多打伤害；或呼咻咻换成更快但单次更弱的形态。",
+      "trade": "迅捷影响全队CD，仍受体力与6层上限限制。",
+      "move": "②移开后仍攻击，但不再为①星位续迅捷。",
+      "bag_cost": 3,
+      "bags": [
+        {
+          "kind": "satchel",
+          "x": 1,
+          "y": 0,
+          "rotation": 1
+        },
+        {
+          "kind": "strip",
+          "x": 0,
+          "y": 0,
+          "rotation": 0
+        }
+      ],
+      "cells": 6,
+      "price": 8,
+      "free_weapon": "w_rectifier",
+      "additional": 7
+    },
+    {
+      "id": "C4",
+      "name": "联动配霜渐",
+      "leader": "吟霖",
+      "ids": [
+        "w_rectifier",
+        "whiff",
+        "echo_glacio"
+      ],
+      "pos": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "links": [
+        [
+          "w_rectifier",
+          "whiff"
+        ],
+        [
+          "w_rectifier",
+          "echo_glacio"
+        ]
+      ],
+      "phase": "基础三件",
+      "flow": "两只声骸均可触发①的声骸星位。己方迅捷加快发动，③霜渐延缓敌方武器。",
+      "craft": "R14",
+      "after": "冷凝棱镜升级失去攻击标签，但仍是声骸，所以在这套组合里继续续迅捷。",
+      "trade": "同一个合成，在C2会断关系，在这里保留关系。",
+      "move": "两只声骸争①共享触发间隔，密集发动不等于每次都加层。",
+      "bag_cost": 0,
+      "bags": [
+        {
+          "kind": "satchel",
+          "x": 1,
+          "y": 0,
+          "rotation": 1
+        }
+      ],
+      "cells": 6,
+      "price": 8,
+      "free_weapon": "w_rectifier",
+      "additional": 4
+    },
+    {
+      "id": "C5",
+      "name": "守御配光噪",
+      "leader": "维里奈",
+      "ids": [
+        "rectifier25",
+        "turtle",
+        "spectro_coin"
+      ],
+      "pos": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "links": [
+        [
+          "rectifier25",
+          "turtle"
+        ],
+        [
+          "spectro_coin",
+          "rectifier25"
+        ]
+      ],
+      "phase": "初始留光转型",
+      "flow": "①攻击供盾，②实际治疗通过①星位补盾；③按①普通攻击累积光噪。",
+      "craft": "R07 / R12",
+      "after": "初始留光与紫珊瑚合成鸣动仪；陆龟后续可转净化，治疗量让步。",
+      "trade": "满血时②仍有治疗能力，但没有有效治疗事件。",
+      "move": "②移开后治疗保留，星位额外供盾消失。",
+      "bag_cost": 3,
+      "bags": [
+        {
+          "kind": "satchel",
+          "x": 0,
+          "y": 0,
+          "rotation": 0
+        },
+        {
+          "kind": "pouch",
+          "x": 0,
+          "y": 2,
+          "rotation": 0
+        }
+      ],
+      "cells": 6,
+      "price": 10,
+      "free_weapon": "w_rectifier",
+      "additional": 9
+    },
+    {
+      "id": "C6",
+      "name": "守御配霜渐",
+      "leader": "维里奈",
+      "ids": [
+        "rectifier25",
+        "turtle",
+        "echo_glacio"
+      ],
+      "pos": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "links": [
+        [
+          "rectifier25",
+          "turtle"
+        ]
+      ],
+      "phase": "初始留光转型",
+      "flow": "①②负责供盾与治疗，③独立挂霜渐。霜渐争取供盾时间。",
+      "craft": "R07 / R14",
+      "after": "升级③加快控制；也可先买鸣钟之龟，把多余护盾转成攻击。",
+      "trade": "③占在①另一颗星上也不会生效：它没有治疗标签。图中保留这一无效示例。",
+      "move": "③换位置不影响挂霜；②移开则损失额外供盾。",
+      "bag_cost": 0,
+      "bags": [
+        {
+          "kind": "satchel",
+          "x": 1,
+          "y": 0,
+          "rotation": 1
+        }
+      ],
+      "cells": 6,
+      "price": 10,
+      "free_weapon": "w_rectifier",
+      "additional": 6
+    },
+    {
+      "id": "C7",
+      "name": "盾击与远星充能",
+      "leader": "维里奈",
+      "ids": [
+        "rectifier25",
+        "turtle",
+        "bellborne",
+        "lamp"
+      ],
+      "pos": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "links": [
+        [
+          "rectifier25",
+          "turtle"
+        ],
+        [
+          "bellborne",
+          "rectifier25"
+        ],
+        [
+          "lamp",
+          "rectifier25"
+        ]
+      ],
+      "phase": "中期四件",
+      "flow": "①供盾，②治疗补盾，③定期吃盾打震击。④隔一格接①的普通供盾，为主武积充能。",
+      "craft": "R07",
+      "after": "鸣钟之龟R3可购。后续盾量不够时，应补供盾而不是继续堆消耗者。",
+      "trade": "④的远星需要位置；③吃盾时会给对方留下进攻空当。",
+      "move": "④移开后仍占空间，但失去充能功能；没有常驻虚线。",
+      "bag_cost": 8,
+      "bags": [
+        {
+          "kind": "satchel",
+          "x": 1,
+          "y": 2,
+          "rotation": 0
+        },
+        {
+          "kind": "strip",
+          "x": 0,
+          "y": 0,
+          "rotation": 0
+        },
+        {
+          "kind": "travel",
+          "x": 1,
+          "y": 0,
+          "rotation": 0
+        }
+      ],
+      "cells": 13,
+      "price": 20,
+      "free_weapon": "w_rectifier",
+      "additional": 24
+    },
+    {
+      "id": "C8",
+      "name": "给联动补破盾",
+      "leader": "吟霖",
+      "ids": [
+        "w_rectifier",
+        "whiff",
+        "echo_vanguard",
+        "answer"
+      ],
+      "pos": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "links": [
+        [
+          "w_rectifier",
+          "whiff"
+        ],
+        [
+          "answer",
+          "w_rectifier"
+        ]
+      ],
+      "phase": "先选声骸或遗物对策",
+      "flow": "①②维持迅捷。③独立攻击并额外削盾。④若摆到合适远星位置，可让①也获得破盾。",
+      "craft": "R06",
+      "after": "当前角色也能买通用破盾声骸和遗物，不必先招募长刃角色。③不接星位也能工作。",
+      "trade": "反制装备占用金币和空间，对无盾对手降低通用输出效率。",
+      "move": "移开破盾遗物的目标武器，其余组合仍正常工作。",
+      "bag_cost": 6,
+      "bags": [
+        {
+          "kind": "satchel",
+          "x": 1,
+          "y": 0,
+          "rotation": 1
+        },
+        {
+          "kind": "pouch",
+          "x": 1,
+          "y": 3,
+          "rotation": 0
+        },
+        {
+          "kind": "pouch",
+          "x": 3,
+          "y": 1,
+          "rotation": 0
+        }
+      ],
+      "cells": 10,
+      "price": 11,
+      "free_weapon": "w_rectifier",
+      "additional": 13
+    }
+  ],
+  "states": [
+    {
+      "name": "充能",
+      "side": "己方增益",
+      "route": "重击",
+      "simple": "攒满后，主武下一击更重",
+      "rule": "上限6。主武普通攻击开始时若满层，消耗6，额外+80%主武基础伤害。可与迅捷、护盾并存。",
+      "cap": 6,
+      "life": "本场保留，满层溢出不存",
+      "risk": "只由整备选定的主武消耗，副武不能抢充能"
+    },
+    {
+      "name": "迅捷",
+      "side": "己方增益",
+      "route": "联动",
+      "simple": "让有CD的物品更快发动",
+      "rule": "上限6，每层CD推进速度+4%。一次获得刷新全部层数6秒。到期清空。",
+      "cap": 6,
+      "life": "6秒，刷新持续时间",
+      "risk": "不加速固定触发间隔、状态tick、补给阈值和开战事件。满层最多+24%推进速度"
+    },
+    {
+      "name": "护盾",
+      "side": "己方增益",
+      "route": "守御",
+      "simple": "先挡伤害，也可由装备转成伤害",
+      "rule": "盾值上限=最大生命40%。正常伤害先扣盾再扣生命。盾击消耗盾后确实降低防御。",
+      "cap": 0.4,
+      "life": "本场保留，受击消耗",
+      "risk": "治疗不自动变护盾；格挡不在初版状态中。没有额外护甲属性"
+    },
+    {
+      "name": "光噪",
+      "side": "敌方减益",
+      "route": "三流派通用",
+      "simple": "叠层后持续掉血，可提前消耗",
+      "rule": "最多6层，每2秒造成层数×1伤害，不自动掉层。每次施加刷新12秒。伤害仍先扣盾。",
+      "cap": 6,
+      "life": "12秒，施加刷新，不重置2秒节拍",
+      "risk": "永夜消耗每层立即6伤，牺牲后续持续收益。净化可清除"
+    },
+    {
+      "name": "霜渐",
+      "side": "敌方减益",
+      "route": "三流派通用",
+      "simple": "减慢武器，满层短暂冻结",
+      "rule": "最多5层，每成功加1层造成1伤。每层武器CD推进速度−4%。满层立即清层，武器冻结0.6秒，解冻后3秒免疫。",
+      "cap": 5,
+      "life": "8秒，施加刷新",
+      "risk": "逐层施加；冻结及免疫期施加失败，不造成加层伤害。不减慢声骸/治疗。净化层数不取消已触发冻结"
+    }
+  ],
+  "rules": [
+    [
+      "标签",
+      "物品卡和星位使用同名标签。每件物品一组星位、只接收一个标签，没有“且/或”，没有方块或菱形。"
+    ],
+    [
+      "空间",
+      "星位可贴边或隔格，跟随物品旋转，可跨口袋。一个目标覆盖多颗星只计一次。自己不能给自己触发。"
+    ],
+    [
+      "普通发动",
+      "每次成功发动/补给使用算一次；武器必须冷却完成且体力足够才算发动。多段攻击算一次；攻击、治疗、供盾同时发生也只通知同一接收者一次。"
+    ],
+    [
+      "真实能力",
+      "攻击标签要求独立普通攻击。治疗/护盾标签要求有普通发动能恢复生命/加盾。光噪、反击、星位追加收益不会伪造这些标签。"
+    ],
+    [
+      "防循环",
+      "星位额外收益、反击、持续伤害和追加段不再发出星位事件。普通技能本体可发事件。共享间隔按卡面；同名与合成形态属于同族，不绕过同族间隔。"
+    ],
+    [
+      "消耗时序",
+      "普通攻击开始时判定充能/迅捷条件，执行额外削盾，再扣普通伤害，再结算本体增益和星位收益。盾击先扣己方盾。倒地后不再获得后续治疗。"
+    ],
+    [
+      "破盾",
+      "额外削盾=min(额外削盾量,当前护盾)，先执行。再结算普通伤害。削盾不溢出生命，自身不触发反击；普通攻击伤害被盾吸收才可触发持盾反击。"
+    ],
+    [
+      "速度叠加",
+      "普通武器CD推进倍率=(1+0.04×迅捷层数)×(1−0.04×霜渐层数)。声骸/独立遗物只乘迅捷。冻结期间武器停止推进，保留已积累进度。"
+    ],
+    [
+      "声骸分层",
+      "1C/3C/4C保持物种身份，不随调谐变种；本作品质依次绿→蓝、蓝→紫、金。没有额外C总量上限；用金币、占格、供给与技能代价约束。1C高效基础发动、3C条件强化、4C核心转化，各自留用途。"
+    ],
+    [
+      "原图与占格",
+      "声骸大小按完整主体轮廓取整格，不把光效阴影算占格，也不为增加成本强挖异形缺角。新增声骸暂用原生头像参考，有裁切的图不是最终入游素材。"
+    ],
+    [
+      "净化",
+      "从己方层数更多的光噪/霜渐清起，平局先霜渐；连续清多层时逐层比较。对手遵守相同规则。"
+    ],
+    [
+      "供给",
+      "基础声骸、补给、反制遗物对所有角色开放。武器沿现有类型准入，同属性招募保留。首轮已有低价破盾/净化，核心R3开放。"
+    ],
+    [
+      "合成",
+      "整备时用确切输入，边邻接即可，不要求星位。确认合法产物落点后才消耗材料。合成费0；产物成本由输入相加。取消无损。"
+    ],
+    [
+      "角色与旧规则",
+      "示例不计算角色被动。实施前清查旧风蚀、协奏、印记、全局治疗转伤等入口。暂保留体力和现有主武/队友权重，不能把本稿当已实装。"
+    ],
+    [
+      "验收重点",
+      "相同金币/空间下，重复低价伙伴与多样伙伴、纯盾与破盾、快攻与反击、净化与无净化都要比较。当前仅核对结构，不提供胜率结论。"
+    ]
+  ],
+  "raw": [
+    {
+      "id": "w_broadblade",
+      "name": "戍关长刃·定军",
+      "image": "private-source",
+      "price": 4,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "cells": 3,
+      "current": "本作改编 · T2 破阵重击；每2.8秒攻击8.16，消耗1.6耐力，能量8.4 / 协奏8.4。每3次普通主武器攻击，下一次普通主武器攻击额外造成重击伤害。",
+      "source": "https://mc.appfeng.com/weapon/21010053",
+      "status": "本轮详细设计",
+      "proposal": "重击；8.4伤害 / 2.8秒\n普通攻击后充能+1",
+      "tags": [
+        "武器",
+        "攻击",
+        "充能"
+      ],
+      "stars": "攻击"
+    },
+    {
+      "id": "w_sword",
+      "name": "戍关迅刀·镇海",
+      "image": "private-source",
+      "price": 4,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "cells": 3,
+      "current": "本作改编 · T2 悬丝协同；每1.8秒攻击6.3，消耗1耐力，能量5.4 / 协奏5.4。普通主武器攻击蓄积印记；普通声骸攻击结算协同伤害。",
+      "source": "https://mc.appfeng.com/weapon/21020053",
+      "status": "本轮详细设计",
+      "proposal": "联动；5.4伤害 / 1.8秒\n普通攻击后迅捷+1",
+      "tags": [
+        "武器",
+        "攻击",
+        "迅捷"
+      ],
+      "stars": "补给"
+    },
+    {
+      "id": "w_pistol",
+      "name": "戍关佩枪·平云",
+      "image": "private-source",
+      "price": 4,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "cells": 2,
+      "current": "本作改编 · T2 风蚀接力；每2秒攻击8.8，消耗1耐力，能量6 / 协奏6。普通主武器攻击施加风蚀，最多6层，6秒到期，每2秒结算一次。",
+      "source": "https://mc.appfeng.com/weapon/21030053",
+      "status": "本轮详细设计",
+      "proposal": "通用；6.0伤害 / 2.0秒\n无额外状态",
+      "tags": [
+        "武器",
+        "攻击"
+      ],
+      "stars": "补给"
+    },
+    {
+      "id": "w_gauntlet",
+      "name": "戍关臂铠·拔山",
+      "image": "private-source",
+      "price": 4,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "cells": 2,
+      "current": "本作改编 · T2 解放爆发；每1.6秒攻击6.12，消耗0.9耐力，主武能量7.2 / 副武基础4.8 / 协奏4.8。主武普通攻击回能更快；解放后3次普通攻击附加爆发伤害，终阶4次；派生不回能。",
+      "source": "https://mc.appfeng.com/weapon/21040053",
+      "status": "本轮详细设计",
+      "proposal": "守御；4.8伤害 / 1.6秒\n普通攻击后获得2护盾",
+      "tags": [
+        "武器",
+        "攻击",
+        "护盾"
+      ],
+      "stars": "治疗"
+    },
+    {
+      "id": "w_rectifier",
+      "name": "戍关音感仪·留光",
+      "image": "private-source",
+      "price": 4,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cells": 4,
+      "current": "本作改编 · T2 悬丝协同；每2.2秒攻击7.2，消耗1耐力，能量6.6 / 协奏6.6。普通主武器攻击蓄积印记；普通声骸攻击结算协同伤害。",
+      "source": "https://mc.appfeng.com/weapon/21050053",
+      "status": "本轮详细设计",
+      "proposal": "联动；6.6伤害 / 2.2秒\n普通攻击后迅捷+1",
+      "tags": [
+        "武器",
+        "攻击",
+        "迅捷"
+      ],
+      "stars": "声骸"
+    },
+    {
+      "id": "discord",
+      "name": "异响空灵",
+      "image": "private-source",
+      "price": 7,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "cells": 4,
+      "current": "本作改编 · T3 悬丝协同；每2.8秒攻击14.04，消耗1.6耐力，能量8.4 / 协奏8.4。普通主武器攻击蓄积印记；普通声骸攻击结算协同伤害。",
+      "source": "https://mc.appfeng.com/weapon/21010024",
+      "status": "本轮详细设计",
+      "proposal": "联动；10.08伤害 / 2.8秒\n普通攻击后迅捷+1",
+      "tags": [
+        "武器",
+        "攻击",
+        "迅捷"
+      ],
+      "stars": "攻击"
+    },
+    {
+      "id": "variation",
+      "name": "奇幻变奏",
+      "image": "private-source",
+      "price": 7,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cells": 4,
+      "current": "本作改编 · T3 悬丝协同；每2.2秒攻击9.36，消耗1耐力，能量6.6 / 协奏6.6。普通主武器攻击蓄积印记；普通声骸攻击结算协同伤害。",
+      "source": "https://mc.appfeng.com/weapon/21050024",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "rectifier25",
+      "name": "鸣动仪-25型",
+      "image": "private-source",
+      "price": 7,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cells": 4,
+      "current": "本作改编 · T3 光合协同；每2.2秒攻击11.44，消耗1耐力，能量6.6 / 协奏6.6。两次实际普通治疗后，下次普通主武器攻击附加衍射伤害并获得护盾。",
+      "source": "https://mc.appfeng.com/weapon/21050034",
+      "status": "本轮详细设计",
+      "proposal": "守御；7.26伤害 / 2.2秒\n普通攻击后获得3护盾",
+      "tags": [
+        "武器",
+        "攻击",
+        "护盾"
+      ],
+      "stars": "治疗"
+    },
+    {
+      "id": "verdant",
+      "name": "苍鳞千嶂",
+      "image": "private-source",
+      "price": 22,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "cells": 5,
+      "current": "本作改编 · T5 破阵重击；每2.8秒攻击28.38，消耗1.6耐力，能量8.4 / 协奏8.4。每3次普通主武器攻击，下一次普通主武器攻击额外造成重击伤害。仅合成；需要已拥有任一证据主人。",
+      "source": "https://mc.appfeng.com/weapon/21010016",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "stringmaster",
+      "name": "掣傀之手",
+      "image": "private-source",
+      "price": 22,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cells": 4,
+      "current": "本作改编 · T5 悬丝协同；每2.2秒攻击16.34，消耗1耐力，能量6.6 / 协奏6.6。普通主武器攻击蓄积印记；普通声骸攻击结算协同伤害。仅合成；需要已拥有任一证据主人。",
+      "source": "https://mc.appfeng.com/weapon/21050016",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "tea",
+      "name": "清芬茶",
+      "image": "private-source",
+      "price": 2,
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "cells": 1,
+      "current": "开战前饮用，生命上限 +15，本场有效；战后消耗。不是反复治疗的茶壶。",
+      "source": "https://mc.appfeng.com/item/80000008",
+      "status": "本轮详细设计",
+      "proposal": "通用；开战增加15生命上限，并等量增加当前生命",
+      "tags": [
+        "补给",
+        "生命上限"
+      ],
+      "stars": ""
+    },
+    {
+      "id": "soup",
+      "name": "清芬鱼汤",
+      "image": "private-source",
+      "price": 2,
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "cells": 1,
+      "current": "耐力首次低于 3 时恢复 4；每场一次，战后消耗。",
+      "source": "https://mc.appfeng.com/item/80000019",
+      "status": "本轮详细设计",
+      "proposal": "联动/通用；体力首次低于3时恢复4体力",
+      "tags": [
+        "补给",
+        "体力"
+      ],
+      "stars": ""
+    },
+    {
+      "id": "nutrition",
+      "name": "初级营养块",
+      "image": "private-source",
+      "price": 2,
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "cells": 1,
+      "current": "生命首次低于 50% 时回复 18；每场一次，战后消耗。",
+      "source": "https://mc.appfeng.com/item/42100017",
+      "status": "本轮详细设计",
+      "proposal": "通用；生命低于50%时治疗18",
+      "tags": [
+        "补给",
+        "治疗"
+      ],
+      "stars": ""
+    },
+    {
+      "id": "revive",
+      "name": "初级复苏吸雾",
+      "image": "private-source",
+      "price": 4,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "cells": 2,
+      "current": "首次致命伤时保留 1 生命并恢复 12；每场限一件，战后消耗。重复触发禁止。",
+      "source": "https://mc.appfeng.com/item/42100013",
+      "status": "本轮详细设计",
+      "proposal": "通用对策；首次受到减益时治疗6，净化1层",
+      "tags": [
+        "补给",
+        "治疗",
+        "净化"
+      ],
+      "stars": ""
+    },
+    {
+      "id": "tuner",
+      "name": "特级调谐器",
+      "image": "private-source",
+      "price": 3,
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "cells": 1,
+      "current": "商店调谐一只声骸：从两条明确词条中选一条（快／强）；不反复洗概率词条。使用即消耗。",
+      "source": "https://mc.appfeng.com/item/36000014",
+      "status": "本轮详细设计",
+      "proposal": "通用；无战斗效果",
+      "tags": [
+        "材料"
+      ],
+      "stars": ""
+    },
+    {
+      "id": "tube",
+      "name": "高级密音筒",
+      "image": "private-source",
+      "price": 3,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "cells": 2,
+      "current": "确认一只声骸后消耗，升一级（技能强度 +15%），最多两级；保持同一物种。",
+      "source": "https://mc.appfeng.com/item/36000003",
+      "status": "本轮详细设计",
+      "proposal": "通用；无战斗效果",
+      "tags": [
+        "材料"
+      ],
+      "stars": ""
+    },
+    {
+      "id": "contract",
+      "name": "眷属-珍奇契约",
+      "image": "private-source",
+      "price": 6,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "cells": 2,
+      "current": "星位上的一只声骸触发后，追加一次 35% 强度的协同攻击；每 6 秒一次，不复制治疗或再次生成接力。",
+      "source": "https://mc.appfeng.com/item/71500011",
+      "status": "本轮详细设计",
+      "proposal": "联动；无独立攻击",
+      "tags": [
+        "遗物",
+        "迅捷"
+      ],
+      "stars": "声骸"
+    },
+    {
+      "id": "aero_coin",
+      "name": "气动-锈蚀古币",
+      "image": "private-source",
+      "price": 3,
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "cells": 1,
+      "current": "上、下星位的气动物品伤害 +12%；一件物品只接受一枚同类古币。",
+      "source": "https://mc.appfeng.com/item/71500004",
+      "status": "本轮详细设计",
+      "proposal": "联动；无独立攻击",
+      "tags": [
+        "遗物",
+        "迅捷"
+      ],
+      "stars": "补给"
+    },
+    {
+      "id": "electro_coin",
+      "name": "导电-锈蚀古币",
+      "image": "private-source",
+      "price": 3,
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "cells": 1,
+      "current": "左、右星位的导电物品伤害 +12%；一件物品只接受一枚同类古币。",
+      "source": "https://mc.appfeng.com/item/71500003",
+      "status": "本轮详细设计",
+      "proposal": "重击；无独立攻击",
+      "tags": [
+        "遗物",
+        "充能"
+      ],
+      "stars": "攻击"
+    },
+    {
+      "id": "sail",
+      "name": "那前赴后继的风帆",
+      "image": "private-source",
+      "price": 9,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cells": 4,
+      "current": "角色解放后，接力终点的下一次技能伤害 +50%，每次解放一次；一局只装备一件黄金信物。",
+      "source": "https://mc.appfeng.com/item/71500035",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "feilian",
+      "name": "飞廉之猩",
+      "image": "private-source",
+      "price": 7,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cells": 4,
+      "current": "每 6 秒气动连击 8+10；上方星位重击武器下次伤害 +4。",
+      "source": "https://mc.appfeng.com/monster/330000050",
+      "status": "本轮详细设计",
+      "proposal": "重击；每6秒攻击12伤，充能+2",
+      "tags": [
+        "声骸",
+        "攻击",
+        "充能"
+      ],
+      "stars": "武器"
+    },
+    {
+      "id": "thundering",
+      "name": "云闪之鳞",
+      "image": "private-source",
+      "price": 7,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cells": 4,
+      "current": "每 6 秒导电攻击 16；邻接角色专属物时，下一次角色解放伤害 +6，不叠加多只。",
+      "source": "https://mc.appfeng.com/monster/340000080",
+      "status": "本轮详细设计",
+      "proposal": "联动；每5秒攻击8伤，迅捷+1",
+      "tags": [
+        "声骸",
+        "攻击",
+        "迅捷"
+      ],
+      "stars": "攻击"
+    },
+    {
+      "id": "bellborne",
+      "name": "鸣钟之龟",
+      "image": "private-source",
+      "price": 7,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cells": 4,
+      "current": "每 7 秒冷凝攻击 8，提供三次各减伤 3 的钟盾；星位治疗每次让下次钟盾 +1，最多 +3。",
+      "source": "https://mc.appfeng.com/monster/340000020",
+      "status": "本轮详细设计",
+      "proposal": "守御；每7秒攻击6伤，并消耗己方最多8护盾，每点增加1.5伤",
+      "tags": [
+        "声骸",
+        "攻击"
+      ],
+      "stars": "护盾"
+    },
+    {
+      "id": "heron",
+      "name": "无常凶鹭",
+      "image": "private-source",
+      "price": 7,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cells": 4,
+      "current": "每 6 秒湮灭攻击 12，共鸣能量 +6；接力经过它后下一物品伤害 +3，仅持续一次。",
+      "source": "https://mc.appfeng.com/monster/330000030",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "inferno",
+      "name": "燎照之骑",
+      "image": "private-source",
+      "price": 7,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cells": 4,
+      "current": "每 6 秒热熔连斩 5+5+8；星位武器下两次普攻各 +2。",
+      "source": "https://mc.appfeng.com/monster/330000020",
+      "status": "本轮详细设计",
+      "proposal": "通用对策；每6秒攻击8伤，额外削盾10",
+      "tags": [
+        "声骸",
+        "攻击",
+        "破盾"
+      ],
+      "stars": "武器"
+    },
+    {
+      "id": "violet",
+      "name": "紫羽鹭",
+      "image": "private-source",
+      "price": 4,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cells": 4,
+      "current": "每 5 秒格挡下一次攻击 4 点，格挡成功导电反击 7 并恢复 4 协奏。",
+      "source": "https://mc.appfeng.com/monster/320000020",
+      "status": "本轮详细设计",
+      "proposal": "守御；每5秒攻击3伤。己方护盾吸收敌方普通攻击后反击3伤，共享1.5秒间隔",
+      "tags": [
+        "声骸",
+        "攻击",
+        "反击"
+      ],
+      "stars": "护盾"
+    },
+    {
+      "id": "whiff",
+      "name": "呼咻咻",
+      "image": "private-source",
+      "price": 2,
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "cells": 1,
+      "current": "每4秒气动攻击3+3；普通激活能量4/协奏8。相同声骸的后续副本效力与产能依次减半。",
+      "source": "https://mc.appfeng.com/monster/310000100",
+      "status": "本轮详细设计",
+      "proposal": "通用；每4秒攻击两段，合计6伤",
+      "tags": [
+        "声骸",
+        "攻击"
+      ],
+      "stars": ""
+    },
+    {
+      "id": "turtle",
+      "name": "寒霜陆龟",
+      "image": "private-source",
+      "price": 2,
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "cells": 1,
+      "current": "每4秒实际恢复4生命；有效普通治疗激活产能，满血不产能。相同声骸的后续副本效力与产能依次减半。",
+      "source": "https://mc.appfeng.com/monster/310000270",
+      "status": "本轮详细设计",
+      "proposal": "通用；每4秒治疗4",
+      "tags": [
+        "声骸",
+        "治疗"
+      ],
+      "stars": ""
+    },
+    {
+      "id": "rocksteady",
+      "name": "坚岩斗士",
+      "image": "private-source",
+      "price": 4,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cells": 4,
+      "current": "每 5 秒物理攻击 7，并提供 8 护盾；可为燃灯路线提供来源。",
+      "source": "https://mc.appfeng.com/monster/320000010",
+      "status": "本轮详细设计",
+      "proposal": "守御；每5秒攻击3伤，获得4护盾",
+      "tags": [
+        "声骸",
+        "攻击",
+        "护盾"
+      ],
+      "stars": "治疗"
+    },
+    {
+      "id": "strategy",
+      "name": "用兵之道",
+      "image": "private-source",
+      "price": 0,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cells": 4,
+      "current": "对应角色第2轮赠送：标记一条长刃→声骸的接力，终点伤害 +2；专属限定，不能重复购买。",
+      "source": "https://wiki.biligame.com/wutheringwaves/%E5%85%B1%E9%B8%A3%E8%80%85/%E5%BF%8C%E7%82%8E",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "puppet",
+      "name": "机械人偶“悬丝”",
+      "image": "private-source",
+      "price": 0,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cells": 4,
+      "current": "吟霖第2轮赠送：每6秒准备一次悬丝强化，6秒内下一次普通声骸协同结算+2；与吟霖、武器印记合并一次结算。",
+      "source": "https://wiki.biligame.com/wutheringwaves/%E5%85%B1%E9%B8%A3%E8%80%85/%E5%90%9F%E9%9C%96",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "flower",
+      "name": "盛放的永恒",
+      "image": "private-source",
+      "price": 0,
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "cells": 1,
+      "current": "对应角色第2轮赠送：星位治疗声骸实际回复后，下一物品技能附加 2 护盾；每 3 秒一次。",
+      "source": "https://wiki.biligame.com/wutheringwaves/%E5%85%B1%E9%B8%A3%E8%80%85/%E7%BB%B4%E9%87%8C%E5%A5%88",
+      "status": "本轮详细设计",
+      "proposal": "守御；每6秒获得3护盾",
+      "tags": [
+        "遗物",
+        "护盾"
+      ],
+      "stars": "治疗"
+    },
+    {
+      "id": "satchel",
+      "name": "初始行囊",
+      "image": "private-source",
+      "price": 0,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "cells": 6,
+      "current": "原创终端收纳模块；边相接扩容，可随袋搬动所容物品。",
+      "source": "",
+      "status": "本轮详细设计",
+      "proposal": "通用；提供6格",
+      "tags": [
+        "口袋"
+      ],
+      "stars": ""
+    },
+    {
+      "id": "pouch",
+      "name": "普通口袋",
+      "image": "private-source",
+      "price": 3,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cells": 4,
+      "current": "原创终端收纳模块；边相接扩容，可随袋搬动所容物品。",
+      "source": "",
+      "status": "本轮详细设计",
+      "proposal": "通用；提供4格，开战每个实际占用格+2盾",
+      "tags": [
+        "口袋"
+      ],
+      "stars": ""
+    },
+    {
+      "id": "strip",
+      "name": "长条挂袋",
+      "image": "private-source",
+      "price": 3,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "cells": 3,
+      "current": "原创终端收纳模块；边相接扩容，可随袋搬动所容物品。",
+      "source": "",
+      "status": "本轮详细设计",
+      "proposal": "通用；提供3格，覆盖物品CD−10%×覆盖比例",
+      "tags": [
+        "口袋"
+      ],
+      "stars": ""
+    },
+    {
+      "id": "corner",
+      "name": "折角袋",
+      "image": "private-source",
+      "price": 3,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cells": 3,
+      "current": "原创终端收纳模块；边相接扩容，可随袋搬动所容物品。",
+      "source": "",
+      "status": "本轮详细设计",
+      "proposal": "通用；提供3格，声骸直接伤害/治疗/护盾+15%×覆盖比例",
+      "tags": [
+        "口袋"
+      ],
+      "stars": ""
+    },
+    {
+      "id": "travel",
+      "name": "旅行附包",
+      "image": "private-source",
+      "price": 5,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "cells": 6,
+      "current": "原创终端收纳模块；边相接扩容，可随袋搬动所容物品。",
+      "source": "",
+      "status": "本轮详细设计",
+      "proposal": "通用；提供6格，武器基础伤害+8%×覆盖比例",
+      "tags": [
+        "口袋"
+      ],
+      "stars": ""
+    },
+    {
+      "id": "weapon_21010011",
+      "name": "教学长刃",
+      "image": "private-source",
+      "price": 2,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "cells": 2,
+      "current": "本作改编 · T1 破阵重击；每2.8秒攻击4.9，消耗1.6耐力，能量8.4 / 协奏8.4。每3次普通主武器攻击，下一次普通主武器攻击额外造成重击伤害。",
+      "source": "https://mc.appfeng.com/weapon/21010011",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21010012",
+      "name": "原初长刃·朴石",
+      "image": "private-source",
+      "price": 2,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "cells": 2,
+      "current": "本作改编 · T1 破阵重击；每2.8秒攻击4.9，消耗1.6耐力，能量8.4 / 协奏8.4。每3次普通主武器攻击，下一次普通主武器攻击额外造成重击伤害。",
+      "source": "https://mc.appfeng.com/weapon/21010012",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21010013",
+      "name": "暗夜长刃·玄明",
+      "image": "private-source",
+      "price": 4,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "cells": 3,
+      "current": "本作改编 · T2 破阵重击；每2.8秒攻击8.16，消耗1.6耐力，能量8.4 / 协奏8.4。每3次普通主武器攻击，下一次普通主武器攻击额外造成重击伤害。",
+      "source": "https://mc.appfeng.com/weapon/21010013",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21010015",
+      "name": "浩境粼光",
+      "image": "private-source",
+      "price": 11,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "cells": 5,
+      "current": "本作改编 · T4 悬丝协同；每2.8秒攻击18.31，消耗1.6耐力，能量8.4 / 协奏8.4。普通主武器攻击蓄积印记；普通声骸攻击结算协同伤害。",
+      "source": "https://mc.appfeng.com/weapon/21010015",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21010023",
+      "name": "源能长刃·测壹",
+      "image": "private-source",
+      "price": 4,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "cells": 3,
+      "current": "本作改编 · T2 悬丝协同；每2.8秒攻击10.8，消耗1.6耐力，能量8.4 / 协奏8.4。普通主武器攻击蓄积印记；普通声骸攻击结算协同伤害。",
+      "source": "https://mc.appfeng.com/weapon/21010023",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21010026",
+      "name": "时和岁稔",
+      "image": "private-source",
+      "price": 22,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "cells": 5,
+      "current": "本作改编 · T5 悬丝协同；每2.8秒攻击24.51，消耗1.6耐力，能量8.4 / 协奏8.4。普通主武器攻击蓄积印记；普通声骸攻击结算协同伤害。仅合成；需要已拥有任一证据主人。",
+      "source": "https://mc.appfeng.com/weapon/21010026",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21010034",
+      "name": "重破刃-41型",
+      "image": "private-source",
+      "price": 7,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "cells": 4,
+      "current": "本作改编 · T3 光合协同；每2.8秒攻击17.16，消耗1.6耐力，能量8.4 / 协奏8.4。两次实际普通治疗后，下次普通主武器攻击附加衍射伤害并获得护盾。",
+      "source": "https://mc.appfeng.com/weapon/21010034",
+      "status": "本轮详细设计",
+      "proposal": "通用对策；7.84伤害 / 2.8秒\n每次普通攻击额外削盾8",
+      "tags": [
+        "武器",
+        "攻击",
+        "破盾"
+      ],
+      "stars": "攻击"
+    },
+    {
+      "id": "weapon_21010036",
+      "name": "焰痕",
+      "image": "private-source",
+      "price": 22,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "cells": 5,
+      "current": "本作改编 · T5 解放爆发；每2.8秒攻击22.45，消耗1.6耐力，主武能量12.6 / 副武基础8.4 / 协奏8.4。主武普通攻击回能更快；解放后3次普通攻击附加爆发伤害，终阶4次；派生不回能。仅合成；需要已拥有任一证据主人。",
+      "source": "https://mc.appfeng.com/weapon/21010036",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21010043",
+      "name": "远行者长刃·辟路",
+      "image": "private-source",
+      "price": 4,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "cells": 3,
+      "current": "本作改编 · T2 悬丝协同；每2.8秒攻击10.8，消耗1.6耐力，能量8.4 / 协奏8.4。普通主武器攻击蓄积印记；普通声骸攻击结算协同伤害。",
+      "source": "https://mc.appfeng.com/weapon/21010043",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21010044",
+      "name": "永夜长明",
+      "image": "private-source",
+      "price": 7,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "cells": 4,
+      "current": "本作改编 · T3 破阵重击；每2.8秒攻击10.61，消耗1.6耐力，能量8.4 / 协奏8.4。每3次普通主武器攻击，下一次普通主武器攻击额外造成重击伤害。",
+      "source": "https://mc.appfeng.com/weapon/21010044",
+      "status": "本轮详细设计",
+      "proposal": "重击；10.08伤害 / 2.8秒\n普通攻击后充能+1。主武充能攻击额外消耗最多2层光噪，每层6伤",
+      "tags": [
+        "武器",
+        "攻击",
+        "充能"
+      ],
+      "stars": "攻击"
+    },
+    {
+      "id": "weapon_21010045",
+      "name": "源能机锋",
+      "image": "private-source",
+      "price": 11,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "cells": 5,
+      "current": "本作改编 · T4 解放爆发；每2.8秒攻击18.71，消耗1.6耐力，主武能量12.6 / 副武基础8.4 / 协奏8.4。主武普通攻击回能更快；解放后3次普通攻击附加爆发伤害，终阶4次；派生不回能。",
+      "source": "https://mc.appfeng.com/weapon/21010045",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21010046",
+      "name": "驭冕铸雷之权",
+      "image": "private-source",
+      "price": 22,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "cells": 5,
+      "current": "本作改编 · T5 破阵重击；每2.8秒攻击28.38，消耗1.6耐力，能量8.4 / 协奏8.4。每3次普通主武器攻击，下一次普通主武器攻击额外造成重击伤害。仅合成；需要已拥有任一证据主人。",
+      "source": "https://mc.appfeng.com/weapon/21010046",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21010056",
+      "name": "昙切",
+      "image": "private-source",
+      "price": 22,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "cells": 5,
+      "current": "本作改编 · T5 光合协同；每2.8秒攻击32.77，消耗1.6耐力，能量8.4 / 协奏8.4。两次实际普通治疗后，下次普通主武器攻击附加衍射伤害并获得护盾。仅合成；需要已拥有任一证据主人。",
+      "source": "https://mc.appfeng.com/weapon/21010056",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21010063",
+      "name": "钧天正音",
+      "image": "private-source",
+      "price": 4,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "cells": 3,
+      "current": "本作改编 · T2 解放爆发；每2.8秒攻击12.24，消耗1.6耐力，主武能量12.6 / 副武基础8.4 / 协奏8.4。主武普通攻击回能更快；解放后3次普通攻击附加爆发伤害，终阶4次；派生不回能。",
+      "source": "https://mc.appfeng.com/weapon/21010063",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21010064",
+      "name": "东落",
+      "image": "private-source",
+      "price": 7,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "cells": 4,
+      "current": "本作改编 · T3 悬丝协同；每2.8秒攻击14.04，消耗1.6耐力，能量8.4 / 协奏8.4。普通主武器攻击蓄积印记；普通声骸攻击结算协同伤害。",
+      "source": "https://mc.appfeng.com/weapon/21010064",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21010066",
+      "name": "宙算仪轨",
+      "image": "private-source",
+      "price": 22,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "cells": 5,
+      "current": "本作改编 · T5 光合协同；每2.8秒攻击32.77，消耗1.6耐力，能量8.4 / 协奏8.4。两次实际普通治疗后，下次普通主武器攻击附加衍射伤害并获得护盾。仅合成；需要已拥有任一证据主人。",
+      "source": "https://mc.appfeng.com/weapon/21010066",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21010074",
+      "name": "纹秋",
+      "image": "private-source",
+      "price": 7,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "cells": 4,
+      "current": "本作改编 · T3 破阵重击；每2.8秒攻击10.61，消耗1.6耐力，能量8.4 / 协奏8.4。每3次普通主武器攻击，下一次普通主武器攻击额外造成重击伤害。",
+      "source": "https://mc.appfeng.com/weapon/21010074",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21010076",
+      "name": "千般渡",
+      "image": "private-source",
+      "price": 22,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "cells": 5,
+      "current": "本作改编 · T5 光合协同；每2.8秒攻击32.77，消耗1.6耐力，能量8.4 / 协奏8.4。两次实际普通治疗后，下次普通主武器攻击附加衍射伤害并获得护盾。仅合成；需要已拥有任一证据主人。",
+      "source": "https://mc.appfeng.com/weapon/21010076",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21010084",
+      "name": "凋亡频移",
+      "image": "private-source",
+      "price": 7,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "cells": 4,
+      "current": "本作改编 · T3 悬丝协同；每2.8秒攻击14.04，消耗1.6耐力，能量8.4 / 协奏8.4。普通主武器攻击蓄积印记；普通声骸攻击结算协同伤害。",
+      "source": "https://mc.appfeng.com/weapon/21010084",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21010094",
+      "name": "容赦的沉思录",
+      "image": "private-source",
+      "price": 7,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "cells": 4,
+      "current": "本作改编 · T3 破阵重击；每2.8秒攻击10.61，消耗1.6耐力，能量8.4 / 协奏8.4。每3次普通主武器攻击，下一次普通主武器攻击额外造成重击伤害。",
+      "source": "https://mc.appfeng.com/weapon/21010094",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21010104",
+      "name": "金穹",
+      "image": "private-source",
+      "price": 7,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "cells": 4,
+      "current": "本作改编 · T3 解放爆发；每2.8秒攻击15.91，消耗1.6耐力，主武能量12.6 / 副武基础8.4 / 协奏8.4。主武普通攻击回能更快；解放后3次普通攻击附加爆发伤害，终阶4次；派生不回能。",
+      "source": "https://mc.appfeng.com/weapon/21010104",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21020011",
+      "name": "教学迅刀",
+      "image": "private-source",
+      "price": 2,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "cells": 2,
+      "current": "本作改编 · T1 破阵重击；每1.8秒攻击2.86，消耗1耐力，能量5.4 / 协奏5.4。每3次普通主武器攻击，下一次普通主武器攻击额外造成重击伤害。",
+      "source": "https://mc.appfeng.com/weapon/21020011",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21020012",
+      "name": "原初迅刀·鸣雨",
+      "image": "private-source",
+      "price": 2,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "cells": 2,
+      "current": "本作改编 · T1 破阵重击；每1.8秒攻击2.86，消耗1耐力，能量5.4 / 协奏5.4。每3次普通主武器攻击，下一次普通主武器攻击额外造成重击伤害。",
+      "source": "https://mc.appfeng.com/weapon/21020012",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21020013",
+      "name": "暗夜迅刀·黑闪",
+      "image": "private-source",
+      "price": 4,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "cells": 3,
+      "current": "本作改编 · T2 破阵重击；每1.8秒攻击4.76，消耗1耐力，能量5.4 / 协奏5.4。每3次普通主武器攻击，下一次普通主武器攻击额外造成重击伤害。",
+      "source": "https://mc.appfeng.com/weapon/21020013",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21020015",
+      "name": "千古洑流",
+      "image": "private-source",
+      "price": 11,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "cells": 5,
+      "current": "本作改编 · T4 风蚀接力；每1.8秒攻击11.09，消耗1耐力，能量5.4 / 协奏5.4。普通主武器攻击施加风蚀，最多6层，6秒到期，每2秒结算一次。",
+      "source": "https://mc.appfeng.com/weapon/21020015",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21020016",
+      "name": "赫奕流明",
+      "image": "private-source",
+      "price": 22,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "cells": 5,
+      "current": "本作改编 · T5 解放爆发；每1.8秒攻击13.09，消耗1耐力，主武能量8.1 / 副武基础5.4 / 协奏5.4。主武普通攻击回能更快；解放后3次普通攻击附加爆发伤害，终阶4次；派生不回能。仅合成；需要已拥有任一证据主人。",
+      "source": "https://mc.appfeng.com/weapon/21020016",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21020017",
+      "name": "心之锚",
+      "image": "private-source",
+      "price": 7,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "cells": 4,
+      "current": "本作改编 · T3 破阵重击；每1.8秒攻击6.19，消耗1耐力，能量5.4 / 协奏5.4。每3次普通主武器攻击，下一次普通主武器攻击额外造成重击伤害。",
+      "source": "https://mc.appfeng.com/weapon/21020017",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21020023",
+      "name": "源能迅刀·测贰",
+      "image": "private-source",
+      "price": 4,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "cells": 3,
+      "current": "本作改编 · T2 解放爆发；每1.8秒攻击7.14，消耗1耐力，主武能量8.1 / 副武基础5.4 / 协奏5.4。主武普通攻击回能更快；解放后3次普通攻击附加爆发伤害，终阶4次；派生不回能。",
+      "source": "https://mc.appfeng.com/weapon/21020023",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21020024",
+      "name": "行进序曲",
+      "image": "private-source",
+      "price": 7,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "cells": 4,
+      "current": "本作改编 · T3 风蚀接力；每1.8秒攻击10.01，消耗1耐力，能量5.4 / 协奏5.4。普通主武器攻击施加风蚀，最多6层，6秒到期，每2秒结算一次。",
+      "source": "https://mc.appfeng.com/weapon/21020024",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21020026",
+      "name": "裁春",
+      "image": "private-source",
+      "price": 22,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "cells": 5,
+      "current": "本作改编 · T5 破阵重击；每1.8秒攻击16.55，消耗1耐力，能量5.4 / 协奏5.4。每3次普通主武器攻击，下一次普通主武器攻击额外造成重击伤害。仅合成；需要已拥有任一证据主人。",
+      "source": "https://mc.appfeng.com/weapon/21020026",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21020034",
+      "name": "瞬斩刀-18型",
+      "image": "private-source",
+      "price": 7,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "cells": 4,
+      "current": "本作改编 · T3 破阵重击；每1.8秒攻击6.19，消耗1耐力，能量5.4 / 协奏5.4。每3次普通主武器攻击，下一次普通主武器攻击额外造成重击伤害。",
+      "source": "https://mc.appfeng.com/weapon/21020034",
+      "status": "本轮详细设计",
+      "proposal": "通用对策；5.04伤害 / 1.8秒\n每次普通攻击额外削盾6",
+      "tags": [
+        "武器",
+        "攻击",
+        "破盾"
+      ],
+      "stars": "补给"
+    },
+    {
+      "id": "weapon_21020036",
+      "name": "不灭航路",
+      "image": "private-source",
+      "price": 22,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "cells": 5,
+      "current": "本作改编 · T5 光合协同；每1.8秒攻击19.11，消耗1耐力，能量5.4 / 协奏5.4。两次实际普通治疗后，下次普通主武器攻击附加衍射伤害并获得护盾。仅合成；需要已拥有任一证据主人。",
+      "source": "https://mc.appfeng.com/weapon/21020036",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21020043",
+      "name": "远行者迅刀·旅迹",
+      "image": "private-source",
+      "price": 4,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "cells": 3,
+      "current": "本作改编 · T2 悬丝协同；每1.8秒攻击6.3，消耗1耐力，能量5.4 / 协奏5.4。普通主武器攻击蓄积印记；普通声骸攻击结算协同伤害。",
+      "source": "https://mc.appfeng.com/weapon/21020043",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21020044",
+      "name": "不归孤军",
+      "image": "private-source",
+      "price": 7,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "cells": 4,
+      "current": "本作改编 · T3 破阵重击；每1.8秒攻击6.19，消耗1耐力，能量5.4 / 协奏5.4。每3次普通主武器攻击，下一次普通主武器攻击额外造成重击伤害。",
+      "source": "https://mc.appfeng.com/weapon/21020044",
+      "status": "本轮详细设计",
+      "proposal": "重击；6.48伤害 / 1.8秒\n普通攻击后充能+1",
+      "tags": [
+        "武器",
+        "攻击",
+        "充能"
+      ],
+      "stars": "攻击"
+    },
+    {
+      "id": "weapon_21020045",
+      "name": "镭射切变",
+      "image": "private-source",
+      "price": 11,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "cells": 5,
+      "current": "本作改编 · T4 悬丝协同；每1.8秒攻击10.68，消耗1耐力，能量5.4 / 协奏5.4。普通主武器攻击蓄积印记；普通声骸攻击结算协同伤害。",
+      "source": "https://mc.appfeng.com/weapon/21020045",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21020046",
+      "name": "血誓盟约",
+      "image": "private-source",
+      "price": 22,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "cells": 5,
+      "current": "本作改编 · T5 光噪结算；每1.8秒攻击16.25，消耗1耐力，能量5.4 / 协奏5.4。普通主武器攻击施加光噪，最多6层，6秒到期，每2秒结算一次。仅合成；需要已拥有任一证据主人。",
+      "source": "https://mc.appfeng.com/weapon/21020046",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21020056",
+      "name": "不屈命定之冠",
+      "image": "private-source",
+      "price": 22,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "cells": 5,
+      "current": "本作改编 · T5 风蚀接力；每1.8秒攻击12.34，消耗1耐力，能量5.4 / 协奏5.4。普通主武器攻击施加风蚀，最多6层，6秒到期，每2秒结算一次。仅合成；需要已拥有任一证据主人。",
+      "source": "https://mc.appfeng.com/weapon/21020056",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21020064",
+      "name": "西升",
+      "image": "private-source",
+      "price": 7,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "cells": 4,
+      "current": "本作改编 · T3 破阵重击；每1.8秒攻击6.19，消耗1耐力，能量5.4 / 协奏5.4。每3次普通主武器攻击，下一次普通主武器攻击额外造成重击伤害。",
+      "source": "https://mc.appfeng.com/weapon/21020064",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21020066",
+      "name": "裁竹",
+      "image": "private-source",
+      "price": 22,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "cells": 5,
+      "current": "本作改编 · T5 悬丝协同；每1.8秒攻击14.3，消耗1耐力，能量5.4 / 协奏5.4。普通主武器攻击蓄积印记；普通声骸攻击结算协同伤害。仅合成；需要已拥有任一证据主人。",
+      "source": "https://mc.appfeng.com/weapon/21020066",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21020074",
+      "name": "飞景",
+      "image": "private-source",
+      "price": 7,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "cells": 4,
+      "current": "本作改编 · T3 悬丝协同；每1.8秒攻击8.19，消耗1耐力，能量5.4 / 协奏5.4。普通主武器攻击蓄积印记；普通声骸攻击结算协同伤害。",
+      "source": "https://mc.appfeng.com/weapon/21020074",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21020076",
+      "name": "永远的启明星",
+      "image": "private-source",
+      "price": 22,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "cells": 5,
+      "current": "本作改编 · T5 解放爆发；每1.8秒攻击13.09，消耗1耐力，主武能量8.1 / 副武基础5.4 / 协奏5.4。主武普通攻击回能更快；解放后3次普通攻击附加爆发伤害，终阶4次；派生不回能。仅合成；需要已拥有任一证据主人。",
+      "source": "https://mc.appfeng.com/weapon/21020076",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21020084",
+      "name": "永续坍缩",
+      "image": "private-source",
+      "price": 7,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "cells": 4,
+      "current": "本作改编 · T3 悬丝协同；每1.8秒攻击8.19，消耗1耐力，能量5.4 / 协奏5.4。普通主武器攻击蓄积印记；普通声骸攻击结算协同伤害。",
+      "source": "https://mc.appfeng.com/weapon/21020084",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21020086",
+      "name": "灼霜",
+      "image": "private-source",
+      "price": 22,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "cells": 5,
+      "current": "本作改编 · T5 解放爆发；每1.8秒攻击13.09，消耗1耐力，主武能量8.1 / 副武基础5.4 / 协奏5.4。主武普通攻击回能更快；解放后3次普通攻击附加爆发伤害，终阶4次；派生不回能。仅合成；需要已拥有任一证据主人。",
+      "source": "https://mc.appfeng.com/weapon/21020086",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21020094",
+      "name": "风流的寓言诗",
+      "image": "private-source",
+      "price": 7,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "cells": 4,
+      "current": "本作改编 · T3 破阵重击；每1.8秒攻击6.19，消耗1耐力，能量5.4 / 协奏5.4。每3次普通主武器攻击，下一次普通主武器攻击额外造成重击伤害。",
+      "source": "https://mc.appfeng.com/weapon/21020094",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21020096",
+      "name": "天之苍苍",
+      "image": "private-source",
+      "price": 22,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "cells": 5,
+      "current": "本作改编 · T5 破阵重击；每1.8秒攻击16.55，消耗1耐力，能量5.4 / 协奏5.4。每3次普通主武器攻击，下一次普通主武器攻击额外造成重击伤害。仅合成；需要已拥有任一证据主人。",
+      "source": "https://mc.appfeng.com/weapon/21020096",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21020104",
+      "name": "翼锋",
+      "image": "private-source",
+      "price": 7,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "cells": 4,
+      "current": "本作改编 · T3 解放爆发；每1.8秒攻击9.28，消耗1耐力，主武能量8.1 / 副武基础5.4 / 协奏5.4。主武普通攻击回能更快；解放后3次普通攻击附加爆发伤害，终阶4次；派生不回能。",
+      "source": "https://mc.appfeng.com/weapon/21020104",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21020106",
+      "name": "云琅",
+      "image": "private-source",
+      "price": 22,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "cells": 5,
+      "current": "本作改编 · T5 风蚀接力；每1.8秒攻击12.34，消耗1耐力，能量5.4 / 协奏5.4。普通主武器攻击施加风蚀，最多6层，6秒到期，每2秒结算一次。仅合成；需要已拥有任一证据主人。",
+      "source": "https://mc.appfeng.com/weapon/21020106",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21020107",
+      "name": "沉冥",
+      "image": "private-source",
+      "price": 11,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "cells": 5,
+      "current": "本作改编 · T4 破阵重击；每1.8秒攻击10.28，消耗1耐力，能量5.4 / 协奏5.4。每3次普通主武器攻击，下一次普通主武器攻击额外造成重击伤害。 已公告待上线；本地原型开放合成。",
+      "source": "https://mc.appfeng.com/weapon/21020107",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21030011",
+      "name": "教学佩枪",
+      "image": "private-source",
+      "price": 2,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "cells": 2,
+      "current": "本作改编 · T1 悬丝协同；每2秒攻击4.32，消耗1耐力，能量6 / 协奏6。普通主武器攻击蓄积印记；普通声骸攻击结算协同伤害。",
+      "source": "https://mc.appfeng.com/weapon/21030011",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21030012",
+      "name": "原初佩枪·穿林",
+      "image": "private-source",
+      "price": 2,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "cells": 2,
+      "current": "本作改编 · T1 悬丝协同；每2秒攻击4.32，消耗1耐力，能量6 / 协奏6。普通主武器攻击蓄积印记；普通声骸攻击结算协同伤害。",
+      "source": "https://mc.appfeng.com/weapon/21030012",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21030013",
+      "name": "暗夜佩枪·暗星",
+      "image": "private-source",
+      "price": 4,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "cells": 2,
+      "current": "本作改编 · T2 悬丝协同；每2秒攻击7.2，消耗1耐力，能量6 / 协奏6。普通主武器攻击蓄积印记；普通声骸攻击结算协同伤害。",
+      "source": "https://mc.appfeng.com/weapon/21030013",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21030015",
+      "name": "停驻之烟",
+      "image": "private-source",
+      "price": 11,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "cells": 3,
+      "current": "本作改编 · T4 解放爆发；每2秒攻击12.47，消耗1耐力，主武能量9 / 副武基础6 / 协奏6。主武普通攻击回能更快；解放后3次普通攻击附加爆发伤害，终阶4次；派生不回能。",
+      "source": "https://mc.appfeng.com/weapon/21030015",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21030016",
+      "name": "死与舞",
+      "image": "private-source",
+      "price": 22,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "cells": 3,
+      "current": "本作改编 · T5 悬丝协同；每2秒攻击16.34，消耗1耐力，能量6 / 协奏6。普通主武器攻击蓄积印记；普通声骸攻击结算协同伤害。仅合成；需要已拥有任一证据主人。",
+      "source": "https://mc.appfeng.com/weapon/21030016",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21030023",
+      "name": "源能佩枪·测叁",
+      "image": "private-source",
+      "price": 4,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "cells": 2,
+      "current": "本作改编 · T2 悬丝协同；每2秒攻击7.2，消耗1耐力，能量6 / 协奏6。普通主武器攻击蓄积印记；普通声骸攻击结算协同伤害。",
+      "source": "https://mc.appfeng.com/weapon/21030023",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21030024",
+      "name": "华彩乐段",
+      "image": "private-source",
+      "price": 7,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "cells": 3,
+      "current": "本作改编 · T3 悬丝协同；每2秒攻击9.36，消耗1耐力，能量6 / 协奏6。普通主武器攻击蓄积印记；普通声骸攻击结算协同伤害。",
+      "source": "https://mc.appfeng.com/weapon/21030024",
+      "status": "本轮详细设计",
+      "proposal": "联动；7.2伤害 / 2.0秒\n普通攻击后迅捷+1。迅捷至少4层时本武器体力消耗−20%",
+      "tags": [
+        "武器",
+        "攻击",
+        "迅捷"
+      ],
+      "stars": "补给"
+    },
+    {
+      "id": "weapon_21030026",
+      "name": "林间的咏叹调",
+      "image": "private-source",
+      "price": 22,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "cells": 3,
+      "current": "本作改编 · T5 风蚀接力；每2秒攻击14.1，消耗1耐力，能量6 / 协奏6。普通主武器攻击施加风蚀，最多6层，6秒到期，每2秒结算一次。仅合成；需要已拥有任一证据主人。",
+      "source": "https://mc.appfeng.com/weapon/21030026",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21030034",
+      "name": "穿击枪-26型",
+      "image": "private-source",
+      "price": 7,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "cells": 3,
+      "current": "本作改编 · T3 光合协同；每2秒攻击11.44，消耗1耐力，能量6 / 协奏6。两次实际普通治疗后，下次普通主武器攻击附加衍射伤害并获得护盾。",
+      "source": "https://mc.appfeng.com/weapon/21030034",
+      "status": "本轮详细设计",
+      "proposal": "通用对策；5.6伤害 / 2.0秒\n每次普通攻击额外削盾5",
+      "tags": [
+        "武器",
+        "攻击",
+        "破盾"
+      ],
+      "stars": "补给"
+    },
+    {
+      "id": "weapon_21030036",
+      "name": "光影双生",
+      "image": "private-source",
+      "price": 22,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "cells": 3,
+      "current": "本作改编 · T5 破阵重击；每2秒攻击18.92，消耗1耐力，能量6 / 协奏6。每3次普通主武器攻击，下一次普通主武器攻击额外造成重击伤害。仅合成；需要已拥有任一证据主人。",
+      "source": "https://mc.appfeng.com/weapon/21030036",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21030043",
+      "name": "远行者佩枪·洞察",
+      "image": "private-source",
+      "price": 4,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "cells": 2,
+      "current": "本作改编 · T2 悬丝协同；每2秒攻击7.2，消耗1耐力，能量6 / 协奏6。普通主武器攻击蓄积印记；普通声骸攻击结算协同伤害。",
+      "source": "https://mc.appfeng.com/weapon/21030043",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21030044",
+      "name": "无眠烈火",
+      "image": "private-source",
+      "price": 7,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "cells": 3,
+      "current": "本作改编 · T3 悬丝协同；每2秒攻击9.36，消耗1耐力，能量6 / 协奏6。普通主武器攻击蓄积印记；普通声骸攻击结算协同伤害。",
+      "source": "https://mc.appfeng.com/weapon/21030044",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21030045",
+      "name": "相位涟漪",
+      "image": "private-source",
+      "price": 11,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "cells": 3,
+      "current": "本作改编 · T4 悬丝协同；每2秒攻击12.21，消耗1耐力，能量6 / 协奏6。普通主武器攻击蓄积印记；普通声骸攻击结算协同伤害。",
+      "source": "https://mc.appfeng.com/weapon/21030045",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21030046",
+      "name": "溢彩荧辉",
+      "image": "private-source",
+      "price": 22,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "cells": 3,
+      "current": "本作改编 · T5 解放爆发；每2秒攻击14.96，消耗1耐力，主武能量9 / 副武基础6 / 协奏6。主武普通攻击回能更快；解放后3次普通攻击附加爆发伤害，终阶4次；派生不回能。仅合成；需要已拥有任一证据主人。",
+      "source": "https://mc.appfeng.com/weapon/21030046",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21030056",
+      "name": "蜃影",
+      "image": "private-source",
+      "price": 22,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "cells": 3,
+      "current": "本作改编 · T5 破阵重击；每2秒攻击18.92，消耗1耐力，能量6 / 协奏6。每3次普通主武器攻击，下一次普通主武器攻击额外造成重击伤害。仅合成；需要已拥有任一证据主人。",
+      "source": "https://mc.appfeng.com/weapon/21030056",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21030064",
+      "name": "飞逝",
+      "image": "private-source",
+      "price": 7,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "cells": 3,
+      "current": "本作改编 · T3 悬丝协同；每2秒攻击9.36，消耗1耐力，能量6 / 协奏6。普通主武器攻击蓄积印记；普通声骸攻击结算协同伤害。",
+      "source": "https://mc.appfeng.com/weapon/21030064",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21030066",
+      "name": "碎骨",
+      "image": "private-source",
+      "price": 22,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "cells": 3,
+      "current": "本作改编 · T5 破阵重击；每2秒攻击18.92，消耗1耐力，能量6 / 协奏6。每3次普通主武器攻击，下一次普通主武器攻击额外造成重击伤害。仅合成；需要已拥有任一证据主人。",
+      "source": "https://mc.appfeng.com/weapon/21030066",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21030074",
+      "name": "奔雷",
+      "image": "private-source",
+      "price": 7,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "cells": 3,
+      "current": "本作改编 · T3 悬丝协同；每2秒攻击9.36，消耗1耐力，能量6 / 协奏6。普通主武器攻击蓄积印记；普通声骸攻击结算协同伤害。",
+      "source": "https://mc.appfeng.com/weapon/21030074",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21030084",
+      "name": "悖论喷流",
+      "image": "private-source",
+      "price": 7,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "cells": 3,
+      "current": "本作改编 · T3 悬丝协同；每2秒攻击9.36，消耗1耐力，能量6 / 协奏6。普通主武器攻击蓄积印记；普通声骸攻击结算协同伤害。",
+      "source": "https://mc.appfeng.com/weapon/21030084",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21030094",
+      "name": "叙别的罗曼史",
+      "image": "private-source",
+      "price": 7,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "cells": 3,
+      "current": "本作改编 · T3 悬丝协同；每2秒攻击9.36，消耗1耐力，能量6 / 协奏6。普通主武器攻击蓄积印记；普通声骸攻击结算协同伤害。",
+      "source": "https://mc.appfeng.com/weapon/21030094",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21030104",
+      "name": "阳焰",
+      "image": "private-source",
+      "price": 7,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "cells": 3,
+      "current": "本作改编 · T3 破阵重击；每2秒攻击7.07，消耗1耐力，能量6 / 协奏6。每3次普通主武器攻击，下一次普通主武器攻击额外造成重击伤害。",
+      "source": "https://mc.appfeng.com/weapon/21030104",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21040011",
+      "name": "教学臂铠",
+      "image": "private-source",
+      "price": 2,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "cells": 2,
+      "current": "本作改编 · T1 破阵重击；每1.6秒攻击2.45，消耗0.9耐力，能量4.8 / 协奏4.8。每3次普通主武器攻击，下一次普通主武器攻击额外造成重击伤害。",
+      "source": "https://mc.appfeng.com/weapon/21040011",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21040012",
+      "name": "原初臂铠·磐岩",
+      "image": "private-source",
+      "price": 2,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "cells": 2,
+      "current": "本作改编 · T1 破阵重击；每1.6秒攻击2.45，消耗0.9耐力，能量4.8 / 协奏4.8。每3次普通主武器攻击，下一次普通主武器攻击额外造成重击伤害。",
+      "source": "https://mc.appfeng.com/weapon/21040012",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21040013",
+      "name": "暗夜臂铠·夜芒",
+      "image": "private-source",
+      "price": 4,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "cells": 2,
+      "current": "本作改编 · T2 破阵重击；每1.6秒攻击4.08，消耗0.9耐力，能量4.8 / 协奏4.8。每3次普通主武器攻击，下一次普通主武器攻击额外造成重击伤害。",
+      "source": "https://mc.appfeng.com/weapon/21040013",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21040015",
+      "name": "擎渊怒涛",
+      "image": "private-source",
+      "price": 11,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "cells": 2,
+      "current": "本作改编 · T4 悬丝协同；每1.6秒攻击9.16，消耗0.9耐力，能量4.8 / 协奏4.8。普通主武器攻击蓄积印记；普通声骸攻击结算协同伤害。",
+      "source": "https://mc.appfeng.com/weapon/21040015",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21040016",
+      "name": "诸方玄枢",
+      "image": "private-source",
+      "price": 22,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "cells": 3,
+      "current": "本作改编 · T5 解放爆发；每1.6秒攻击11.22，消耗0.9耐力，主武能量7.2 / 副武基础4.8 / 协奏4.8。主武普通攻击回能更快；解放后3次普通攻击附加爆发伤害，终阶4次；派生不回能。仅合成；需要已拥有任一证据主人。",
+      "source": "https://mc.appfeng.com/weapon/21040016",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21040023",
+      "name": "源能臂铠·测肆",
+      "image": "private-source",
+      "price": 4,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "cells": 2,
+      "current": "本作改编 · T2 破阵重击；每1.6秒攻击4.08，消耗0.9耐力，能量4.8 / 协奏4.8。每3次普通主武器攻击，下一次普通主武器攻击额外造成重击伤害。",
+      "source": "https://mc.appfeng.com/weapon/21040023",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21040024",
+      "name": "呼啸重音",
+      "image": "private-source",
+      "price": 7,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "cells": 2,
+      "current": "本作改编 · T3 悬丝协同；每1.6秒攻击7.02，消耗0.9耐力，能量4.8 / 协奏4.8。普通主武器攻击蓄积印记；普通声骸攻击结算协同伤害。",
+      "source": "https://mc.appfeng.com/weapon/21040024",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21040026",
+      "name": "悲喜剧",
+      "image": "private-source",
+      "price": 22,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cells": 4,
+      "current": "本作改编 · T5 破阵重击；每1.6秒攻击14.19，消耗0.9耐力，能量4.8 / 协奏4.8。每3次普通主武器攻击，下一次普通主武器攻击额外造成重击伤害。仅合成；需要已拥有任一证据主人。",
+      "source": "https://mc.appfeng.com/weapon/21040026",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21040034",
+      "name": "钢影拳-21丁型",
+      "image": "private-source",
+      "price": 7,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "cells": 2,
+      "current": "本作改编 · T3 光合协同；每1.6秒攻击8.58，消耗0.9耐力，能量4.8 / 协奏4.8。两次实际普通治疗后，下次普通主武器攻击附加衍射伤害并获得护盾。",
+      "source": "https://mc.appfeng.com/weapon/21040034",
+      "status": "本轮详细设计",
+      "proposal": "守御；5.28伤害 / 1.6秒\n普通攻击后获得3护盾",
+      "tags": [
+        "武器",
+        "攻击",
+        "护盾"
+      ],
+      "stars": "治疗"
+    },
+    {
+      "id": "weapon_21040036",
+      "name": "焰光裁定",
+      "image": "private-source",
+      "price": 22,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "cells": 3,
+      "current": "本作改编 · T5 光噪结算；每1.6秒攻击13.93，消耗0.9耐力，能量4.8 / 协奏4.8。普通主武器攻击施加光噪，最多6层，6秒到期，每2秒结算一次。仅合成；需要已拥有任一证据主人。",
+      "source": "https://mc.appfeng.com/weapon/21040036",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21040043",
+      "name": "远行者臂铠·破障",
+      "image": "private-source",
+      "price": 4,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "cells": 2,
+      "current": "本作改编 · T2 悬丝协同；每1.6秒攻击5.4，消耗0.9耐力，能量4.8 / 协奏4.8。普通主武器攻击蓄积印记；普通声骸攻击结算协同伤害。",
+      "source": "https://mc.appfeng.com/weapon/21040043",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21040044",
+      "name": "袍泽之固",
+      "image": "private-source",
+      "price": 7,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "cells": 2,
+      "current": "本作改编 · T3 解放爆发；每1.6秒攻击7.96，消耗0.9耐力，主武能量7.2 / 副武基础4.8 / 协奏4.8。主武普通攻击回能更快；解放后3次普通攻击附加爆发伤害，终阶4次；派生不回能。",
+      "source": "https://mc.appfeng.com/weapon/21040044",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21040045",
+      "name": "脉冲协臂",
+      "image": "private-source",
+      "price": 11,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "cells": 2,
+      "current": "本作改编 · T4 破阵重击；每1.6秒攻击8.81，消耗0.9耐力，能量4.8 / 协奏4.8。每3次普通主武器攻击，下一次普通主武器攻击额外造成重击伤害。",
+      "source": "https://mc.appfeng.com/weapon/21040045",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21040046",
+      "name": "万物持存的注释",
+      "image": "private-source",
+      "price": 22,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "cells": 3,
+      "current": "本作改编 · T5 光合协同；每1.6秒攻击16.38，消耗0.9耐力，能量4.8 / 协奏4.8。两次实际普通治疗后，下次普通主武器攻击附加衍射伤害并获得护盾。仅合成；需要已拥有任一证据主人。",
+      "source": "https://mc.appfeng.com/weapon/21040046",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21040056",
+      "name": "白昼之脊",
+      "image": "private-source",
+      "price": 22,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "cells": 3,
+      "current": "本作改编 · T5 破阵重击；每1.6秒攻击14.19，消耗0.9耐力，能量4.8 / 协奏4.8。每3次普通主武器攻击，下一次普通主武器攻击额外造成重击伤害。仅合成；需要已拥有任一证据主人。",
+      "source": "https://mc.appfeng.com/weapon/21040056",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21040064",
+      "name": "骇行",
+      "image": "private-source",
+      "price": 7,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "cells": 2,
+      "current": "本作改编 · T3 解放爆发；每1.6秒攻击7.96，消耗0.9耐力，主武能量7.2 / 副武基础4.8 / 协奏4.8。主武普通攻击回能更快；解放后3次普通攻击附加爆发伤害，终阶4次；派生不回能。",
+      "source": "https://mc.appfeng.com/weapon/21040064",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21040066",
+      "name": "昭日译注",
+      "image": "private-source",
+      "price": 22,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cells": 4,
+      "current": "本作改编 · T5 解放爆发；每1.6秒攻击11.22，消耗0.9耐力，主武能量7.2 / 副武基础4.8 / 协奏4.8。主武普通攻击回能更快；解放后3次普通攻击附加爆发伤害，终阶4次；派生不回能。仅合成；需要已拥有任一证据主人。",
+      "source": "https://mc.appfeng.com/weapon/21040066",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21040074",
+      "name": "金掌",
+      "image": "private-source",
+      "price": 7,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "cells": 2,
+      "current": "本作改编 · T3 悬丝协同；每1.6秒攻击7.02，消耗0.9耐力，能量4.8 / 协奏4.8。普通主武器攻击蓄积印记；普通声骸攻击结算协同伤害。",
+      "source": "https://mc.appfeng.com/weapon/21040074",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21040084",
+      "name": "尘云旋臂",
+      "image": "private-source",
+      "price": 7,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "cells": 2,
+      "current": "本作改编 · T3 悬丝协同；每1.6秒攻击7.02，消耗0.9耐力，能量4.8 / 协奏4.8。普通主武器攻击蓄积印记；普通声骸攻击结算协同伤害。",
+      "source": "https://mc.appfeng.com/weapon/21040084",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21040094",
+      "name": "酩酊的英雄志",
+      "image": "private-source",
+      "price": 7,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "cells": 2,
+      "current": "本作改编 · T3 破阵重击；每1.6秒攻击5.3，消耗0.9耐力，能量4.8 / 协奏4.8。每3次普通主武器攻击，下一次普通主武器攻击额外造成重击伤害。",
+      "source": "https://mc.appfeng.com/weapon/21040094",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21040104",
+      "name": "凌空",
+      "image": "private-source",
+      "price": 7,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "cells": 2,
+      "current": "本作改编 · T3 解放爆发；每1.6秒攻击7.96，消耗0.9耐力，主武能量7.2 / 副武基础4.8 / 协奏4.8。主武普通攻击回能更快；解放后3次普通攻击附加爆发伤害，终阶4次；派生不回能。",
+      "source": "https://mc.appfeng.com/weapon/21040104",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21050011",
+      "name": "教学音感仪",
+      "image": "private-source",
+      "price": 2,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cells": 4,
+      "current": "本作改编 · T1 悬丝协同；每2.2秒攻击4.32，消耗1耐力，能量6.6 / 协奏6.6。普通主武器攻击蓄积印记；普通声骸攻击结算协同伤害。",
+      "source": "https://mc.appfeng.com/weapon/21050011",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21050012",
+      "name": "原初音感仪·听浪",
+      "image": "private-source",
+      "price": 2,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cells": 4,
+      "current": "本作改编 · T1 悬丝协同；每2.2秒攻击4.32，消耗1耐力，能量6.6 / 协奏6.6。普通主武器攻击蓄积印记；普通声骸攻击结算协同伤害。",
+      "source": "https://mc.appfeng.com/weapon/21050012",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21050013",
+      "name": "暗夜矩阵·暝光",
+      "image": "private-source",
+      "price": 4,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cells": 4,
+      "current": "本作改编 · T2 悬丝协同；每2.2秒攻击7.2，消耗1耐力，能量6.6 / 协奏6.6。普通主武器攻击蓄积印记；普通声骸攻击结算协同伤害。",
+      "source": "https://mc.appfeng.com/weapon/21050013",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21050015",
+      "name": "漪澜浮录",
+      "image": "private-source",
+      "price": 11,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cells": 4,
+      "current": "本作改编 · T4 解放爆发；每2.2秒攻击12.47，消耗1耐力，主武能量9.9 / 副武基础6.6 / 协奏6.6。主武普通攻击回能更快；解放后3次普通攻击附加爆发伤害，终阶4次；派生不回能。",
+      "source": "https://mc.appfeng.com/weapon/21050015",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21050017",
+      "name": "渊海回声",
+      "image": "private-source",
+      "price": 7,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cells": 4,
+      "current": "本作改编 · T3 光合协同；每2.2秒攻击11.44，消耗1耐力，能量6.6 / 协奏6.6。两次实际普通治疗后，下次普通主武器攻击附加衍射伤害并获得护盾。",
+      "source": "https://mc.appfeng.com/weapon/21050017",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21050023",
+      "name": "源能音感仪·测五",
+      "image": "private-source",
+      "price": 4,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cells": 4,
+      "current": "本作改编 · T2 悬丝协同；每2.2秒攻击7.2，消耗1耐力，能量6.6 / 协奏6.6。普通主武器攻击蓄积印记；普通声骸攻击结算协同伤害。",
+      "source": "https://mc.appfeng.com/weapon/21050023",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21050026",
+      "name": "琼枝冰绡",
+      "image": "private-source",
+      "price": 22,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cells": 4,
+      "current": "本作改编 · T5 悬丝协同；每2.2秒攻击16.34，消耗1耐力，能量6.6 / 协奏6.6。普通主武器攻击蓄积印记；普通声骸攻击结算协同伤害。仅合成；需要已拥有任一证据主人。",
+      "source": "https://mc.appfeng.com/weapon/21050026",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21050027",
+      "name": "大海的馈赠",
+      "image": "private-source",
+      "price": 7,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cells": 4,
+      "current": "本作改编 · T3 光噪结算；每2.2秒攻击14.04，消耗1耐力，能量6.6 / 协奏6.6。普通主武器攻击施加光噪，最多6层，6秒到期，每2秒结算一次。",
+      "source": "https://mc.appfeng.com/weapon/21050027",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21050036",
+      "name": "星序协响",
+      "image": "private-source",
+      "price": 22,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "cells": 6,
+      "current": "本作改编 · T5 光合协同；每2.2秒攻击21.84，消耗1耐力，能量6.6 / 协奏6.6。两次实际普通治疗后，下次普通主武器攻击附加衍射伤害并获得护盾。仅合成；需要已拥有任一证据主人。",
+      "source": "https://mc.appfeng.com/weapon/21050036",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21050043",
+      "name": "远行者矩阵·探幽",
+      "image": "private-source",
+      "price": 4,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cells": 4,
+      "current": "本作改编 · T2 悬丝协同；每2.2秒攻击7.2，消耗1耐力，能量6.6 / 协奏6.6。普通主武器攻击蓄积印记；普通声骸攻击结算协同伤害。",
+      "source": "https://mc.appfeng.com/weapon/21050043",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21050044",
+      "name": "今州守望",
+      "image": "private-source",
+      "price": 7,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cells": 4,
+      "current": "本作改编 · T3 悬丝协同；每2.2秒攻击9.36，消耗1耐力，能量6.6 / 协奏6.6。普通主武器攻击蓄积印记；普通声骸攻击结算协同伤害。",
+      "source": "https://mc.appfeng.com/weapon/21050044",
+      "status": "本轮详细设计",
+      "proposal": "联动；7.92伤害 / 2.2秒\n普通攻击后迅捷+1。迅捷满6层时本次普通攻击额外+2伤",
+      "tags": [
+        "武器",
+        "攻击",
+        "迅捷"
+      ],
+      "stars": "声骸"
+    },
+    {
+      "id": "weapon_21050045",
+      "name": "玻色星仪",
+      "image": "private-source",
+      "price": 11,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cells": 4,
+      "current": "本作改编 · T4 破阵重击；每2.2秒攻击11.75，消耗1耐力，能量6.6 / 协奏6.6。每3次普通主武器攻击，下一次普通主武器攻击额外造成重击伤害。",
+      "source": "https://mc.appfeng.com/weapon/21050045",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21050046",
+      "name": "和光回唱",
+      "image": "private-source",
+      "price": 22,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cells": 4,
+      "current": "本作改编 · T5 光噪结算；每2.2秒攻击18.58，消耗1耐力，能量6.6 / 协奏6.6。普通主武器攻击施加光噪，最多6层，6秒到期，每2秒结算一次。仅合成；需要已拥有任一证据主人。",
+      "source": "https://mc.appfeng.com/weapon/21050046",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21050056",
+      "name": "海的呢喃",
+      "image": "private-source",
+      "price": 22,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cells": 4,
+      "current": "本作改编 · T5 光合协同；每2.2秒攻击21.84，消耗1耐力，能量6.6 / 协奏6.6。两次实际普通治疗后，下次普通主武器攻击附加衍射伤害并获得护盾。仅合成；需要已拥有任一证据主人。",
+      "source": "https://mc.appfeng.com/weapon/21050056",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21050064",
+      "name": "异度",
+      "image": "private-source",
+      "price": 7,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cells": 4,
+      "current": "本作改编 · T3 光合协同；每2.2秒攻击11.44，消耗1耐力，能量6.6 / 协奏6.6。两次实际普通治疗后，下次普通主武器攻击附加衍射伤害并获得护盾。",
+      "source": "https://mc.appfeng.com/weapon/21050064",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21050066",
+      "name": "幽冥的忘忧章",
+      "image": "private-source",
+      "price": 22,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cells": 4,
+      "current": "本作改编 · T5 破阵重击；每2.2秒攻击18.92，消耗1耐力，能量6.6 / 协奏6.6。每3次普通主武器攻击，下一次普通主武器攻击额外造成重击伤害。仅合成；需要已拥有任一证据主人。",
+      "source": "https://mc.appfeng.com/weapon/21050066",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21050074",
+      "name": "清音",
+      "image": "private-source",
+      "price": 7,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cells": 4,
+      "current": "本作改编 · T3 解放爆发；每2.2秒攻击10.61，消耗1耐力，主武能量9.9 / 副武基础6.6 / 协奏6.6。主武普通攻击回能更快；解放后3次普通攻击附加爆发伤害，终阶4次；派生不回能。",
+      "source": "https://mc.appfeng.com/weapon/21050074",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21050076",
+      "name": "赝作的矮星",
+      "image": "private-source",
+      "price": 22,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cells": 4,
+      "current": "本作改编 · T5 解放爆发；每2.2秒攻击14.96，消耗1耐力，主武能量9.9 / 副武基础6.6 / 协奏6.6。主武普通攻击回能更快；解放后3次普通攻击附加爆发伤害，终阶4次；派生不回能。仅合成；需要已拥有任一证据主人。",
+      "source": "https://mc.appfeng.com/weapon/21050076",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21050084",
+      "name": "核熔星盘",
+      "image": "private-source",
+      "price": 7,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cells": 4,
+      "current": "本作改编 · T3 悬丝协同；每2.2秒攻击9.36，消耗1耐力，能量6.6 / 协奏6.6。普通主武器攻击蓄积印记；普通声骸攻击结算协同伤害。",
+      "source": "https://mc.appfeng.com/weapon/21050084",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21050086",
+      "name": "存帧",
+      "image": "private-source",
+      "price": 22,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cells": 4,
+      "current": "本作改编 · T5 悬丝协同；每2.2秒攻击16.34，消耗1耐力，能量6.6 / 协奏6.6。普通主武器攻击蓄积印记；普通声骸攻击结算协同伤害。仅合成；需要已拥有任一证据主人。",
+      "source": "https://mc.appfeng.com/weapon/21050086",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21050094",
+      "name": "虚饰的华尔兹",
+      "image": "private-source",
+      "price": 7,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cells": 4,
+      "current": "本作改编 · T3 悬丝协同；每2.2秒攻击9.36，消耗1耐力，能量6.6 / 协奏6.6。普通主武器攻击蓄积印记；普通声骸攻击结算协同伤害。",
+      "source": "https://mc.appfeng.com/weapon/21050094",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21050096",
+      "name": "栖霞饮露",
+      "image": "private-source",
+      "price": 22,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cells": 4,
+      "current": "本作改编 · T5 光噪结算；每2.2秒攻击18.58，消耗1耐力，能量6.6 / 协奏6.6。普通主武器攻击施加光噪，最多6层，6秒到期，每2秒结算一次。仅合成；需要已拥有任一证据主人。",
+      "source": "https://mc.appfeng.com/weapon/21050096",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21050104",
+      "name": "曜光",
+      "image": "private-source",
+      "price": 7,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cells": 4,
+      "current": "本作改编 · T3 悬丝协同；每2.2秒攻击9.36，消耗1耐力，能量6.6 / 协奏6.6。普通主武器攻击蓄积印记；普通声骸攻击结算协同伤害。",
+      "source": "https://mc.appfeng.com/weapon/21050104",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "weapon_21050116",
+      "name": "玉阙玄华",
+      "image": "private-source",
+      "price": 11,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cells": 4,
+      "current": "本作改编 · T4 悬丝协同；每2.2秒攻击12.21，消耗1耐力，能量6.6 / 协奏6.6。普通主武器攻击蓄积印记；普通声骸攻击结算协同伤害。",
+      "source": "https://mc.appfeng.com/weapon/21050116",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "dreamless",
+      "name": "无妄者",
+      "image": "private-source",
+      "price": 8,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cells": 4,
+      "current": "本作改编 · 每7秒六段共22湮灭伤害；解放后首次普通触发额外6。",
+      "source": "https://mc.appfeng.com/monster/340000070",
+      "status": "本轮详细设计",
+      "proposal": "通用；每7秒攻击14伤。敌方生命低于35%时额外+6伤",
+      "tags": [
+        "声骸",
+        "攻击"
+      ],
+      "stars": ""
+    },
+    {
+      "id": "cyan_heron",
+      "name": "青羽鹭",
+      "image": "private-source",
+      "price": 4,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cells": 4,
+      "current": "本作改编 · 每6秒气动攻击10；普通触发延迟敌方最早就绪的重击0.6秒，全队8秒一次。",
+      "source": "https://mc.appfeng.com/monster/320000030",
+      "status": "本轮详细设计",
+      "proposal": "通用；每6秒攻击5伤，施加1层霜渐",
+      "tags": [
+        "声骸",
+        "攻击",
+        "霜渐"
+      ],
+      "stars": "攻击"
+    },
+    {
+      "id": "zig",
+      "name": "阿嗞嗞",
+      "image": "private-source",
+      "price": 3,
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "cells": 1,
+      "current": "本作改编 · 每5秒衍射攻击5；普通触发延迟敌方武器0.3秒，全队1秒一次。",
+      "source": "https://mc.appfeng.com/monster/310000090",
+      "status": "本轮详细设计",
+      "proposal": "联动；每4秒攻击2伤，迅捷+1",
+      "tags": [
+        "声骸",
+        "攻击",
+        "迅捷"
+      ],
+      "stars": ""
+    },
+    {
+      "id": "wuka",
+      "name": "呜咔咔",
+      "image": "private-source",
+      "price": 3,
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "cells": 1,
+      "current": "本作改编 · 每5秒两段共6湮灭伤害；普通触发施加5秒共振削弱，可联动异常遗物。",
+      "source": "https://mc.appfeng.com/monster/310000110",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "judgment",
+      "name": "审判-遗落令旗",
+      "image": "private-source",
+      "price": 5,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "cells": 2,
+      "current": "本作改编 · 变奏或接力启动后，普通武器暴击率+12%，至下一次暴击额外+6；同类6秒一次。",
+      "source": "https://mc.appfeng.com/item/71500007",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "captain_seal",
+      "name": "狂欢者—船长印章",
+      "image": "private-source",
+      "price": 6,
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "cells": 1,
+      "current": "本作改编 · 相邻至少3种不同属性声骸时，它们伤害+10%；同类不叠加。",
+      "source": "https://mc.appfeng.com/item/71500106",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "starfall",
+      "name": "那撕裂命运的坠星",
+      "image": "private-source",
+      "price": 9,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cells": 4,
+      "current": "本作改编 · 普通声骸累计触发4次进入焚潮，本场武器与声骸伤害+12%；仅启动一次。",
+      "source": "https://mc.appfeng.com/item/71500073",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "answer",
+      "name": "那万变无常的解答",
+      "image": "private-source",
+      "price": 9,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cells": 4,
+      "current": "本作改编 · 普通武器与声骸攻击共振削弱目标时，20%伤害穿透护盾；不增加总伤害。",
+      "source": "https://mc.appfeng.com/item/71500064",
+      "status": "本轮详细设计",
+      "proposal": "通用对策；无独立攻击",
+      "tags": [
+        "遗物",
+        "破盾"
+      ],
+      "stars": "武器"
+    },
+    {
+      "id": "elegance",
+      "name": "那奢靡优雅的归宿",
+      "image": "private-source",
+      "price": 9,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cells": 4,
+      "current": "本作改编 · 每4次普通热熔声骸触发追加8热熔伤害；全队6秒一次，额外伤害不产资源。",
+      "source": "https://mc.appfeng.com/item/71500063",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "lamp",
+      "name": "那映照虚幻的燃灯",
+      "image": "private-source",
+      "price": 9,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "cells": 2,
+      "current": "本作改编 · 获得护盾时，相邻重击的下次普通攻击+2，最多3层；全队每秒一层。",
+      "source": "https://mc.appfeng.com/item/71500107",
+      "status": "本轮详细设计",
+      "proposal": "守御/重击；无独立攻击",
+      "tags": [
+        "遗物",
+        "充能"
+      ],
+      "stars": "护盾"
+    },
+    {
+      "id": "medical",
+      "name": "悬壶仁心",
+      "image": "private-source",
+      "price": 0,
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "cells": 1,
+      "current": "本作改编 · 相邻恢复或复苏药品生效时获得5护盾；每场最多2次。",
+      "source": "https://wiki.biligame.com/wutheringwaves/%E5%85%B1%E9%B8%A3%E8%80%85/%E5%BF%8C%E7%82%8E",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "city_photo",
+      "name": "今州一角",
+      "image": "private-source",
+      "price": 0,
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "cells": 1,
+      "current": "本作改编 · 首次生命低于30%，下一次普通重击+5；每场一次。",
+      "source": "https://wiki.biligame.com/wutheringwaves/%E5%85%B1%E9%B8%A3%E8%80%85/%E5%BF%8C%E7%82%8E",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "cheongsam",
+      "name": "旗袍图鉴",
+      "image": "private-source",
+      "price": 0,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "cells": 2,
+      "current": "本作改编 · 放入阵列时，锁定商品便宜1贝币，最低1；仅锁定的两件候选享受。",
+      "source": "https://wiki.biligame.com/wutheringwaves/%E5%85%B1%E9%B8%A3%E8%80%85/%E5%90%9F%E9%9C%96",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "magnifier",
+      "name": "放大镜",
+      "image": "private-source",
+      "price": 0,
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "cells": 1,
+      "current": "本作改编 · 悬丝被普通武器引爆时追加2伤害；每3秒一次，额外伤害不产资源。",
+      "source": "https://wiki.biligame.com/wutheringwaves/%E5%85%B1%E9%B8%A3%E8%80%85/%E5%90%9F%E9%9C%96",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "glasses",
+      "name": "监测眼镜",
+      "image": "private-source",
+      "price": 0,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "cells": 2,
+      "current": "本作改编 · 首次生命低于40%，相邻治疗声骸立即就绪一次。",
+      "source": "https://wiki.biligame.com/wutheringwaves/%E5%85%B1%E9%B8%A3%E8%80%85/%E7%BB%B4%E9%87%8C%E5%A5%88",
+      "status": "本轮详细设计",
+      "proposal": "通用对策；每6秒净化己方1层減益",
+      "tags": [
+        "遗物",
+        "净化"
+      ],
+      "stars": "补给"
+    },
+    {
+      "id": "field_notes",
+      "name": "野外探索笔记",
+      "image": "private-source",
+      "price": 0,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "cells": 2,
+      "current": "本作改编 · 放入阵列时，购买扩容返还1贝币，每轮一次；替换扩容不计。",
+      "source": "https://wiki.biligame.com/wutheringwaves/%E5%85%B1%E9%B8%A3%E8%80%85/%E7%BB%B4%E9%87%8C%E5%A5%88",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "maocai",
+      "name": "今州冒菜",
+      "image": "private-source",
+      "price": 4,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cells": 4,
+      "current": "本作改编 · 开战食用，本场普通武器暴击率+12%；同类仅一份生效，战后消耗。",
+      "source": "https://mc.appfeng.com/item/80000025",
+      "status": "本轮详细设计",
+      "proposal": "守御；开战获得12护盾",
+      "tags": [
+        "补给",
+        "护盾"
+      ],
+      "stars": ""
+    },
+    {
+      "id": "rations",
+      "name": "戍边粮",
+      "image": "private-source",
+      "price": 2,
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "cells": 2,
+      "current": "本作改编 · 开战食用，本场普通武器耐力消耗-15%；同类仅一份生效，战后消耗。",
+      "source": "https://mc.appfeng.com/item/80000005",
+      "status": "本轮详细设计",
+      "proposal": "联动/通用；本场武器体力消耗−15%",
+      "tags": [
+        "补给",
+        "体力"
+      ],
+      "stars": ""
+    },
+    {
+      "id": "mat_43020021",
+      "name": "含杂晶化燃素",
+      "image": "private-source",
+      "price": 3,
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "cells": 1,
+      "current": "本作改编 · 佩枪进阶/核心/专武合成材料；原作用途与图片保留。",
+      "source": "https://mc.appfeng.com/item/43020021",
+      "status": "本轮详细设计",
+      "proposal": "通用；无战斗效果",
+      "tags": [
+        "材料"
+      ],
+      "stars": ""
+    },
+    {
+      "id": "mat_43020011",
+      "name": "惰性金属液滴",
+      "image": "private-source",
+      "price": 3,
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "cells": 1,
+      "current": "本作改编 · 迅刀进阶/核心/专武合成材料；原作用途与图片保留。",
+      "source": "https://mc.appfeng.com/item/43020011",
+      "status": "本轮详细设计",
+      "proposal": "通用；无战斗效果",
+      "tags": [
+        "材料"
+      ],
+      "stars": ""
+    },
+    {
+      "id": "mat_43020031",
+      "name": "慢板涡流",
+      "image": "private-source",
+      "price": 3,
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "cells": 1,
+      "current": "本作改编 · 音感仪进阶/核心/专武合成材料；原作用途与图片保留。",
+      "source": "https://mc.appfeng.com/item/43020031",
+      "status": "本轮详细设计",
+      "proposal": "通用；无战斗效果",
+      "tags": [
+        "材料"
+      ],
+      "stars": ""
+    },
+    {
+      "id": "mat_43020041",
+      "name": "海蚀嵌合体210",
+      "image": "private-source",
+      "price": 3,
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "cells": 1,
+      "current": "本作改编 · 长刃进阶/核心/专武合成材料；原作用途与图片保留。",
+      "source": "https://mc.appfeng.com/item/43020041",
+      "status": "本轮详细设计",
+      "proposal": "通用；无战斗效果",
+      "tags": [
+        "材料"
+      ],
+      "stars": ""
+    },
+    {
+      "id": "mat_43020051",
+      "name": "声律种核",
+      "image": "private-source",
+      "price": 3,
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "cells": 1,
+      "current": "本作改编 · 臂铠进阶/核心/专武合成材料；原作用途与图片保留。",
+      "source": "https://mc.appfeng.com/item/43020051",
+      "status": "本轮详细设计",
+      "proposal": "通用；无战斗效果",
+      "tags": [
+        "材料"
+      ],
+      "stars": ""
+    },
+    {
+      "id": "mat_41100011",
+      "name": "低频呓语声核",
+      "image": "private-source",
+      "price": 2,
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "cells": 1,
+      "current": "本作改编 · 任意同型入门武器升级至标准武器的声核材料。",
+      "source": "https://mc.appfeng.com/item/41100011",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "mat_41100013",
+      "name": "高频呓语声核",
+      "image": "private-source",
+      "price": 4,
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "cells": 1,
+      "current": "本作改编 · 专武终阶声核材料；第4轮起可购。",
+      "source": "https://mc.appfeng.com/item/41100013",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "mat_42500010",
+      "name": "红针晶簇",
+      "image": "private-source",
+      "price": 2,
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "cells": 1,
+      "current": "本作改编 · 破阵重击路线催化材料；原作用途与图片保留。",
+      "source": "https://mc.appfeng.com/item/42500010",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "mat_42310090",
+      "name": "水灯花",
+      "image": "private-source",
+      "price": 2,
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "cells": 1,
+      "current": "本作改编 · 风蚀接力路线催化材料；原作用途与图片保留。",
+      "source": "https://mc.appfeng.com/item/42310090",
+      "status": "本轮详细设计",
+      "proposal": "通用；无战斗效果",
+      "tags": [
+        "材料"
+      ],
+      "stars": ""
+    },
+    {
+      "id": "mat_42300030",
+      "name": "鸢尾花",
+      "image": "private-source",
+      "price": 2,
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "cells": 1,
+      "current": "本作改编 · 悬丝协同路线催化材料；原作用途与图片保留。",
+      "source": "https://mc.appfeng.com/item/42300030",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "mat_42300050",
+      "name": "灯笼果",
+      "image": "private-source",
+      "price": 2,
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "cells": 1,
+      "current": "本作改编 · 解放爆发路线催化材料；原作用途与图片保留。",
+      "source": "https://mc.appfeng.com/item/42300050",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "mat_42300100",
+      "name": "紫珊瑚",
+      "image": "private-source",
+      "price": 2,
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "cells": 1,
+      "current": "本作改编 · 光合协同路线催化材料；原作用途与图片保留。",
+      "source": "https://mc.appfeng.com/item/42300100",
+      "status": "本轮详细设计",
+      "proposal": "通用；无战斗效果",
+      "tags": [
+        "材料"
+      ],
+      "stars": ""
+    },
+    {
+      "id": "mat_42500030",
+      "name": "紫晶簇",
+      "image": "private-source",
+      "price": 2,
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "cells": 1,
+      "current": "本作改编 · 光噪结算路线催化材料；原作用途与图片保留。",
+      "source": "https://mc.appfeng.com/item/42500030",
+      "status": "保留资产，后续设计",
+      "proposal": "暂不投放首轮；不沿用旧印记/光合/风蚀模板",
+      "tags": [],
+      "stars": "待设计"
+    },
+    {
+      "id": "spectro_coin",
+      "name": "衍射-锈蚀古币",
+      "image": "private-source",
+      "price": 3,
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "cells": 1,
+      "current": "本作改编 · 普通激活施加1层光噪，间隔5秒；原作古币文案与图片完整保留。",
+      "source": "https://mc.appfeng.com/item/71500005",
+      "status": "本轮详细设计",
+      "proposal": "通用；无独立攻击",
+      "tags": [
+        "遗物",
+        "光噪"
+      ],
+      "stars": "攻击"
+    }
+  ],
+  "checks": [
+    {
+      "id": "C1",
+      "cells": 5,
+      "cost": 8,
+      "expansion": 3,
+      "additional": 7,
+      "links": 2
+    },
+    {
+      "id": "C2",
+      "cells": 5,
+      "cost": 8,
+      "expansion": 0,
+      "additional": 4,
+      "links": 2
+    },
+    {
+      "id": "C3",
+      "cells": 6,
+      "cost": 8,
+      "expansion": 3,
+      "additional": 7,
+      "links": 2
+    },
+    {
+      "id": "C4",
+      "cells": 6,
+      "cost": 8,
+      "expansion": 0,
+      "additional": 4,
+      "links": 2
+    },
+    {
+      "id": "C5",
+      "cells": 6,
+      "cost": 10,
+      "expansion": 3,
+      "additional": 9,
+      "links": 2
+    },
+    {
+      "id": "C6",
+      "cells": 6,
+      "cost": 10,
+      "expansion": 0,
+      "additional": 6,
+      "links": 1
+    },
+    {
+      "id": "C7",
+      "cells": 13,
+      "cost": 20,
+      "expansion": 8,
+      "additional": 24,
+      "links": 3
+    },
+    {
+      "id": "C8",
+      "cells": 10,
+      "cost": 11,
+      "expansion": 6,
+      "additional": 13,
+      "links": 2
+    }
+  ],
+  "counts": {
+    "existing": 183,
+    "detailed": 69,
+    "existing_selected": 54,
+    "new_originals": 9,
+    "new_forms": 6,
+    "categories": {
+      "武器": 15,
+      "声骸": 19,
+      "遗物": 9,
+      "补给": 12,
+      "材料": 9,
+      "口袋": 5
+    }
+  },
+  "catalog_sha256": "6fdb1d00116a724a602437b27c220abf9eaf3c33f977d4b2c247b87b896c1f59"
+}

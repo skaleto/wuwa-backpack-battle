@@ -1,0 +1,6 @@
+{
+  "pocket_single": {"name": "单格口袋", "shape": [[0, 0]], "price": 1, "color": "c3b0d6"},
+  "pocket_double": {"name": "双格口袋", "shape": [[0, 0], [1, 0]], "price": 2, "color": "c3b0d6"},
+  "pocket_long_l": {"name": "长折角口袋", "shape": [[0, 0], [0, 1], [0, 2], [1, 2]], "price": 3, "color": "c3b0d6"},
+  "pocket_long_j": {"name": "反折角口袋", "shape": [[1, 0], [1, 1], [1, 2], [0, 2]], "price": 3, "color": "c3b0d6"}
+}

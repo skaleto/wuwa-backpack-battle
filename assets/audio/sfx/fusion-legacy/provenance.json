@@ -1,0 +1,210 @@
+{
+  "revision": "v101",
+  "kind": "layered excerpts of existing licensed samples",
+  "procedural_synthesis": false,
+  "pitch_shift_semitones": 0,
+  "playback_rate": 1.0,
+  "runtime_gain_db": -7.0,
+  "land_animation_seconds": 0.94,
+  "visual_end_seconds": 1.25,
+  "processing": "35 Hz high-pass, source-specific gentle low-pass, original-speed excerpts, edge fades, constant-power inward stereo pan, fixed layer gain, final RMS/peak ceiling. No music, new melody, oscillators, pitch shifting, time stretching or reverb.",
+  "sources": {
+    "air": {
+      "path": "art_sources/audio/sfx/weapons/mixkit-2161.wav",
+      "title": "Air in a hit / 2161",
+      "author": "Mixkit",
+      "source_url": "https://mixkit.co/free-sound-effects/swish/",
+      "license": "Mixkit Sound Effects Free License",
+      "license_url": "https://mixkit.co/license/modal/sfxFree/",
+      "license_evidence": "art_sources/audio/sfx/weapons/mixkit-license.html",
+      "lowpass_hz": 4000,
+      "sha256": "a521930bd9b102187894375ecd2132b33f911ff1b3f5a756bf14cd77a2bae92c"
+    },
+    "bubble_small": {
+      "path": "art_sources/audio/sfx/ui/bubbles-single1.wav",
+      "title": "Bubble Sound Effects / bubbles-single1",
+      "author": "BMacZero / Brian MacIntosh",
+      "source_url": "https://opengameart.org/content/bubble-sound-effects",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_evidence": "assets/audio/sfx/ui/CREDITS.md",
+      "lowpass_hz": 4200,
+      "sha256": "014228835d2b255cf300f94c60db8ec661ec15b5b5c097d5f47b148d6a81fdc5"
+    },
+    "bubble_body": {
+      "path": "art_sources/audio/sfx/ui/bubbles-single2.wav",
+      "title": "Bubble Sound Effects / bubbles-single2",
+      "author": "BMacZero / Brian MacIntosh",
+      "source_url": "https://opengameart.org/content/bubble-sound-effects",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_evidence": "assets/audio/sfx/ui/CREDITS.md",
+      "lowpass_hz": 3200,
+      "sha256": "c6c7b9f3e7415e1fee6d5ca0c9556fa03443c4cbeaa623f7a70476fc5b5a11e8"
+    },
+    "pop": {
+      "path": "art_sources/audio/sfx/ui/mixkit/cartoon-bubble-pop-731.wav",
+      "title": "Cartoon bubble pop / 731, first pop only",
+      "author": "Mixkit",
+      "source_url": "https://mixkit.co/free-sound-effects/bubble/",
+      "license": "Mixkit Sound Effects Free License",
+      "license_url": "https://mixkit.co/license/modal/sfxFree/",
+      "license_evidence": "art_sources/audio/sfx/ui/mixkit/license.html",
+      "lowpass_hz": 4800,
+      "sha256": "7e540b926df4fbfc2bc78212e2178c4790d6aa83551b1abd937152086bfb0c62"
+    }
+  },
+  "cues": [
+    {
+      "file": "fusion_gather.wav",
+      "sha256": "fbadf06185a2143f73a80bf8e980ac17990dfb902a4f9a50e36b6f7ee0570dda",
+      "duration_seconds": 1.0,
+      "peak_dbfs": -9.0,
+      "rms_dbfs": -28.674,
+      "event": "fusion",
+      "layers": [
+        {
+          "source": "bubble_small",
+          "excerpt": [
+            0.0,
+            0.31
+          ],
+          "at": 0.035,
+          "gain_db": -2.0,
+          "pan": [
+            -0.7,
+            -0.15
+          ],
+          "fade_in": 0.006,
+          "fade_out": 0.025
+        },
+        {
+          "source": "bubble_small",
+          "excerpt": [
+            0.0,
+            0.31
+          ],
+          "at": 0.255,
+          "gain_db": -3.0,
+          "pan": [
+            0.7,
+            0.15
+          ],
+          "fade_in": 0.006,
+          "fade_out": 0.025
+        },
+        {
+          "source": "bubble_small",
+          "excerpt": [
+            0.0,
+            0.31
+          ],
+          "at": 0.49,
+          "gain_db": -4.0,
+          "pan": [
+            -0.3,
+            0.0
+          ],
+          "fade_in": 0.006,
+          "fade_out": 0.025
+        },
+        {
+          "source": "air",
+          "excerpt": [
+            0.01,
+            0.35
+          ],
+          "at": 0.2,
+          "gain_db": -9.0,
+          "pan": [
+            -0.6,
+            -0.06
+          ],
+          "fade_in": 0.07,
+          "fade_out": 0.045
+        },
+        {
+          "source": "air",
+          "excerpt": [
+            0.01,
+            0.35
+          ],
+          "at": 0.43,
+          "gain_db": -7.5,
+          "pan": [
+            0.6,
+            0.06
+          ],
+          "fade_in": 0.07,
+          "fade_out": 0.045
+        },
+        {
+          "source": "air",
+          "excerpt": [
+            0.01,
+            0.35
+          ],
+          "at": 0.64,
+          "gain_db": -6.0,
+          "pan": [
+            -0.2,
+            0.0
+          ],
+          "fade_in": 0.07,
+          "fade_out": 0.045
+        }
+      ],
+      "final_gain_db": 3.352402
+    },
+    {
+      "file": "fusion_land.wav",
+      "sha256": "19e006f9ff2727dce1f9b1a3f9e6d74a5787dbf2098138d597bf6b5182f79b4b",
+      "duration_seconds": 0.48,
+      "peak_dbfs": -7.0,
+      "rms_dbfs": -24.729,
+      "event": "fusion_land",
+      "layers": [
+        {
+          "source": "pop",
+          "excerpt": [
+            0.0,
+            0.25
+          ],
+          "at": 0.0,
+          "gain_db": -6.0,
+          "pan": [
+            0.0,
+            0.0
+          ],
+          "fade_in": 0.002,
+          "fade_out": 0.015
+        },
+        {
+          "source": "bubble_body",
+          "excerpt": [
+            0.0,
+            0.435646
+          ],
+          "at": 0.015,
+          "gain_db": -6.5,
+          "pan": [
+            0.0,
+            0.0
+          ],
+          "fade_in": 0.008,
+          "fade_out": 0.02
+        }
+      ],
+      "final_gain_db": 5.330546
+    }
+  ],
+  "preview": {
+    "file": "fusion_preview.wav",
+    "sha256": "55332183aa5070839e569f918867556710ccf2afe52584c39d217d899c5bc22a",
+    "duration_seconds": 1.42,
+    "peak_dbfs": -7.0,
+    "rms_dbfs": -26.791,
+    "assembly": "fusion_gather at 0.0 s + fusion_land at 0.94 s; exact PCM sum"
+  },
+  "audition": "Not played automatically or subjectively approved. Timing, PCM and hashes are checked separately."
+}

@@ -1,0 +1,622 @@
+{
+  "test_content_v75": {
+    "path": "tests/regression/test_content_v75.gd",
+    "timeout": 90
+  },
+  "test_shop_v75": {
+    "path": "tests/regression/test_shop_v75.gd",
+    "timeout": 120
+  },
+  "test_battle_v75": {
+    "path": "tests/regression/test_battle_v75.gd",
+    "timeout": 60
+  },
+  "test_battle_v75_rules": {
+    "path": "tests/regression/test_battle_v75_rules.gd",
+    "timeout": 180
+  },
+  "test_storage_v75": {
+    "path": "tests/regression/test_storage_v75.gd",
+    "timeout": 90
+  },
+  "test_practice_v75": {
+    "path": "tests/regression/test_practice_v75.gd",
+    "timeout": 120
+  },
+  "test_playthrough_v75": {
+    "path": "tests/regression/test_playthrough_v75.gd",
+    "timeout": 600
+  },
+  "test_balance_v75": {
+    "path": "tests/regression/test_balance_v75.gd",
+    "timeout": 180
+  },
+  "test_craft_v75": {
+    "path": "tests/regression/test_craft_v75.gd",
+    "timeout": 120
+  },
+  "test_chains_v75": {
+    "path": "tests/regression/test_chains_v75.gd",
+    "timeout": 120
+  },
+  "test_bag_replacement": {
+    "path": "tests/regression/test_bag_replacement.gd",
+    "timeout": 60
+  },
+  "test_item_displacement_v65": {
+    "path": "tests/regression/test_item_displacement_v65.gd",
+    "timeout": 60
+  },
+  "test_drag_purchase_v18": {
+    "path": "tests/regression/test_drag_purchase_v18.gd",
+    "timeout": 60
+  },
+  "test_interaction_v53": {
+    "path": "tests/regression/test_interaction_v53.gd",
+    "timeout": 90
+  },
+  "test_star_feedback_v75": {
+    "path": "tests/regression/test_star_feedback_v75.gd",
+    "timeout": 60
+  },
+  "test_star_events_v75": {
+    "path": "tests/regression/test_star_events_v75.gd",
+    "timeout": 60
+  },
+  "test_ui_v75_controller": {
+    "path": "tests/regression/test_ui_v75_controller.gd",
+    "timeout": 90
+  },
+  "test_visual_skin": {
+    "path": "tests/regression/test_visual_skin.gd",
+    "timeout": 60
+  },
+  "test_cloth_corners_v67": {
+    "path": "tests/regression/test_cloth_corners_v67.gd",
+    "timeout": 60
+  },
+  "test_ui_v75": {
+    "path": "tests/regression/test_ui_v75.gd",
+    "timeout": 120
+  },
+  "test_ui_v75_layout": {
+    "path": "tests/regression/test_ui_v75_layout.gd",
+    "timeout": 120
+  },
+  "test_guidance_v76": {
+    "path": "tests/regression/test_guidance_v76.gd",
+    "timeout": 120
+  },
+  "test_bag_stash_v76": {
+    "path": "tests/regression/test_bag_stash_v76.gd",
+    "timeout": 120
+  },
+  "test_drop_feedback_v65": {
+    "path": "tests/regression/test_drop_feedback_v65.gd",
+    "timeout": 90
+  },
+  "test_craft_equivalence_v77": {
+    "path": "tests/regression/test_craft_equivalence_v77.gd",
+    "timeout": 120
+  },
+  "test_craft_boundaries_v77": {
+    "path": "tests/regression/test_craft_boundaries_v77.gd",
+    "timeout": 120
+  },
+  "test_application_v78": {
+    "path": "tests/regression/test_application_v78.gd",
+    "timeout": 120
+  },
+  "test_craft_storage_v79": {
+    "path": "tests/regression/test_craft_storage_v79.gd",
+    "timeout": 120
+  },
+  "test_links_v79": {
+    "path": "tests/regression/test_links_v79.gd",
+    "timeout": 120
+  },
+  "test_stars_v80": {
+    "path": "tests/regression/test_stars_v80.gd",
+    "timeout": 120
+  },
+  "test_craft_supply_v80": {
+    "path": "tests/regression/test_craft_supply_v80.gd",
+    "timeout": 120
+  },
+  "test_feedback_v81": {
+    "path": "tests/regression/test_feedback_v81.gd",
+    "timeout": 120
+  },
+  "test_catalog_feedback_v81": {
+    "path": "tests/regression/test_catalog_feedback_v81.gd",
+    "timeout": 120
+  },
+  "test_event_consumers_v82": {
+    "path": "tests/regression/test_event_consumers_v82.gd",
+    "timeout": 120
+  },
+  "test_operations_v83": {
+    "path": "tests/regression/test_operations_v83.gd",
+    "timeout": 120
+  },
+  "test_process_v83": {
+    "path": "tests/regression/test_process_v83.gd",
+    "timeout": 240
+  },
+  "test_economy_v83": {
+    "path": "tests/regression/test_economy_v83.gd",
+    "timeout": 120
+  },
+  "test_early_balance_v83": {
+    "path": "tests/regression/test_early_balance_v83.gd",
+    "timeout": 120
+  },
+  "test_card_effects_v87": {
+    "path": "tests/regression/test_card_effects_v87.gd",
+    "timeout": 120
+  },
+  "test_links_v84": {
+    "path": "tests/regression/test_links_v84.gd",
+    "timeout": 120
+  },
+  "test_taper_v85": {
+    "path": "tests/regression/test_taper_v85.gd",
+    "timeout": 60
+  },
+  "test_weapons_materials_v86": {
+    "path": "tests/regression/test_weapons_materials_v86.gd",
+    "timeout": 120
+  },
+  "test_replacement_v86": {
+    "path": "tests/regression/test_replacement_v86.gd",
+    "timeout": 120
+  },
+  "test_migration_v86": {
+    "path": "tests/regression/test_migration_v86.gd",
+    "timeout": 120
+  },
+  "test_feedback_v88": {
+    "path": "tests/regression/test_feedback_v88.gd",
+    "timeout": 60
+  },
+  "test_migration_v88": {
+    "path": "tests/regression/test_migration_v88.gd",
+    "timeout": 60
+  },
+  "test_combos_v88": {
+    "path": "tests/regression/test_combos_v88.gd",
+    "timeout": 60
+  },
+  "test_pool_v88": {
+    "path": "tests/regression/test_pool_v88.gd",
+    "timeout": 120
+  },
+  "test_link_ownership_v89": {
+    "path": "tests/regression/test_link_ownership_v89.gd",
+    "timeout": 120
+  },
+  "test_item_audio_v91": {
+    "path": "tests/regression/test_item_audio_v91.gd",
+    "timeout": 60
+  },
+  "test_provisions_v92": {
+    "path": "tests/regression/test_provisions_v92.gd",
+    "timeout": 60
+  },
+  "test_star_growth_v92": {
+    "path": "tests/regression/test_star_growth_v92.gd",
+    "timeout": 60
+  },
+  "test_migration_v92": {
+    "path": "tests/regression/test_migration_v92.gd",
+    "timeout": 60
+  },
+  "test_progression_v93": {
+    "path": "tests/regression/test_progression_v93.gd",
+    "timeout": 90
+  },
+  "test_supply_v93": {
+    "path": "tests/regression/test_supply_v93.gd",
+    "timeout": 90
+  },
+  "test_migration_v93": {
+    "path": "tests/regression/test_migration_v93.gd",
+    "timeout": 90
+  },
+  "test_battle_readability_v93": {
+    "path": "tests/regression/test_battle_readability_v93.gd",
+    "timeout": 90
+  },
+  "test_practice_performance_v93": {
+    "path": "tests/regression/test_practice_performance_v93.gd",
+    "timeout": 120
+  },
+  "test_audio_v53": {
+    "path": "tests/regression/test_audio_v53.gd",
+    "timeout": 30
+  },
+  "test_music_v94": {
+    "path": "tests/regression/test_music_v94.gd",
+    "timeout": 60
+  },
+  "test_weapon_audio_v95": {
+    "path": "tests/regression/test_weapon_audio_v95.gd",
+    "timeout": 30
+  },
+  "test_feedback_v99": {
+    "path": "tests/regression/test_feedback_v99.gd",
+    "timeout": 60
+  },
+  "test_high_tier_stars_v101": {
+    "path": "tests/regression/test_high_tier_stars_v101.gd",
+    "timeout": 90
+  },
+  "test_migration_v101": {
+    "path": "tests/regression/test_migration_v101.gd",
+    "timeout": 90
+  },
+  "test_battle_review_v101": {
+    "path": "tests/regression/test_battle_review_v101.gd",
+    "timeout": 60
+  },
+  "test_fusion_audio_v101": {
+    "path": "tests/regression/test_fusion_audio_v101.gd",
+    "timeout": 60
+  },
+  "test_presentation_v102": {
+    "path": "tests/regression/test_presentation_v102.gd",
+    "timeout": 60
+  },
+  "test_fusion_v102": {
+    "path": "tests/regression/test_fusion_v102.gd",
+    "timeout": 60
+  },
+  "test_unlimited_stash_v103": {
+    "path": "tests/regression/test_unlimited_stash_v103.gd",
+    "timeout": 60
+  },
+  "test_stash_pages_v103": {
+    "path": "tests/regression/test_stash_pages_v103.gd",
+    "timeout": 90
+  },
+  "test_bag_material_v103": {
+    "path": "tests/regression/test_bag_material_v103.gd",
+    "timeout": 60
+  },
+  "test_bag_layers_v105": {
+    "path": "tests/regression/test_bag_layers_v105.gd",
+    "timeout": 90
+  },
+  "test_bag_contacts_v107": {
+    "path": "tests/regression/test_bag_contacts_v107.gd",
+    "timeout": 60
+  },
+  "test_bag_styles_v109": {
+    "path": "tests/regression/test_bag_styles_v109.gd",
+    "timeout": 90
+  },
+  "test_bag_style_v110": {
+    "path": "tests/regression/test_bag_style_v110.gd",
+    "timeout": 90
+  },
+  "test_capacity_v111": {
+    "path": "tests/regression/test_capacity_v111.gd",
+    "timeout": 90
+  },
+  "test_feedback_v112": {
+    "path": "tests/regression/test_feedback_v112.gd",
+    "timeout": 90
+  },
+  "test_stamina_v112": {
+    "path": "tests/regression/test_stamina_v112.gd",
+    "timeout": 60
+  },
+  "test_open_weapons_v113": {
+    "path": "tests/regression/test_open_weapons_v113.gd",
+    "timeout": 120
+  },
+  "test_historical_qualification_v113": {
+    "path": "tests/regression/test_historical_qualification_v113.gd",
+    "timeout": 90
+  },
+  "test_crew_combat_v113": {
+    "path": "tests/regression/test_crew_combat_v113.gd",
+    "timeout": 90
+  },
+  "test_recruitment_v114": {
+    "path": "tests/regression/test_recruitment_v114.gd",
+    "timeout": 60
+  },
+  "test_bonds_v114": {
+    "path": "tests/regression/test_bonds_v114.gd",
+    "timeout": 90
+  },
+  "test_migration_recruitment_v114": {
+    "path": "tests/regression/test_migration_recruitment_v114.gd",
+    "timeout": 90
+  },
+  "test_recruitment_ui_v114": {
+    "path": "tests/regression/test_recruitment_ui_v114.gd",
+    "timeout": 90
+  },
+  "test_recruitment_v115": {
+    "path": "tests/regression/test_recruitment_v115.gd",
+    "timeout": 60
+  },
+  "test_crew_combat_v115": {
+    "path": "tests/regression/test_crew_combat_v115.gd",
+    "timeout": 90
+  },
+  "test_recruitment_ui_v115": {
+    "path": "tests/regression/test_recruitment_ui_v115.gd",
+    "timeout": 90
+  },
+  "test_playthrough_v115": {
+    "path": "tests/regression/test_playthrough_v115.gd",
+    "timeout": 600
+  },
+  "test_pockets_v116": {
+    "path": "tests/regression/test_pockets_v116.gd",
+    "timeout": 60
+  },
+  "test_icon_fit_v116": {
+    "path": "tests/regression/test_icon_fit_v116.gd",
+    "timeout": 180
+  },
+  "test_migration_v116": {
+    "path": "tests/regression/test_migration_v116.gd",
+    "timeout": 120
+  },
+  "test_feedback_ui_v116": {
+    "path": "tests/regression/test_feedback_ui_v116.gd",
+    "timeout": 90
+  },
+  "test_vfx_v116": {
+    "path": "tests/regression/test_vfx_v116.gd",
+    "timeout": 120
+  },
+  "test_feedback_v117": {
+    "path": "tests/regression/test_feedback_v117.gd",
+    "timeout": 90
+  },
+  "test_buttons_v118": {
+    "path": "tests/regression/test_buttons_v118.gd",
+    "timeout": 90
+  },
+  "test_portrait_source_v119": {
+    "path": "tests/regression/test_portrait_source_v119.gd",
+    "timeout": 60
+  },
+  "test_opening_v119": {
+    "path": "tests/regression/test_opening_v119.gd",
+    "timeout": 120
+  },
+  "test_star_placement_v120": {
+    "path": "tests/regression/test_star_placement_v120.gd",
+    "timeout": 90
+  },
+  "test_render_cache_v120": {
+    "path": "tests/regression/test_render_cache_v120.gd",
+    "timeout": 90
+  },
+  "test_battle_case_v120": {
+    "path": "tests/regression/test_battle_case_v120.gd",
+    "timeout": 60
+  },
+  "test_star_tempo_v121": {
+    "path": "tests/regression/test_star_tempo_v121.gd",
+    "timeout": 60
+  },
+  "test_presentation_stamp_v121": {
+    "path": "tests/regression/test_presentation_stamp_v121.gd",
+    "timeout": 60
+  },
+  "test_craft_display_v121": {
+    "path": "tests/regression/test_craft_display_v121.gd",
+    "timeout": 90
+  },
+  "test_history_v122": {
+    "path": "tests/regression/test_history_v122.gd",
+    "timeout": 60
+  },
+  "test_history_ui_v122": {
+    "path": "tests/regression/test_history_ui_v122.gd",
+    "timeout": 90
+  },
+  "test_history_application_v122": {
+    "path": "tests/regression/test_history_application_v122.gd",
+    "timeout": 90
+  },
+  "test_glints_v122": {
+    "path": "tests/regression/test_glints_v122.gd",
+    "timeout": 60
+  },
+  "test_supply_v122": {
+    "path": "tests/regression/test_supply_v122.gd",
+    "timeout": 120
+  },
+  "test_supply_storage_v122": {
+    "path": "tests/regression/test_supply_storage_v122.gd",
+    "timeout": 60
+  },
+  "test_history_playback_v123": {
+    "path": "tests/regression/test_history_playback_v123.gd",
+    "timeout": 90
+  },
+  "test_history_exit_v123": {
+    "path": "tests/regression/test_history_exit_v123.gd",
+    "timeout": 90
+  },
+  "test_craft_v124": {
+    "path": "tests/regression/test_craft_v124.gd",
+    "timeout": 90
+  },
+  "test_strategy_v124": {
+    "path": "tests/regression/test_strategy_v124.gd",
+    "timeout": 90
+  },
+  "test_core_combat_v124": {
+    "path": "tests/regression/test_core_combat_v124.gd",
+    "timeout": 90
+  },
+  "test_migration_v124": {
+    "path": "tests/regression/test_migration_v124.gd",
+    "timeout": 90
+  },
+  "test_recipe_atlas_v124": {
+    "path": "tests/regression/test_recipe_atlas_v124.gd",
+    "timeout": 90
+  },
+  "test_recipe_atlas_boundary_v124": {
+    "path": "tests/regression/test_recipe_atlas_boundary_v124.gd",
+    "timeout": 90
+  },
+  "test_chains_v124": {
+    "path": "tests/regression/test_chains_v124.gd",
+    "timeout": 60
+  },
+  "test_ecosystem_v125": {
+    "path": "tests/regression/test_ecosystem_v125.gd",
+    "timeout": 90
+  },
+  "test_ecosystem_edges_v125": {
+    "path": "tests/regression/test_ecosystem_edges_v125.gd",
+    "timeout": 90
+  },
+  "test_ecosystem_content_v125": {
+    "path": "tests/regression/test_ecosystem_content_v125.gd",
+    "timeout": 90
+  },
+  "test_spectacle_v126": {
+    "path": "tests/regression/test_spectacle_v126.gd",
+    "timeout": 90
+  },
+  "test_families_catalog_v127": {
+    "path": "tests/regression/test_families_catalog_v127.gd",
+    "timeout": 90
+  },
+  "test_families_effects_v127": {
+    "path": "tests/regression/test_families_effects_v127.gd",
+    "timeout": 90
+  },
+  "test_families_supply_v127": {
+    "path": "tests/regression/test_families_supply_v127.gd",
+    "timeout": 90
+  },
+  "test_families_chains_v127": {
+    "path": "tests/regression/test_families_chains_v127.gd",
+    "timeout": 180
+  },
+  "test_families_practice_v127": {
+    "path": "tests/regression/test_families_practice_v127.gd",
+    "timeout": 180
+  },
+  "test_original_catalog_v128": {
+    "path": "tests/regression/test_original_catalog_v128.gd",
+    "timeout": 90
+  },
+  "test_original_effects_v128": {
+    "path": "tests/regression/test_original_effects_v128.gd",
+    "timeout": 90
+  },
+  "test_original_supply_v128": {
+    "path": "tests/regression/test_original_supply_v128.gd",
+    "timeout": 120
+  },
+  "test_original_chains_v128": {
+    "path": "tests/regression/test_original_chains_v128.gd",
+    "timeout": 180
+  },
+  "test_original_migration_v128": {
+    "path": "tests/regression/test_original_migration_v128.gd",
+    "timeout": 90
+  },
+  "test_original_assets_v128": {
+    "path": "tests/regression/test_original_assets_v128.gd",
+    "timeout": 90
+  },
+  "test_original_practice_v128": {
+    "path": "tests/regression/test_original_practice_v128.gd",
+    "timeout": 180
+  },
+  "test_pockets_catalog_v129": {
+    "path": "tests/regression/test_pockets_catalog_v129.gd",
+    "timeout": 90
+  },
+  "test_pockets_transactions_v129": {
+    "path": "tests/regression/test_pockets_transactions_v129.gd",
+    "timeout": 90
+  },
+  "test_pockets_supply_v129": {
+    "path": "tests/regression/test_pockets_supply_v129.gd",
+    "timeout": 180
+  },
+  "test_pockets_migration_v129": {
+    "path": "tests/regression/test_pockets_migration_v129.gd",
+    "timeout": 90
+  },
+  "test_pocket_art_v129": {
+    "path": "tests/regression/test_pocket_art_v129.gd",
+    "timeout": 90
+  },
+  "test_bag_audio_v130": {
+    "path": "tests/regression/test_bag_audio_v130.gd",
+    "timeout": 90
+  },
+  "test_fine_seams_v130": {
+    "path": "tests/regression/test_fine_seams_v130.gd",
+    "timeout": 90
+  },
+  "test_bag_feedback_v131": {
+    "path": "tests/regression/test_bag_feedback_v131.gd",
+    "timeout": 90
+  },
+  "test_joined_pockets_v132": {
+    "path": "tests/regression/test_joined_pockets_v132.gd",
+    "timeout": 90
+  },
+  "test_async_pvp_v134": {
+    "path": "tests/regression/test_async_pvp_v134.gd",
+    "timeout": 60
+  },
+  "test_async_run_v134": {
+    "path": "tests/regression/test_async_run_v134.gd",
+    "timeout": 90
+  },
+  "test_async_network_v134": {
+    "path": "tests/regression/test_async_network_v134.gd",
+    "timeout": 60
+  },
+  "test_async_ui_v134": {
+    "path": "tests/regression/test_async_ui_v134.gd",
+    "timeout": 90
+  },
+  "test_async_storage_v134": {
+    "path": "tests/regression/test_async_storage_v134.gd",
+    "timeout": 90
+  },
+  "test_async_upload_retry_v134": {
+    "path": "tests/regression/test_async_upload_retry_v134.gd",
+    "timeout": 60
+  },
+  "test_lobby_v135": {
+    "path": "tests/regression/test_lobby_v135.gd",
+    "timeout": 90
+  },
+  "test_release_v138": {
+    "path": "tests/regression/test_release_v138.gd",
+    "timeout": 60
+  },
+  "test_release_storage_v138": {
+    "path": "tests/regression/test_release_storage_v138.gd",
+    "timeout": 60
+  },
+  "test_match_sampling_v138": {
+    "path": "tests/regression/test_match_sampling_v138.gd",
+    "timeout": 60
+  },
+  "test_structure": {
+    "path": "tests/regression/test_structure.gd",
+    "timeout": 60
+  }
+}

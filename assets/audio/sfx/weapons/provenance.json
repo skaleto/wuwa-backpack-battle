@@ -1,0 +1,146 @@
+{
+  "weapons": [
+    {
+      "weapon": "sword",
+      "output": "sword.wav",
+      "source_id": "2166",
+      "source_start": 0.04,
+      "source_end": 0.74,
+      "gain_db": -6.534132957458496,
+      "processing": "Source excerpt, 10ms end fade, constant gain; original pitch and speed.",
+      "source": {
+        "id": "2166",
+        "title": "Swift Sword Strike",
+        "preview": "https://assets.mixkit.co/active_storage/sfx/2166/2166-preview.mp3",
+        "page": "https://mixkit.co/free-sound-effects/swish/",
+        "group": "swish",
+        "file": "originals/mixkit-2166.wav",
+        "download_url": "https://assets.mixkit.co/active_storage/sfx/2166/2166.wav",
+        "sha256": "916312df2b375604edd13277fd2a1f002157088af54f1ec8edc53c35cf534110",
+        "license": "Mixkit Sound Effects Free License",
+        "license_url": "https://mixkit.co/license/modal/sfxFree/",
+        "duration": 1.247234
+      }
+    },
+    {
+      "weapon": "broadblade",
+      "output": "broadblade.wav",
+      "source_id": "2161",
+      "source_start": 0.01,
+      "source_end": 0.36,
+      "gain_db": -4.764737993478775,
+      "processing": "Source excerpt, 10ms end fade, constant gain; original pitch and speed.",
+      "source": {
+        "id": "2161",
+        "title": "Air in a hit",
+        "preview": "https://assets.mixkit.co/active_storage/sfx/2161/2161-preview.mp3",
+        "page": "https://mixkit.co/free-sound-effects/swish/",
+        "group": "swish",
+        "file": "originals/mixkit-2161.wav",
+        "download_url": "https://assets.mixkit.co/active_storage/sfx/2161/2161.wav",
+        "sha256": "a521930bd9b102187894375ecd2132b33f911ff1b3f5a756bf14cd77a2bae92c",
+        "license": "Mixkit Sound Effects Free License",
+        "license_url": "https://mixkit.co/license/modal/sfxFree/",
+        "duration": 1.276259
+      }
+    },
+    {
+      "weapon": "gauntlet",
+      "output": "gauntlet.wav",
+      "source_id": "2151",
+      "source_start": 0.07,
+      "source_end": 0.42,
+      "gain_db": -5.829159844666719,
+      "processing": "Source excerpt, 10ms end fade, constant gain; original pitch and speed.",
+      "source": {
+        "id": "2151",
+        "title": "Soft quick punch",
+        "preview": "https://assets.mixkit.co/active_storage/sfx/2151/2151-preview.mp3",
+        "page": "https://mixkit.co/free-sound-effects/punch/",
+        "group": "punch",
+        "file": "originals/mixkit-2151.wav",
+        "download_url": "https://assets.mixkit.co/active_storage/sfx/2151/2151.wav",
+        "sha256": "d77ec3d56eabab9b0d5cf8e33bb17b098e15116b9cf33f49d720cfe889f3cf42",
+        "license": "Mixkit Sound Effects Free License",
+        "license_url": "https://mixkit.co/license/modal/sfxFree/",
+        "duration": 0.48
+      }
+    },
+    {
+      "weapon": "pistol",
+      "output": "pistol.wav",
+      "source_id": "1670",
+      "source_start": 0,
+      "source_end": 0.55,
+      "gain_db": 1.8158634901046753,
+      "processing": "Source excerpt, 10ms end fade, constant gain; original pitch and speed.",
+      "source": {
+        "id": "1670",
+        "title": "Short laser gun shot",
+        "preview": "https://assets.mixkit.co/active_storage/sfx/1670/1670-preview.mp3",
+        "page": "https://mixkit.co/free-sound-effects/laser/",
+        "group": "laser",
+        "file": "originals/mixkit-1670.wav",
+        "download_url": "https://assets.mixkit.co/active_storage/sfx/1670/1670.wav",
+        "sha256": "bd8bd6de1ce6e72242ad601af1f59cc2d43df639d58f71f4d742c803aedee7a3",
+        "license": "Mixkit Sound Effects Free License",
+        "license_url": "https://mixkit.co/license/modal/sfxFree/"
+      },
+      "v96_filter": "treble=g=-12:f=3500:w=0.5,lowpass=f=10000:p=2,afade=t=in:st=0:d=0.002",
+      "v96_processing": "Applied once to frozen V95 pistol.wav. No renormalization, pitch/speed/duration change; 100–2000 Hz body power -0.25 dB, >=6000 Hz power -15.45 dB.",
+      "v96_source_sha256": "1e79f3b0b15424d02dd0cb9bcad14959df3f7a0fbe7b3800014f67a079820516",
+      "v96_output_sha256": "d2d2ca698c81ae5e4851b59fb5caf35583ef9f9440568c51101507711d273190"
+    },
+    {
+      "weapon": "rectifier",
+      "output": "rectifier.wav",
+      "source_id": "2999",
+      "source_start": 0,
+      "source_end": 0.67,
+      "gain_db": -4.435723036527634,
+      "processing": "Source excerpt, 10ms end fade, constant gain; original pitch and speed.",
+      "source": {
+        "id": "2999",
+        "title": "Magic bubbles spell",
+        "preview": "https://assets.mixkit.co/active_storage/sfx/2999/2999-preview.mp3",
+        "page": "https://mixkit.co/free-sound-effects/magic/",
+        "group": "magic",
+        "file": "originals/mixkit-2999.wav",
+        "download_url": "https://assets.mixkit.co/active_storage/sfx/2999/2999.wav",
+        "sha256": "3e6cb75a269d78b74fc1dfd748148969fa2ff21a829ac4fc63c18e61af4a3b54",
+        "license": "Mixkit Sound Effects Free License",
+        "license_url": "https://mixkit.co/license/modal/sfxFree/",
+        "duration": 1.669615
+      }
+    },
+    {
+      "weapon": "echo",
+      "output": "echo.wav",
+      "source": "Existing V53 bubble grab source, BMacZero CC0; preserved without modification."
+    }
+  ],
+  "failure": {
+    "id": "2876",
+    "title": "Funny fail low tone",
+    "preview": "https://assets.mixkit.co/active_storage/sfx/2876/2876-preview.mp3",
+    "page": "https://mixkit.co/free-sound-effects/cartoon/",
+    "group": "失败",
+    "number": "11",
+    "label": "滑稽低音",
+    "slug": "lose_low",
+    "file": "originals/mixkit-2876.wav",
+    "download_url": "https://assets.mixkit.co/active_storage/sfx/2876/2876.wav",
+    "sha256": "024ee4e2b732ba977bdd75ca5cad9a40af757e31b0c397cd84367e702761c140",
+    "license": "Mixkit Sound Effects Free License",
+    "license_url": "https://mixkit.co/license/modal/sfxFree/",
+    "duration_seconds": 1.5152,
+    "gain_db": -7.9944,
+    "output_peak_dbfs": -10.0,
+    "single": "single/11_lose_low.wav",
+    "audition": "audition/11_lose_low.wav",
+    "repeats": 2
+  },
+  "license": "https://mixkit.co/license/modal/sfxFree/",
+  "runtime_weapon_gain_db": -9,
+  "note": "V96 only softens pistol high frequencies. All other V95 weapons, selected failure, music, stars and UI events unchanged; new jelly clicks and longer victory phrases remain audition-only."
+}

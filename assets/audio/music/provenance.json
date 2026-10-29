@@ -1,0 +1,34 @@
+{
+  "checked_on": "2026-10-19",
+  "license_basis": "PeriTune /about: tracks released before March 2026 retain CC BY 4.0; these tracks were released in 2019 and 2021.",
+  "tracks": [
+    {
+      "title": "Positive_Happy",
+      "author": "PeriTune",
+      "scene": "prepare",
+      "page": "https://peritune.com/blog/2019/01/06/positive_happy/",
+      "archive_url": "https://peritune.com/loop/PerituneMaterial_Positive_Happy_loop.zip",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "file": "assets/audio/music/positive_happy.ogg",
+      "sha256": "72cae3d8629901bdba1fb998f923f45983991b019d0eec456a73f9bd4bd6129a",
+      "duration_seconds": 80.0,
+      "gain_db": -17.34,
+      "processing": "Original OGG bytes unchanged; static gain and crossfades applied only at runtime."
+    },
+    {
+      "title": "Battle_Fun",
+      "author": "PeriTune",
+      "scene": "battle",
+      "page": "https://peritune.com/blog/2021/04/13/battle_fun/",
+      "archive_url": "https://peritune.com/loop/PerituneMaterial_Battle_Fun_loop.zip",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "file": "assets/audio/music/battle_fun.ogg",
+      "sha256": "5cab12f7263ea24bc4f4a7f88c824076190257f246e949e52feff564a0b41d72",
+      "duration_seconds": 72.653292,
+      "gain_db": -21.46,
+      "processing": "Original OGG bytes unchanged; static gain and crossfades applied only at runtime."
+    }
+  ]
+}

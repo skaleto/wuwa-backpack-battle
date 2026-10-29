@@ -1,0 +1,42 @@
+{
+  "revision": "v102",
+  "kind": "single excerpt of an existing licensed recording",
+  "procedural_synthesis": false,
+  "pitch_shift_semitones": 0,
+  "playback_rate": 1.0,
+  "event": "fusion_land",
+  "land_animation_seconds": 0.94,
+  "runtime_gain_db": -7.0,
+  "source": {
+    "path": "art_sources/audio/sfx/ui/bubbles-single2.wav",
+    "sha256": "c6c7b9f3e7415e1fee6d5ca0c9556fa03443c4cbeaa623f7a70476fc5b5a11e8",
+    "title": "Bubble Sound Effects / bubbles-single2",
+    "author": "BMacZero / Brian MacIntosh",
+    "source_url": "https://opengameart.org/content/bubble-sound-effects",
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license_evidence": "assets/audio/sfx/ui/CREDITS.md"
+  },
+  "processing": {
+    "excerpt_seconds": [
+      0.0,
+      0.26
+    ],
+    "highpass_hz": 35,
+    "lowpass_hz": 3600,
+    "fade_in_seconds": 0.004,
+    "fade_out_seconds": 0.035,
+    "fixed_gain_db": 1.120361,
+    "layer_count": 1
+  },
+  "output": {
+    "file": "fusion_land.wav",
+    "sha256": "2497c9fa06d39161602cf1a209e0cadbdcaa4a1820ee4a40627ca9db29f62e94",
+    "duration_seconds": 0.26,
+    "channels": 1,
+    "sample_rate": 48000,
+    "peak_dbfs": -9.0,
+    "rms_dbfs": -23.549
+  },
+  "audition": "Not automatically played or subjectively approved."
+}

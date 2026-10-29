@@ -1,0 +1,816 @@
+{
+  "revision": 124,
+  "cores": {
+    "weapon_21020104": {
+      "role": "蓄力",
+      "rule": "wing",
+      "damage": 6.5,
+      "cd": 2.4,
+      "stamina": 1.45,
+      "stars": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "ownExtra": "开战获得3充能；每3次自然攻击获得2充能。",
+      "starText": "★声骸累计攻击2次，获得1充能；间隔3秒。",
+      "opening_charge": 3,
+      "charge_every": 3,
+      "charge_gain": 2,
+      "star_threshold": 2,
+      "star_charge": 1,
+      "star_period": 3,
+      "star_categories": [
+        "echo"
+      ],
+      "capabilities": [
+        "attack",
+        "charge"
+      ],
+      "star_requires_attack": true
+    },
+    "weapon_21020076": {
+      "role": "蓄力",
+      "rule": "morning",
+      "damage": 11,
+      "cd": 3.2,
+      "stamina": 2.1,
+      "stars": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          2,
+          -1
+        ]
+      ],
+      "ownExtra": "开战获得3充能；每3次自然攻击获得2充能。充能攻击额外造成4伤害。",
+      "starText": "★声骸累计攻击2次获得1充能，间隔3秒；自身充能攻击使★武器的下一击伤害+3。",
+      "opening_charge": 3,
+      "charge_every": 3,
+      "charge_gain": 2,
+      "star_threshold": 2,
+      "star_charge": 1,
+      "star_period": 3,
+      "charged_flat": 4,
+      "partner_flat": 3,
+      "star_categories": [
+        "echo",
+        "weapon"
+      ],
+      "capabilities": [
+        "attack",
+        "charge"
+      ],
+      "star_requires_attack": true
+    },
+    "weapon_21010064": {
+      "role": "蓄力",
+      "rule": "east",
+      "damage": 9.6,
+      "cd": 3.2,
+      "stamina": 1.9,
+      "stars": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "ownExtra": "每2次自然攻击获得1充能。充能攻击消耗储存的蓄力，每层额外造成2伤害。",
+      "starText": "★武器每次自然攻击储存1层蓄力，最多3层。",
+      "charge_every": 2,
+      "charge_gain": 1,
+      "stack_cap": 3,
+      "stack_flat": 2,
+      "star_categories": [
+        "weapon"
+      ],
+      "capabilities": [
+        "attack",
+        "charge"
+      ]
+    },
+    "verdant": {
+      "role": "蓄力",
+      "rule": "verdant",
+      "damage": 14,
+      "cd": 3.8,
+      "stamina": 2.5,
+      "stars": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "ownExtra": "自然攻击先削减敌方8护盾。每2次自然攻击获得1充能。充能攻击消耗至多8点自身护盾，每消耗2点额外造成1伤害。",
+      "starText": "★物品实际产生护盾时，获得1充能；间隔3秒。",
+      "charge_every": 2,
+      "charge_gain": 1,
+      "shieldPeriod": 6,
+      "shieldAmount": 3,
+      "shield_spend": 8,
+      "shield_ratio": 0.5,
+      "break_amount": 8,
+      "star_charge": 1,
+      "star_period": 3,
+      "star_categories": [
+        "shield"
+      ],
+      "capabilities": [
+        "attack",
+        "charge",
+        "shielding",
+        "break_shield"
+      ]
+    },
+    "weapon_21020074": {
+      "role": "连动",
+      "rule": "feijing",
+      "damage": 6.8,
+      "cd": 2,
+      "stamina": 1,
+      "stars": [
+        [
+          0,
+          2
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "ownExtra": "每3次自然攻击，准备下一击伤害+3。强化击后自身冷却提前0.2秒。",
+      "starText": "强化击使★武器中剩余冷却最长的一件提前0.25秒。",
+      "prepare_every": 3,
+      "prepare_flat": 3,
+      "self_advance": 0.2,
+      "partner_advance": 0.25,
+      "star_categories": [
+        "weapon"
+      ],
+      "capabilities": [
+        "attack",
+        "haste"
+      ]
+    },
+    "weapon_21020045": {
+      "role": "连动",
+      "rule": "laser",
+      "damage": 9.2,
+      "cd": 2.3,
+      "stamina": 1.4,
+      "stars": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "ownExtra": "每3次自然攻击，准备下一击伤害+7，并先削减敌方4护盾。强化击后自身冷却提前0.2秒。",
+      "starText": "强化击使★武器中剩余冷却最长的一件提前1.2秒。",
+      "prepare_every": 3,
+      "prepare_flat": 7,
+      "break_amount": 4,
+      "self_advance": 0.2,
+      "partner_advance": 1.2,
+      "star_categories": [
+        "weapon"
+      ],
+      "capabilities": [
+        "attack",
+        "haste",
+        "break_shield"
+      ]
+    },
+    "weapon_21020086": {
+      "role": "连动",
+      "rule": "frost",
+      "damage": 7.4,
+      "cd": 2.5,
+      "stamina": 1.35,
+      "stars": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          -1
+        ],
+        [
+          4,
+          1
+        ]
+      ],
+      "ownExtra": "敌方有至少2层霜渐时，本体每第3次自然攻击额外造成5伤害。",
+      "starText": "★武器累计自然攻击3次，施加1层霜渐；间隔5秒。",
+      "frostPeriod": 7,
+      "prepare_every": 3,
+      "frost_min": 2,
+      "prepare_flat": 5,
+      "star_threshold": 3,
+      "star_period": 5,
+      "star_categories": [
+        "weapon"
+      ],
+      "capabilities": [
+        "attack",
+        "frost"
+      ]
+    },
+    "weapon_21020106": {
+      "role": "连动",
+      "rule": "yunlang",
+      "damage": 8.5,
+      "cd": 2.5,
+      "stamina": 1.2,
+      "stars": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "ownExtra": "每3次自然攻击，准备下一击伤害+3。",
+      "starText": "两种不同的★声骸交替自然攻击时，获得1迅捷并使自身冷却提前0.6秒；间隔1秒。",
+      "prepare_every": 3,
+      "prepare_flat": 3,
+      "self_advance": 0.6,
+      "star_period": 1,
+      "star_categories": [
+        "echo"
+      ],
+      "capabilities": [
+        "attack",
+        "haste"
+      ],
+      "star_requires_attack": true
+    },
+    "weapon_21040064": {
+      "role": "反击",
+      "rule": "haixing",
+      "damage": 5.6,
+      "cd": 2.4,
+      "stamina": 1,
+      "stars": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "ownExtra": "实际挡住敌方自然攻击2次后，反击造成4伤害；间隔2秒。",
+      "starText": "★物品实际产生护盾时，准备本体下一拳伤害+2；间隔3秒。",
+      "shieldPeriod": 6,
+      "shieldAmount": 3,
+      "block_threshold": 2,
+      "counter_damage": 4,
+      "counter_period": 2,
+      "partner_flat": 2,
+      "star_period": 3,
+      "star_categories": [
+        "shield"
+      ],
+      "capabilities": [
+        "attack",
+        "shielding",
+        "counter"
+      ]
+    },
+    "weapon_21040034": {
+      "role": "反击",
+      "rule": "steel",
+      "damage": 7,
+      "cd": 2.7,
+      "stamina": 1.3,
+      "stars": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          -1
+        ]
+      ],
+      "ownExtra": "累计实际挡伤6点，准备下一拳伤害+6并治疗2；间隔4秒。",
+      "starText": "★物品实际治疗时，获得2护盾；间隔4秒。",
+      "shieldPeriod": 6,
+      "shieldAmount": 3,
+      "healPeriod": 6,
+      "healAmount": 2,
+      "block_amount": 6,
+      "prepare_flat": 6,
+      "punch_heal": 2,
+      "counter_period": 4,
+      "star_shield": 2,
+      "star_period": 4,
+      "star_categories": [
+        "heal"
+      ],
+      "capabilities": [
+        "attack",
+        "shielding",
+        "healing",
+        "counter"
+      ]
+    },
+    "weapon_21010076": {
+      "role": "反击",
+      "rule": "qianban",
+      "damage": 7.5,
+      "cd": 3.4,
+      "stamina": 1.8,
+      "stars": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "ownExtra": "实际挡住敌方自然攻击2次后，反击造成8伤害；间隔2秒。",
+      "starText": "★物品实际产生护盾时，准备本体下一击伤害+3；间隔4秒。",
+      "shieldPeriod": 6,
+      "shieldAmount": 5,
+      "healPeriod": 6,
+      "healAmount": 2,
+      "block_threshold": 2,
+      "counter_damage": 8,
+      "counter_period": 2,
+      "partner_flat": 3,
+      "star_period": 4,
+      "star_categories": [
+        "shield"
+      ],
+      "capabilities": [
+        "attack",
+        "shielding",
+        "healing",
+        "counter"
+      ]
+    },
+    "rocksteady": {
+      "role": "反击",
+      "rule": "rock",
+      "damage": 5.2,
+      "cd": 5,
+      "stamina": 0,
+      "stars": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "ownExtra": "自然攻击先削减敌方3护盾。",
+      "starText": "★武器累计自然攻击2次，使本体下一次护盾增加3；不叠加。",
+      "shieldPeriod": 5,
+      "shieldAmount": 5,
+      "hp": 15,
+      "break_amount": 3,
+      "star_threshold": 2,
+      "shield_bonus": 3,
+      "star_categories": [
+        "weapon"
+      ],
+      "capabilities": [
+        "attack",
+        "shielding",
+        "break_shield",
+        "max_hp"
+      ]
+    }
+  },
+  "recipes": [
+    {
+      "id": "V124_01",
+      "base": "weapon_21020044",
+      "materials": [
+        "spicy_meat"
+      ],
+      "target": "weapon_21020104",
+      "round_min": 1,
+      "fee": 0,
+      "route": "充能重击",
+      "trade": "转向蓄力；放弃连动准备，得到开场充能",
+      "input_tier": 2,
+      "type": "branch"
+    },
+    {
+      "id": "V124_02",
+      "base": "weapon_21020024",
+      "materials": [
+        "mat_43020051"
+      ],
+      "target": "weapon_21020074",
+      "round_min": 1,
+      "fee": 0,
+      "route": "迅捷联动",
+      "trade": "转向强化击与冷却接力",
+      "input_tier": 2,
+      "type": "branch"
+    },
+    {
+      "id": "V124_03",
+      "base": "weapon_21020104",
+      "materials": [
+        "mat_43020051"
+      ],
+      "target": "weapon_21010064",
+      "round_min": 1,
+      "fee": 0,
+      "route": "充能重击",
+      "trade": "长刃蓄力；攻击变慢，伙伴帮助攒强化",
+      "input_tier": 3,
+      "type": "branch"
+    },
+    {
+      "id": "V124_04",
+      "base": "weapon_21010104",
+      "materials": [
+        "mat_43020051"
+      ],
+      "target": "weapon_21010064",
+      "round_min": 1,
+      "fee": 0,
+      "route": "充能重击",
+      "trade": "蓄力中阶的另一条获取路线",
+      "input_tier": 2,
+      "type": "branch"
+    },
+    {
+      "id": "V124_05",
+      "base": "weapon_21010064",
+      "materials": [
+        "rocksteady"
+      ],
+      "target": "verdant",
+      "round_min": 1,
+      "fee": 0,
+      "route": "充能重击",
+      "trade": "保留部分供盾，消耗护盾强化重击",
+      "input_tier": 3,
+      "type": "branch"
+    },
+    {
+      "id": "V124_06",
+      "base": "weapon_21010064",
+      "materials": [
+        "tube"
+      ],
+      "target": "weapon_21010026",
+      "round_min": 1,
+      "fee": 0,
+      "route": "充能重击",
+      "trade": "转向延长强化窗口",
+      "input_tier": 3,
+      "type": "branch"
+    },
+    {
+      "id": "V124_07",
+      "base": "weapon_21010044",
+      "materials": [
+        "nutrition"
+      ],
+      "target": "weapon_21010034",
+      "round_min": 1,
+      "fee": 0,
+      "route": "护盾反击",
+      "trade": "转向高生命时的伤害收益",
+      "input_tier": 2,
+      "type": "branch"
+    },
+    {
+      "id": "V124_08",
+      "base": "weapon_21040064",
+      "materials": [
+        "mat_42300100"
+      ],
+      "target": "weapon_21040034",
+      "round_min": 1,
+      "fee": 0,
+      "route": "护盾反击",
+      "trade": "保留供盾，挡伤准备重拳与治疗",
+      "input_tier": 2,
+      "type": "branch"
+    },
+    {
+      "id": "V124_09",
+      "base": "weapon_21040064",
+      "materials": [
+        "mat_43020051"
+      ],
+      "target": "weapon_21040044",
+      "round_min": 1,
+      "fee": 0,
+      "route": "充能重击",
+      "trade": "转向护盾支持的充能攻击",
+      "input_tier": 2,
+      "type": "branch"
+    },
+    {
+      "id": "V124_10",
+      "base": "weapon_21040034",
+      "materials": [
+        "bellborne"
+      ],
+      "target": "weapon_21010076",
+      "round_min": 1,
+      "fee": 0,
+      "route": "护盾反击",
+      "trade": "保留盾与少量治疗，提升实际挡伤反击",
+      "input_tier": 3,
+      "type": "branch"
+    },
+    {
+      "id": "V124_11",
+      "base": "weapon_21040044",
+      "materials": [
+        "bellborne"
+      ],
+      "target": "weapon_21010076",
+      "round_min": 1,
+      "fee": 0,
+      "route": "护盾反击",
+      "trade": "反击终阶的替代路线",
+      "input_tier": 3,
+      "type": "branch"
+    },
+    {
+      "id": "V124_12",
+      "base": "weapon_21040024",
+      "materials": [
+        "electro_coin"
+      ],
+      "target": "weapon_21040045",
+      "round_min": 1,
+      "fee": 0,
+      "route": "迅捷联动",
+      "trade": "附噪与连续出拳",
+      "input_tier": 2,
+      "type": "branch"
+    },
+    {
+      "id": "V124_13",
+      "base": "weapon_21030074",
+      "materials": [
+        "mat_41100011"
+      ],
+      "target": "weapon_21030044",
+      "round_min": 1,
+      "fee": 0,
+      "route": "充能重击",
+      "trade": "转为多次攻击准备强化",
+      "input_tier": 2,
+      "type": "branch"
+    },
+    {
+      "id": "V124_14",
+      "base": "weapon_21030024",
+      "materials": [
+        "mat_43020051"
+      ],
+      "target": "weapon_21030044",
+      "round_min": 1,
+      "fee": 0,
+      "route": "充能重击",
+      "trade": "连动配枪走向强化击",
+      "input_tier": 2,
+      "type": "branch"
+    },
+    {
+      "id": "V124_15",
+      "base": "weapon_21030064",
+      "materials": [
+        "answer"
+      ],
+      "target": "weapon_21030045",
+      "round_min": 1,
+      "fee": 0,
+      "route": "充能重击",
+      "trade": "转向破盾与伙伴奖励",
+      "input_tier": 3,
+      "type": "branch"
+    },
+    {
+      "id": "V124_16",
+      "base": "weapon_21030034",
+      "materials": [
+        "tube"
+      ],
+      "target": "weapon_21030015",
+      "round_min": 1,
+      "fee": 0,
+      "route": "迅捷联动",
+      "trade": "由瞄准转向强化击支援",
+      "input_tier": 3,
+      "type": "branch"
+    },
+    {
+      "id": "V124_17",
+      "base": "weapon_21050044",
+      "materials": [
+        "mat_42310090"
+      ],
+      "target": "weapon_21050017",
+      "round_min": 1,
+      "fee": 0,
+      "route": "护盾反击",
+      "trade": "保留治疗，成为治疗联动核心",
+      "input_tier": 2,
+      "type": "branch"
+    },
+    {
+      "id": "V124_18",
+      "base": "weapon_21050104",
+      "materials": [
+        "mat_43020051"
+      ],
+      "target": "weapon_21050074",
+      "round_min": 1,
+      "fee": 0,
+      "route": "充能重击",
+      "trade": "由独立爆发转向强化窗口",
+      "input_tier": 2,
+      "type": "branch"
+    },
+    {
+      "id": "V124_19",
+      "base": "rectifier25",
+      "materials": [
+        "whiff"
+      ],
+      "target": "weapon_21050015",
+      "round_min": 1,
+      "fee": 0,
+      "route": "迅捷联动",
+      "trade": "治疗连动的替代路线",
+      "input_tier": 3,
+      "type": "branch"
+    },
+    {
+      "id": "V124_20",
+      "base": "weapon_21050074",
+      "materials": [
+        "contract"
+      ],
+      "target": "variation",
+      "round_min": 1,
+      "fee": 0,
+      "route": "迅捷联动",
+      "trade": "选择声骸协同，继续分支海的呢喃或掣傀之手",
+      "input_tier": 3,
+      "type": "branch"
+    },
+    {
+      "id": "V124_21",
+      "base": "cyan_heron",
+      "materials": [
+        "mat_41100011"
+      ],
+      "target": "heron",
+      "round_min": 1,
+      "fee": 0,
+      "route": "充能重击",
+      "trade": "从攻速联动转向单次强力支援",
+      "input_tier": 2,
+      "type": "branch"
+    },
+    {
+      "id": "V124_22",
+      "base": "rocksteady",
+      "materials": [
+        "nutrition"
+      ],
+      "target": "bellborne",
+      "round_min": 1,
+      "fee": 0,
+      "route": "护盾反击",
+      "trade": "护盾声骸的替代配方",
+      "input_tier": 2,
+      "type": "branch"
+    },
+    {
+      "id": "V124_23",
+      "base": "zig",
+      "materials": [
+        "electro_coin"
+      ],
+      "target": "violet",
+      "round_min": 1,
+      "fee": 0,
+      "route": "护盾反击",
+      "trade": "转向护盾反击声骸",
+      "input_tier": 1,
+      "type": "branch"
+    },
+    {
+      "id": "V124_24",
+      "base": "whiff",
+      "materials": [
+        "echo_glacio"
+      ],
+      "target": "cyan_heron",
+      "round_min": 1,
+      "fee": 0,
+      "route": "迅捷联动",
+      "trade": "攻速与霜渐的组合支援",
+      "input_tier": 1,
+      "type": "branch"
+    }
+  ],
+  "redirects": {
+    "P062": "weapon_21020074",
+    "P076": "weapon_21040034",
+    "P046": "weapon_21010034"
+  }
+}

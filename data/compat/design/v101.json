@@ -1,0 +1,748 @@
+{
+  "design_version": 101,
+  "baseline_sha256": "b93de1c216fce6e362d7cc62b88af51f9da7b53b9745cccdbf0e570892f21e4c",
+  "star_limits": {
+    "1": 2,
+    "2": 3,
+    "3": 4,
+    "4": 4,
+    "5": 5
+  },
+  "stars": {
+    "weapon_21010045": {
+      "name": "源能机锋",
+      "layout": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          2,
+          -2
+        ]
+      ],
+      "text": "★声骸累计自然攻击2次：充能1，同名间隔4秒。",
+      "effect": {
+        "trigger": "star_attack",
+        "category": "echo",
+        "action": "charge",
+        "value": 1,
+        "period": 4,
+        "threshold": 2,
+        "target": "self"
+      }
+    },
+    "weapon_21020016": {
+      "name": "赫奕流明",
+      "layout": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          4,
+          -1
+        ],
+        [
+          1,
+          -2
+        ]
+      ],
+      "text": "★声骸累计自然攻击2次：推进本体冷却0.4秒，同名间隔4秒。",
+      "effect": {
+        "trigger": "star_attack",
+        "category": "echo",
+        "action": "advance",
+        "value": 0.4,
+        "period": 4,
+        "threshold": 2,
+        "target": "self"
+      }
+    },
+    "weapon_21020036": {
+      "name": "不灭航路",
+      "layout": [
+        [
+          0,
+          -1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "text": "★武器累计自然攻击2次：推进本体冷却0.3秒，同名间隔3秒。",
+      "effect": {
+        "trigger": "star_attack",
+        "category": "weapon",
+        "action": "advance",
+        "value": 0.3,
+        "period": 3,
+        "threshold": 2,
+        "target": "self"
+      }
+    },
+    "weapon_21020045": {
+      "name": "镭射切变",
+      "layout": [
+        [
+          0,
+          2
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          4,
+          -1
+        ]
+      ],
+      "text": "本体强化击后：推进剩余冷却最长的★武器0.4秒；只推进一件，无可推进目标不发动。",
+      "effect": {
+        "trigger": "self_burst",
+        "category": "weapon",
+        "action": "advance",
+        "value": 0.4,
+        "period": 0,
+        "threshold": 1,
+        "target": "longest_weapon"
+      }
+    },
+    "weapon_21020046": {
+      "name": "血誓盟约",
+      "layout": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          4,
+          -1
+        ],
+        [
+          0,
+          -2
+        ]
+      ],
+      "text": "★治疗物品实际治疗后：获得4护盾，同名间隔5秒；满血溢出治疗不触发。",
+      "effect": {
+        "trigger": "star_heal",
+        "category": "heal",
+        "action": "shield",
+        "value": 4,
+        "period": 5,
+        "threshold": 1,
+        "target": "self"
+      }
+    },
+    "weapon_21020056": {
+      "name": "不屈命定之冠",
+      "layout": [
+        [
+          0,
+          -1
+        ],
+        [
+          2,
+          -1
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "text": "★光噪物品自然施加光噪后：获得4护盾，同名间隔4秒。",
+      "effect": {
+        "trigger": "star_noise",
+        "category": "noise",
+        "action": "shield",
+        "value": 4,
+        "period": 4,
+        "threshold": 1,
+        "target": "self"
+      }
+    },
+    "weapon_21020076": {
+      "name": "永远的启明星",
+      "layout": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          2,
+          -2
+        ]
+      ],
+      "text": "★声骸累计自然攻击2次：准备本体下一次自然攻击，附伤4并使20%伤害穿盾（上限8）。仅存一次，待出手期间不累积；不消耗充能。",
+      "effect": {
+        "trigger": "star_attack",
+        "category": "echo",
+        "action": "prepare_attack",
+        "value": 4,
+        "period": 0,
+        "threshold": 2,
+        "target": "self",
+        "pierce": 0.2,
+        "pierce_cap": 8
+      }
+    },
+    "weapon_21020086": {
+      "name": "灼霜",
+      "layout": [
+        [
+          0,
+          2
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          4,
+          -1
+        ]
+      ],
+      "text": "★武器累计自然攻击3次：施加霜渐1，同名间隔5秒；派生伤害不计数。",
+      "effect": {
+        "trigger": "star_attack",
+        "category": "weapon",
+        "action": "frost",
+        "value": 1,
+        "period": 5,
+        "threshold": 3,
+        "target": "self"
+      }
+    },
+    "weapon_21020096": {
+      "name": "天之苍苍",
+      "layout": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          -1
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "text": "★光噪物品累计自然施加光噪2次：充能1，同名间隔4秒。",
+      "effect": {
+        "trigger": "star_noise",
+        "category": "noise",
+        "action": "charge",
+        "value": 1,
+        "period": 4,
+        "threshold": 2,
+        "target": "self"
+      }
+    },
+    "weapon_21030016": {
+      "name": "死与舞",
+      "layout": [
+        [
+          0,
+          -1
+        ],
+        [
+          2,
+          -1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "text": "★武器累计自然攻击3次：推进本体冷却0.4秒，同名间隔4秒。",
+      "effect": {
+        "trigger": "star_attack",
+        "category": "weapon",
+        "action": "advance",
+        "value": 0.4,
+        "period": 4,
+        "threshold": 3,
+        "target": "self"
+      }
+    },
+    "weapon_21030066": {
+      "name": "碎骨",
+      "layout": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          1,
+          -2
+        ]
+      ],
+      "text": "★武器累计自然攻击3次：最后发动的★武器下一次自然攻击附伤3，同名间隔4秒，不叠加。",
+      "effect": {
+        "trigger": "star_attack",
+        "category": "weapon",
+        "action": "flat",
+        "value": 3,
+        "period": 4,
+        "threshold": 3,
+        "target": "trigger",
+        "count": 1
+      }
+    },
+    "weapon_21040026": {
+      "name": "悲喜剧",
+      "layout": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "text": "★武器累计自然攻击2次：充能1，同名间隔4秒；不直接复制充能拳。",
+      "effect": {
+        "trigger": "star_attack",
+        "category": "weapon",
+        "action": "charge",
+        "value": 1,
+        "period": 4,
+        "threshold": 2,
+        "target": "self"
+      }
+    },
+    "weapon_21040036": {
+      "name": "焰光裁定",
+      "layout": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          1,
+          -2
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "text": "★声骸累计自然攻击2次：由本体施加光噪1，同名间隔5秒；派生光噪不触发其他星效。",
+      "effect": {
+        "trigger": "star_attack",
+        "category": "echo",
+        "action": "noise",
+        "value": 1,
+        "period": 5,
+        "threshold": 2,
+        "target": "self"
+      }
+    },
+    "weapon_21050045": {
+      "name": "玻色星仪",
+      "layout": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "text": "★武器累计自然攻击3次：准备本体下一次自然攻击，附伤2并额外削盾4。同名间隔4秒，仅存一次，待出手期间不累积。",
+      "effect": {
+        "trigger": "star_attack",
+        "category": "weapon",
+        "action": "prepare_attack",
+        "value": 2,
+        "period": 4,
+        "threshold": 3,
+        "target": "self",
+        "breaking": 4
+      }
+    },
+    "weapon_21050046": {
+      "name": "和光回唱",
+      "layout": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          1
+        ]
+      ],
+      "text": "★光噪物品累计自然施加光噪2次：推进本体冷却0.4秒，同名间隔4秒。",
+      "effect": {
+        "trigger": "star_noise",
+        "category": "noise",
+        "action": "advance",
+        "value": 0.4,
+        "period": 4,
+        "threshold": 2,
+        "target": "self"
+      }
+    },
+    "weapon_21050096": {
+      "name": "栖霞饮露",
+      "layout": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          -1,
+          0
+        ],
+        [
+          3,
+          1
+        ]
+      ],
+      "text": "★治疗物品实际治疗后：施加霜渐1，同名间隔5秒；满血溢出治疗不触发。",
+      "effect": {
+        "trigger": "star_heal",
+        "category": "heal",
+        "action": "frost",
+        "value": 1,
+        "period": 5,
+        "threshold": 1,
+        "target": "self"
+      }
+    },
+    "weapon_21050116": {
+      "name": "玉阙玄华",
+      "layout": [
+        [
+          0,
+          -1
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          1
+        ]
+      ],
+      "text": "★武器累计自然攻击3次：充能1，同名间隔4秒，衔接本体的充能后削盾。",
+      "effect": {
+        "trigger": "star_attack",
+        "category": "weapon",
+        "action": "charge",
+        "value": 1,
+        "period": 4,
+        "threshold": 3,
+        "target": "self"
+      }
+    }
+  },
+  "audit": {
+    "verdant": {
+      "name": "苍鳞千嶂",
+      "decision": "retain_existing_rule",
+      "reason": "★声骸发动：接续+1，同名间隔3秒。"
+    },
+    "stringmaster": {
+      "name": "掣傀之手",
+      "decision": "retain_existing_rule",
+      "reason": "两种★声骸各发动一次获得2印记；下一件★武器自然攻击消费，每印记+3伤害。间隔4秒，本体不能消费。"
+    },
+    "weapon_21010026": {
+      "name": "时和岁稔",
+      "decision": "retain_existing_rule",
+      "reason": "★声骸发动与本体普通攻击各有一次记录时，准备下次充能攻击额外2段、每段4伤害；消费两条记录，间隔4秒。"
+    },
+    "weapon_21010036": {
+      "name": "焰痕",
+      "decision": "retain_existing_rule",
+      "reason": "★声骸攻击时：下次充能攻击+3伤害，间隔4秒，不累积。"
+    },
+    "weapon_21010045": {
+      "name": "源能机锋",
+      "decision": "new_star_rule",
+      "reason": "★声骸累计自然攻击2次：充能1，同名间隔4秒。"
+    },
+    "weapon_21010046": {
+      "name": "驭冕铸雷之权",
+      "decision": "retain_existing_rule",
+      "reason": "其他★物品实际加盾：穿透+1，同名间隔2秒。"
+    },
+    "weapon_21010056": {
+      "name": "昙切",
+      "decision": "retain_existing_rule",
+      "reason": "★光噪自然施加参与同一计数。"
+    },
+    "weapon_21010066": {
+      "name": "宙算仪轨",
+      "decision": "retain_existing_rule",
+      "reason": "本体实际治疗后，基础伤害最高的★武器下一次充能攻击+5伤害，持续6秒，同名间隔5秒。"
+    },
+    "weapon_21010076": {
+      "name": "千般渡",
+      "decision": "retain_existing_rule",
+      "reason": "★护盾物品自然实际加盾也可存承载。"
+    },
+    "weapon_21020016": {
+      "name": "赫奕流明",
+      "decision": "new_star_rule",
+      "reason": "★声骸累计自然攻击2次：推进本体冷却0.4秒，同名间隔4秒。"
+    },
+    "weapon_21020026": {
+      "name": "裁春",
+      "decision": "retain_existing_rule",
+      "reason": "★武器出手只计准备，不免除迅捷消费。"
+    },
+    "weapon_21020036": {
+      "name": "不灭航路",
+      "decision": "new_star_rule",
+      "reason": "★武器累计自然攻击2次：推进本体冷却0.3秒，同名间隔3秒。"
+    },
+    "weapon_21020045": {
+      "name": "镭射切变",
+      "decision": "new_star_rule",
+      "reason": "本体强化击后：推进剩余冷却最长的★武器0.4秒；只推进一件，无可推进目标不发动。"
+    },
+    "weapon_21020046": {
+      "name": "血誓盟约",
+      "decision": "new_star_rule",
+      "reason": "★治疗物品实际治疗后：获得4护盾，同名间隔5秒；满血溢出治疗不触发。"
+    },
+    "weapon_21020056": {
+      "name": "不屈命定之冠",
+      "decision": "new_star_rule",
+      "reason": "★光噪物品自然施加光噪后：获得4护盾，同名间隔4秒。"
+    },
+    "weapon_21020066": {
+      "name": "裁竹",
+      "decision": "retain_existing_rule",
+      "reason": "大竹斩后，两只参与的★声骸下一次自然伤害各+3，持续6秒；不另有协击复制。"
+    },
+    "weapon_21020076": {
+      "name": "永远的启明星",
+      "decision": "new_star_rule",
+      "reason": "★声骸累计自然攻击2次：准备本体下一次自然攻击，附伤4并使20%伤害穿盾（上限8）。仅存一次，待出手期间不累积；不消耗充能。"
+    },
+    "weapon_21020086": {
+      "name": "灼霜",
+      "decision": "new_star_rule",
+      "reason": "★武器累计自然攻击3次：施加霜渐1，同名间隔5秒；派生伤害不计数。"
+    },
+    "weapon_21020096": {
+      "name": "天之苍苍",
+      "decision": "new_star_rule",
+      "reason": "★光噪物品累计自然施加光噪2次：充能1，同名间隔4秒。"
+    },
+    "weapon_21020106": {
+      "name": "云琅",
+      "decision": "retain_existing_rule",
+      "reason": "不同名称★声骸交替发动：本体自然伤害+5%，最多4层；每层6秒；满层延为10秒，满层后不刷新。"
+    },
+    "weapon_21020107": {
+      "name": "沉冥",
+      "decision": "retain_existing_rule",
+      "reason": "武器与声骸在★中交替4次切换姿态：第一次切换使自身下两击+3；第二次使两件★武器各下一击+2。两态交替，不叠加。"
+    },
+    "weapon_21030016": {
+      "name": "死与舞",
+      "decision": "new_star_rule",
+      "reason": "★武器累计自然攻击3次：推进本体冷却0.4秒，同名间隔4秒。"
+    },
+    "weapon_21030026": {
+      "name": "林间的咏叹调",
+      "decision": "retain_existing_rule",
+      "reason": "★补给首次自然发动：迅捷2，同一补给一次。"
+    },
+    "weapon_21030036": {
+      "name": "光影双生",
+      "decision": "retain_existing_rule",
+      "reason": "充能攻击使下一只★声骸下一击+4；声骸发动使本体下一次重击+4；每个方向间隔4秒，奖励不复制。"
+    },
+    "weapon_21030046": {
+      "name": "溢彩荧辉",
+      "decision": "retain_existing_rule",
+      "reason": "本体命中6层光噪目标后，一件★武器下一击+3，间隔5秒；补给首次发动迅捷2。"
+    },
+    "weapon_21030056": {
+      "name": "蜃影",
+      "decision": "retain_existing_rule",
+      "reason": "实际破盾后两件★武器下一击各+3，间隔6秒，不增加全队常驻攻击。"
+    },
+    "weapon_21030066": {
+      "name": "碎骨",
+      "decision": "new_star_rule",
+      "reason": "★武器累计自然攻击3次：最后发动的★武器下一次自然攻击附伤3，同名间隔4秒，不叠加。"
+    },
+    "weapon_21040016": {
+      "name": "诸方玄枢",
+      "decision": "retain_existing_rule",
+      "reason": "★声骸每次发动延长1秒，单窗最多3次。"
+    },
+    "weapon_21040026": {
+      "name": "悲喜剧",
+      "decision": "new_star_rule",
+      "reason": "★武器累计自然攻击2次：充能1，同名间隔4秒；不直接复制充能拳。"
+    },
+    "weapon_21040036": {
+      "name": "焰光裁定",
+      "decision": "new_star_rule",
+      "reason": "★声骸累计自然攻击2次：由本体施加光噪1，同名间隔5秒；派生光噪不触发其他星效。"
+    },
+    "weapon_21040046": {
+      "name": "万物持存的注释",
+      "decision": "retain_existing_rule",
+      "reason": "其他★物品实际加盾存1层穿透，间隔2秒，上限3；本体充能攻击消费，每层额外削盾4和附伤1。"
+    },
+    "weapon_21040056": {
+      "name": "白昼之脊",
+      "decision": "retain_existing_rule",
+      "reason": "两种★声骸交替发动迅捷1，间隔3秒。"
+    },
+    "weapon_21040066": {
+      "name": "昭日译注",
+      "decision": "retain_existing_rule",
+      "reason": "两种不同★声骸交替发动后，下一只★声骸基础伤害+35%，单次增量上限6，间隔4秒；不复制状态或治疗。"
+    },
+    "weapon_21050026": {
+      "name": "琼枝冰绡",
+      "decision": "retain_existing_rule",
+      "reason": "下一只★声骸自然攻击获得6附伤，间隔5秒；本体不同时增伤。"
+    },
+    "weapon_21050036": {
+      "name": "星序协响",
+      "decision": "retain_existing_rule",
+      "reason": "本体发生实际治疗后，最多两件★武器下一击各+3伤害，6秒有效，间隔5秒。无声骸复制。"
+    },
+    "weapon_21050045": {
+      "name": "玻色星仪",
+      "decision": "new_star_rule",
+      "reason": "★武器累计自然攻击3次：准备本体下一次自然攻击，附伤2并额外削盾4。同名间隔4秒，仅存一次，待出手期间不累积。"
+    },
+    "weapon_21050046": {
+      "name": "和光回唱",
+      "decision": "new_star_rule",
+      "reason": "★光噪物品累计自然施加光噪2次：推进本体冷却0.4秒，同名间隔4秒。"
+    },
+    "weapon_21050066": {
+      "name": "幽冥的忘忧章",
+      "decision": "retain_existing_rule",
+      "reason": "两种★声骸各发动一次：本体下一击+5、下一只★声骸下一击+5，间隔5秒，6秒有效。"
+    },
+    "weapon_21050076": {
+      "name": "赝作的矮星",
+      "decision": "retain_existing_rule",
+      "reason": "★武器充能攻击后，下一只★声骸下一击+6，间隔5秒；不附加第三种减益。"
+    },
+    "weapon_21050086": {
+      "name": "存帧",
+      "decision": "retain_existing_rule",
+      "reason": "下一件★武器自然攻击的基础附伤复制30%，上限6；不复制状态、治疗、回能或新的存帧。"
+    },
+    "weapon_21050096": {
+      "name": "栖霞饮露",
+      "decision": "new_star_rule",
+      "reason": "★治疗物品实际治疗后：施加霜渐1，同名间隔5秒；满血溢出治疗不触发。"
+    },
+    "weapon_21050116": {
+      "name": "玉阙玄华",
+      "decision": "new_star_rule",
+      "reason": "★武器累计自然攻击3次：充能1，同名间隔4秒，衔接本体的充能后削盾。"
+    }
+  }
+}

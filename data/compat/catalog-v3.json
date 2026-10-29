@@ -1,0 +1,1582 @@
+{
+  "ruleset": "wuwa-pack-v3",
+  "items": {
+    "w_broadblade": {
+      "name": "戍关长刃·定军",
+      "canonical_effect": "普攻和重击伤害加成提升12%。",
+      "original_summary": "长刃；强化普攻与重击",
+      "source_page": "https://mc.appfeng.com/weapon/21010053",
+      "asset_path": "assets/research/wuwa/weapon.21010053.png",
+      "sha256": "733b4cde21aa53b5c52b61ca63a0b12380ec416b3b74293ece4e18c8dd16db66",
+      "source_id": "weapon.21010053",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "price": 3,
+      "desc": "每 2.8 秒重击 12，消耗 1.6 耐力；适配忌炎。",
+      "cooldown": 2.8,
+      "element": "neutral",
+      "tags": [
+        "weapon",
+        "heavy"
+      ],
+      "rarity": 1,
+      "original_rarity": 3,
+      "effect": "w_broadblade",
+      "stars": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "target": "echo",
+      "round_min": 1,
+      "draw_hint": {
+        "angle_radians": 0.7853981633974483,
+        "rotated_opaque_bounds": [
+          -178.89801564019652,
+          -30.405591591021548,
+          360.2102448427661,
+          104.23759005323595
+        ]
+      },
+      "damage": 12,
+      "stamina": 1.6,
+      "weapon_type": "broadblade",
+      "heavy": true,
+      "energy": 8,
+      "concerto": 8
+    },
+    "w_sword": {
+      "name": "戍关迅刀·镇海",
+      "canonical_effect": "共鸣技能伤害加成提升12%。",
+      "original_summary": "迅刀；强化共鸣技能",
+      "source_page": "https://mc.appfeng.com/weapon/21020053",
+      "asset_path": "assets/research/wuwa/weapon.21020053.png",
+      "sha256": "30be7de834959abe858bea9bb30d495a5685b3b47d7db199b5419c83daeb7cb4",
+      "source_id": "weapon.21020053",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "price": 3,
+      "desc": "每 1.8 秒斩击 7，消耗 1 耐力；接力后的首次攻击 +3。",
+      "cooldown": 1.8,
+      "element": "neutral",
+      "tags": [
+        "weapon"
+      ],
+      "rarity": 1,
+      "original_rarity": 3,
+      "effect": "w_sword",
+      "stars": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "target": "echo",
+      "round_min": 1,
+      "damage": 7,
+      "stamina": 1.0,
+      "weapon_type": "sword",
+      "energy": 8,
+      "concerto": 8
+    },
+    "w_pistol": {
+      "name": "戍关佩枪·平云",
+      "canonical_effect": "共鸣技能伤害加成提升12%。",
+      "original_summary": "佩枪；强化共鸣技能",
+      "source_page": "https://mc.appfeng.com/weapon/21030053",
+      "asset_path": "assets/research/wuwa/weapon.21030053.png",
+      "sha256": "92c3f002b0ce841d52dcff5597bc6d7d3585e16cbeca28bb76b680381395d0d4",
+      "source_id": "weapon.21030053",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "price": 3,
+      "desc": "每 2 秒射击 8，消耗 1 耐力；接力后额外射击 1 次。",
+      "cooldown": 2.0,
+      "element": "neutral",
+      "tags": [
+        "weapon"
+      ],
+      "rarity": 1,
+      "original_rarity": 3,
+      "effect": "w_pistol",
+      "stars": [
+        [
+          0,
+          1
+        ]
+      ],
+      "target": "echo",
+      "round_min": 1,
+      "damage": 8,
+      "stamina": 1.0,
+      "weapon_type": "pistol",
+      "energy": 8,
+      "concerto": 8
+    },
+    "w_gauntlet": {
+      "name": "戍关臂铠·拔山",
+      "canonical_effect": "共鸣解放伤害加成提升12%。",
+      "original_summary": "臂铠；强化共鸣解放",
+      "source_page": "https://mc.appfeng.com/weapon/21040053",
+      "asset_path": "assets/research/wuwa/weapon.21040053.png",
+      "sha256": "53ff0148f416930928abbfc074dd69f6e6a8b620c0cafec20a9cf5bfd4533e1b",
+      "source_id": "weapon.21040053",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "price": 3,
+      "desc": "每 1.6 秒攻击 6，消耗 0.9 耐力；角色解放后下两拳各 +4。",
+      "cooldown": 1.6,
+      "element": "neutral",
+      "tags": [
+        "weapon"
+      ],
+      "rarity": 1,
+      "original_rarity": 3,
+      "effect": "w_gauntlet",
+      "stars": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "target": "echo",
+      "round_min": 1,
+      "damage": 6,
+      "stamina": 0.9,
+      "weapon_type": "gauntlet",
+      "energy": 8,
+      "concerto": 8
+    },
+    "w_rectifier": {
+      "name": "戍关音感仪·留光",
+      "canonical_effect": "普攻和重击伤害加成提升12%。",
+      "original_summary": "音感仪；强化普攻与重击",
+      "source_page": "https://mc.appfeng.com/weapon/21050053",
+      "asset_path": "assets/research/wuwa/weapon.21050053.png",
+      "sha256": "43613cf411c421417b0bad0ebc2f461ec4be502412843cc33592e8eea8b76a31",
+      "source_id": "weapon.21050053",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "price": 3,
+      "desc": "每 2.2 秒发射 8，消耗 1 耐力；普通攻击积累角色共鸣能量。",
+      "cooldown": 2.2,
+      "element": "neutral",
+      "tags": [
+        "weapon"
+      ],
+      "rarity": 1,
+      "original_rarity": 3,
+      "effect": "w_rectifier",
+      "stars": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "target": "echo",
+      "round_min": 1,
+      "damage": 8,
+      "stamina": 1.0,
+      "weapon_type": "rectifier",
+      "energy": 10,
+      "concerto": 8
+    },
+    "discord": {
+      "name": "异响空灵",
+      "canonical_effect": "施放共鸣技能时，回复8点协奏能量，每20秒可触发1次。",
+      "original_summary": "长刃；技能回协奏",
+      "source_page": "https://mc.appfeng.com/weapon/21010024",
+      "asset_path": "assets/research/wuwa/weapon.21010024.png",
+      "sha256": "5c2e5d06591ea58bca0381f8e39466e0198be8aa568ce71fc6896269a0754ae3",
+      "source_id": "weapon.21010024",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "price": 5,
+      "desc": "每 2.8 秒重击12；接力入口的普通攻击协奏 +6，每8秒一次。",
+      "cooldown": 2.8,
+      "element": "neutral",
+      "tags": [
+        "weapon",
+        "heavy"
+      ],
+      "rarity": 2,
+      "original_rarity": 4,
+      "effect": "discord",
+      "stars": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "target": "echo",
+      "round_min": 2,
+      "damage": 12,
+      "stamina": 1.6,
+      "weapon_type": "broadblade",
+      "heavy": true,
+      "energy": 8,
+      "concerto": 8
+    },
+    "variation": {
+      "name": "奇幻变奏",
+      "canonical_effect": "施放共鸣技能时，回复8点协奏能量，每20秒可触发1次。",
+      "original_summary": "音感仪；技能回协奏",
+      "source_page": "https://mc.appfeng.com/weapon/21050024",
+      "asset_path": "assets/research/wuwa/weapon.21050024.webp",
+      "sha256": "80b1c74acca9b61188b5fdd36ef146f3c5950d7af7508ba65eb6184bc3c652c0",
+      "source_id": "weapon.21050024",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "price": 5,
+      "desc": "每 2.4 秒攻击7；接力入口的普通攻击协奏 +8，每8秒一次。",
+      "cooldown": 2.4,
+      "element": "neutral",
+      "tags": [
+        "weapon"
+      ],
+      "rarity": 2,
+      "original_rarity": 4,
+      "effect": "variation",
+      "stars": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "target": "echo",
+      "round_min": 2,
+      "damage": 7,
+      "stamina": 1.0,
+      "weapon_type": "rectifier",
+      "energy": 8,
+      "concerto": 8
+    },
+    "rectifier25": {
+      "name": "鸣动仪-25型",
+      "canonical_effect": "施放共鸣技能时，若角色生命低于60%，回复角色5%生命值，每8秒可触发1次；若角色生命高于60%，则攻击提升12%，持续10秒。",
+      "original_summary": "音感仪；根据血量治疗或增攻",
+      "source_page": "https://mc.appfeng.com/weapon/21050034",
+      "asset_path": "assets/research/wuwa/weapon.21050034.webp",
+      "sha256": "b424295090366c59e5db8c5853acfc00a2a2d123a3fd26b9464537100ba333b7",
+      "source_id": "weapon.21050034",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "price": 5,
+      "desc": "每 2.8 秒攻击 8；生命低于 60% 时回复 5，否则本次伤害 +2。",
+      "cooldown": 2.8,
+      "element": "neutral",
+      "tags": [
+        "weapon",
+        "healing"
+      ],
+      "rarity": 2,
+      "original_rarity": 4,
+      "effect": "rectifier25",
+      "stars": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "target": "echo",
+      "round_min": 2,
+      "damage": 8,
+      "stamina": 1.0,
+      "weapon_type": "rectifier",
+      "heal": 5,
+      "energy": 8,
+      "concerto": 8
+    },
+    "verdant": {
+      "name": "苍鳞千嶂",
+      "canonical_effect": "全属性伤害加成提升12%。每次施放变奏技能或共鸣解放时，自身重击伤害加成提升24%，可叠加2层，效果持续14秒。",
+      "original_summary": "忌炎主题专武；变奏／解放强化重击",
+      "source_page": "https://mc.appfeng.com/weapon/21010016",
+      "asset_path": "assets/research/wuwa/weapon.21010016.png",
+      "sha256": "847e5cac1256ef7a93499e40195e7e058cd6a095771abac3c7f4c632372e29e4",
+      "source_id": "weapon.21010016",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "price": 10,
+      "desc": "每 3 秒重击 17，消耗 1.8 耐力；接力或角色解放后重击 +4，最多两层，持续 5 秒。",
+      "cooldown": 3.0,
+      "element": "neutral",
+      "tags": [
+        "weapon",
+        "heavy"
+      ],
+      "rarity": 3,
+      "original_rarity": 5,
+      "effect": "verdant",
+      "stars": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          1
+        ]
+      ],
+      "target": "echo",
+      "round_min": 3,
+      "draw_hint": {
+        "angle_radians": 0.7853981633974483,
+        "rotated_opaque_bounds": [
+          -180.3122292025696,
+          -82.02438661763952,
+          361.6244584051392,
+          167.17009357883867
+        ]
+      },
+      "damage": 17,
+      "stamina": 1.8,
+      "weapon_type": "broadblade",
+      "heavy": true,
+      "energy": 8,
+      "concerto": 8
+    },
+    "stringmaster": {
+      "name": "掣傀之手",
+      "canonical_effect": "全属性伤害加成提升12%。造成共鸣技能伤害时，自身攻击提升12%，可叠加2层，效果持续5秒。自身不在场时，该效果攻击额外提升12%。",
+      "original_summary": "吟霖主题专武；技能触发与后台增益",
+      "source_page": "https://mc.appfeng.com/weapon/21050016",
+      "asset_path": "assets/research/wuwa/weapon.21050016.webp",
+      "sha256": "5045fb7de6555d36ae02a3ece97b8212bb504358aa1c876f5575c96ed3494e78",
+      "source_id": "weapon.21050016",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "price": 10,
+      "desc": "每 2.8 秒攻击 10；星位声骸触发后下一次攻击 +3，最多两层；悬丝的协同攻击额外 +2。",
+      "cooldown": 2.8,
+      "element": "neutral",
+      "tags": [
+        "weapon"
+      ],
+      "rarity": 3,
+      "original_rarity": 5,
+      "effect": "stringmaster",
+      "stars": [
+        [
+          1,
+          -1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "target": "echo",
+      "round_min": 3,
+      "damage": 10,
+      "stamina": 1.2,
+      "weapon_type": "rectifier",
+      "energy": 8,
+      "concerto": 8
+    },
+    "tea": {
+      "name": "清芬茶",
+      "canonical_effect": "提高队伍中所有共鸣者25%生命上限，持续时间30分钟，在多人游戏中仅对自己的角色生效。",
+      "original_summary": "菜肴；提高生命上限",
+      "source_page": "https://mc.appfeng.com/item/80000008",
+      "asset_path": "assets/research/wuwa/item.80000008.png",
+      "sha256": "542e2a6a2c846348e27823c64ff906d1e796fb03469d31bb59e77bca0c26c470",
+      "source_id": "item.80000008",
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "price": 2,
+      "desc": "开战前饮用，生命上限 +15，本场有效；战后消耗。不是反复治疗的茶壶。",
+      "cooldown": 0.0,
+      "element": "neutral",
+      "tags": [
+        "consumable"
+      ],
+      "rarity": 1,
+      "original_rarity": 3,
+      "effect": "tea",
+      "stars": [],
+      "target": "",
+      "round_min": 1
+    },
+    "soup": {
+      "name": "清芬鱼汤",
+      "canonical_effect": "恢复40点耐力。",
+      "original_summary": "菜肴；恢复耐力",
+      "source_page": "https://mc.appfeng.com/item/80000019",
+      "asset_path": "assets/research/wuwa/item.80000019.png",
+      "sha256": "7a4d65919d0359b0069efb1e7bb3195ddc7359eb4d339c3eb92fca67f1e8d9d4",
+      "source_id": "item.80000019",
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "price": 2,
+      "desc": "耐力首次低于 3 时恢复 4；每场一次，战后消耗。",
+      "cooldown": 0.0,
+      "element": "neutral",
+      "tags": [
+        "consumable"
+      ],
+      "rarity": 1,
+      "original_rarity": 2,
+      "effect": "soup",
+      "stars": [],
+      "target": "",
+      "round_min": 1
+    },
+    "nutrition": {
+      "name": "初级营养块",
+      "canonical_effect": "可使队伍中指定共鸣者回复生命上限10%的生命值和500点固定生命值（多人游戏中只对自己的角色生效）。",
+      "original_summary": "药品；即时恢复生命",
+      "source_page": "https://mc.appfeng.com/item/42100017",
+      "asset_path": "assets/research/wuwa/item.42100017.png",
+      "sha256": "37d8cabeb3c183577365cdaffaff308e1af0d0c6563b5649e74fe792e56c1383",
+      "source_id": "item.42100017",
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "price": 2,
+      "desc": "生命首次低于 50% 时回复 18；每场一次，战后消耗。",
+      "cooldown": 0.0,
+      "element": "neutral",
+      "tags": [
+        "consumable"
+      ],
+      "rarity": 1,
+      "original_rarity": 2,
+      "effect": "nutrition",
+      "stars": [],
+      "target": "",
+      "round_min": 1
+    },
+    "revive": {
+      "name": "初级复苏吸雾",
+      "canonical_effect": "可使队伍中指定共鸣者即时恢复意识并回复100点生命值，每60秒只能使用一次（多人游戏中只对自己的角色生效）。",
+      "original_summary": "药品；唤醒失去意识的角色",
+      "source_page": "https://mc.appfeng.com/item/42100013",
+      "asset_path": "assets/research/wuwa/item.42100013.png",
+      "sha256": "279de98e9542813bce538b1b418e7c64212a4854fcc9ce8be7d3780e99d8a7e8",
+      "source_id": "item.42100013",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "price": 4,
+      "desc": "首次致命伤时保留 1 生命并恢复 12；每场限一件，战后消耗。重复触发禁止。",
+      "cooldown": 0.0,
+      "element": "neutral",
+      "tags": [
+        "consumable"
+      ],
+      "rarity": 2,
+      "original_rarity": 2,
+      "effect": "revive",
+      "stars": [],
+      "target": "",
+      "round_min": 1
+    },
+    "tuner": {
+      "name": "特级调谐器",
+      "canonical_effect": "可用于调谐五星声骸的特级装置，调谐后可激活一条辅音属性。",
+      "original_summary": "养成材料；激活五星声骸辅音属性",
+      "source_page": "https://mc.appfeng.com/item/36000014",
+      "asset_path": "assets/research/wuwa/item.36000014.png",
+      "sha256": "6a06b83b8e27c8ea20dcaf4d514ee428ad08f23709f54d318ec17726dcb24ef2",
+      "source_id": "item.36000014",
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "price": 3,
+      "desc": "商店调谐一只声骸：从两条明确词条中选一条（快／强）；不反复洗概率词条。使用即消耗。",
+      "cooldown": 0.0,
+      "element": "neutral",
+      "tags": [
+        "material"
+      ],
+      "rarity": 1,
+      "original_rarity": 5,
+      "effect": "tuner",
+      "stars": [],
+      "target": "",
+      "round_min": 2
+    },
+    "tube": {
+      "name": "高级密音筒",
+      "canonical_effect": "大型声骸经验道具，可提供2000点经验。",
+      "original_summary": "养成材料；声骸经验",
+      "source_page": "https://mc.appfeng.com/item/36000003",
+      "asset_path": "assets/research/wuwa/item.36000003.png",
+      "sha256": "b4af03974b63a463000cdfeb5d19d4a9c05da2f8fb65065fe30786ad6a96f882",
+      "source_id": "item.36000003",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "price": 3,
+      "desc": "确认一只声骸后消耗，升一级（技能强度 +15%），最多两级；保持同一物种。",
+      "cooldown": 0.0,
+      "element": "neutral",
+      "tags": [
+        "material"
+      ],
+      "rarity": 1,
+      "original_rarity": 4,
+      "effect": "tube",
+      "stars": [],
+      "target": "",
+      "round_min": 2
+    },
+    "contract": {
+      "name": "眷属-珍奇契约",
+      "canonical_effect": "召唤一名声骸协同作战，不会受到玩家角色伤害\n\n该信物在冥歌海墟中不限制使用次数",
+      "original_summary": "海墟信物；召唤声骸协同作战",
+      "source_page": "https://mc.appfeng.com/item/71500011",
+      "asset_path": "assets/research/wuwa/item.71500011.png",
+      "sha256": "280d7083d2807df098524ff0d41daec6b1650e516a064d8e00972f901729273d",
+      "source_id": "item.71500011",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "price": 6,
+      "desc": "星位上的一只声骸触发后，追加一次 35% 强度的协同攻击；每 6 秒一次，不复制治疗或再次生成接力。",
+      "cooldown": 0.0,
+      "element": "neutral",
+      "tags": [
+        "relic"
+      ],
+      "rarity": 2,
+      "original_rarity": 4,
+      "effect": "contract",
+      "stars": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "target": "echo",
+      "round_min": 2
+    },
+    "aero_coin": {
+      "name": "气动-锈蚀古币",
+      "canonical_effect": "气动伤害提升20%\n\n该信物在冥歌海墟中不限制使用次数",
+      "original_summary": "海墟信物；强化气动伤害",
+      "source_page": "https://mc.appfeng.com/item/71500004",
+      "asset_path": "assets/research/wuwa/item.71500004.png",
+      "sha256": "7dc9f6b7d4d828dee509d63f16a84a6bfc2552cf2119b8b7b222eaaf1be63a6e",
+      "source_id": "item.71500004",
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "price": 3,
+      "desc": "上、下星位的气动物品伤害 +12%；一件物品只接受一枚同类古币。",
+      "cooldown": 0.0,
+      "element": "aero",
+      "tags": [
+        "relic"
+      ],
+      "rarity": 1,
+      "original_rarity": 2,
+      "effect": "aero_coin",
+      "stars": [
+        [
+          0,
+          -1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "target": "aero",
+      "round_min": 1
+    },
+    "electro_coin": {
+      "name": "导电-锈蚀古币",
+      "canonical_effect": "导电伤害提升20%\n\n该信物在冥歌海墟中不限制使用次数",
+      "original_summary": "海墟信物；强化导电伤害",
+      "source_page": "https://mc.appfeng.com/item/71500003",
+      "asset_path": "assets/research/wuwa/item.71500003.png",
+      "sha256": "068e4fde8bcb0d49aa8b98a3ee80224a6117b9655327305e7e16d8bb23101fff",
+      "source_id": "item.71500003",
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "price": 3,
+      "desc": "左、右星位的导电物品伤害 +12%；一件物品只接受一枚同类古币。",
+      "cooldown": 0.0,
+      "element": "electro",
+      "tags": [
+        "relic"
+      ],
+      "rarity": 1,
+      "original_rarity": 2,
+      "effect": "electro_coin",
+      "stars": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "target": "electro",
+      "round_min": 1
+    },
+    "sail": {
+      "name": "那前赴后继的风帆",
+      "canonical_effect": "施放共鸣解放后，使当前角色共鸣技能伤害加深90%，持续15秒\n\n该信物在冥歌海墟中最多使用2次",
+      "original_summary": "黄金信物；解放后强化共鸣技能",
+      "source_page": "https://mc.appfeng.com/item/71500035",
+      "asset_path": "assets/research/wuwa/item.71500035.png",
+      "sha256": "1816319bc1778aaeee541e6dbe811714abbd6cb91f84bc737a32c5b6fd10401d",
+      "source_id": "item.71500035",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "price": 9,
+      "desc": "角色解放后，接力终点的下一次技能伤害 +50%，每次解放一次；一局只装备一件黄金信物。",
+      "cooldown": 0.0,
+      "element": "neutral",
+      "tags": [
+        "relic",
+        "golden"
+      ],
+      "rarity": 3,
+      "original_rarity": 5,
+      "effect": "sail",
+      "stars": [],
+      "target": "",
+      "round_min": 5
+    },
+    "feilian": {
+      "name": "飞廉之猩",
+      "canonical_effect": "使用声骸技能，幻形为飞廉之猩进行踢击。如果踢击命中则会接续一记追击，踢击造成144.90%气动伤害，追击造成177.10%气动伤害。\n追击命中后，自身气动伤害加成提升12.00%，重击伤害加成提升12.00%，持续15秒。\n技能冷却：20秒",
+      "original_summary": "声骸；气动踢击与重击增益",
+      "source_page": "https://mc.appfeng.com/monster/330000050",
+      "asset_path": "assets/research/wuwa/monster.330000050.png",
+      "sha256": "c00f9e50f1f185d6550245050516b9030ffaff91bae905a7b9bebbab5b39fd93",
+      "source_id": "monster.330000050",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "price": 7,
+      "desc": "每 6 秒气动连击 8+10；上方星位重击武器下次伤害 +4。",
+      "cooldown": 6.0,
+      "element": "aero",
+      "tags": [
+        "echo"
+      ],
+      "rarity": 2,
+      "original_rarity": 3,
+      "effect": "feilian",
+      "stars": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "target": "heavy",
+      "round_min": 2,
+      "damage": 18,
+      "energy": 4,
+      "concerto": 8
+    },
+    "thundering": {
+      "name": "云闪之鳞",
+      "canonical_effect": "使用声骸技能，幻形为云闪之鳞，穿梭攻击，可连续使用最多6次，前5次每次造成82.88%导电伤害，终结一击造成118.40%导电伤害，落雷造成19.73%导电伤害。\n终结一击命中后，自身导电伤害加成提升12.00%，共鸣解放伤害加成提升12.00%，持续15秒。\n技能冷却：20秒",
+      "original_summary": "声骸；导电攻击与解放增益",
+      "source_page": "https://mc.appfeng.com/monster/340000080",
+      "asset_path": "assets/research/wuwa/monster.340000080.png",
+      "sha256": "c6a42d136d01d0dfd9cc1221f69d9cd00c35cc8e1d62c5af5363645ddfed3a47",
+      "source_id": "monster.340000080",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "price": 7,
+      "desc": "每 6 秒导电攻击 16；邻接角色专属物时，下一次角色解放伤害 +6，不叠加多只。",
+      "cooldown": 6.0,
+      "element": "electro",
+      "tags": [
+        "echo"
+      ],
+      "rarity": 2,
+      "original_rarity": 3,
+      "effect": "thundering",
+      "stars": [],
+      "target": "",
+      "round_min": 2,
+      "damage": 16,
+      "energy": 4,
+      "concerto": 8
+    },
+    "bellborne": {
+      "name": "鸣钟之龟",
+      "canonical_effect": "使用声骸技能，发动鸣钟之龟的加护，对附近敌人造成基于自身防御力91.20%的冷凝伤害，并获得鸣钟之盾，持续15秒。\n鸣钟之盾能为队伍中登场角色提供50.00%的减伤和10.00%的伤害提升，受到3次攻击后消失。\n技能冷却：20秒",
+      "original_summary": "声骸；冷凝伤害、减伤与增伤",
+      "source_page": "https://mc.appfeng.com/monster/340000020",
+      "asset_path": "assets/research/wuwa/monster.340000020.png",
+      "sha256": "71a8649e258bf4e0f9e0ad288050a497dd4617a2bfe20c7e166becc6f93adcc8",
+      "source_id": "monster.340000020",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "price": 7,
+      "desc": "每 7 秒冷凝攻击 8，提供三次各减伤 3 的钟盾；星位治疗每次让下次钟盾 +1，最多 +3。",
+      "cooldown": 7.0,
+      "element": "glacio",
+      "tags": [
+        "echo"
+      ],
+      "rarity": 2,
+      "original_rarity": 4,
+      "effect": "bellborne",
+      "stars": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "target": "healing",
+      "round_min": 2,
+      "damage": 8,
+      "energy": 4,
+      "concerto": 8
+    },
+    "heron": {
+      "name": "无常凶鹭",
+      "canonical_effect": "使用声骸技能，幻形为无常凶鹭，起飞后下砸，造成194.10%的湮灭伤害；\n长按声骸技能，持续幻形，起飞后向下倾泻湮灭火炎，每段攻击造成34.83%的湮灭伤害。\n幻形后首次命中敌人，回复自身10点共鸣能量；在此后15秒内，若自身施放延奏技能，则可使下一个变奏登场的角色伤害提升12%，持续15秒。\n技能冷却：20秒",
+      "original_summary": "声骸；湮灭攻击、回能与下一位增伤",
+      "source_page": "https://mc.appfeng.com/monster/330000030",
+      "asset_path": "assets/research/wuwa/monster.330000030.png",
+      "sha256": "d1ab5bcc497817f3688781bd63b3bbc80a815bd195ba5118c1f6a21e860d3be9",
+      "source_id": "monster.330000030",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "price": 7,
+      "desc": "每 6 秒湮灭攻击 12，共鸣能量 +6；接力经过它后下一物品伤害 +3，仅持续一次。",
+      "cooldown": 6.0,
+      "element": "havoc",
+      "tags": [
+        "echo"
+      ],
+      "rarity": 2,
+      "original_rarity": 3,
+      "effect": "heron",
+      "stars": [],
+      "target": "",
+      "round_min": 2,
+      "damage": 12,
+      "energy": 6,
+      "concerto": 8
+    },
+    "inferno": {
+      "name": "燎照之骑",
+      "canonical_effect": "短按声骸技能，幻形为燎照之骑发动斩击，可连续使用最多3次。分别造成151.50%、176.75%、176.75%的热熔伤害。\n最后一段命中敌人后，自身热熔伤害加成提升12.00%，普攻伤害加成提升12.00%，持续15秒。\n长按声骸技能，持续幻形为燎照之骑并进入骑行状态，结束时对前方的目标造成一次176.75%的热熔伤害。\n技能冷却：20秒",
+      "original_summary": "声骸；热熔斩击与普攻增益",
+      "source_page": "https://mc.appfeng.com/monster/330000020",
+      "asset_path": "assets/research/wuwa/monster.330000020.png",
+      "sha256": "14a23648433ed79426403f3a0da2086d0625c19f4c932983a1ae5d7191246b5e",
+      "source_id": "monster.330000020",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "price": 7,
+      "desc": "每 6 秒热熔连斩 5+5+8；星位武器下两次普攻各 +2。",
+      "cooldown": 6.0,
+      "element": "fusion",
+      "tags": [
+        "echo"
+      ],
+      "rarity": 2,
+      "original_rarity": 3,
+      "effect": "inferno",
+      "stars": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "target": "weapon",
+      "round_min": 2,
+      "damage": 18,
+      "energy": 4,
+      "concerto": 8
+    },
+    "violet": {
+      "name": "紫羽鹭",
+      "canonical_effect": "使用声骸技能，幻形为紫羽鹭，在原地格挡，持续一段时间后进行反击，造成180.00%导电伤害，在格挡过程中受到攻击则能提前反击，额外回复5点协奏能量。\n技能冷却：15秒",
+      "original_summary": "声骸；格挡反击与协奏恢复",
+      "source_page": "https://mc.appfeng.com/monster/320000020",
+      "asset_path": "assets/research/wuwa/monster.320000020.png",
+      "sha256": "bd6a6b06213eaafe9bd37abdfba31450f303043f4cc19f81770bdc0c84c269a2",
+      "source_id": "monster.320000020",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "price": 4,
+      "desc": "每 5 秒格挡下一次攻击 4 点，格挡成功导电反击 7 并恢复 4 协奏。",
+      "cooldown": 5.0,
+      "element": "electro",
+      "tags": [
+        "echo"
+      ],
+      "rarity": 2,
+      "original_rarity": 2,
+      "effect": "violet",
+      "stars": [],
+      "target": "",
+      "round_min": 1,
+      "energy": 4,
+      "concerto": 8
+    },
+    "whiff": {
+      "name": "呼咻咻",
+      "canonical_effect": "使用声骸技能，召唤呼咻咻引爆风压，造成32.10%气动伤害并形成低气压区域。低压区域不断将敌人向中心聚拢，持续2秒，期间造成6次12.48%的气动伤害伤害。\n技能冷却：15秒",
+      "original_summary": "声骸；气动多段风压与聚拢",
+      "source_page": "https://mc.appfeng.com/monster/310000100",
+      "asset_path": "assets/research/wuwa/monster.310000100.png",
+      "sha256": "2cbfa5517ac7608d51eb2da5c13bdc62ef9af575f0e19ae9111b2a69bb5a6862",
+      "source_id": "monster.310000100",
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "price": 2,
+      "desc": "每 4 秒气动攻击 3+3；邻接长刃时，第二段额外积累 2 协奏。单挑中的聚怪不凭空变加速。",
+      "cooldown": 4.0,
+      "element": "aero",
+      "tags": [
+        "echo"
+      ],
+      "rarity": 1,
+      "original_rarity": 1,
+      "effect": "whiff",
+      "stars": [],
+      "target": "",
+      "round_min": 1,
+      "damage": 6,
+      "energy": 4,
+      "concerto": 8
+    },
+    "turtle": {
+      "name": "寒霜陆龟",
+      "canonical_effect": "使用声骸技能，幻形为寒霜陆龟，同时缓慢回复生命值。幻形过程中再次使用声骸技能可退出幻形状态。\n技能冷却：8秒",
+      "original_summary": "声骸；幻形中缓慢回血",
+      "source_page": "https://mc.appfeng.com/monster/310000270",
+      "asset_path": "assets/research/wuwa/monster.310000270.png",
+      "sha256": "fc4fdee205342d555de70caa625b6ddbeb7a2d5a418406b68ad3ccfb58666752",
+      "source_id": "monster.310000270",
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "price": 2,
+      "desc": "每 4 秒恢复 4 生命；治疗只计实际恢复量，满血不触发治疗协奏。",
+      "cooldown": 4.0,
+      "element": "glacio",
+      "tags": [
+        "echo",
+        "healing"
+      ],
+      "rarity": 1,
+      "original_rarity": 1,
+      "effect": "turtle",
+      "stars": [],
+      "target": "",
+      "round_min": 1,
+      "heal": 4,
+      "energy": 4,
+      "concerto": 8
+    },
+    "rocksteady": {
+      "name": "坚岩斗士",
+      "canonical_effect": "使用声骸技能，幻形为坚岩斗士向前冲锋，命中时造成70.40%物理伤害并下砸造成105.60%物理伤害，获得生命值上限10.00%的护盾，持续7秒。幻形过程中再次使用声骸技能可退出幻形状态。\n技能冷却：15秒",
+      "original_summary": "声骸；冲锋、物理伤害与护盾",
+      "source_page": "https://mc.appfeng.com/monster/320000010",
+      "asset_path": "assets/research/wuwa/monster.320000010.png",
+      "sha256": "0720b195f24844dafcb7fac40a5e971810fc9c9ca01b6d78f3741d391339f2bd",
+      "source_id": "monster.320000010",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "price": 4,
+      "desc": "每 5 秒物理攻击 7，并提供 8 护盾；可为燃灯路线提供来源。",
+      "cooldown": 5.0,
+      "element": "neutral",
+      "tags": [
+        "echo"
+      ],
+      "rarity": 2,
+      "original_rarity": 2,
+      "effect": "rocksteady",
+      "stars": [],
+      "target": "",
+      "round_min": 1,
+      "damage": 7,
+      "shield": 8,
+      "energy": 4,
+      "concerto": 8
+    },
+    "strategy": {
+      "name": "用兵之道",
+      "canonical_effect": "原作档案中的个人物件，没有可装备的战斗数值。",
+      "original_summary": "忌炎档案的兵法书籍，无装备数值",
+      "source_page": "https://wiki.biligame.com/wutheringwaves/%E5%85%B1%E9%B8%A3%E8%80%85/%E5%BF%8C%E7%82%8E",
+      "asset_path": "assets/research/wuwa/keepsake.忌炎.1.png",
+      "sha256": "c90de5d0f23ec43d2c83ff206498a0eae1494f34dda214943ec230f6390cb9d3",
+      "source_id": "keepsake.忌炎.1",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "price": 0,
+      "desc": "对应角色第2轮赠送：标记一条长刃→声骸的接力，终点伤害 +2；专属限定，不能重复购买。",
+      "cooldown": 0.0,
+      "element": "aero",
+      "tags": [
+        "keepsake",
+        "relic_endpoint"
+      ],
+      "rarity": 1,
+      "original_rarity": null,
+      "effect": "strategy",
+      "stars": [],
+      "target": "",
+      "round_min": 1,
+      "owner": "jiyan"
+    },
+    "puppet": {
+      "name": "机械人偶“悬丝”",
+      "canonical_effect": "原作档案中的个人物件，没有可装备的战斗数值。",
+      "original_summary": "吟霖改造的机关人偶，不是声骸",
+      "source_page": "https://wiki.biligame.com/wutheringwaves/%E5%85%B1%E9%B8%A3%E8%80%85/%E5%90%9F%E9%9C%96",
+      "asset_path": "assets/research/wuwa/keepsake.吟霖.1.png",
+      "sha256": "0f18230f3453d241b1056ed91279e7528043b5539dc85f623db58207450a9bf8",
+      "source_id": "keepsake.吟霖.1",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "price": 0,
+      "desc": "对应角色第2轮赠送：每 6 秒给敌人惩罚印记，随后第一次武器命中追加 6 导电伤害；最多一次待触发印记。",
+      "cooldown": 6.0,
+      "element": "electro",
+      "tags": [
+        "keepsake",
+        "relic_endpoint"
+      ],
+      "rarity": 1,
+      "original_rarity": null,
+      "effect": "puppet",
+      "stars": [],
+      "target": "",
+      "round_min": 1,
+      "owner": "yinlin"
+    },
+    "flower": {
+      "name": "盛放的永恒",
+      "canonical_effect": "原作档案中的个人物件，没有可装备的战斗数值。",
+      "original_summary": "维里奈首次田野调查的花朵，无装备数值",
+      "source_page": "https://wiki.biligame.com/wutheringwaves/%E5%85%B1%E9%B8%A3%E8%80%85/%E7%BB%B4%E9%87%8C%E5%A5%88",
+      "asset_path": "assets/research/wuwa/keepsake.维里奈.2.png",
+      "sha256": "5e72eb08afebee6f8312c02bba280d46afb803c4e5d605f8399f499c94c8637c",
+      "source_id": "keepsake.维里奈.2",
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "price": 0,
+      "desc": "对应角色第2轮赠送：星位治疗声骸实际回复后，下一物品技能附加 2 护盾；每 3 秒一次。",
+      "cooldown": 0.0,
+      "element": "spectro",
+      "tags": [
+        "keepsake",
+        "relic_endpoint"
+      ],
+      "rarity": 1,
+      "original_rarity": null,
+      "effect": "flower",
+      "stars": [
+        [
+          0,
+          -1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "target": "healing",
+      "round_min": 1,
+      "owner": "verina"
+    },
+    "satchel": {
+      "name": "初始行囊",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "price": 0,
+      "cooldown": 0,
+      "element": "neutral",
+      "tags": [
+        "bag"
+      ],
+      "rarity": 1,
+      "desc": "原创终端收纳模块；边相接扩容，可随袋搬动所容物品。",
+      "effect": "bag",
+      "stars": [],
+      "target": "",
+      "round_min": 1,
+      "asset_path": "assets/items/satchel.svg",
+      "original_summary": "本 Demo 原创容器",
+      "canonical_effect": "",
+      "source_page": ""
+    },
+    "pouch": {
+      "name": "普通口袋",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "price": 3,
+      "cooldown": 0,
+      "element": "neutral",
+      "tags": [
+        "bag"
+      ],
+      "rarity": 1,
+      "desc": "原创终端收纳模块；边相接扩容，可随袋搬动所容物品。",
+      "effect": "bag",
+      "stars": [],
+      "target": "",
+      "round_min": 1,
+      "asset_path": "assets/items/pouch.svg",
+      "original_summary": "本 Demo 原创容器",
+      "canonical_effect": "",
+      "source_page": ""
+    },
+    "strip": {
+      "name": "长条挂袋",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "price": 3,
+      "cooldown": 0,
+      "element": "neutral",
+      "tags": [
+        "bag"
+      ],
+      "rarity": 1,
+      "desc": "原创终端收纳模块；边相接扩容，可随袋搬动所容物品。",
+      "effect": "bag",
+      "stars": [],
+      "target": "",
+      "round_min": 2,
+      "asset_path": "assets/items/pouch.svg",
+      "original_summary": "本 Demo 原创容器",
+      "canonical_effect": "",
+      "source_page": ""
+    },
+    "corner": {
+      "name": "折角袋",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "price": 3,
+      "cooldown": 0,
+      "element": "neutral",
+      "tags": [
+        "bag"
+      ],
+      "rarity": 1,
+      "desc": "原创终端收纳模块；边相接扩容，可随袋搬动所容物品。",
+      "effect": "bag",
+      "stars": [],
+      "target": "",
+      "round_min": 3,
+      "asset_path": "assets/items/pouch.svg",
+      "original_summary": "本 Demo 原创容器",
+      "canonical_effect": "",
+      "source_page": ""
+    },
+    "travel": {
+      "name": "旅行附包",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "price": 5,
+      "cooldown": 0,
+      "element": "neutral",
+      "tags": [
+        "bag"
+      ],
+      "rarity": 1,
+      "desc": "原创终端收纳模块；边相接扩容，可随袋搬动所容物品。",
+      "effect": "bag",
+      "stars": [],
+      "target": "",
+      "round_min": 3,
+      "asset_path": "assets/items/satchel.svg",
+      "original_summary": "本 Demo 原创容器",
+      "canonical_effect": "",
+      "source_page": ""
+    }
+  },
+  "characters": {
+    "jiyan": {
+      "name": "忌炎",
+      "sprite": 0,
+      "element": "aero",
+      "starter": "w_broadblade",
+      "weapon_type": "broadblade",
+      "core": "strategy",
+      "passive": "本作改编 · 气动伤害 +15% · 普攻暴击协奏 +2",
+      "burst": "苍躣八荒·谋定",
+      "burst_damage": 24,
+      "canonical_burst_summary": "施放苍躣八荒·谋定后，忌炎进入破阵状态。\n\n\n\n破阵状态\n\n·忌炎的抗打断能力提升;\n\n·普攻、重击和闪避反击替换为重击破阵之枪。\n\n\n\n重击·破阵之枪\n\n进行最多3段的连续攻击，造成气动伤害，此次伤害为重击伤害。",
+      "source_page": "https://wiki.biligame.com/wutheringwaves/共鸣者/忌炎",
+      "source_evidence_ids": [
+        "bwiki-page-1895-r5091"
+      ],
+      "adaptation_summary": "本作改编：气动伤害 +15% · 普攻暴击协奏 +2；能量60触发上述解放的简化单挑效果。"
+    },
+    "yinlin": {
+      "name": "吟霖",
+      "sprite": 1,
+      "element": "electro",
+      "starter": "w_rectifier",
+      "weapon_type": "rectifier",
+      "core": "puppet",
+      "passive": "本作改编 · 声骸技能协奏 +2 · 悬丝协同攻击",
+      "burst": "破天雷灭击",
+      "burst_damage": 20,
+      "canonical_burst_summary": "指挥“悬丝”引下天雷，轰击敌人，造成大范围导电伤害。",
+      "source_page": "https://wiki.biligame.com/wutheringwaves/共鸣者/吟霖",
+      "source_evidence_ids": [
+        "bwiki-page-1898-r5434"
+      ],
+      "adaptation_summary": "本作改编：声骸技能协奏 +2 · 悬丝协同攻击；能量60触发上述解放的简化单挑效果。"
+    },
+    "verina": {
+      "name": "维里奈",
+      "sprite": 2,
+      "element": "spectro",
+      "starter": "w_rectifier",
+      "weapon_type": "rectifier",
+      "core": "flower",
+      "passive": "本作改编 · 治疗 +20% · 实际治疗产生资源",
+      "burst": "草木生长",
+      "burst_damage": 10,
+      "burst_heal": 16,
+      "burst_shield": 10,
+      "canonical_burst_summary": "促使周围的草木急速生长，造成衍射伤害，回复附近队伍中所有角色的生命值，命中目标时给目标附加光合标记。\n\n\n光合标记\n\n附近队伍中所有角色攻击命中携带光合标记的目标时，维里奈都会进行协同攻击，造成衍射伤害，并为造成伤害的附近队伍登场角色回复生命值，每秒可触发1次。",
+      "source_page": "https://wiki.biligame.com/wutheringwaves/共鸣者/维里奈",
+      "source_evidence_ids": [
+        "bwiki-page-1780-r6580"
+      ],
+      "adaptation_summary": "本作改编：治疗 +20% · 实际治疗产生资源；能量60触发上述解放的简化单挑效果。"
+    }
+  },
+  "recipes": []
+}

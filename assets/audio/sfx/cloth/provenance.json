@@ -1,0 +1,39 @@
+{
+  "revision": "approved-01c-2026-10-27",
+  "author": "Planman",
+  "title": "Poof of Smoke",
+  "page": "https://freesound.org/people/Planman/sounds/208111/",
+  "license": "CC0 1.0",
+  "source_quality": "Official public HQ MP3 preview, not lossless original",
+  "source": "art_sources/audio/sfx/cloth/pillow-poof.mp3",
+  "source_sha256": "eb3eba6ff3c72c97caba84aaed4936c54d25e06d0ac5e94b1905f750bafba917",
+  "approved_preview": "build/qa/pockets-v130/audio-material-options/01c-cotton-light.wav",
+  "samples": [
+    {
+      "event": "bag_pick",
+      "output": "assets/audio/sfx/cloth/bag_pick.wav",
+      "output_sha256": "ffd2325fcd1e9c222fbdc5ea1294b168890255c7b943d927411b9d08014c092c",
+      "duration": 0.15,
+      "approved_asset": "build/qa/pockets-v130/audio-material-options/01c-cotton-light-pick.wav",
+      "source_segment_start": 0.18,
+      "source_segment_duration": 0.15,
+      "original_01_processing": "Mono 48k PCM16, original pitch/speed; 100Hz highpass, 5.5kHz lowpass, 3ms fade in, fade out min(35ms,23% duration)",
+      "original_01_gain": 0.3343414470391702,
+      "additional_gain_db": -5.0,
+      "integration": "Byte-identical to approved 01C audition. V131 bag event gain -1 dB cancels the existing limiter +1 dB below threshold; no additional UI attenuation, pitch or EQ. See build/qa/pockets-v131/audio-pcm.json."
+    },
+    {
+      "event": "bag_drop",
+      "output": "assets/audio/sfx/cloth/bag_drop.wav",
+      "output_sha256": "77f4b4f5f636912ea5920f111e4cb5034d61e50117aac46682ae3e9e5999079c",
+      "duration": 0.235,
+      "approved_asset": "build/qa/pockets-v130/audio-material-options/01c-cotton-light-drop.wav",
+      "source_segment_start": 0.345,
+      "source_segment_duration": 0.235,
+      "original_01_processing": "Mono 48k PCM16, original pitch/speed; 100Hz highpass, 5.5kHz lowpass, 3ms fade in, fade out min(35ms,23% duration)",
+      "original_01_gain": 1.176781262014494,
+      "additional_gain_db": -7.0,
+      "integration": "Byte-identical to approved 01C audition. V131 bag event gain -1 dB cancels the existing limiter +1 dB below threshold; no additional UI attenuation, pitch or EQ. See build/qa/pockets-v131/audio-pcm.json."
+    }
+  ]
+}

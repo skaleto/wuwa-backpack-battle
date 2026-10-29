@@ -1,0 +1,44 @@
+# Godot generated imports; per-asset .import settings are versioned.
+.godot/
+.DS_Store
+build/
+dist/
+*.pck
+*.zip
+*.tar.gz
+*.log
+*.log.*
+
+# Local dependencies and credentials. Keep only documented examples.
+.venv*/
+__pycache__/
+*.py[cod]
+node_modules/
+.env
+.env.*
+*.env
+!*.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.db
+*.db-shm
+*.db-wal
+.runtime/
+.uv-cache/
+.local/
+private/
+online.json
+upload-queue.json
+export_credentials.cfg
+
+# Authoring website snapshots can contain third-party tokens.
+/art_sources/**/*.html
+# Only current maintained Markdown docs are published.
+/docs/**
+!/docs/**/
+!/docs/README.md
+!/docs/design/**/*.md
+!/docs/development/**/*.md
+!/docs/release/**/*.md

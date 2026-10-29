@@ -1,0 +1,1370 @@
+{
+	"bags": [
+		{
+			"cost_basis": "known_free",
+			"kind": "satchel",
+			"level": 0,
+			"paid_cost": 0,
+			"rotation": 0,
+			"tuning": "",
+			"uid": "b1",
+			"x": 0,
+			"y": 0
+		},
+		{
+			"cost_basis": "actual",
+			"kind": "corner",
+			"level": 0,
+			"paid_cost": 2,
+			"rotation": 0,
+			"tuning": "",
+			"uid": "i3",
+			"x": 3,
+			"y": 0
+		},
+		{
+			"cost_basis": "actual",
+			"kind": "corner",
+			"level": 0,
+			"paid_cost": 2,
+			"rotation": 0,
+			"tuning": "",
+			"uid": "i5",
+			"x": 5,
+			"y": 0
+		},
+		{
+			"cost_basis": "actual",
+			"kind": "travel",
+			"level": 0,
+			"paid_cost": 4,
+			"rotation": 0,
+			"tuning": "",
+			"uid": "i10",
+			"x": 0,
+			"y": 2
+		},
+		{
+			"cost_basis": "actual",
+			"kind": "pouch",
+			"level": 0,
+			"paid_cost": 2,
+			"rotation": 0,
+			"tuning": "",
+			"uid": "i15",
+			"x": 3,
+			"y": 2
+		},
+		{
+			"cost_basis": "actual",
+			"kind": "pouch",
+			"level": 0,
+			"paid_cost": 2,
+			"rotation": 0,
+			"tuning": "",
+			"uid": "i19",
+			"x": 5,
+			"y": 2
+		},
+		{
+			"cost_basis": "actual",
+			"kind": "strip",
+			"level": 0,
+			"paid_cost": 2,
+			"rotation": 0,
+			"tuning": "",
+			"uid": "i23",
+			"x": 7,
+			"y": 0
+		},
+		{
+			"cost_basis": "actual",
+			"kind": "corner",
+			"level": 0,
+			"paid_cost": 2,
+			"rotation": 0,
+			"tuning": "",
+			"uid": "i27",
+			"x": 0,
+			"y": 4
+		},
+		{
+			"cost_basis": "actual",
+			"kind": "travel",
+			"level": 0,
+			"paid_cost": 4,
+			"rotation": 0,
+			"tuning": "",
+			"uid": "i30",
+			"x": 2,
+			"y": 4
+		}
+	],
+	"catalogue_hash": "b93de1c216fce6e362d7cc62b88af51f9da7b53b9745cccdbf0e570892f21e4c",
+	"golden_acquired": false,
+	"items": [
+		{
+			"cost_basis": "actual",
+			"kind": "echo_lionarch",
+			"level": 0,
+			"paid_cost": 4,
+			"rotation": 0,
+			"tuning": "",
+			"uid": "i12",
+			"x": 0,
+			"y": 0
+		},
+		{
+			"cost_basis": "actual",
+			"kind": "cyan_heron",
+			"level": 0,
+			"paid_cost": 5,
+			"rotation": 0,
+			"tuning": "",
+			"uid": "i14",
+			"x": 1,
+			"y": 2
+		},
+		{
+			"cost_basis": "actual",
+			"kind": "weapon_21020024",
+			"level": 0,
+			"paid_cost": 6,
+			"rotation": 0,
+			"tuning": "",
+			"uid": "i22",
+			"x": 3,
+			"y": 3
+		},
+		{
+			"cost_basis": "actual",
+			"kind": "lamp",
+			"level": 0,
+			"paid_cost": 6,
+			"rotation": 2,
+			"tuning": "",
+			"uid": "i17",
+			"x": 0,
+			"y": 2
+		},
+		{
+			"cost_basis": "actual",
+			"kind": "mat_42500030",
+			"level": 0,
+			"paid_cost": 2,
+			"rotation": 0,
+			"tuning": "",
+			"uid": "i26",
+			"x": 5,
+			"y": 0
+		},
+		{
+			"cost_basis": "actual",
+			"kind": "flower",
+			"level": 0,
+			"paid_cost": 5,
+			"rotation": 0,
+			"tuning": "",
+			"uid": "i29",
+			"x": 7,
+			"y": 0
+		},
+		{
+			"cost_basis": "actual",
+			"kind": "echo_wankui",
+			"level": 0,
+			"paid_cost": 11,
+			"rotation": 0,
+			"tuning": "",
+			"uid": "i31",
+			"x": 2,
+			"y": 4
+		},
+		{
+			"cost_basis": "actual",
+			"kind": "weapon_21020015",
+			"level": 0,
+			"paid_cost": 4,
+			"rotation": 2,
+			"salvage_credit": 2,
+			"tuning": "",
+			"uid": "i32",
+			"x": 2,
+			"y": 1
+		},
+		{
+			"cost_basis": "actual",
+			"kind": "echo_spectro",
+			"level": 0,
+			"paid_cost": 2,
+			"rotation": 0,
+			"tuning": "",
+			"uid": "i25",
+			"x": 2,
+			"y": 0
+		},
+		{
+			"cost_basis": "actual",
+			"kind": "echo_butterfly",
+			"level": 0,
+			"paid_cost": 3,
+			"rotation": 1,
+			"tuning": "",
+			"uid": "i28",
+			"x": 7,
+			"y": 1
+		}
+	],
+	"leader": "qingxiao",
+	"name": "演练 · 清宵",
+	"owner": "practice",
+	"pool_mode": "focused",
+	"practice_budget": 69,
+	"practice_ledger": [
+		{
+			"balance": 9,
+			"gold": 0,
+			"kind": "",
+			"offers": [
+				{
+					"kind": "w_sword",
+					"locked": false
+				},
+				{
+					"kind": "echo_glacio",
+					"locked": false
+				},
+				{
+					"kind": "mat_43020021",
+					"locked": false
+				},
+				{
+					"kind": "turtle",
+					"locked": false
+				},
+				{
+					"kind": "echo_vanguard",
+					"locked": false
+				},
+				{
+					"kind": "corner",
+					"locked": false
+				}
+			],
+			"purpose": "shelf",
+			"round": 1,
+			"source": "public_transaction"
+		},
+		{
+			"balance": 7,
+			"destination": "board",
+			"gold": 2,
+			"kind": "corner",
+			"placement": [
+				3,
+				0,
+				0
+			],
+			"purpose": "capacity",
+			"round": 1,
+			"slot": 5,
+			"source": "public_transaction",
+			"uid": "i3"
+		},
+		{
+			"balance": 5,
+			"destination": "board",
+			"gold": 2,
+			"kind": "echo_vanguard",
+			"placement": [
+				3,
+				0,
+				0
+			],
+			"purpose": "shop",
+			"round": 1,
+			"slot": 4,
+			"source": "public_transaction",
+			"uid": "i4"
+		},
+		{
+			"balance": 5,
+			"from": [
+				0,
+				0,
+				0
+			],
+			"gold": 0,
+			"kind": "w_sword",
+			"placement": [
+				2,
+				1,
+				2
+			],
+			"purpose": "move",
+			"round": 1,
+			"source": "public_transaction",
+			"uid": "i1"
+		},
+		{
+			"balance": 15,
+			"gold": 0,
+			"kind": "",
+			"offers": [
+				{
+					"kind": "w_sword",
+					"locked": false
+				},
+				{
+					"kind": "whiff",
+					"locked": false
+				},
+				{
+					"kind": "electro_coin",
+					"locked": false
+				},
+				{
+					"kind": "mat_43020041",
+					"locked": false
+				},
+				{
+					"kind": "tube",
+					"locked": false
+				},
+				{
+					"kind": "corner",
+					"locked": false
+				}
+			],
+			"purpose": "shelf",
+			"round": 2,
+			"source": "public_transaction"
+		},
+		{
+			"balance": 13,
+			"destination": "board",
+			"gold": 2,
+			"kind": "corner",
+			"placement": [
+				5,
+				0,
+				0
+			],
+			"purpose": "capacity",
+			"round": 2,
+			"slot": 5,
+			"source": "public_transaction",
+			"uid": "i5"
+		},
+		{
+			"balance": 13,
+			"consumed": [
+				"i4",
+				"i2"
+			],
+			"gold": 0,
+			"inputs": [
+				{
+					"cost_basis": "actual",
+					"kind": "echo_vanguard",
+					"level": 0,
+					"paid_cost": 2,
+					"rotation": 0,
+					"tuning": "",
+					"uid": "i4",
+					"x": 3,
+					"y": 0
+				},
+				{
+					"cost_basis": "known_free",
+					"kind": "tea",
+					"level": 0,
+					"paid_cost": 0,
+					"rotation": 0,
+					"tuning": "",
+					"uid": "i2",
+					"x": 2,
+					"y": 0
+				}
+			],
+			"kind": "rocksteady",
+			"output": {
+				"cost_basis": "actual",
+				"kind": "rocksteady",
+				"level": 0,
+				"paid_cost": 2,
+				"rotation": 0,
+				"tuning": "",
+				"uid": "i6",
+				"x": 0,
+				"y": 0
+			},
+			"purpose": "craft",
+			"recipe": "P028",
+			"round": 2,
+			"source": "public_transaction"
+		},
+		{
+			"balance": 11,
+			"destination": "board",
+			"gold": 2,
+			"kind": "whiff",
+			"placement": [
+				2,
+				0,
+				0
+			],
+			"purpose": "shop",
+			"round": 2,
+			"slot": 1,
+			"source": "public_transaction",
+			"uid": "i7"
+		},
+		{
+			"balance": 11,
+			"consumed": [
+				"i1",
+				"i7"
+			],
+			"gold": 0,
+			"inputs": [
+				{
+					"cost_basis": "known_free",
+					"kind": "w_sword",
+					"level": 0,
+					"paid_cost": 0,
+					"rotation": 2,
+					"salvage_credit": 2,
+					"tuning": "",
+					"uid": "i1",
+					"x": 2,
+					"y": 1
+				},
+				{
+					"cost_basis": "actual",
+					"kind": "whiff",
+					"level": 0,
+					"paid_cost": 2,
+					"rotation": 0,
+					"tuning": "",
+					"uid": "i7",
+					"x": 2,
+					"y": 0
+				}
+			],
+			"kind": "weapon_21020024",
+			"output": {
+				"cost_basis": "actual",
+				"kind": "weapon_21020024",
+				"level": 0,
+				"paid_cost": 2,
+				"rotation": 2,
+				"salvage_credit": 2,
+				"tuning": "",
+				"uid": "i8",
+				"x": 2,
+				"y": 1
+			},
+			"purpose": "craft",
+			"recipe": "P009",
+			"round": 2,
+			"source": "public_transaction"
+		},
+		{
+			"balance": 8,
+			"destination": "board",
+			"gold": 3,
+			"kind": "electro_coin",
+			"placement": [
+				2,
+				0,
+				0
+			],
+			"purpose": "shop",
+			"round": 2,
+			"slot": 2,
+			"source": "public_transaction",
+			"uid": "i9"
+		},
+		{
+			"balance": 8,
+			"from": [
+				2,
+				0,
+				0
+			],
+			"gold": 0,
+			"kind": "electro_coin",
+			"placement": [
+				6,
+				1,
+				0
+			],
+			"purpose": "move",
+			"round": 2,
+			"source": "public_transaction",
+			"uid": "i9"
+		},
+		{
+			"balance": 19,
+			"gold": 0,
+			"kind": "",
+			"offers": [
+				{
+					"kind": "w_sword",
+					"locked": false
+				},
+				{
+					"kind": "cyan_heron",
+					"locked": false
+				},
+				{
+					"kind": "mat_42310090",
+					"locked": false
+				},
+				{
+					"kind": "dragon_food",
+					"locked": false
+				},
+				{
+					"kind": "zig",
+					"locked": false
+				},
+				{
+					"kind": "travel",
+					"locked": false
+				}
+			],
+			"purpose": "shelf",
+			"round": 3,
+			"source": "public_transaction"
+		},
+		{
+			"balance": 15,
+			"destination": "board",
+			"gold": 4,
+			"kind": "travel",
+			"placement": [
+				0,
+				2,
+				0
+			],
+			"purpose": "capacity",
+			"round": 3,
+			"slot": 5,
+			"source": "public_transaction",
+			"uid": "i10"
+		},
+		{
+			"balance": 13,
+			"destination": "board",
+			"gold": 2,
+			"kind": "mat_42310090",
+			"placement": [
+				2,
+				0,
+				0
+			],
+			"purpose": "shop",
+			"round": 3,
+			"slot": 2,
+			"source": "public_transaction",
+			"uid": "i11"
+		},
+		{
+			"balance": 13,
+			"consumed": [
+				"i6",
+				"i11"
+			],
+			"gold": 0,
+			"inputs": [
+				{
+					"cost_basis": "actual",
+					"kind": "rocksteady",
+					"level": 0,
+					"paid_cost": 2,
+					"rotation": 0,
+					"tuning": "",
+					"uid": "i6",
+					"x": 0,
+					"y": 0
+				},
+				{
+					"cost_basis": "actual",
+					"kind": "mat_42310090",
+					"level": 0,
+					"paid_cost": 2,
+					"rotation": 0,
+					"tuning": "",
+					"uid": "i11",
+					"x": 2,
+					"y": 0
+				}
+			],
+			"kind": "echo_lionarch",
+			"output": {
+				"cost_basis": "actual",
+				"kind": "echo_lionarch",
+				"level": 0,
+				"paid_cost": 4,
+				"rotation": 0,
+				"tuning": "",
+				"uid": "i12",
+				"x": 0,
+				"y": 0
+			},
+			"purpose": "craft",
+			"recipe": "P087",
+			"round": 3,
+			"source": "public_transaction"
+		},
+		{
+			"balance": 11,
+			"destination": "board",
+			"gold": 2,
+			"kind": "zig",
+			"placement": [
+				2,
+				0,
+				0
+			],
+			"purpose": "shop",
+			"round": 3,
+			"slot": 4,
+			"source": "public_transaction",
+			"uid": "i13"
+		},
+		{
+			"balance": 6,
+			"destination": "board",
+			"gold": 5,
+			"kind": "cyan_heron",
+			"placement": [
+				0,
+				2,
+				0
+			],
+			"purpose": "shop",
+			"round": 3,
+			"slot": 1,
+			"source": "public_transaction",
+			"uid": "i14"
+		},
+		{
+			"balance": 6,
+			"from": [
+				0,
+				2,
+				0
+			],
+			"gold": 0,
+			"kind": "cyan_heron",
+			"placement": [
+				1,
+				2,
+				0
+			],
+			"purpose": "move",
+			"round": 3,
+			"source": "public_transaction",
+			"uid": "i14"
+		},
+		{
+			"balance": 18,
+			"gold": 0,
+			"kind": "",
+			"offers": [
+				{
+					"kind": "weapon_21020024",
+					"locked": false
+				},
+				{
+					"kind": "whiff",
+					"locked": false
+				},
+				{
+					"kind": "lamp",
+					"locked": false
+				},
+				{
+					"kind": "whiff",
+					"locked": false
+				},
+				{
+					"kind": "mat_42500010",
+					"locked": false
+				},
+				{
+					"kind": "pouch",
+					"locked": false
+				}
+			],
+			"purpose": "shelf",
+			"round": 4,
+			"source": "public_transaction"
+		},
+		{
+			"balance": 16,
+			"destination": "board",
+			"gold": 2,
+			"kind": "pouch",
+			"placement": [
+				3,
+				2,
+				0
+			],
+			"purpose": "capacity",
+			"round": 4,
+			"slot": 5,
+			"source": "public_transaction",
+			"uid": "i15"
+		},
+		{
+			"balance": 14,
+			"destination": "board",
+			"gold": 2,
+			"kind": "mat_42500010",
+			"placement": [
+				3,
+				0,
+				0
+			],
+			"purpose": "shop",
+			"round": 4,
+			"slot": 4,
+			"source": "public_transaction",
+			"uid": "i16"
+		},
+		{
+			"balance": 8,
+			"destination": "board",
+			"gold": 6,
+			"kind": "lamp",
+			"placement": [
+				0,
+				2,
+				0
+			],
+			"purpose": "shop",
+			"round": 4,
+			"slot": 2,
+			"source": "public_transaction",
+			"uid": "i17"
+		},
+		{
+			"balance": 6,
+			"destination": "board",
+			"gold": 2,
+			"kind": "whiff",
+			"placement": [
+				5,
+				0,
+				0
+			],
+			"purpose": "shop",
+			"round": 4,
+			"slot": 1,
+			"source": "public_transaction",
+			"uid": "i18"
+		},
+		{
+			"balance": 6,
+			"gold": 0,
+			"kind": "",
+			"purpose": "refresh",
+			"round": 4,
+			"source": "public_transaction"
+		},
+		{
+			"balance": 6,
+			"gold": 0,
+			"kind": "",
+			"offers": [
+				{
+					"kind": "w_sword",
+					"locked": false
+				},
+				{
+					"kind": "echo_glacio",
+					"locked": false
+				},
+				{
+					"kind": "tuner",
+					"locked": false
+				},
+				{
+					"kind": "cool_tea",
+					"locked": false
+				},
+				{
+					"kind": "echo_formrender",
+					"locked": false
+				},
+				{
+					"kind": "pouch",
+					"locked": false
+				}
+			],
+			"purpose": "shelf",
+			"round": 4,
+			"source": "public_transaction"
+		},
+		{
+			"balance": 4,
+			"destination": "board",
+			"gold": 2,
+			"kind": "pouch",
+			"placement": [
+				5,
+				2,
+				0
+			],
+			"purpose": "capacity",
+			"round": 4,
+			"slot": 5,
+			"source": "public_transaction",
+			"uid": "i19"
+		},
+		{
+			"balance": 4,
+			"consumed": [
+				"i9",
+				"i16"
+			],
+			"gold": 0,
+			"inputs": [
+				{
+					"cost_basis": "actual",
+					"kind": "electro_coin",
+					"level": 0,
+					"paid_cost": 3,
+					"rotation": 0,
+					"tuning": "",
+					"uid": "i9",
+					"x": 6,
+					"y": 1
+				},
+				{
+					"cost_basis": "actual",
+					"kind": "mat_42500010",
+					"level": 0,
+					"paid_cost": 2,
+					"rotation": 0,
+					"tuning": "",
+					"uid": "i16",
+					"x": 6,
+					"y": 2
+				}
+			],
+			"kind": "lamp",
+			"output": {
+				"cost_basis": "actual",
+				"kind": "lamp",
+				"level": 0,
+				"paid_cost": 5,
+				"rotation": 0,
+				"tuning": "",
+				"uid": "i20",
+				"x": 6,
+				"y": 1
+			},
+			"purpose": "craft",
+			"recipe": "P038",
+			"round": 4,
+			"source": "public_transaction"
+		},
+		{
+			"balance": 0,
+			"destination": "board",
+			"gold": 4,
+			"kind": "w_sword",
+			"placement": [
+				3,
+				2,
+				0
+			],
+			"purpose": "shop",
+			"round": 4,
+			"slot": 0,
+			"source": "public_transaction",
+			"uid": "i21"
+		},
+		{
+			"balance": 0,
+			"consumed": [
+				"i21",
+				"i18"
+			],
+			"gold": 0,
+			"inputs": [
+				{
+					"cost_basis": "actual",
+					"kind": "w_sword",
+					"level": 0,
+					"paid_cost": 4,
+					"rotation": 0,
+					"tuning": "",
+					"uid": "i21",
+					"x": 3,
+					"y": 2
+				},
+				{
+					"cost_basis": "actual",
+					"kind": "whiff",
+					"level": 0,
+					"paid_cost": 2,
+					"rotation": 0,
+					"tuning": "",
+					"uid": "i18",
+					"x": 3,
+					"y": 3
+				}
+			],
+			"kind": "weapon_21020024",
+			"output": {
+				"cost_basis": "actual",
+				"kind": "weapon_21020024",
+				"level": 0,
+				"paid_cost": 6,
+				"rotation": 0,
+				"tuning": "",
+				"uid": "i22",
+				"x": 3,
+				"y": 3
+			},
+			"purpose": "craft",
+			"recipe": "P009",
+			"round": 4,
+			"source": "public_transaction"
+		},
+		{
+			"balance": 0,
+			"from": [
+				0,
+				2,
+				0
+			],
+			"gold": 0,
+			"kind": "lamp",
+			"placement": [
+				0,
+				2,
+				2
+			],
+			"purpose": "move",
+			"round": 4,
+			"source": "public_transaction",
+			"uid": "i17"
+		},
+		{
+			"balance": 13,
+			"gold": 0,
+			"kind": "",
+			"offers": [
+				{
+					"kind": "w_sword",
+					"locked": false
+				},
+				{
+					"kind": "echo_soulfrayer",
+					"locked": false
+				},
+				{
+					"kind": "mat_42500030",
+					"locked": false
+				},
+				{
+					"kind": "echo_spectro",
+					"locked": false
+				},
+				{
+					"kind": "echo_formrender",
+					"locked": false
+				},
+				{
+					"kind": "strip",
+					"locked": false
+				}
+			],
+			"purpose": "shelf",
+			"round": 5,
+			"source": "public_transaction"
+		},
+		{
+			"balance": 11,
+			"destination": "board",
+			"gold": 2,
+			"kind": "strip",
+			"placement": [
+				7,
+				0,
+				0
+			],
+			"purpose": "capacity",
+			"round": 5,
+			"slot": 5,
+			"source": "public_transaction",
+			"uid": "i23"
+		},
+		{
+			"balance": 5,
+			"destination": "stash",
+			"gold": 6,
+			"kind": "echo_formrender",
+			"placement": [
+				0,
+				0,
+				0
+			],
+			"purpose": "shop",
+			"round": 5,
+			"slot": 4,
+			"source": "public_transaction",
+			"uid": "i24"
+		},
+		{
+			"balance": 3,
+			"destination": "board",
+			"gold": 2,
+			"kind": "echo_spectro",
+			"placement": [
+				3,
+				0,
+				0
+			],
+			"purpose": "shop",
+			"round": 5,
+			"slot": 3,
+			"source": "public_transaction",
+			"uid": "i25"
+		},
+		{
+			"balance": 1,
+			"destination": "board",
+			"gold": 2,
+			"kind": "mat_42500030",
+			"placement": [
+				5,
+				0,
+				0
+			],
+			"purpose": "shop",
+			"round": 5,
+			"slot": 2,
+			"source": "public_transaction",
+			"uid": "i26"
+		},
+		{
+			"balance": 1,
+			"gold": 0,
+			"kind": "",
+			"offers": [
+				{
+					"kind": "w_sword",
+					"locked": false
+				},
+				{
+					"kind": "echo_soulfrayer",
+					"locked": false
+				},
+				{},
+				{},
+				{},
+				{}
+			],
+			"purpose": "shelf",
+			"round": 5,
+			"source": "public_transaction"
+		},
+		{
+			"balance": 15,
+			"gold": 0,
+			"kind": "",
+			"offers": [
+				{
+					"kind": "w_sword",
+					"locked": false
+				},
+				{
+					"kind": "echo_butterfly",
+					"locked": false
+				},
+				{
+					"kind": "flower",
+					"locked": false
+				},
+				{
+					"kind": "violet",
+					"locked": false
+				},
+				{
+					"kind": "echo_spectro",
+					"locked": false
+				},
+				{
+					"kind": "corner",
+					"locked": false
+				}
+			],
+			"purpose": "shelf",
+			"round": 6,
+			"source": "public_transaction"
+		},
+		{
+			"balance": 13,
+			"destination": "board",
+			"gold": 2,
+			"kind": "corner",
+			"placement": [
+				0,
+				4,
+				0
+			],
+			"purpose": "capacity",
+			"round": 6,
+			"slot": 5,
+			"source": "public_transaction",
+			"uid": "i27"
+		},
+		{
+			"balance": 10,
+			"destination": "board",
+			"gold": 3,
+			"kind": "echo_butterfly",
+			"placement": [
+				3,
+				2,
+				0
+			],
+			"purpose": "shop",
+			"round": 6,
+			"slot": 1,
+			"source": "public_transaction",
+			"uid": "i28"
+		},
+		{
+			"balance": 5,
+			"destination": "board",
+			"gold": 5,
+			"kind": "flower",
+			"placement": [
+				7,
+				0,
+				0
+			],
+			"purpose": "shop",
+			"round": 6,
+			"slot": 2,
+			"source": "public_transaction",
+			"uid": "i29"
+		},
+		{
+			"balance": 5,
+			"gold": 0,
+			"kind": "",
+			"purpose": "refresh",
+			"round": 6,
+			"source": "public_transaction"
+		},
+		{
+			"balance": 5,
+			"gold": 0,
+			"kind": "",
+			"offers": [
+				{
+					"kind": "weapon_21020015",
+					"locked": false
+				},
+				{
+					"kind": "cyan_heron",
+					"locked": false
+				},
+				{
+					"kind": "dragon_food",
+					"locked": false
+				},
+				{
+					"kind": "contract",
+					"locked": false
+				},
+				{
+					"kind": "mat_42300050",
+					"locked": false
+				},
+				{
+					"kind": "travel",
+					"locked": false
+				}
+			],
+			"purpose": "shelf",
+			"round": 6,
+			"source": "public_transaction"
+		},
+		{
+			"balance": 1,
+			"destination": "board",
+			"gold": 4,
+			"kind": "travel",
+			"placement": [
+				2,
+				4,
+				0
+			],
+			"purpose": "capacity",
+			"round": 6,
+			"slot": 5,
+			"source": "public_transaction",
+			"uid": "i30"
+		},
+		{
+			"balance": 1,
+			"consumed": [
+				"i24",
+				"i20"
+			],
+			"gold": 0,
+			"inputs": [
+				{
+					"cost_basis": "actual",
+					"kind": "echo_formrender",
+					"level": 0,
+					"paid_cost": 6,
+					"rotation": 0,
+					"tuning": "",
+					"uid": "i24",
+					"x": 2,
+					"y": 4
+				},
+				{
+					"cost_basis": "actual",
+					"kind": "lamp",
+					"level": 0,
+					"paid_cost": 5,
+					"rotation": 0,
+					"tuning": "",
+					"uid": "i20",
+					"x": 4,
+					"y": 4
+				}
+			],
+			"kind": "echo_wankui",
+			"output": {
+				"cost_basis": "actual",
+				"kind": "echo_wankui",
+				"level": 0,
+				"paid_cost": 11,
+				"rotation": 0,
+				"tuning": "",
+				"uid": "i31",
+				"x": 2,
+				"y": 4
+			},
+			"purpose": "craft",
+			"recipe": "P091",
+			"round": 6,
+			"source": "public_transaction"
+		},
+		{
+			"balance": 1,
+			"consumed": [
+				"i8",
+				"i13"
+			],
+			"gold": 0,
+			"inputs": [
+				{
+					"cost_basis": "actual",
+					"kind": "weapon_21020024",
+					"level": 0,
+					"paid_cost": 2,
+					"rotation": 2,
+					"salvage_credit": 2,
+					"tuning": "",
+					"uid": "i8",
+					"x": 2,
+					"y": 1
+				},
+				{
+					"cost_basis": "actual",
+					"kind": "zig",
+					"level": 0,
+					"paid_cost": 2,
+					"rotation": 0,
+					"tuning": "",
+					"uid": "i13",
+					"x": 2,
+					"y": 0
+				}
+			],
+			"kind": "weapon_21020015",
+			"output": {
+				"cost_basis": "actual",
+				"kind": "weapon_21020015",
+				"level": 0,
+				"paid_cost": 4,
+				"rotation": 2,
+				"salvage_credit": 2,
+				"tuning": "",
+				"uid": "i32",
+				"x": 2,
+				"y": 1
+			},
+			"purpose": "craft",
+			"recipe": "P056",
+			"round": 6,
+			"source": "public_transaction"
+		},
+		{
+			"balance": 1,
+			"from": [
+				3,
+				0,
+				0
+			],
+			"gold": 0,
+			"kind": "echo_spectro",
+			"placement": [
+				2,
+				0,
+				0
+			],
+			"purpose": "move",
+			"round": 6,
+			"source": "public_transaction",
+			"uid": "i25"
+		},
+		{
+			"balance": 1,
+			"from": [
+				3,
+				2,
+				0
+			],
+			"gold": 0,
+			"kind": "echo_butterfly",
+			"placement": [
+				7,
+				1,
+				1
+			],
+			"purpose": "move",
+			"round": 6,
+			"source": "public_transaction",
+			"uid": "i28"
+		}
+	],
+	"practice_method": "shop-procurement-v93",
+	"practice_seed": 3,
+	"practice_spend": 68,
+	"practice_unspent": 1,
+	"primary": "i32",
+	"relay": [],
+	"roster": [],
+	"round": 6,
+	"ruleset": "wuwa-pack-v5",
+	"simulation_version": "resonance-v93",
+	"source": "practice",
+	"supports": [],
+	"version": 5
+}

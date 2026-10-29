@@ -1,0 +1,228 @@
+{
+	"bags": [
+		{
+			"kind": "satchel",
+			"level": 0,
+			"rotation": 0,
+			"tuning": "",
+			"uid": "b1",
+			"x": 0,
+			"y": 0
+		},
+		{
+			"kind": "pouch",
+			"level": 0,
+			"rotation": 0,
+			"tuning": "",
+			"uid": "i5",
+			"x": 3,
+			"y": 0
+		},
+		{
+			"kind": "pouch",
+			"level": 0,
+			"rotation": 0,
+			"tuning": "",
+			"uid": "i10",
+			"x": 5,
+			"y": 0
+		}
+	],
+	"catalogue_hash": "5afc54ecc02ea2a92b58540d985839694673aca76f4438c273631870a131104f",
+	"gold": 0,
+	"golden_acquired": false,
+	"history": [
+		{
+			"build": {
+				"bags": [
+					{
+						"kind": "satchel",
+						"level": 0,
+						"rotation": 0,
+						"tuning": "",
+						"uid": "b1",
+						"x": 0,
+						"y": 0
+					},
+					{
+						"kind": "pouch",
+						"level": 0,
+						"rotation": 0,
+						"tuning": "",
+						"uid": "i5",
+						"x": 3,
+						"y": 0
+					}
+				],
+				"catalogue_hash": "5afc54ecc02ea2a92b58540d985839694673aca76f4438c273631870a131104f",
+				"golden_acquired": false,
+				"items": [
+					{
+						"kind": "nutrition",
+						"level": 0,
+						"rotation": 0,
+						"tuning": "",
+						"uid": "i2",
+						"x": 0,
+						"y": 1
+					},
+					{
+						"kind": "whiff",
+						"level": 0,
+						"rotation": 0,
+						"tuning": "",
+						"uid": "i3",
+						"x": 2,
+						"y": 1
+					},
+					{
+						"kind": "w_broadblade",
+						"level": 0,
+						"rotation": 0,
+						"tuning": "",
+						"uid": "i1",
+						"x": 0,
+						"y": 0
+					},
+					{
+						"kind": "electro_coin",
+						"level": 0,
+						"rotation": 0,
+						"tuning": "",
+						"uid": "i4",
+						"x": 1,
+						"y": 1
+					}
+				],
+				"leader": "jiyan",
+				"name": "忌炎的行囊",
+				"owner": "native-1791051195.52388-3218680916",
+				"primary": "i1",
+				"relay": [],
+				"round": 1,
+				"ruleset": "wuwa-pack-v3",
+				"version": 3
+			},
+			"duration": 22.0,
+			"round": 1,
+			"totals": [
+				{
+					"bursts": 1,
+					"damage": 172.47,
+					"heal": 18.0,
+					"relays": 1,
+					"shield": 0.0,
+					"tired": 0
+				},
+				{
+					"bursts": 2,
+					"damage": 121.4,
+					"heal": 83.6,
+					"relays": 2,
+					"shield": 20.0,
+					"tired": 0
+				}
+			],
+			"winner": -1
+		}
+	],
+	"items": [
+		{
+			"kind": "whiff",
+			"level": 0,
+			"rotation": 0,
+			"tuning": "",
+			"uid": "i3",
+			"x": 2,
+			"y": 1
+		},
+		{
+			"kind": "w_broadblade",
+			"level": 0,
+			"rotation": 0,
+			"tuning": "",
+			"uid": "i1",
+			"x": 1,
+			"y": 0
+		},
+		{
+			"kind": "soup",
+			"level": 0,
+			"rotation": 0,
+			"tuning": "",
+			"uid": "i6",
+			"x": 0,
+			"y": 0
+		},
+		{
+			"kind": "electro_coin",
+			"level": 0,
+			"rotation": 0,
+			"tuning": "",
+			"uid": "i4",
+			"x": 1,
+			"y": 1
+		},
+		{
+			"kind": "revive",
+			"level": 0,
+			"rotation": 0,
+			"tuning": "",
+			"uid": "i8",
+			"x": 3,
+			"y": 1
+		},
+		{
+			"kind": "whiff",
+			"level": 0,
+			"rotation": 0,
+			"tuning": "",
+			"uid": "i9",
+			"x": 4,
+			"y": 0
+		}
+	],
+	"leader": "jiyan",
+	"losses": 1,
+	"pending_gifts": [],
+	"pending_rearrange": [],
+	"phase": "shop",
+	"primary": "i1",
+	"refreshes": 0,
+	"relay": [],
+	"relay_guide_complete": true,
+	"round": 2,
+	"ruleset": "wuwa-pack-v3",
+	"seed": 2799765528,
+	"serial": 10,
+	"shop": [
+		{},
+		{},
+		{
+			"kind": "w_broadblade",
+			"locked": false
+		},
+		{
+			"kind": "discord",
+			"locked": false
+		},
+		{
+			"kind": "w_sword",
+			"locked": false
+		},
+		{}
+	],
+	"stash": [
+		{
+			"kind": "strategy",
+			"level": 0,
+			"rotation": 0,
+			"tuning": "",
+			"uid": "i7",
+			"x": 0,
+			"y": 0
+		}
+	],
+	"version": 3,
+	"wins": 0
+}

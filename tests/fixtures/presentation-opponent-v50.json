@@ -1,0 +1,172 @@
+{
+	"bags": [
+		{
+			"kind": "satchel",
+			"level": 0,
+			"rotation": 0,
+			"tuning": "",
+			"uid": "b1",
+			"x": 0,
+			"y": 0
+		},
+		{
+			"kind": "pouch",
+			"level": 0,
+			"rotation": 0,
+			"tuning": "",
+			"uid": "i5",
+			"x": 3,
+			"y": 0
+		}
+	],
+	"catalogue_hash": "6fdb1d00116a724a602437b27c220abf9eaf3c33f977d4b2c247b87b896c1f59",
+	"golden_acquired": false,
+	"items": [
+		{
+			"kind": "w_broadblade",
+			"level": 0,
+			"rotation": 0,
+			"tuning": "",
+			"uid": "i1",
+			"x": 0,
+			"y": 0
+		},
+		{
+			"kind": "whiff",
+			"level": 0,
+			"rotation": 0,
+			"tuning": "",
+			"uid": "i3",
+			"x": 0,
+			"y": 1
+		},
+		{
+			"kind": "nutrition",
+			"level": 0,
+			"rotation": 0,
+			"tuning": "",
+			"uid": "i4",
+			"x": 1,
+			"y": 1
+		},
+		{
+			"kind": "w_gauntlet",
+			"level": 0,
+			"rotation": 0,
+			"tuning": "",
+			"uid": "i6",
+			"x": 3,
+			"y": 0
+		}
+	],
+	"leader": "jiyan",
+	"name": "演练 · 忌炎",
+	"owner": "practice",
+	"practice_budget": 17,
+	"practice_ledger": [
+		{
+			"gold": 0,
+			"kind": "w_broadblade",
+			"purpose": "starter",
+			"round": 1,
+			"uid": "i1"
+		},
+		{
+			"gold": 0,
+			"kind": "satchel",
+			"purpose": "initial_capacity",
+			"round": 1,
+			"uid": "b1"
+		},
+		{
+			"gold": 2,
+			"kind": "whiff",
+			"piece": {
+				"kind": "whiff",
+				"level": 0,
+				"rotation": 0,
+				"tuning": "",
+				"uid": "i3",
+				"x": 0,
+				"y": 1
+			},
+			"purpose": "purchase",
+			"round": 1,
+			"uid": "i3"
+		},
+		{
+			"gold": 2,
+			"kind": "nutrition",
+			"piece": {
+				"kind": "nutrition",
+				"level": 0,
+				"rotation": 0,
+				"tuning": "",
+				"uid": "i4",
+				"x": 1,
+				"y": 1
+			},
+			"purpose": "purchase",
+			"round": 1,
+			"uid": "i4"
+		},
+		{
+			"gold": 3,
+			"kind": "pouch",
+			"piece": {
+				"kind": "pouch",
+				"level": 0,
+				"rotation": 0,
+				"tuning": "",
+				"uid": "i5",
+				"x": 3,
+				"y": 0
+			},
+			"purpose": "purchase",
+			"round": 2,
+			"uid": "i5"
+		},
+		{
+			"carrier_uid": "i6",
+			"gold": 5,
+			"kind": "",
+			"purpose": "recruit",
+			"role_id": "role_1405",
+			"round": 2,
+			"uid": ""
+		},
+		{
+			"gold": 4,
+			"kind": "w_gauntlet",
+			"piece": {
+				"kind": "w_gauntlet",
+				"level": 0,
+				"rotation": 0,
+				"tuning": "",
+				"uid": "i6",
+				"x": 3,
+				"y": 0
+			},
+			"purpose": "purchase",
+			"round": 2,
+			"uid": "i6"
+		}
+	],
+	"practice_method": "paid-sequential-v15",
+	"practice_seed": 1,
+	"practice_spend": 16,
+	"practice_unspent": 1,
+	"primary": "i1",
+	"relay": [],
+	"roster": [
+		"role_1405"
+	],
+	"round": 2,
+	"ruleset": "wuwa-pack-v5",
+	"simulation_version": "resonance-v53",
+	"source": "practice",
+	"supports": [
+		"role_1405"
+	],
+	"version": 5
+}

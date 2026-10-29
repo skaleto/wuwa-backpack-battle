@@ -1,0 +1,12 @@
+{
+  "version": 83,
+  "source": "2026-10-16 approved early economy and starting-build audit",
+  "economy": {"starting_gold":9,"round_income":10,"win_bonus":1,"resale_ratio":0.75,"starter_credit":2},
+  "bag_prices": {"pouch":2,"strip":2,"corner":2,"travel":4},
+  "characters": {
+    "aemeath":{"charge":6,"starter_supply":"daily_tea"},
+    "yangyang_xuanling":{"charge":6,"starter_supply":"salt_tea"}
+  },
+  "weapon_damage_changes": {},
+  "note": "Controlled first-stage crafts are mixed outcomes after opening fixes; keep all weapon, echo, recipe and shop pool numbers unchanged."
+}

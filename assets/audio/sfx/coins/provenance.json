@@ -1,0 +1,20 @@
+{
+  "purchase": {
+    "source": "art_sources/audio/sfx/coins/handleCoins2.ogg",
+    "author": "Kenney",
+    "license": "CC0 1.0",
+    "page": "https://kenney.nl/assets/rpg-audio",
+    "duration": 0.286031746031746,
+    "source_sha256": "4b857968d64f9ac9336a10ffac6694d7547e1f01566ad6857b30bc8db3ee6c32",
+    "processing": "silence trim, 6.5 kHz lowpass, 4 ms fade in, peak -8 dB; original pitch and timing"
+  },
+  "sell": {
+    "source": "art_sources/audio/sfx/coins/handleCoins.ogg",
+    "author": "Kenney",
+    "license": "CC0 1.0",
+    "page": "https://kenney.nl/assets/rpg-audio",
+    "duration": 0.7913832199546486,
+    "source_sha256": "8a91f969e932df709df80ee124d86a51389eed9b67f22e5e716bc2bbf60d8dab",
+    "processing": "silence trim, 6.5 kHz lowpass, 4 ms fade in, peak -8 dB; original pitch and timing"
+  }
+}

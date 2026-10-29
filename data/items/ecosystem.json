@@ -1,0 +1,691 @@
+{
+  "version": 125,
+  "updates": {
+    "tuner": {
+      "material_effect": {
+        "trigger": "clock",
+        "action": "advance",
+        "value": 0.45,
+        "period": 6,
+        "category": "echo",
+        "count": 1
+      },
+      "ownExtra": "每6秒使★冷却剩余最长的声骸提前0.45秒。",
+      "starText": "★声骸获得冷却推进；同名间隔6秒。"
+    },
+    "tube": {
+      "material_effect": {
+        "trigger": "clock",
+        "action": "flat",
+        "value": 2,
+        "period": 6,
+        "category": "echo",
+        "count": 1
+      },
+      "ownExtra": "每6秒使★基础伤害最高的声骸下次自然攻击总伤害+2，不累积。",
+      "starText": "★声骸获得强化；多段攻击合计只加2。"
+    },
+    "puppet": {
+      "ecosystem_rule": "puppet",
+      "stars": [
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "star_categories": [
+        "echo"
+      ],
+      "starText": "★声骸每累计3次自然攻击：重演最近一次基础攻击的25%，最多3伤害；间隔4秒。",
+      "ownExtra": "每6秒造成1伤害；重演不复制状态、资源或联动。",
+      "capabilities": [
+        "attack"
+      ],
+      "threshold": 3,
+      "copy_ratio": 0.25,
+      "copy_cap": 3,
+      "star_period": 4
+    },
+    "mat_42500010": {
+      "material_effect": {
+        "trigger": "clock",
+        "action": "break",
+        "value": 4,
+        "period": 6,
+        "category": "weapon",
+        "count": 1
+      },
+      "stars": [
+        [
+          1,
+          0
+        ]
+      ],
+      "star_categories": [
+        "weapon"
+      ],
+      "ownExtra": "每6秒使★武器下一次自然攻击先削4盾，不累积。",
+      "starText": "★武器获得削盾；无盾时不增加伤害。",
+      "capabilities": [
+        "break_shield"
+      ]
+    },
+    "soup": {
+      "ecosystem_rule": "soup",
+      "material_effect": {
+        "trigger": "clock",
+        "action": "stamina",
+        "value": 2,
+        "period": 6,
+        "category": "",
+        "count": 1
+      },
+      "cyclic_supply": true,
+      "ownExtra": "每6秒恢复2体力；常驻，不消耗。"
+    },
+    "spicy_meat": {
+      "ecosystem_rule": "meat",
+      "material_effect": {
+        "trigger": "clock",
+        "action": "charge",
+        "value": 1,
+        "period": 8,
+        "category": "",
+        "count": 1
+      },
+      "cyclic_supply": true,
+      "opening_charge": 1,
+      "ownExtra": "开战获得1充能；每8秒获得1充能。",
+      "capabilities": [
+        "charge"
+      ]
+    },
+    "cool_tea": {
+      "ecosystem_rule": "tea",
+      "material_effect": {},
+      "openingShield": 0,
+      "healPeriod": 6,
+      "healAmount": 3,
+      "opening_haste": 1,
+      "cyclic_supply": true,
+      "ownExtra": "开战获得1迅捷；常驻，不消耗。",
+      "capabilities": [
+        "haste",
+        "healing"
+      ]
+    },
+    "answer": {
+      "ecosystem_rule": "answer",
+      "material_effect": {},
+      "noisePeriod": 10,
+      "star_categories": [
+        "weapon"
+      ],
+      "ownExtra": "每10秒附加1光噪。",
+      "starText": "★武器攻击带光噪或霜渐的敌人时：该击30%伤害穿盾，最多4；间隔2秒，无盾不增伤。",
+      "pierce": 0.3,
+      "pierce_cap": 4,
+      "star_period": 2,
+      "capabilities": [
+        "noise",
+        "break_shield"
+      ]
+    },
+    "turtle": {
+      "healAmount": 2,
+      "ownExtra": ""
+    },
+    "echo_glacio": {
+      "ecosystem_rule": "glacio",
+      "material_effect": {},
+      "star_categories": [
+        "weapon"
+      ],
+      "starText": "★武器累计3次自然攻击：本体附霜时钟提前1秒；间隔4秒。",
+      "threshold": 3,
+      "advance": 1,
+      "star_period": 4,
+      "capabilities": [
+        "frost"
+      ]
+    }
+  },
+  "new_items": {
+    "echo_porcelain": {
+      "name": "瓷庭候",
+      "category": "echo",
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "stars": [
+        [
+          1,
+          0
+        ]
+      ],
+      "profile": {
+        "tier": 1,
+        "cost": 2,
+        "shop_price": 2,
+        "damage": 2.5,
+        "cd": 3,
+        "stamina": 0,
+        "ecosystem_rule": "porcelain",
+        "capabilities": [
+          "haste"
+        ],
+        "ownExtra": "每2次自然攻击，让一只★声骸的冷却提前0.4秒。",
+        "starText": "★声骸获得推进；不能推进自己。",
+        "star_categories": [
+          "echo"
+        ],
+        "shop_round": 1,
+        "echo_cost": 1,
+        "threshold": 2,
+        "advance": 0.4
+      }
+    },
+    "echo_anger": {
+      "name": "心傀·怒",
+      "category": "echo",
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "stars": [
+        [
+          1,
+          0
+        ]
+      ],
+      "profile": {
+        "tier": 1,
+        "cost": 2,
+        "shop_price": 2,
+        "damage": 5,
+        "cd": 4,
+        "stamina": 0,
+        "ecosystem_rule": "anger",
+        "capabilities": [
+          "attack"
+        ],
+        "ownExtra": "周期攻击。",
+        "starText": "★武器完成充能攻击：本体下一击+3，不累积。",
+        "star_categories": [
+          "weapon"
+        ],
+        "shop_round": 1,
+        "echo_cost": 1,
+        "prepare_flat": 3
+      }
+    },
+    "echo_sorrow": {
+      "name": "心傀·忧",
+      "category": "echo",
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "stars": [
+        [
+          1,
+          0
+        ]
+      ],
+      "profile": {
+        "tier": 1,
+        "cost": 2,
+        "shop_price": 2,
+        "damage": 3,
+        "cd": 4,
+        "stamina": 0,
+        "ecosystem_rule": "sorrow",
+        "capabilities": [
+          "frost"
+        ],
+        "ownExtra": "两段攻击，整次只计1次自然发动。",
+        "starText": "★物品实际供盾：准备下一次攻击附1霜渐；间隔4秒，不累积。",
+        "star_categories": [
+          "shield"
+        ],
+        "shop_round": 2,
+        "echo_cost": 1,
+        "star_period": 4,
+        "segments": [
+          0.5,
+          0.5
+        ]
+      }
+    },
+    "echo_gliding_sentry": {
+      "name": "游鳞机枢",
+      "category": "echo",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "stars": [
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "profile": {
+        "tier": 3,
+        "cost": 6,
+        "shop_price": 6,
+        "damage": 5,
+        "cd": 5,
+        "stamina": 0,
+        "ecosystem_rule": "sentry",
+        "capabilities": [
+          "counter",
+          "frost"
+        ],
+        "ownExtra": "招架成功时反击4伤害并附1霜渐。",
+        "starText": "★物品实际供盾：准备一次招架；下次敌方武器自然攻击减伤2。招架间隔6秒，不累积。",
+        "star_categories": [
+          "shield"
+        ],
+        "shop_round": 3,
+        "echo_cost": 3,
+        "guard": 2,
+        "counter_damage": 4,
+        "star_period": 6
+      }
+    },
+    "echo_moth": {
+      "name": "迷胧幻蛾",
+      "category": "echo",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "stars": [
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "profile": {
+        "tier": 3,
+        "cost": 7,
+        "shop_price": 7,
+        "damage": 8,
+        "cd": 6,
+        "stamina": 0,
+        "ecosystem_rule": "moth",
+        "capabilities": [
+          "noise"
+        ],
+        "ownExtra": "自然攻击附1光噪。",
+        "starText": "★武器完成充能攻击：准备下一次攻击额外结算一跳当前光噪；间隔6秒，不加层、不移动原跳伤时钟。",
+        "star_categories": [
+          "weapon"
+        ],
+        "shop_round": 4,
+        "echo_cost": 3,
+        "star_period": 6
+      }
+    },
+    "echo_singilum": {
+      "name": "辛吉勒姆",
+      "category": "echo",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "stars": [
+        [
+          0,
+          -1
+        ],
+        [
+          2,
+          -1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "profile": {
+        "tier": 4,
+        "cost": 12,
+        "shop_price": 12,
+        "damage": 16,
+        "cd": 6.5,
+        "stamina": 0,
+        "ecosystem_rule": "singilum",
+        "capabilities": [
+          "charge",
+          "attack"
+        ],
+        "ownExtra": "两段攻击，后段占总伤害的75%。",
+        "starText": "★武器累计2次充能攻击：本体下一次第二段+8，不累积。",
+        "star_categories": [
+          "weapon"
+        ],
+        "shop_round": 6,
+        "echo_cost": 4,
+        "segments": [
+          0.25,
+          0.75
+        ],
+        "charge": 2,
+        "threshold": 2,
+        "prepare_flat": 8,
+        "craft_only": true
+      }
+    },
+    "relic_diverter": {
+      "name": "分流齿轮",
+      "category": "relic",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "stars": [
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "profile": {
+        "tier": 2,
+        "cost": 5,
+        "shop_price": 5,
+        "damage": 0,
+        "cd": 0,
+        "stamina": 0,
+        "ecosystem_rule": "diverter",
+        "capabilities": [
+          "charge",
+          "attack"
+        ],
+        "ownExtra": "每10秒获得1充能。",
+        "starText": "★武器攻击时，充能1～5则消耗1使该击+2；间隔2秒。满6仍触发正常重击。",
+        "star_categories": [
+          "weapon"
+        ],
+        "shop_round": 3,
+        "material_effect": {
+          "trigger": "clock",
+          "action": "charge",
+          "value": 1,
+          "period": 10,
+          "category": "",
+          "count": 1
+        },
+        "star_period": 2,
+        "prepare_flat": 2
+      }
+    },
+    "relic_lunchbox": {
+      "name": "配餐盒",
+      "category": "relic",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "stars": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "profile": {
+        "tier": 2,
+        "cost": 5,
+        "shop_price": 5,
+        "damage": 0,
+        "cd": 0,
+        "stamina": 0,
+        "ecosystem_rule": "lunchbox",
+        "capabilities": [
+          "stamina"
+        ],
+        "ownExtra": "每6秒恢复2体力。",
+        "starText": "两种不同★补给各周期发动一次：本体回耐时钟提前2秒；间隔4秒。",
+        "star_categories": [
+          "provision"
+        ],
+        "shop_round": 3,
+        "material_effect": {
+          "trigger": "clock",
+          "action": "stamina",
+          "value": 2,
+          "period": 6,
+          "category": "",
+          "count": 1
+        },
+        "star_period": 4,
+        "advance": 2
+      }
+    }
+  },
+  "recipes": [
+    {
+      "id": "E125-01",
+      "base": "soup",
+      "materials": [
+        "field_notes"
+      ],
+      "target": "relic_lunchbox",
+      "round_min": 1,
+      "fee": 0,
+      "type": "ecosystem",
+      "route": "组合配套",
+      "trade": "保留持续回耐；补给组合推进回耐周期。"
+    },
+    {
+      "id": "E125-02",
+      "base": "strategy",
+      "materials": [
+        "mat_42500030"
+      ],
+      "target": "relic_diverter",
+      "round_min": 1,
+      "fee": 0,
+      "type": "ecosystem",
+      "route": "组合配套",
+      "trade": "保留供能，提前消费小份充能换持续输出，减少重击机会。"
+    },
+    {
+      "id": "E125-03",
+      "base": "puppet",
+      "materials": [
+        "tube"
+      ],
+      "target": "elegance",
+      "round_min": 1,
+      "fee": 0,
+      "type": "ecosystem",
+      "route": "组合配套",
+      "trade": "升级为异种声骸交替重演；不再独立周期造成1伤害。"
+    },
+    {
+      "id": "E125-04",
+      "base": "whiff",
+      "materials": [
+        "echo_porcelain"
+      ],
+      "target": "cyan_heron",
+      "round_min": 1,
+      "fee": 0,
+      "type": "ecosystem",
+      "route": "组合配套",
+      "trade": "声骸接力转换为迅捷与武器接力。"
+    },
+    {
+      "id": "E125-05",
+      "base": "echo_anger",
+      "materials": [
+        "strategy"
+      ],
+      "target": "heron",
+      "round_min": 1,
+      "fee": 0,
+      "type": "ecosystem",
+      "route": "组合配套",
+      "trade": "供能和武器强化承接单体重击跟进。"
+    },
+    {
+      "id": "E125-06",
+      "base": "echo_sorrow",
+      "materials": [
+        "puppet"
+      ],
+      "target": "echo_gliding_sentry",
+      "round_min": 1,
+      "fee": 0,
+      "type": "ecosystem",
+      "route": "组合配套",
+      "trade": "保留供盾触发霜渐，改由招架反击附霜。"
+    },
+    {
+      "id": "E125-07",
+      "base": "echo_sorrow",
+      "materials": [
+        "rocksteady"
+      ],
+      "target": "bellborne",
+      "round_min": 1,
+      "fee": 0,
+      "type": "ecosystem",
+      "route": "组合配套",
+      "trade": "保留实际供盾，控制转为招架防御。"
+    },
+    {
+      "id": "E125-08",
+      "base": "echo_spectro",
+      "materials": [
+        "elegance"
+      ],
+      "target": "echo_moth",
+      "round_min": 1,
+      "fee": 0,
+      "type": "ecosystem",
+      "route": "组合配套",
+      "trade": "保留附噪，基础攻击重演转为重击后的光噪追加结算。"
+    },
+    {
+      "id": "E125-09",
+      "base": "heron",
+      "materials": [
+        "starfall"
+      ],
+      "target": "echo_singilum",
+      "round_min": 1,
+      "fee": 0,
+      "type": "ecosystem",
+      "route": "组合配套",
+      "trade": "保留供能；武器增益转为声骸后段爆发，需持续重击配套。"
+    }
+  ]
+}

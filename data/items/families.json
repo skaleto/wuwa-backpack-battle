@@ -1,0 +1,1961 @@
+{
+  "version": 127,
+  "updates": {
+    "dragon_food": {
+      "ecosystem_rule": "dragon_meal",
+      "material_effect": {
+        "trigger": "clock",
+        "action": "stamina",
+        "value": 2,
+        "period": 6,
+        "category": "",
+        "count": 1
+      },
+      "cyclic_supply": true,
+      "openingShield": 12,
+      "capabilities": [
+        "stamina",
+        "shield"
+      ],
+      "ownExtra": "开战获得12护盾；每6秒恢复2体力。常驻，不消耗。",
+      "starText": "",
+      "family": "food"
+    },
+    "elegance": {
+      "material_effect": {
+        "trigger": "clock",
+        "action": "advance",
+        "value": 0.25,
+        "period": 7,
+        "category": "echo",
+        "count": 1
+      },
+      "ownExtra": "每7秒使★冷却剩余最长的声骸提前0.25秒；没有自然攻击。",
+      "family": "acoustics"
+    },
+    "magnifier": {
+      "active": true,
+      "material_effect": {
+        "trigger": "clock",
+        "action": "flat",
+        "value": 1,
+        "period": 8,
+        "category": "weapon",
+        "count": 1
+      },
+      "stars": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "star_categories": [
+        "weapon"
+      ],
+      "capabilities": [
+        "attack"
+      ],
+      "ownExtra": "每8秒使★基础伤害最高的武器下次自然攻击总伤害+1，不累积。",
+      "starText": "★武器获得一次强化；多段合计只加1。",
+      "introduced_version": 127,
+      "family": "breaker",
+      "supply_anchor": "mat_42500010"
+    },
+    "relic_lunchbox": {
+      "family": "food"
+    },
+    "relic_diverter": {
+      "family": "machinery"
+    },
+    "cool_tea": {
+      "family": "tea"
+    },
+    "answer": {
+      "noisePeriod": 8,
+      "ownExtra": "每8秒附加1光噪。",
+      "family": "noise"
+    },
+    "violet": {
+      "opening_haste": 1,
+      "ownExtra": "开战获得1迅捷。每5秒进入2秒格挡窗；首个敌方武器攻击减伤30%，存活则反击8；没接住则窗口结束攻击6，两者互斥。姿态结束充能1、削盾3。"
+    }
+  },
+  "new_items": {
+    "relic_cutlery": {
+      "name": "便携餐具",
+      "category": "relic",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "stars": [],
+      "profile": {
+        "tier": 1,
+        "cost": 1,
+        "shop_price": 1,
+        "shop_round": 1,
+        "craft_only": false,
+        "damage": 0,
+        "cd": 0,
+        "stamina": 0,
+        "ownExtra": "每8秒恢复1体力；餐具常驻，不消耗。",
+        "starText": "",
+        "capabilities": [
+          "stamina"
+        ],
+        "introduced_version": 127,
+        "family": "food",
+        "supply_anchor": "field_notes",
+        "material_effect": {
+          "trigger": "clock",
+          "action": "stamina",
+          "value": 1,
+          "period": 8,
+          "category": "",
+          "count": 1
+        }
+      },
+      "provenance": {
+        "kind": "original_adaptation",
+        "label": "本作原创改编",
+        "basis": "现有鸣潮原物料的用途与造型；本名称和器件为本作原创"
+      }
+    },
+    "relic_march_lunchbox": {
+      "name": "行军饭盒",
+      "category": "relic",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "stars": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "profile": {
+        "tier": 3,
+        "cost": 8,
+        "shop_price": 8,
+        "shop_round": 3,
+        "craft_only": true,
+        "damage": 0,
+        "cd": 0,
+        "stamina": 0,
+        "ownExtra": "每6秒恢复3体力；全队武器耐力消耗−15%，同源取最高。",
+        "starText": "两种不同★补给各周期发动一次：回耐时钟提前2秒；间隔4秒。",
+        "capabilities": [
+          "stamina"
+        ],
+        "introduced_version": 127,
+        "family": "food",
+        "supply_anchor": "field_notes",
+        "material_effect": {
+          "trigger": "clock",
+          "action": "stamina",
+          "value": 3,
+          "period": 6,
+          "category": "",
+          "count": 1
+        },
+        "ecosystem_rule": "lunchbox",
+        "star_period": 4,
+        "advance": 2,
+        "star_categories": [
+          "provision"
+        ],
+        "opening_stamina_discount": 0.15
+      },
+      "provenance": {
+        "kind": "original_adaptation",
+        "label": "本作原创改编",
+        "basis": "现有鸣潮原物料的用途与造型；本名称和器件为本作原创"
+      }
+    },
+    "relic_emergency_lunchbox": {
+      "name": "应急餐盒",
+      "category": "relic",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "stars": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "profile": {
+        "tier": 3,
+        "cost": 8,
+        "shop_price": 8,
+        "shop_round": 3,
+        "craft_only": true,
+        "damage": 0,
+        "cd": 0,
+        "stamina": 0,
+        "ownExtra": "每6秒恢复3体力；首次存活且生命低于50%时治疗18，同源急救每战一次。",
+        "starText": "两种不同★补给各周期发动一次：回耐时钟提前2秒；间隔4秒。",
+        "capabilities": [
+          "stamina",
+          "heal"
+        ],
+        "introduced_version": 127,
+        "family": "food",
+        "supply_anchor": "field_notes",
+        "material_effect": {
+          "trigger": "clock",
+          "action": "stamina",
+          "value": 3,
+          "period": 6,
+          "category": "",
+          "count": 1
+        },
+        "ecosystem_rule": "lunchbox",
+        "star_period": 4,
+        "advance": 2,
+        "star_categories": [
+          "provision"
+        ],
+        "emergency": 18
+      },
+      "provenance": {
+        "kind": "original_adaptation",
+        "label": "本作原创改编",
+        "basis": "现有鸣潮原物料的用途与造型；本名称和器件为本作原创"
+      }
+    },
+    "relic_tea_strainer": {
+      "name": "便携茶滤",
+      "category": "relic",
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "stars": [],
+      "profile": {
+        "tier": 1,
+        "cost": 1,
+        "shop_price": 1,
+        "shop_round": 1,
+        "craft_only": false,
+        "damage": 0,
+        "cd": 0,
+        "stamina": 0,
+        "ownExtra": "每8秒治疗1；可直接作为缓慢治疗的小物。",
+        "starText": "",
+        "capabilities": [
+          "heal"
+        ],
+        "introduced_version": 127,
+        "family": "tea",
+        "supply_anchor": "mat_42310090",
+        "healPeriod": 8,
+        "healAmount": 1
+      },
+      "provenance": {
+        "kind": "original_adaptation",
+        "label": "本作原创改编",
+        "basis": "现有鸣潮原物料的用途与造型；本名称和器件为本作原创"
+      }
+    },
+    "provision_strong_tea": {
+      "name": "浓萃凉茶",
+      "category": "provision",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "stars": [],
+      "profile": {
+        "tier": 3,
+        "cost": 7,
+        "shop_price": 7,
+        "shop_round": 3,
+        "craft_only": true,
+        "damage": 0,
+        "cd": 0,
+        "stamina": 0,
+        "ownExtra": "每6秒治疗5；开战获得1迅捷。常驻，不消耗。",
+        "starText": "",
+        "capabilities": [
+          "heal",
+          "haste"
+        ],
+        "introduced_version": 127,
+        "family": "tea",
+        "supply_anchor": "cool_tea",
+        "healPeriod": 6,
+        "healAmount": 5,
+        "opening_haste": 1,
+        "cyclic_supply": true
+      },
+      "provenance": {
+        "kind": "original_adaptation",
+        "label": "本作原创改编",
+        "basis": "现有鸣潮原物料的用途与造型；本名称和器件为本作原创"
+      }
+    },
+    "provision_clear_tea": {
+      "name": "澄心凉茶",
+      "category": "provision",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "stars": [],
+      "profile": {
+        "tier": 3,
+        "cost": 7,
+        "shop_price": 7,
+        "shop_round": 3,
+        "craft_only": true,
+        "damage": 0,
+        "cd": 0,
+        "stamina": 0,
+        "ownExtra": "每6秒治疗3；每8秒净化1层；开战获得1迅捷。常驻，不消耗。",
+        "starText": "",
+        "capabilities": [
+          "heal",
+          "cleanse",
+          "haste"
+        ],
+        "introduced_version": 127,
+        "family": "tea",
+        "supply_anchor": "cool_tea",
+        "healPeriod": 6,
+        "healAmount": 3,
+        "opening_haste": 1,
+        "material_effect": {
+          "trigger": "clock",
+          "action": "cleanse",
+          "value": 1,
+          "period": 8,
+          "category": "",
+          "count": 1
+        },
+        "cyclic_supply": true
+      },
+      "provenance": {
+        "kind": "original_adaptation",
+        "label": "本作原创改编",
+        "basis": "现有鸣潮原物料的用途与造型；本名称和器件为本作原创"
+      }
+    },
+    "relic_clockwork": {
+      "name": "储能发条",
+      "category": "relic",
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "stars": [],
+      "profile": {
+        "tier": 1,
+        "cost": 1,
+        "shop_price": 1,
+        "shop_round": 1,
+        "craft_only": false,
+        "damage": 0,
+        "cd": 0,
+        "stamina": 0,
+        "ownExtra": "每12秒获得1充能；充能上限6。",
+        "starText": "",
+        "capabilities": [
+          "charge"
+        ],
+        "introduced_version": 127,
+        "family": "machinery",
+        "supply_anchor": "mat_42500030",
+        "material_effect": {
+          "trigger": "clock",
+          "action": "charge",
+          "value": 1,
+          "period": 12,
+          "category": "",
+          "count": 1
+        }
+      },
+      "provenance": {
+        "kind": "original_adaptation",
+        "label": "本作原创改编",
+        "basis": "现有鸣潮原物料的用途与造型；本名称和器件为本作原创"
+      }
+    },
+    "relic_capacitor": {
+      "name": "蓄能飞轮",
+      "category": "relic",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "stars": [],
+      "profile": {
+        "tier": 3,
+        "cost": 8,
+        "shop_price": 8,
+        "shop_round": 3,
+        "craft_only": true,
+        "damage": 0,
+        "cd": 0,
+        "stamina": 0,
+        "ownExtra": "开战获得1充能；每10秒获得2充能。保留充能用于重击。",
+        "starText": "",
+        "capabilities": [
+          "charge"
+        ],
+        "introduced_version": 127,
+        "family": "machinery",
+        "supply_anchor": "relic_diverter",
+        "opening_charge": 1,
+        "material_effect": {
+          "trigger": "clock",
+          "action": "charge",
+          "value": 2,
+          "period": 10,
+          "category": "",
+          "count": 1
+        }
+      },
+      "provenance": {
+        "kind": "original_adaptation",
+        "label": "本作原创改编",
+        "basis": "现有鸣潮原物料的用途与造型；本名称和器件为本作原创"
+      }
+    },
+    "relic_pulse_gear": {
+      "name": "脉冲齿组",
+      "category": "relic",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "stars": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "profile": {
+        "tier": 3,
+        "cost": 8,
+        "shop_price": 8,
+        "shop_round": 3,
+        "craft_only": true,
+        "damage": 0,
+        "cd": 0,
+        "stamina": 0,
+        "ownExtra": "每10秒获得1充能。",
+        "starText": "★武器攻击时，充能1～5则消耗1使该击+3；间隔3秒。满6仍正常重击。",
+        "capabilities": [
+          "charge",
+          "attack"
+        ],
+        "introduced_version": 127,
+        "family": "machinery",
+        "supply_anchor": "relic_diverter",
+        "star_categories": [
+          "weapon"
+        ],
+        "ecosystem_rule": "diverter",
+        "material_effect": {
+          "trigger": "clock",
+          "action": "charge",
+          "value": 1,
+          "period": 10,
+          "category": "",
+          "count": 1
+        },
+        "star_period": 3,
+        "prepare_flat": 3
+      },
+      "provenance": {
+        "kind": "original_adaptation",
+        "label": "本作原创改编",
+        "basis": "现有鸣潮原物料的用途与造型；本名称和器件为本作原创"
+      }
+    },
+    "relic_diaphragm": {
+      "name": "共鸣振膜",
+      "category": "relic",
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "stars": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "profile": {
+        "tier": 1,
+        "cost": 1,
+        "shop_price": 1,
+        "shop_round": 1,
+        "craft_only": false,
+        "damage": 0,
+        "cd": 0,
+        "stamina": 0,
+        "ownExtra": "每7秒使★冷却剩余最长的声骸提前0.25秒。",
+        "starText": "★声骸获得推进；没有可推进时钟时不触发。",
+        "capabilities": [
+          "haste"
+        ],
+        "introduced_version": 127,
+        "family": "acoustics",
+        "supply_anchor": "tuner",
+        "star_categories": [
+          "echo"
+        ],
+        "material_effect": {
+          "trigger": "clock",
+          "action": "advance",
+          "value": 0.25,
+          "period": 7,
+          "category": "echo",
+          "count": 1
+        }
+      },
+      "provenance": {
+        "kind": "original_adaptation",
+        "label": "本作原创改编",
+        "basis": "现有鸣潮原物料的用途与造型；本名称和器件为本作原创"
+      }
+    },
+    "relic_recorder": {
+      "name": "回声录筒",
+      "category": "relic",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "stars": [
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "profile": {
+        "tier": 2,
+        "cost": 5,
+        "shop_price": 5,
+        "shop_round": 3,
+        "craft_only": true,
+        "damage": 0,
+        "cd": 0,
+        "stamina": 0,
+        "ownExtra": "每7秒使★冷却剩余最长的声骸提前0.25秒。",
+        "starText": "★声骸累计2次自然攻击：重演最近基础攻击的50%，最多5伤害；间隔4秒。",
+        "capabilities": [
+          "attack",
+          "haste"
+        ],
+        "introduced_version": 127,
+        "family": "acoustics",
+        "supply_anchor": "puppet",
+        "star_categories": [
+          "echo"
+        ],
+        "ecosystem_rule": "puppet",
+        "threshold": 2,
+        "copy_ratio": 0.5,
+        "copy_cap": 5,
+        "star_period": 4,
+        "material_effect": {
+          "trigger": "clock",
+          "action": "advance",
+          "value": 0.25,
+          "period": 7,
+          "category": "echo",
+          "count": 1
+        }
+      },
+      "provenance": {
+        "kind": "original_adaptation",
+        "label": "本作原创改编",
+        "basis": "现有鸣潮原物料的用途与造型；本名称和器件为本作原创"
+      }
+    },
+    "relic_echo_relay": {
+      "name": "接力音叉",
+      "category": "relic",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "stars": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "profile": {
+        "tier": 3,
+        "cost": 8,
+        "shop_price": 8,
+        "shop_round": 3,
+        "craft_only": true,
+        "damage": 0,
+        "cd": 0,
+        "stamina": 0,
+        "ownExtra": "每7秒使★冷却剩余最长的声骸提前0.25秒。",
+        "starText": "两种不同★声骸交替攻击：推进另一只★声骸1.2秒；间隔4秒。放弃录筒重演。",
+        "capabilities": [
+          "haste"
+        ],
+        "introduced_version": 127,
+        "family": "acoustics",
+        "supply_anchor": "tuner",
+        "star_categories": [
+          "echo"
+        ],
+        "material_effect": {
+          "trigger": "clock",
+          "action": "advance",
+          "value": 0.25,
+          "period": 7,
+          "category": "echo",
+          "count": 1
+        },
+        "family_effect": {
+          "trigger": "star_attack",
+          "action": "alternate_advance",
+          "category": "echo",
+          "value": 1.2,
+          "period": 4
+        }
+      },
+      "provenance": {
+        "kind": "original_adaptation",
+        "label": "本作原创改编",
+        "basis": "现有鸣潮原物料的用途与造型；本名称和器件为本作原创"
+      }
+    },
+    "relic_guard_plate": {
+      "name": "轻型护板",
+      "category": "relic",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "stars": [],
+      "profile": {
+        "tier": 1,
+        "cost": 1,
+        "shop_price": 1,
+        "shop_round": 1,
+        "craft_only": false,
+        "damage": 0,
+        "cd": 0,
+        "stamina": 0,
+        "ownExtra": "每8秒获得2护盾。",
+        "starText": "",
+        "capabilities": [
+          "shield"
+        ],
+        "introduced_version": 127,
+        "family": "defense",
+        "supply_anchor": "mat_43020041",
+        "shieldPeriod": 8,
+        "shieldAmount": 2
+      },
+      "provenance": {
+        "kind": "original_adaptation",
+        "label": "本作原创改编",
+        "basis": "现有鸣潮原物料的用途与造型；本名称和器件为本作原创"
+      }
+    },
+    "relic_layered_guard": {
+      "name": "叠层护板",
+      "category": "relic",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "stars": [],
+      "profile": {
+        "tier": 2,
+        "cost": 7,
+        "shop_price": 7,
+        "shop_round": 3,
+        "craft_only": true,
+        "damage": 0,
+        "cd": 0,
+        "stamina": 0,
+        "ownExtra": "每6秒获得5护盾；不主动消耗护盾。",
+        "starText": "",
+        "capabilities": [
+          "shield"
+        ],
+        "introduced_version": 127,
+        "family": "defense",
+        "supply_anchor": "mat_43020041",
+        "shieldPeriod": 6,
+        "shieldAmount": 5
+      },
+      "provenance": {
+        "kind": "original_adaptation",
+        "label": "本作原创改编",
+        "basis": "现有鸣潮原物料的用途与造型；本名称和器件为本作原创"
+      }
+    },
+    "relic_recoil_guard": {
+      "name": "回弹护板",
+      "category": "relic",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "stars": [],
+      "profile": {
+        "tier": 3,
+        "cost": 7,
+        "shop_price": 7,
+        "shop_round": 3,
+        "craft_only": true,
+        "damage": 0,
+        "cd": 0,
+        "stamina": 0,
+        "ownExtra": "每8秒获得6护盾；挡住2次自然攻击后，消耗至多2剩余护盾，每点反击2伤害；间隔4秒。",
+        "starText": "",
+        "capabilities": [
+          "shield",
+          "counter"
+        ],
+        "introduced_version": 127,
+        "family": "defense",
+        "supply_anchor": "mat_43020041",
+        "shieldPeriod": 8,
+        "shieldAmount": 6,
+        "family_effect": {
+          "trigger": "blocked",
+          "action": "shield_counter",
+          "threshold": 2,
+          "spend": 2,
+          "value": 2,
+          "period": 4
+        }
+      },
+      "provenance": {
+        "kind": "original_adaptation",
+        "label": "本作原创改编",
+        "basis": "现有鸣潮原物料的用途与造型；本名称和器件为本作原创"
+      }
+    },
+    "relic_breaker_wedge": {
+      "name": "红针破盾楔",
+      "category": "relic",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "stars": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "profile": {
+        "tier": 1,
+        "cost": 3,
+        "shop_price": 3,
+        "shop_round": 1,
+        "craft_only": false,
+        "damage": 0,
+        "cd": 0,
+        "stamina": 0,
+        "ownExtra": "开战获得3护盾；每6秒使★基础伤害最高的武器下次攻击先削5盾。",
+        "starText": "只削真实护盾，不转换成生命伤害；准备不累积。",
+        "capabilities": [
+          "break_shield",
+          "shield"
+        ],
+        "introduced_version": 127,
+        "family": "breaker",
+        "supply_anchor": "mat_42500010",
+        "star_categories": [
+          "weapon"
+        ],
+        "material_effect": {
+          "trigger": "clock",
+          "action": "break",
+          "value": 5,
+          "period": 6,
+          "category": "weapon",
+          "count": 1
+        },
+        "openingShield": 3
+      },
+      "provenance": {
+        "kind": "original_adaptation",
+        "label": "本作原创改编",
+        "basis": "现有鸣潮原物料的用途与造型；本名称和器件为本作原创"
+      }
+    },
+    "relic_crack_driver": {
+      "name": "裂盾冲头",
+      "category": "relic",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "stars": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "profile": {
+        "tier": 3,
+        "cost": 7,
+        "shop_price": 7,
+        "shop_round": 3,
+        "craft_only": true,
+        "damage": 0,
+        "cd": 0,
+        "stamina": 0,
+        "ownExtra": "开战获得3护盾；每6秒使★基础伤害最高的武器下次攻击先削8盾。",
+        "starText": "集中破盾；没有护盾时不增加伤害。",
+        "capabilities": [
+          "break_shield",
+          "shield"
+        ],
+        "introduced_version": 127,
+        "family": "breaker",
+        "supply_anchor": "mat_42500010",
+        "star_categories": [
+          "weapon"
+        ],
+        "material_effect": {
+          "trigger": "clock",
+          "action": "break",
+          "value": 8,
+          "period": 6,
+          "category": "weapon",
+          "count": 1
+        },
+        "openingShield": 3
+      },
+      "provenance": {
+        "kind": "original_adaptation",
+        "label": "本作原创改编",
+        "basis": "现有鸣潮原物料的用途与造型；本名称和器件为本作原创"
+      }
+    },
+    "relic_breach_scope": {
+      "name": "缺口瞄镜",
+      "category": "relic",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "stars": [
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "profile": {
+        "tier": 3,
+        "cost": 7,
+        "shop_price": 7,
+        "shop_round": 3,
+        "craft_only": true,
+        "damage": 0,
+        "cd": 0,
+        "stamina": 0,
+        "ownExtra": "开战获得3护盾；每6秒使★基础伤害最高的武器下次攻击先削5盾。",
+        "starText": "★武器自然攻击无盾目标时，追加2伤害；间隔3秒。削盾量低于裂盾冲头。",
+        "capabilities": [
+          "break_shield",
+          "shield",
+          "attack"
+        ],
+        "introduced_version": 127,
+        "family": "breaker",
+        "supply_anchor": "mat_42500010",
+        "star_categories": [
+          "weapon"
+        ],
+        "material_effect": {
+          "trigger": "clock",
+          "action": "break",
+          "value": 5,
+          "period": 6,
+          "category": "weapon",
+          "count": 1
+        },
+        "family_effect": {
+          "trigger": "star_attack",
+          "action": "conditional_damage",
+          "condition": "unshielded",
+          "value": 2,
+          "period": 3
+        },
+        "openingShield": 3
+      },
+      "provenance": {
+        "kind": "original_adaptation",
+        "label": "本作原创改编",
+        "basis": "现有鸣潮原物料的用途与造型；本名称和器件为本作原创"
+      }
+    },
+    "relic_noise_lamp": {
+      "name": "呓语灯",
+      "category": "relic",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "stars": [],
+      "profile": {
+        "tier": 1,
+        "cost": 3,
+        "shop_price": 3,
+        "shop_round": 1,
+        "craft_only": false,
+        "damage": 0,
+        "cd": 0,
+        "stamina": 0,
+        "ownExtra": "每8秒附加1光噪；常驻声核灯。",
+        "starText": "",
+        "capabilities": [
+          "noise"
+        ],
+        "introduced_version": 127,
+        "family": "noise",
+        "supply_anchor": "mat_41100011",
+        "noisePeriod": 8
+      },
+      "provenance": {
+        "kind": "original_adaptation",
+        "label": "本作原创改编",
+        "basis": "现有鸣潮原物料的用途与造型；本名称和器件为本作原创"
+      }
+    },
+    "relic_noise_chamber": {
+      "name": "叠响腔",
+      "category": "relic",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "stars": [],
+      "profile": {
+        "tier": 3,
+        "cost": 7,
+        "shop_price": 7,
+        "shop_round": 3,
+        "craft_only": true,
+        "damage": 0,
+        "cd": 0,
+        "stamina": 0,
+        "ownExtra": "每3秒附加1光噪；更快累积，仍按正常光噪时钟结算。",
+        "starText": "",
+        "capabilities": [
+          "noise"
+        ],
+        "introduced_version": 127,
+        "family": "noise",
+        "supply_anchor": "mat_41100013",
+        "noisePeriod": 3
+      },
+      "provenance": {
+        "kind": "original_adaptation",
+        "label": "本作原创改编",
+        "basis": "现有鸣潮原物料的用途与造型；本名称和器件为本作原创"
+      }
+    },
+    "relic_noise_chime": {
+      "name": "余响铃",
+      "category": "relic",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "stars": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "profile": {
+        "tier": 3,
+        "cost": 8,
+        "shop_price": 8,
+        "shop_round": 3,
+        "craft_only": true,
+        "damage": 0,
+        "cd": 0,
+        "stamina": 0,
+        "ownExtra": "每8秒附加1光噪。",
+        "starText": "★武器完成充能攻击：额外结算现有光噪一跳，最多4伤害；间隔6秒。不加层、不移动原时钟。",
+        "capabilities": [
+          "noise",
+          "attack"
+        ],
+        "introduced_version": 127,
+        "family": "noise",
+        "supply_anchor": "mat_41100011",
+        "star_categories": [
+          "weapon"
+        ],
+        "noisePeriod": 8,
+        "family_effect": {
+          "trigger": "star_charged",
+          "action": "noise_tick",
+          "value": 4,
+          "period": 6
+        }
+      },
+      "provenance": {
+        "kind": "original_adaptation",
+        "label": "本作原创改编",
+        "basis": "现有鸣潮原物料的用途与造型；本名称和器件为本作原创"
+      }
+    },
+    "relic_cooling_can": {
+      "name": "冷凝罐",
+      "category": "relic",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "stars": [],
+      "profile": {
+        "tier": 1,
+        "cost": 3,
+        "shop_price": 3,
+        "shop_round": 1,
+        "craft_only": false,
+        "damage": 0,
+        "cd": 0,
+        "stamina": 0,
+        "ownExtra": "每8秒附加1霜渐并治疗1；常驻冷凝器。",
+        "starText": "",
+        "capabilities": [
+          "frost",
+          "heal"
+        ],
+        "introduced_version": 127,
+        "family": "frost",
+        "supply_anchor": "mat_42300100",
+        "frostPeriod": 8,
+        "healPeriod": 8,
+        "healAmount": 1
+      },
+      "provenance": {
+        "kind": "original_adaptation",
+        "label": "本作原创改编",
+        "basis": "现有鸣潮原物料的用途与造型；本名称和器件为本作原创"
+      }
+    },
+    "relic_frost_condenser": {
+      "name": "寒潮凝结器",
+      "category": "relic",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "stars": [
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "profile": {
+        "tier": 3,
+        "cost": 8,
+        "shop_price": 8,
+        "shop_round": 3,
+        "craft_only": true,
+        "damage": 0,
+        "cd": 0,
+        "stamina": 0,
+        "ownExtra": "每5秒附加1霜渐；每8秒治疗1。",
+        "starText": "★武器累计3次自然攻击：追加1霜渐；间隔5秒。免疫不消耗计数。",
+        "capabilities": [
+          "frost",
+          "heal"
+        ],
+        "introduced_version": 127,
+        "family": "frost",
+        "supply_anchor": "mat_42300100",
+        "star_categories": [
+          "weapon"
+        ],
+        "frostPeriod": 5,
+        "material_effect": {
+          "trigger": "star_attack",
+          "action": "frost",
+          "value": 1,
+          "threshold": 3,
+          "period": 5,
+          "category": "weapon",
+          "target": "self"
+        },
+        "healPeriod": 8,
+        "healAmount": 1
+      },
+      "provenance": {
+        "kind": "original_adaptation",
+        "label": "本作原创改编",
+        "basis": "现有鸣潮原物料的用途与造型；本名称和器件为本作原创"
+      }
+    },
+    "relic_shatter_prism": {
+      "name": "碎霜棱镜",
+      "category": "relic",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "stars": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "profile": {
+        "tier": 3,
+        "cost": 8,
+        "shop_price": 8,
+        "shop_round": 3,
+        "craft_only": true,
+        "damage": 0,
+        "cd": 0,
+        "stamina": 0,
+        "ownExtra": "每8秒附加1霜渐并治疗1。",
+        "starText": "★武器自然攻击至少2层霜渐或已冻结的目标时，追加3伤害；间隔4秒。控制频率较低。",
+        "capabilities": [
+          "frost",
+          "heal",
+          "attack"
+        ],
+        "introduced_version": 127,
+        "family": "frost",
+        "supply_anchor": "mat_42300100",
+        "star_categories": [
+          "weapon"
+        ],
+        "frostPeriod": 8,
+        "family_effect": {
+          "trigger": "star_attack",
+          "action": "conditional_damage",
+          "condition": "frost",
+          "frost_min": 2,
+          "value": 3,
+          "period": 4
+        },
+        "healPeriod": 8,
+        "healAmount": 1
+      },
+      "provenance": {
+        "kind": "original_adaptation",
+        "label": "本作原创改编",
+        "basis": "现有鸣潮原物料的用途与造型；本名称和器件为本作原创"
+      }
+    }
+  },
+  "remove_recipes": [
+    "E125-01",
+    "E125-02",
+    "P033",
+    "V124_23",
+    "P036",
+    "E125-03",
+    "P037",
+    "P040"
+  ],
+  "recipes": [
+    {
+      "id": "F127-01",
+      "base": "soup",
+      "materials": [
+        "relic_cutlery"
+      ],
+      "target": "relic_lunchbox",
+      "round_min": 1,
+      "fee": 0,
+      "type": "family",
+      "route": "补给与餐具",
+      "family": "food",
+      "trade": "鱼汤装入配餐工具；保留每6秒回耐2，并由两种补给接力推进。"
+    },
+    {
+      "id": "F127-02",
+      "base": "relic_lunchbox",
+      "materials": [
+        "rations"
+      ],
+      "target": "relic_march_lunchbox",
+      "round_min": 1,
+      "fee": 0,
+      "type": "family",
+      "route": "补给与餐具",
+      "family": "food",
+      "trade": "回耐从2提高到3并保留配餐接力；加入15%减耗，体积增至4格。"
+    },
+    {
+      "id": "F127-03",
+      "base": "relic_lunchbox",
+      "materials": [
+        "nutrition"
+      ],
+      "target": "relic_emergency_lunchbox",
+      "round_min": 1,
+      "fee": 0,
+      "type": "family",
+      "route": "补给与餐具",
+      "family": "food",
+      "trade": "回耐从2提高到3并保留配餐接力；加入一次低生命急救，没有行军减耗。"
+    },
+    {
+      "id": "F127-04",
+      "base": "dragon_food",
+      "materials": [
+        "relic_cutlery"
+      ],
+      "target": "relic_march_lunchbox",
+      "round_min": 1,
+      "fee": 0,
+      "type": "family",
+      "route": "补给与餐具",
+      "family": "food",
+      "trade": "周期回耐从2提高到3，打包成行军饭盒；放弃开场盾换持续减耗与配餐接力。"
+    },
+    {
+      "id": "F127-05",
+      "base": "soup",
+      "materials": [
+        "maocai"
+      ],
+      "target": "dragon_food",
+      "round_min": 1,
+      "fee": 0,
+      "type": "family",
+      "route": "补给与餐具",
+      "family": "food",
+      "trade": "两份餐食组合；保留鱼汤的周期回耐和冒菜的开场护盾。"
+    },
+    {
+      "id": "F127-06",
+      "base": "daily_tea",
+      "materials": [
+        "relic_tea_strainer"
+      ],
+      "target": "cool_tea",
+      "round_min": 1,
+      "fee": 0,
+      "type": "family",
+      "route": "茶饮与药草",
+      "family": "tea",
+      "trade": "茶滤缓慢治疗与清茶迅捷组合成凉茶；保留治疗和开场迅捷。"
+    },
+    {
+      "id": "F127-07",
+      "base": "cool_tea",
+      "materials": [
+        "relic_tea_strainer"
+      ],
+      "target": "provision_strong_tea",
+      "round_min": 1,
+      "fee": 0,
+      "type": "family",
+      "route": "茶饮与药草",
+      "family": "tea",
+      "trade": "凉茶再次滤萃；保留开场迅捷，提高周期治疗，不提供净化。"
+    },
+    {
+      "id": "F127-08",
+      "base": "cool_tea",
+      "materials": [
+        "mat_42300030"
+      ],
+      "target": "provision_clear_tea",
+      "round_min": 1,
+      "fee": 0,
+      "type": "family",
+      "route": "茶饮与药草",
+      "family": "tea",
+      "trade": "凉茶加入鸢尾花；保留治疗和开场迅捷，增加定期净化。"
+    },
+    {
+      "id": "F127-09",
+      "base": "cool_tea",
+      "materials": [
+        "mat_42310090"
+      ],
+      "target": "provision_strong_tea",
+      "round_min": 1,
+      "fee": 0,
+      "type": "family",
+      "route": "茶饮与药草",
+      "family": "tea",
+      "trade": "凉茶增加水灯花浓度；保留开场迅捷，强化周期治疗，不附带净化。"
+    },
+    {
+      "id": "F127-10",
+      "base": "cool_tea",
+      "materials": [
+        "revive"
+      ],
+      "target": "provision_clear_tea",
+      "round_min": 1,
+      "fee": 0,
+      "type": "family",
+      "route": "茶饮与药草",
+      "family": "tea",
+      "trade": "凉茶吸收复苏吸雾的净化用途；保留周期治疗，净化改为周期。"
+    },
+    {
+      "id": "F127-11",
+      "base": "relic_clockwork",
+      "materials": [
+        "mat_42500030"
+      ],
+      "target": "relic_diverter",
+      "round_min": 1,
+      "fee": 0,
+      "type": "family",
+      "route": "机械与发条",
+      "family": "machinery",
+      "trade": "储能发条接入紫晶；保留供能，并可提前消耗小份充能。"
+    },
+    {
+      "id": "F127-12",
+      "base": "relic_diverter",
+      "materials": [
+        "relic_clockwork"
+      ],
+      "target": "relic_capacitor",
+      "round_min": 1,
+      "fee": 0,
+      "type": "family",
+      "route": "机械与发条",
+      "family": "machinery",
+      "trade": "保留充能供给并扩大储能；放弃小份消耗，使充能留给重击。"
+    },
+    {
+      "id": "F127-13",
+      "base": "relic_diverter",
+      "materials": [
+        "mat_43020031"
+      ],
+      "target": "relic_pulse_gear",
+      "round_min": 1,
+      "fee": 0,
+      "type": "family",
+      "route": "机械与发条",
+      "family": "machinery",
+      "trade": "分流齿轮接入涡流传动；保留供能，单次分流增强但间隔变长。"
+    },
+    {
+      "id": "F127-14",
+      "base": "relic_diverter",
+      "materials": [
+        "mat_43020021"
+      ],
+      "target": "relic_capacitor",
+      "round_min": 1,
+      "fee": 0,
+      "type": "family",
+      "route": "机械与发条",
+      "family": "machinery",
+      "trade": "分流齿轮加入晶化燃素储能；保留并增强供能，放弃小份放电，为重击积攒。"
+    },
+    {
+      "id": "F127-15",
+      "base": "relic_diverter",
+      "materials": [
+        "mat_43020021"
+      ],
+      "target": "relic_pulse_gear",
+      "round_min": 1,
+      "fee": 0,
+      "type": "family",
+      "route": "机械与发条",
+      "family": "machinery",
+      "trade": "晶化燃素接入分流齿组；与蓄能飞轮共享输入但选择小份放电，单次更强而间隔更长。"
+    },
+    {
+      "id": "F127-16",
+      "base": "relic_diaphragm",
+      "materials": [
+        "tube"
+      ],
+      "target": "relic_recorder",
+      "round_min": 1,
+      "fee": 0,
+      "type": "family",
+      "route": "声学器件",
+      "family": "acoustics",
+      "trade": "振膜接入密音筒记录声骸；保留冷却推进，改以两次自然攻击后的有限重演输出。"
+    },
+    {
+      "id": "F127-17",
+      "base": "relic_recorder",
+      "materials": [
+        "puppet"
+      ],
+      "target": "elegance",
+      "round_min": 1,
+      "fee": 0,
+      "type": "family",
+      "route": "声学器件",
+      "family": "acoustics",
+      "trade": "保留推进，7格压成4格；交替重演上限6，低伤声骸伤害可能降低。"
+    },
+    {
+      "id": "F127-18",
+      "base": "relic_recorder",
+      "materials": [
+        "tuner"
+      ],
+      "target": "relic_echo_relay",
+      "round_min": 1,
+      "fee": 0,
+      "type": "family",
+      "route": "声学器件",
+      "family": "acoustics",
+      "trade": "录筒接入调谐器；保留基础推进，放弃复制伤害换不同声骸接力推进。"
+    },
+    {
+      "id": "F127-19",
+      "base": "relic_diaphragm",
+      "materials": [
+        "puppet"
+      ],
+      "target": "relic_recorder",
+      "round_min": 1,
+      "fee": 0,
+      "type": "family",
+      "route": "声学器件",
+      "family": "acoustics",
+      "trade": "机械人偶安装振膜成为录筒；保留推进与有限重演，不复制状态。"
+    },
+    {
+      "id": "F127-20",
+      "base": "relic_recorder",
+      "materials": [
+        "contract"
+      ],
+      "target": "relic_echo_relay",
+      "round_min": 1,
+      "fee": 0,
+      "type": "family",
+      "route": "声学器件",
+      "family": "acoustics",
+      "trade": "录筒共振契约形成接力音叉；保留推进，要求两种声骸交替，不再复制攻击。"
+    },
+    {
+      "id": "F127-21",
+      "base": "relic_guard_plate",
+      "materials": [
+        "mat_43020011"
+      ],
+      "target": "relic_layered_guard",
+      "round_min": 1,
+      "fee": 0,
+      "type": "family",
+      "route": "防护构件",
+      "family": "defense",
+      "trade": "护板覆上金属液滴形成叠甲；保留周期护盾，增强持续防护。"
+    },
+    {
+      "id": "F127-22",
+      "base": "relic_layered_guard",
+      "materials": [
+        "relic_clockwork"
+      ],
+      "target": "relic_recoil_guard",
+      "round_min": 1,
+      "fee": 0,
+      "type": "family",
+      "route": "防护构件",
+      "family": "defense",
+      "trade": "叠层护板装上回弹发条；周期盾由5/6秒变为6/8秒，持续防护较少，挡伤后可消耗剩余盾反击。"
+    },
+    {
+      "id": "F127-24",
+      "base": "echo_vanguard",
+      "materials": [
+        "relic_guard_plate"
+      ],
+      "target": "rocksteady",
+      "round_min": 1,
+      "fee": 0,
+      "type": "family",
+      "route": "防护构件",
+      "family": "defense",
+      "trade": "幼岩加装护板成为同岩系斗士；保留削盾，获得持续防护。"
+    },
+    {
+      "id": "F127-25",
+      "base": "cyan_heron",
+      "materials": [
+        "relic_guard_plate"
+      ],
+      "target": "violet",
+      "round_min": 1,
+      "fee": 0,
+      "type": "family",
+      "route": "防护构件",
+      "family": "defense",
+      "trade": "青羽鹭加装护板走向格挡姿态；保留开场1迅捷，持续迅捷转为招架反击。"
+    },
+    {
+      "id": "F127-26",
+      "base": "mat_42500010",
+      "materials": [
+        "mat_43020011"
+      ],
+      "target": "relic_breaker_wedge",
+      "round_min": 1,
+      "fee": 0,
+      "type": "family",
+      "route": "破甲构件",
+      "family": "breaker",
+      "trade": "红针晶簇嵌入金属楔；保留3开场盾，周期削盾从4提高到5。"
+    },
+    {
+      "id": "F127-27",
+      "base": "relic_breaker_wedge",
+      "materials": [
+        "relic_clockwork"
+      ],
+      "target": "relic_crack_driver",
+      "round_min": 1,
+      "fee": 0,
+      "type": "family",
+      "route": "破甲构件",
+      "family": "breaker",
+      "trade": "破盾楔由发条驱动；保留3开场盾，周期削盾从5提高到8，不奖励无盾伤害。"
+    },
+    {
+      "id": "F127-28",
+      "base": "relic_breaker_wedge",
+      "materials": [
+        "magnifier"
+      ],
+      "target": "relic_breach_scope",
+      "round_min": 1,
+      "fee": 0,
+      "type": "family",
+      "route": "破甲构件",
+      "family": "breaker",
+      "trade": "破盾楔加瞄镜寻找缺口；保留开场盾与周期削盾，无盾时获得追加伤害，削盾量低于冲头。"
+    },
+    {
+      "id": "F127-29",
+      "base": "relic_breaker_wedge",
+      "materials": [
+        "mat_42500030"
+      ],
+      "target": "relic_crack_driver",
+      "round_min": 1,
+      "fee": 0,
+      "type": "family",
+      "route": "破甲构件",
+      "family": "breaker",
+      "trade": "紫晶为破盾楔供能；专注更强削盾，仍无直接生命伤害奖励。"
+    },
+    {
+      "id": "F127-31",
+      "base": "mat_41100011",
+      "materials": [
+        "relic_diaphragm"
+      ],
+      "target": "relic_noise_lamp",
+      "round_min": 1,
+      "fee": 0,
+      "type": "family",
+      "route": "光噪组件",
+      "family": "noise",
+      "trade": "呓语声核装入振膜灯；附噪周期从10秒缩至8秒，振膜推进转换为附噪频率。"
+    },
+    {
+      "id": "F127-32",
+      "base": "relic_noise_lamp",
+      "materials": [
+        "mat_41100013"
+      ],
+      "target": "relic_noise_chamber",
+      "round_min": 1,
+      "fee": 0,
+      "type": "family",
+      "route": "光噪组件",
+      "family": "noise",
+      "trade": "灯体扩成高频双腔；保留并强化两路声核总附噪，变为每3秒1层，需占4格而无追加跳伤。"
+    },
+    {
+      "id": "F127-33",
+      "base": "relic_noise_lamp",
+      "materials": [
+        "relic_recorder"
+      ],
+      "target": "relic_noise_chime",
+      "round_min": 1,
+      "fee": 0,
+      "type": "family",
+      "route": "光噪组件",
+      "family": "noise",
+      "trade": "声核灯接上录筒成为余响铃；保留每8秒附噪，以重击触发有限追加跳伤。"
+    },
+    {
+      "id": "F127-35",
+      "base": "relic_noise_lamp",
+      "materials": [
+        "mat_42500010"
+      ],
+      "target": "answer",
+      "round_min": 1,
+      "fee": 0,
+      "type": "family",
+      "route": "光噪组件",
+      "family": "noise",
+      "trade": "呓语声核灯嵌晶针；保留每8秒附噪，减益目标上的武器可有限穿盾。"
+    },
+    {
+      "id": "F127-36",
+      "base": "mat_42300100",
+      "materials": [
+        "relic_tea_strainer"
+      ],
+      "target": "relic_cooling_can",
+      "round_min": 1,
+      "fee": 0,
+      "type": "family",
+      "route": "霜渐组件",
+      "family": "frost",
+      "trade": "紫珊瑚装入滤罐；附霜周期从10秒缩至8秒，并保留茶滤的周期治疗。"
+    },
+    {
+      "id": "F127-37",
+      "base": "relic_cooling_can",
+      "materials": [
+        "echo_glacio"
+      ],
+      "target": "relic_frost_condenser",
+      "round_min": 1,
+      "fee": 0,
+      "type": "family",
+      "route": "霜渐组件",
+      "family": "frost",
+      "trade": "冷凝罐接入冷凝棱镜；保留微量治疗，放弃棱镜攻击，换每5秒附霜与3次武器攻击协同控制。"
+    },
+    {
+      "id": "F127-38",
+      "base": "relic_cooling_can",
+      "materials": [
+        "mat_42500010"
+      ],
+      "target": "relic_shatter_prism",
+      "round_min": 1,
+      "fee": 0,
+      "type": "family",
+      "route": "霜渐组件",
+      "family": "frost",
+      "trade": "冷凝罐嵌红针晶体；保留基础附霜与缓慢治疗，攻击已结霜目标时追加伤害。"
+    },
+    {
+      "id": "F127-40",
+      "base": "relic_cooling_can",
+      "materials": [
+        "mat_43020031"
+      ],
+      "target": "relic_frost_condenser",
+      "round_min": 1,
+      "fee": 0,
+      "type": "family",
+      "route": "霜渐组件",
+      "family": "frost",
+      "trade": "冷凝罐加入慢板涡流循环；保留缓慢治疗，增强周期与武器协同附霜。"
+    }
+  ],
+  "item_updates": {
+    "magnifier": {
+      "tags": [
+        "relic"
+      ]
+    }
+  }
+}

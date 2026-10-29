@@ -1,0 +1,61 @@
+extends SceneTree
+var checks=[]
+func check(ok:bool,label:String):
+	checks.append({"ok":ok,"label":label})
+	if not ok:printerr("FAIL ",label)
+func _initialize():call_deferred("run")
+func run():
+	check(FileAccess.file_exists("res://scripts/ui/visual_skin.gd"),"display registry exists")
+	if FileAccess.file_exists("res://scripts/ui/visual_skin.gd"):
+		var skin=load("res://scripts/ui/visual_skin.gd")
+		var inv=load("res://scripts/inventory/inventory.gd").new()
+		var battle=load("res://scripts/battle/battle.gd").new()
+		var c=load("res://scripts/data/catalog.gd")
+		var run=inv.new_run("encore",50);var enemy=inv.new_run("jiyan",51)
+		var before=run.duplicate(true);var catalogue_hash=c.catalogue_hash
+		check(not skin.set_skin("original",false),"original skin explicitly unavailable")
+		var original=battle.simulate(run,enemy)
+		var path=skin.item_path("w_rectifier")
+		skin.set_skin("chibi",false)
+		check(skin.item_path("w_rectifier")==path and skin.item_path("w_rectifier").begins_with("res://assets/"),"all item paths stay in only Q skin")
+		check(skin.portrait_path("encore")==skin.portrait_path("role_1203"),"leader and recruit share their chibi identity")
+		check(skin.ui_path("panel").begins_with("res://assets/"),"UI paths use selected skin")
+		check(skin.bounds(skin.ui_path("glyph_coin")).size.x<900,"UI fitting excludes imperceptible transparent padding")
+		check(skin.bag_path("satchel").begins_with("res://assets/"),"bags use selected skin")
+		check(battle.simulate(run,enemy)==original,"obsolete skin requests cannot change simulation")
+		check(run==before and c.catalogue_hash==catalogue_hash,"skin leaves run and catalogue untouched")
+		check(skin.validate_manifest().is_empty(),"all Q art paths exist")
+		check(skin.validate_manifest({"items":{},"characters":{},"leaders":{},"bags":{},"ui":{}}).size()>200,"missing assets are explicit validation failures")
+		check(not skin.set_skin("unknown",false) and skin.current=="chibi","unknown skin cannot alter preference")
+		check(skin.profile_root(["--profile=visual-comparison"])=="user://profiles/visual-comparison/","comparison launchers share isolated save namespace")
+		check(skin.profile_root([])=="user://","ordinary launcher retains true saves")
+		check(skin.profile_root(["--profile=../../bad"])=="user://","unknown profile cannot escape namespace")
+		seed(8401);var expected=randi();seed(8401);skin.set_skin("original",false)
+		check(randi()==expected,"skin does not consume global RNG")
+		check_bag_preferences(skin)
+	var failures=checks.filter(func(v):return not v.ok).size()
+	print("SKIN REGISTRY: ",checks.size()," checks, ",failures," failures")
+	quit(1 if failures else 0)
+
+func check_bag_preferences(skin):
+	var isolated="user://qa-bag-preferences-"+str(OS.get_process_id())+"-"+str(Time.get_ticks_usec())+"/"
+	DirAccess.make_dir_recursive_absolute(isolated)
+	var path=isolated+"visual.cfg"
+	skin.configure([],isolated)
+	check(skin.bag_style=="patchwork_v129","normal startup uses the approved lightweight patchwork")
+	check(not FileAccess.file_exists(path),"loading preferences does not create files")
+	for saved in ["patchwork","paper","invalid","flat","fold","storybook","patchwork_v129"]:
+		var cfg=ConfigFile.new();cfg.set_value("display","bag_style",saved)
+		cfg.set_value("unrelated","value",123);cfg.save(path)
+		var before=FileAccess.get_file_as_string(path)
+		skin.configure([],isolated)
+		check(skin.bag_style=="patchwork_v129","stored style adopts the approved lightweight patchwork: "+saved)
+		check(FileAccess.get_file_as_string(path)==before,"startup leaves stored file untouched: "+saved)
+	skin.configure(["--bag-style=flat"],isolated)
+	check(skin.bag_style=="flat","comparison launcher can override stored fold")
+	skin.set_bag_style("patchwork_v129")
+	skin.set_bag_style("fold",false);skin.configure([],isolated)
+	check(skin.bag_style=="patchwork_v129","approved style survives next startup")
+	var stored=ConfigFile.new();stored.load(path)
+	check(stored.get_value("unrelated","value")==123,"saving style preserves unrelated settings")
+	DirAccess.remove_absolute(path);DirAccess.remove_absolute(isolated)

@@ -1,0 +1,8 @@
+{
+  "path": "assets/ui/camp-study/camp.png",
+  "generator": "built_in_image_gen",
+  "raw_path": "private-source",
+  "prompt": "art_sources/prompts/v135/camp.txt",
+  "reference": "build/qa/pvp-v134/native/02-async.png",
+  "sha256": "f70d4edf0203b30b7a71174cb4e46652c26bb7f54860ddde000398552f08bce9"
+}
