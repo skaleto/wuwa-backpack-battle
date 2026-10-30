@@ -615,6 +615,10 @@
     "path": "tests/regression/test_match_sampling_v138.gd",
     "timeout": 60
   },
+  "test_web_cache": {
+    "path": "tests/regression/test_web_cache.gd",
+    "timeout": 60
+  },
   "test_structure": {
     "path": "tests/regression/test_structure.gd",
     "timeout": 60
