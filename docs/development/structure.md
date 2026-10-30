@@ -11,6 +11,7 @@
 | 购买、合成、摆放 | `scripts/shop/`、`crafting/`、`inventory/` |
 | 战斗与招募 | `scripts/battle/`、`party/` |
 | 界面与动效 | `scripts/ui/`，内部按 items、pockets、party、battle 等用途分组 |
+| 声音设置 | `scripts/ui/settings_view.gd`（界面），`scripts/ui/audio/sound_settings.gd`（偏好），两个音频通道负责增益与静音 |
 | 保存与在线 | `scripts/storage/`、`online/`，整局提交在 `scripts/run/` |
 | 图片与音效 | `assets/`，按 items、characters、ui、audio、vfx、fonts 分类 |
 | 素材登记 | `assets/manifest.json`；离线缓存在 `assets/generated/` |

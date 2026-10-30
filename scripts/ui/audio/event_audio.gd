@@ -37,8 +37,13 @@ func _ready()->void:
 		pools[group]=[]
 		for n in VOICES[group]:
 			var player=AudioStreamPlayer.new();player.bus=bus_name;add_child(player);pools[group].append(player)
+func set_volume(value:float)->void:
+	var index=AudioServer.get_bus_index(bus_name)
+	if index>=0:AudioServer.set_bus_volume_db(index,linear_to_db(clampf(value,0.0,1.0)) if value>0 else -80.0)
 func set_muted(value:bool)->void:
 	muted=value
+	var index=AudioServer.get_bus_index(bus_name)
+	if index>=0:AudioServer.set_bus_mute(index,muted)
 	if muted:stop_all()
 func stop_all()->void:
 	for pool in pools.values():

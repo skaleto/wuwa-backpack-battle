@@ -84,3 +84,17 @@ static func draw_status_detail(g)->void:
 				var tip=StyleBoxFlat.new();tip.bg_color=Q.PLUM;tip.set_corner_radius_all(5)
 				g.draw_style_box(tip,Rect2(pos+Vector2(0,30),Vector2(42,23)))
 				g._text("%.1f"%status.remaining,pos+Vector2(6,47),13,Q.LIGHT)
+
+# Large, fixed hit targets are registered by the scene; only the face animates.
+static func control(g,rect:Rect2,label:String,action:String,paused:bool,hover:float,alpha:float)->void:
+	T.surface(g,rect,"button_primary",alpha,Color.WHITE*(1.0+hover*.12))
+	var ink=Color(Q.LIGHT,alpha)
+	var at=rect.position+Vector2(24,30)
+	if action=="pause" and not paused:
+		for x in [-7,5]:g.draw_line(at+Vector2(x,-10),at+Vector2(x,10),ink,5,true)
+	else:
+		var offsets=[-8,3] if action=="speed" else [-7]
+		for x in offsets:
+			g.draw_colored_polygon(PackedVector2Array([at+Vector2(x,-10),at+Vector2(x+12,0),at+Vector2(x,10)]),ink)
+		if action=="skip":g.draw_line(at+Vector2(9,-10),at+Vector2(9,10),ink,4,true)
+	g._text(label,rect.position+Vector2(43,37),21,ink)

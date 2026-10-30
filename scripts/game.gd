@@ -28,6 +28,7 @@ const STAR_FEEDBACK=preload("res://scripts/ui/items/star_feedback.gd")
 var placement_stars=preload("res://scripts/ui/items/placement_star_feedback.gd").new()
 var star_activations=preload("res://scripts/ui/items/star_activation_view.gd").new()
 const QL=preload("res://scripts/ui/chibi_layout.gd")
+const DESKTOP_WINDOW=preload("res://scripts/ui/desktop_window.gd")
 const SKIN=preload("res://scripts/ui/visual_skin.gd")
 const FEATURES=preload("res://scripts/run/demo_features.gd")
 const INFO=preload("res://scripts/ui/items/item_info.gd")
@@ -148,6 +149,12 @@ var crew_text_cache: Dictionary = {}
 var support_flights: Array = []
 var audio
 var music
+const SOUND_SETTINGS=preload("res://scripts/ui/audio/sound_settings.gd")
+const SETTINGS_VIEW=preload("res://scripts/ui/settings_view.gd")
+var sound_settings
+var settings_return_overlay=""
+var settings_drag_channel=""
+var settings_focus_channel=""
 var muted = false
 var run: Dictionary = {}
 var saved: Dictionary = {}
@@ -263,9 +270,11 @@ func _ready() -> void:
 	if DisplayServer.get_name()!="headless":get_window().title="索拉里斯大乱斗 · V138"
 	texture_filter=CanvasItem.TEXTURE_FILTER_LINEAR_WITH_MIPMAPS
 	# Test scenes supply their isolated store before entering the tree.
+	if storage==null:DESKTOP_WINDOW.configure(get_window())
 	var live_start=storage==null and SKIN.profile_root(OS.get_cmdline_user_args())=="user://"
 	if storage==null:storage=S.new(SKIN.profile_root(OS.get_cmdline_user_args()))
 	practice_storage=storage
+	sound_settings=SOUND_SETTINGS.new(storage.root_path)
 	online_storage=S.new(storage.root_path+"async/")
 	online_client=preload("res://scripts/online/async_pool_client.gd").new();add_child(online_client);online_client.configure(online_storage)
 	if live_start:online_client.call_deferred("start_identity")
@@ -282,9 +291,9 @@ func _ready() -> void:
 	for leader in C.characters:
 		camp_loadouts[leader]=inventory.new_run(leader,19).items
 	audio=AUDIO.new();add_child(audio)
-	audio.set_muted(muted)
+	audio.set_muted(muted or (sound_settings!=null and (sound_settings.effects_muted or sound_settings.effects_volume<=0)))
 	music=MUSIC.new();add_child(music)
-	_update_music()
+	_apply_sound_settings()
 	saved=storage.resume()
 	_refresh_camp_saves()
 	dialog=FileDialog.new()
@@ -715,9 +724,9 @@ func _draw_overtime() -> void:
 
 func _draw_battle_controls() -> void:
 	if run.phase=="battle":
-		_button(Rect2(1349,844,56,32),"▶" if paused else "Ⅱ","pause")
-		_button(Rect2(1349,884,56,32),"×"+str(int(speed)),"speed")
-		_button(Rect2(1349,924,56,32),"»","skip")
+		_button(Rect2(936,24,98,60),"继续" if paused else "暂停","pause")
+		_button(Rect2(1038,24,98,60),str(int(speed))+"×","speed")
+		_button(Rect2(1140,24,98,60),"跳过","skip")
 
 func _draw_board(build: Dictionary,origin: Vector2,side: int) -> void:
 	if SKIN.is_chibi() or (run.phase=="shop" and side==0):TERMINAL.placement_grid(self,origin,Vector2i(I.WIDTH,I.HEIGHT),CELL,paint_alpha)
@@ -1528,6 +1537,12 @@ func _draw_overlay() -> void:
 	paint_alpha=p
 	paint_offset=Vector2(116*(1-p),0)
 	var displayed=overlay if not overlay.is_empty() else motion.last_overlay
+	if displayed=="settings":
+		paint_offset=Vector2.ZERO
+		SETTINGS_VIEW.draw(self,sound_settings,settings_focus_channel)
+		paint_alpha=1.0
+		if overlay.is_empty():buttons=[]
+		return
 	if displayed in ["item_details","item_recipes"]:
 		if displayed=="item_details":ITEM_PANEL.details(self)
 		else:ITEM_PANEL.recipes(self)
@@ -1559,7 +1574,7 @@ func _draw_overlay() -> void:
 		_button(Rect2(515,369,410,57),"继续游戏","close",true,true,GREEN)
 		_button(Rect2(515,434,410,57),"对战记录","history",run.get("phase","")!="battle")
 		_button(Rect2(515,499,410,57),"返回选择","home")
-		_button(Rect2(515,564,410,57),"静音" if not muted else "打开声音","sound")
+		_button(Rect2(515,564,410,57),"设置","settings")
 		_button(Rect2(515,629,410,57),"退出游戏","quit")
 	elif displayed=="ghosts":
 		_text("异步影像",Vector2(630,332),32,INK)
@@ -1747,12 +1762,14 @@ func _update_bag_style_title()->void:
 		get_window().title="索拉里斯大乱斗 · V109 · "+("01 薄袋平铺" if SKIN.bag_style=="flat" else "02 软布折口")+" · F7 切换"
 
 func _input(event: InputEvent) -> void:
+	if overlay=="settings":
+		_settings_input(event);queue_redraw();return
 	if matching:return
 	if _preparation_frozen():
 		if event is InputEventMouseButton and event.pressed and event.button_index==MOUSE_BUTTON_LEFT:
 			mouse=event.position
 			for button in buttons:
-				if button.enabled and _button_contains(button,mouse) and button.action in ["battle","home","menu","close","quit"]:_action(button.action);break
+				if button.enabled and _button_contains(button,mouse) and button.action in ["battle","home","menu","settings","close","quit"]:_action(button.action);break
 		return
 	if event is InputEventKey and event.pressed and not event.echo and event.keycode==KEY_F7 and SKIN.bag_style in ["flat","fold"]:
 		_action("bag_style");queue_redraw();return
@@ -2233,7 +2250,11 @@ func _update_hover() -> void:
 
 func _action(action: String) -> void:
 	if matching:return
-	if _preparation_frozen() and action not in ["battle","home","menu","close","quit"]:return
+	if _preparation_frozen() and action not in ["battle","home","menu","settings","close","quit"]:return
+	if action=="settings":
+		settings_return_overlay=overlay if overlay=="menu" else ""
+		settings_focus_channel="";settings_drag_channel="";overlay="settings";_update_music();return
+	if action.begins_with("settings:"):_settings_action(action);return
 	if action.begins_with("mode:"):_switch_mode(action.trim_prefix("mode:"));return
 	if action.begins_with("camp:"):_camp_action(action);return
 	if action in ["stash_prev","stash_next"]:
@@ -2479,7 +2500,7 @@ func _action(action: String) -> void:
 			dragging={};_clear_held_pose()
 		"sound":
 			muted=not muted
-			if is_instance_valid(audio):audio.set_muted(muted)
+			if is_instance_valid(audio):audio.set_muted(muted or (sound_settings!=null and (sound_settings.effects_muted or sound_settings.effects_volume<=0)))
 			_update_music()
 		"quit":get_tree().quit()
 		"export":
@@ -2957,6 +2978,7 @@ func _file_selected(path: String) -> void:
 
 func _notification(what: int) -> void:
 	if what==NOTIFICATION_WM_CLOSE_REQUEST:
+		if sound_settings!=null and not settings_drag_channel.is_empty():_save_sound_settings()
 		if not history_return.is_empty():_close_archived_battle()
 		if not run.is_empty():_application().checkpoint(run)
 		get_tree().quit()
@@ -2969,7 +2991,60 @@ func _update_music()->void:
 	if not is_instance_valid(music):return
 	var phase=str(run.get("phase","shop")) if screen=="game" else "camp"
 	if phase=="recruit":phase="shop"
-	music.set_context(phase,muted,phase=="battle" and (paused or _blocking_overlay()))
+	music.set_context(phase,muted or (sound_settings!=null and (sound_settings.music_muted or sound_settings.music_volume<=0)),phase=="battle" and (paused or _blocking_overlay()))
+
+func _apply_sound_settings()->void:
+	if sound_settings==null:return
+	if is_instance_valid(audio):
+		audio.set_volume(sound_settings.effects_volume)
+		audio.set_muted(muted or sound_settings.effects_muted or sound_settings.effects_volume<=0)
+	if is_instance_valid(music):music.set_volume(sound_settings.music_volume)
+	_update_music()
+
+func _save_sound_settings()->void:
+	if not sound_settings.save():_notify("设置未能保存")
+
+func _settings_action(action:String)->void:
+	if action=="settings:back":
+		if not settings_drag_channel.is_empty():_save_sound_settings()
+		settings_drag_channel="";overlay=settings_return_overlay;settings_return_overlay="";_update_music()
+	elif action=="settings:reset":
+		sound_settings.reset();_apply_sound_settings();_save_sound_settings()
+	elif action.begins_with("settings:toggle:"):
+		sound_settings.toggle(action.trim_prefix("settings:toggle:"));_apply_sound_settings();_save_sound_settings()
+
+func _settings_drag(at:Vector2)->void:
+	var r=SETTINGS_VIEW.slider(settings_drag_channel)
+	sound_settings.set_volume(settings_drag_channel,snappedf((at.x-r.position.x)/r.size.x,.01))
+	_apply_sound_settings()
+
+func _settings_input(event:InputEvent)->void:
+	if event is InputEventMouseMotion:
+		mouse=event.position
+		if not settings_drag_channel.is_empty():_settings_drag(mouse)
+	elif event is InputEventMouseButton and event.button_index==MOUSE_BUTTON_LEFT:
+		mouse=event.position
+		if not event.pressed:
+			if not settings_drag_channel.is_empty():
+				_settings_drag(mouse);_save_sound_settings()
+				if settings_drag_channel=="effects":_sound("click")
+				settings_drag_channel=""
+			return
+		for channel in SETTINGS_VIEW.CHANNELS:
+			if SETTINGS_VIEW.slider(channel).grow(12).has_point(mouse):
+				settings_drag_channel=channel;settings_focus_channel=channel;_settings_drag(mouse);return
+		for button in buttons:
+			if button.enabled and str(button.action).begins_with("settings:") and _button_contains(button,mouse):
+				motion.press(button.action);_settings_action(button.action);_sound("click");return
+	elif event is InputEventKey and event.pressed:
+		if event.keycode==KEY_ESCAPE:_settings_action("settings:back");return
+		if event.keycode==KEY_TAB:settings_focus_channel="effects" if settings_focus_channel=="music" else "music";return
+		if settings_focus_channel.is_empty():return
+		if event.keycode in [KEY_LEFT,KEY_RIGHT,KEY_HOME,KEY_END]:
+			var value=sound_settings.volume(settings_focus_channel)+(-.05 if event.keycode==KEY_LEFT else .05)
+			if event.keycode in [KEY_HOME,KEY_END]:value=0 if event.keycode==KEY_HOME else 1
+			sound_settings.set_volume(settings_focus_channel,value);_apply_sound_settings();_save_sound_settings()
+		elif not event.echo and event.keycode in [KEY_ENTER,KEY_SPACE]:_settings_action("settings:toggle:"+settings_focus_channel)
 
 func _notify(message: String) -> void:
 	toast=message
@@ -2977,7 +3052,7 @@ func _notify(message: String) -> void:
 
 func _sound(key: String,weapon:String="") -> void:
 	if not is_instance_valid(audio):return
-	audio.set_muted(muted)
+	audio.set_muted(muted or (sound_settings!=null and (sound_settings.effects_muted or sound_settings.effects_volume<=0)))
 	audio.play_event("drop" if key=="collect" else key,weapon)
 
 func _stop_fusion_audio()->void:
@@ -3025,6 +3100,7 @@ func _board_cell(pos: Vector2,side: int=0) -> Vector2i:
 	return Vector2i(floori((logical.x-origin.x)/CELL),floori((logical.y-origin.y)/CELL))
 
 func _wallet_position() -> Vector2:
+	if SKIN.is_chibi() and run.get("phase", "")=="battle":return Vector2(830,51)
 	return Vector2(1108,51) if SKIN.is_chibi() else Vector2(1053,49)
 
 func _stash_mat_rect() -> Rect2:
@@ -3403,12 +3479,6 @@ func _button(rect: Rect2,label: String,action: String,enabled: bool = true,visib
 		return
 	if SKIN.is_chibi():
 		_draw_chibi_button(rect,label,action,enabled,color,hover,down);return
-	if action=="quit" and screen=="camp":
-		var at=visual_rect.get_center()
-		for angle in [PI*.25,PI*.75]:
-			var d=Vector2.from_angle(angle)
-			draw_line(at-d*12,at+d*12,Color(T.tone(T.PAPER),.8+hover*.2),2,true)
-		return
 	if action in ["crew_recruit","crew_formation","crew_original_intro","crew_original_outro"]:
 		var selected=color==GOLD
 		var at=visual_rect.position
@@ -3718,8 +3788,8 @@ func _draw_chibi_button(rect:Rect2,label:String,action:String,enabled:bool,color
 	var face_tint=Color.WHITE*(1.0+hover*.10);face_tint.a=1.0
 	var primary=action in ["battle","start","forge_confirm","replacement_confirm","material_confirm","sell_bag_confirm"]
 	var alpha=paint_alpha*(1.0 if enabled else .42)
-	if action=="quit" and screen=="camp" and overlay.is_empty():
-		STAGE.tool(self,visual,"close",hover,down,false,enabled);return
+	if action in ["pause","speed","skip"]:
+		Q_BATTLE.control(self,visual,label,action,paused,hover,alpha);return
 	if action=="battle":
 		# Only the rendered face grows; the registered circular target stays fixed.
 		var hovered_face=visual.grow(3.0*clampf(hover,0.0,1.0) if enabled else 0.0)

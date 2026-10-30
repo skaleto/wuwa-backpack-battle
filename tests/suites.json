@@ -622,5 +622,13 @@
   "test_structure": {
     "path": "tests/regression/test_structure.gd",
     "timeout": 60
+  },
+  "test_settings": {
+    "path": "tests/regression/test_settings.gd",
+    "timeout": 90
+  },
+  "test_desktop_resolution": {
+    "path": "tests/regression/test_desktop_resolution.gd",
+    "timeout": 30
   }
 }

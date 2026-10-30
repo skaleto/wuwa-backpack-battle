@@ -25,6 +25,10 @@ func _ready()->void:
 		player.stream=stream;player.bus=bus_name;player.volume_db=-80.0
 		add_child(player);players[key]=player
 
+func set_volume(value:float)->void:
+	var index=AudioServer.get_bus_index(bus_name)
+	if index>=0:AudioServer.set_bus_volume_db(index,linear_to_db(clampf(value,0.0,1.0)) if value>0 else -80.0)
+
 func set_context(phase:String,is_muted:bool,is_paused:bool=false)->void:
 	var next="" if phase in ["result","ending"] else "battle" if phase=="battle" else "prepare"
 	quiet=is_paused and phase=="battle"

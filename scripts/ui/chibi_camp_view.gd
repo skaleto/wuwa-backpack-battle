@@ -21,9 +21,7 @@ static func draw(g)->void:
  var leader=C.characters[g.selected_leader]
  var enter=reveal(g.camp_age,0)
  # The real text sits on the authored hanging sign; no title baked into the bitmap.
- g.draw_set_transform_matrix(g.draw_basis*Transform2D(-.055,Vector2(275,83)))
- ART.text(g,g.font,str(ProjectSettings.get_setting('application/config/name')),Rect2(-158,-35,322,70),36,W.INK)
- g.draw_set_transform_matrix(g.draw_basis)
+ ART.text(g,g.font,str(ProjectSettings.get_setting('application/config/name')),Rect2(96,48,322,70),36,W.INK)
  # Sparse window dust follows the light, with no star wallpaper or looping glows.
  for n in 5:
   var at=Vector2(48+fmod(n*87.1,540),175+fmod(n*67.3-g.age*5+2000,330))
@@ -37,6 +35,7 @@ static func draw(g)->void:
  ART.text(g,g.font,leader.name,Rect2(57,532,190,34),28,W.INK)
  var opening=leader.get('v60_traits',[["开场",""]])[0]
  ART.text(g,g.font,str(opening[0])+'：'+str(opening[1]),Rect2(57,571,190,28),19,W.INK)
+ W.button(g,Rect2(1245,27,164,59),"设置","settings","label",23)
  _loadout(g)
  _portraits(g)
  for mode in ['practice','async']:
@@ -52,7 +51,6 @@ static func draw(g)->void:
    var who=C.characters.get(pending.get('leader',''),{}).get('name','')
    W.button(g,Rect2(r.position.x+8,r.end.y+1,r.size.x-16,28),'继续 · '+who+' · 第 '+str(pending.get('round',1))+' 回合','camp:'+mode+':resume','label',16)
    W.button(g,Rect2(1322,r.position.y+54,100,39),'新对局','camp:'+mode+':new','label',16)
- W.button(g,Rect2(1346,27,62,62),'','quit','tool')
 static func _loadout(g)->void:
  ART.text(g,g.font,'初始装备',Rect2(741,380,320,40),24,W.INK,false)
  var items=g.camp_loadouts.get(g.selected_leader,[])
