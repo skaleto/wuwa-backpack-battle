@@ -12,12 +12,12 @@ func tier_sum(distribution:Dictionary,tier:int)->float:
   if int(C.items[k].v75.tier)==tier:total+=distribution[k]
  return total
 func _initialize():
- var r=inv.new_run("aemeath",19,"focused")
+ var r=inv.new_run_supply("aemeath",19,"focused",129)
  ck(not inv.shop_eligible(r,"weapon_21020015"),"high-quality direct offers unavailable at opening")
  r.round=3
  ck(inv.shop_eligible(r,"aero_coin") and inv.shop_eligible(r,"contract"),"default supply connects echo and final recipe materials")
  for leader in C.selectable_leaders():
-  r=inv.new_run(leader,19,"focused")
+  r=inv.new_run_supply(leader,19,"focused",129)
   for rn in [1,2,3,5,8,11]:
    r.round=rn
    var facts=SHOP.facts(r,inv)
@@ -30,7 +30,7 @@ func _initialize():
    if rn>=3:ck(tier_sum(weapon,2)>0 and tier_sum(weapon,3)>0,"real middle quality weapon supply "+leader)
    if rn>=5:ck(tier_sum(weapon,4)>0 and tier_sum(echo,4)>0,"real high quality category supply "+leader)
    if rn==11:ck(tier_sum(weapon,1)>.19 and tier_sum(weapon,4)>.24,"late supply preserves basic ingredients while advancing quality")
- r=inv.new_run("aemeath",19,"focused");r.round=11
+ r=inv.new_run_supply("aemeath",19,"focused",129);r.round=11
  r.stash.append(inv.make_piece("cyan_heron","qa-existing"))
  var missing=SHOP.missing(r,inv)
  ck("contract" in missing,"late missing partner is still offered")

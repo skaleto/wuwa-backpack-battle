@@ -105,13 +105,16 @@ static func procure(inv,run:Dictionary,route:String,conservative:bool=true)->voi
  var faces=1 if conservative and run.round<=3 else 2
  for shelf in faces:
   record(run,"shelf","",0,{"offers":run.shop.duplicate(true)})
-  purchase(inv,run,5,"capacity",conservative)
+  if int(run.get("supply_version",0))>=140:
+   for slot in 6:
+    if C.is_tag(run.shop[slot].get("kind",""),"bag") and purchase(inv,run,slot,"capacity",conservative):break
+  else:purchase(inv,run,5,"capacity",conservative)
   craft_owned(inv,run,route)
   var bought=0
   # Rescore after every purchase/fusion; newly missing inputs can be on this shelf.
   for attempt in 5:
    if conservative and run.round<=3 and bought>=run.round:break
-   var picks=[0,1,2,3,4]
+   var picks=range(6).filter(func(n):return not C.is_tag(run.shop[n].get("kind",""),"bag")) if int(run.get("supply_version",0))>=140 else [0,1,2,3,4]
    picks.sort_custom(func(a,b):return utility(run,a,route)>utility(run,b,route))
    var success=false
    for slot in picks:

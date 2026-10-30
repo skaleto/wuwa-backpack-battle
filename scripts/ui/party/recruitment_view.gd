@@ -2,11 +2,13 @@ extends Node2D
 ## Layered invitation stage. Owns animation/selection only; returns input intents.
 const ART=preload("res://scripts/ui/party/recruitment_art.gd")
 const CARD=preload("res://scripts/ui/party/recruitment_card_view.gd")
+const W=preload("res://scripts/ui/workbench_art.gd")
 const DISSOLVE=preload("res://scripts/ui/party/recruitment_dissolve.gdshader")
 const SIZE=Vector2(1440,960)
-const TITLE=Rect2(470,16,500,150)
-const CONFIRM=Rect2(490,844,460,105)
-const SATCHEL=Rect2(24,807,238,142)
+const TITLE=Rect2(515,36,410,78)
+const TITLE_TEXT=Rect2(540,50,360,49)
+const CONFIRM=Rect2(524,857,392,79)
+const SATCHEL=Rect2(44,855,198,61)
 const CARD_POSITIONS=[Vector2(128,170),Vector2(528,170),Vector2(928,170)]
 const INK=Color("493367")
 const JOIN_DURATION=1.15
@@ -39,11 +41,11 @@ func open(value:Dictionary,title_font:Font,text_font:Font)->void:
 	model=value.duplicate(true);font=title_font;body_font=text_font
 	active=true;visible=true;elapsed=0;selected=-1;hovered=-1;join_time=-1;arrived=false;peek=false;peek_page=0
 	for n in model.get("cards",[]).size():
-		var port=SubViewport.new();port.size=Vector2i(CARD.SIZE);port.transparent_bg=true
+		var port=SubViewport.new();port.size=Vector2i(CARD.SIZE*2);port.transparent_bg=true
 		port.render_target_update_mode=SubViewport.UPDATE_ALWAYS;port.gui_disable_input=true
 		add_child(port)
-		var painter=CARD.new();port.add_child(painter);painter.show_card(model.cards[n],font,body_font)
-		var sprite=Sprite2D.new();sprite.centered=false;sprite.texture=port.get_texture()
+		var painter=CARD.new();painter.scale=Vector2.ONE*2;port.add_child(painter);painter.show_card(model.cards[n],font,body_font)
+		var sprite=Sprite2D.new();sprite.centered=false;sprite.texture=port.get_texture();sprite.scale=Vector2.ONE*.5
 		var material_value=ShaderMaterial.new();material_value.shader=DISSOLVE;sprite.material=material_value
 		sprite.texture_filter=CanvasItem.TEXTURE_FILTER_LINEAR;add_child(sprite)
 		cards.append({"viewport":port,"painter":painter,"sprite":sprite,"material":material_value,"lift":0.0})
@@ -137,12 +139,13 @@ func _draw()->void:
 	if not active or font==null:return
 	var bg=model.get("background")
 	if bg:draw_texture_rect(bg,Rect2(Vector2.ZERO,SIZE),false)
-	draw_rect(Rect2(Vector2.ZERO,SIZE),Color("453274",.21))
-	for n in 20:
+	draw_rect(Rect2(Vector2.ZERO,SIZE),Color("453274",.52))
+	for n in 6:
 		var p=Vector2(60+fmod(n*241.0,1320),170+fmod(n*129.0-elapsed*5,620))
 		var a=.10+.08*sin(elapsed*1.8+n)
 		draw_circle(p,1.5 if n%3 else 2.5,Color("ffedbb",a))
-	ART.decor_label(self,font,"title","伙伴招募",TITLE,38,INK)
+	W.face(self,TITLE,"label")
+	ART.text(self,font,"伙伴招募",TITLE_TEXT,34,INK)
 	ART.text(self,body_font,"第 %d 回合结束"%int(model.get("node",3)),Rect2(520,155,400,30),21,Color("fff1d8"))
 	_draw_team()
 	_draw_milestones()
@@ -153,8 +156,11 @@ func _draw()->void:
 	if join_time>=0:alpha*=1-smoothstep(0,.25,join_time)
 	var button=CONFIRM
 	if button.has_point(pointer) and can_confirm():button.position.y-=2
-	ART.decor_label(self,font,"confirm","邀请入队",button,30,INK,alpha)
-	if join_time<0:ART.decor_label(self,font,"satchel","查看背包",SATCHEL,22,INK)
+	W.face(self,button,"label",Color(1,1,1,alpha))
+	ART.text(self,font,"邀请入队",button.grow(-21),30,Color(INK,alpha))
+	if join_time<0:
+		W.face(self,SATCHEL,"label")
+		ART.text(self,font,"查看背包",Rect2(57,862,172,45),22,INK)
 	if int(model.get("node",3))==3:
 		ART.text(self,body_font,"第 6 回合 · 三人羁绊",Rect2(1092,865,297,31),19,Color("f8e7c9"))
 	else:
@@ -164,7 +170,9 @@ func _draw_team()->void:
 	var team:Array=model.get("team",[])
 	for n in 3:
 		var center=Vector2(78+n*94,81)
-		ART.decor(self,"socket",Rect2(center-Vector2.ONE*42,Vector2.ONE*84),1.0 if n<team.size() else .6)
+		draw_circle(center+Vector2(0,2),38,Color("282038",.22))
+		draw_circle(center,36,Color("e5d8ee") if n<team.size() else Color("9b8bb6"))
+		draw_arc(center,36,0,TAU,48,Color("f6e5c8"),2,true)
 		if n<team.size():_portrait(self,team[n],Rect2(center-Vector2.ONE*31,Vector2.ONE*62))
 		else:ART.text(self,font,"+",Rect2(center-Vector2(16,22),Vector2(32,44)),32,Color("ddd2f4"))
 
@@ -210,7 +218,8 @@ func _draw_arrival(c:CanvasItem)->void:
 		c.draw_circle(point,(1+n%3*.6)*a,Color("fff4d8",a))
 	var scale_value=lerpf(90.0,62.0,travel)
 	var alpha=smoothstep(.15,.38,join_time)
-	ART.decor(c,"socket",Rect2(head-Vector2.ONE*(scale_value*.63),Vector2.ONE*scale_value*1.26),alpha)
+	c.draw_circle(head,scale_value*.57,Color("e5d8ee",alpha))
+	c.draw_arc(head,scale_value*.57,0,TAU,48,Color("f6e5c8",alpha),2,true)
 	_portrait(c,model.cards[selected],Rect2(head-Vector2.ONE*scale_value*.5,Vector2.ONE*scale_value),alpha)
 	if travel>.92:
 		c.draw_arc(target,38+sin((travel-.92)/.08*PI)*7,0,TAU,40,Color("ffe7ac",(1-travel)*8),2,true)

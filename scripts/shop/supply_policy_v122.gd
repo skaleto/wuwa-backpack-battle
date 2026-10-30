@@ -14,7 +14,7 @@ const TARGET_PROGRESS={
  4:[.03,.08,.25,.5,1.0,1.0],
  5:[.01,.025,.08,.2,.55,1.0],
 }
-static func enabled(data:Dictionary)->bool:return int(data.get('supply_version',0))in [VERSION,125,127,128,129]
+static func enabled(data:Dictionary)->bool:return int(data.get('supply_version',0))in [VERSION,125,127,128,129,140]
 static func commodity_weight(kind:String,round_number:int)->float:
  return float(CATALYST_WEIGHT[clampi(round_number-1,0,CATALYST_WEIGHT.size()-1)]) if kind in EARLY_CATALYSTS else 1.0
 static func commodities(ordinary:Dictionary,round_number:int)->Dictionary:

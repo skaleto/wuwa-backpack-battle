@@ -17,8 +17,8 @@ func _initialize():
  ck(C.v128_hash==old.catalogue_hash and C.catalogue_hash!=old.catalogue_hash,'published V128 hash frozen, current catalogue advances')
  for kind in old.items:ck(JSON.parse_string(JSON.stringify(C.items[kind]))==old.items[kind],'V128 item remains exact '+kind)
  ck(JSON.parse_string(JSON.stringify(C.combinations))==old.recipes,'recipes unchanged')
- var run=inv.new_run('aemeath',129)
- ck(run.get('supply_version')==129,'new runs use supply 129')
+ var run=inv.new_run_supply('aemeath',129,'full',129)
+ ck(run.get('supply_version')==129,'historical runs retain supply 129')
  ck(I.WIDTH==9 and I.HEIGHT==7 and I.MAX_CAPACITY==63 and inv.coverage(run.bags).size()==6,'board and initial capacity unchanged')
  for kind in SHAPES:
   ck(C.items.has(kind),'new pocket exists '+kind)

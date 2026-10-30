@@ -12,7 +12,7 @@ func _initialize():
  var current=JSON.parse_string(JSON.stringify(preload('res://tests/scenarios/pocket_supply_trace_v129.gd').sample()))
  ck(current.size()==baseline.size(),'same historical trace coverage')
  for i in mini(current.size(),baseline.size()):ck(current[i]==baseline[i],'exact old distributions, locked slots, purchases and refresh RNG '+str(i))
- var inv=I.new();var run=inv.new_run('aemeath',129);var old=inv.new_run_supply('aemeath',129,'full',128)
+ var inv=I.new();var run=inv.new_run_supply('aemeath',129,'full',129);var old=inv.new_run_supply('aemeath',129,'full',128)
  for rn in [1,3,6,10]:
   run.round=rn;old.round=rn
   for slot in 5:ck(SHOP.distribution(run,slot,inv)==SHOP.distribution(old,slot,inv),'ordinary item probabilities unchanged '+str(rn)+'/'+str(slot))

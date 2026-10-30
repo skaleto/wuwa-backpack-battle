@@ -2,11 +2,11 @@
 
 鸣潮题材的非官方二创背包自动战斗 Demo，使用 Godot 4.7.2。通过购买、摆放、星位联动、连续合成和队友招募构建阵容，支持独立的人机与异步在线对战模式。
 
-当前功能基线为 **V138**。在线免注册，后台建立安装身份并续期；客户端计算战斗，对手不足时明确使用练习对手补位。当前结构整理只调整组织方式，不改玩法、素材、存档及在线匹配池身份；目录与验证结果见 [结构说明](docs/development/structure.md)。
+当前功能基线为 **V138**，新局商店已升级为 **V140 随机货架**，招募改为简洁伙伴卡；见 [本轮改动](docs/development/polish-140.md)。在线免注册，后台建立安装身份并续期；客户端计算战斗，对手不足时明确使用练习对手补位。当前结构整理只调整组织方式，不改玩法、素材、存档及在线匹配池身份；目录与验证结果见 [结构说明](docs/development/structure.md)。
 
 ## 获取和启动
 
-玩家下载：[三端试玩版](https://github.com/skaleto/wuwa-backpack-battle/releases/tag/v0.1.0-demo.1)。Windows/macOS 包无需安装 Godot；Web 附件是需要 HTTP(S) 托管的部署包。启动方式、签名状态与 Web 联网前提见 [三端发布说明](docs/release/three-platform.md)。
+玩家下载：[最新 Windows 试玩版](https://github.com/skaleto/wuwa-backpack-battle/releases/tag/v0.1.0-demo.3)、[国内备用下载](https://clear-raccoon-d2gqs87oabfed2a47-1302322545.tcloudbaseapp.com/downloads/windows/v0.1.0-demo.3/SolarisBrawl-v0.1.0-demo.3-Windows-x86_64.zip)；macOS/Web 旧版见 [三端试玩版](https://github.com/skaleto/wuwa-backpack-battle/releases/tag/v0.1.0-demo.1)。Windows/macOS 包无需安装 Godot；Web 附件是需要 HTTP(S) 托管的部署包。启动方式、签名状态与 Web 联网前提见 [三端发布说明](docs/release/three-platform.md)。
 
 需要 Godot 4.7.2 与 Git LFS，素材通过 Git LFS 管理。
 

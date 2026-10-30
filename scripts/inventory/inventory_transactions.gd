@@ -36,8 +36,8 @@ static func replacement_quote(inv,run:Dictionary,target_uid:String,new_kind:Stri
 	var refund=resale_value(inv,target)
 	return {"refund":refund,"price":maxi(0,int(C.items[new_kind].price)-refund),"cashback":maxi(0,refund-int(C.items[new_kind].price))}
 
-static func _apply_replace_bag(inv,run: Dictionary,target_uid: String,new_kind: String,rotation: int) -> bool:
-	if run.get("phase","")!="shop" or not inv.shop_eligible(run,new_kind) or not C.is_tag(new_kind,"bag") or not inv.bounded_integer(rotation,0,3) or run.get("shop",[]).size()!=6 or run.shop[5].get("kind","")!=new_kind:return false
+static func _apply_replace_bag(inv,run: Dictionary,target_uid: String,new_kind: String,rotation: int,offer_index:int=5) -> bool:
+	if run.get("phase","")!="shop" or not inv.shop_eligible(run,new_kind) or not C.is_tag(new_kind,"bag") or not inv.bounded_integer(rotation,0,3) or run.get("shop",[]).size()!=6 or offer_index<0 or offer_index>=6 or run.shop[offer_index].get("kind","")!=new_kind:return false
 	if int(run.get("round",1))<inv.offer_round(new_kind):return false
 	var targets=run.get("bags",[]).filter(func(v):return v.uid==target_uid)
 	if targets.size()!=1:return false
@@ -56,7 +56,7 @@ static func _apply_replace_bag(inv,run: Dictionary,target_uid: String,new_kind: 
 	proposed.append(candidate)
 	if not inv.bags_legal(proposed) or not run.items.all(func(v):return inv.can_place(v,run.items,proposed)):return false
 	# Mutate only after every geometric, ownership, and financial check has passed.
-	run.bags=proposed;run.serial=next_serial;run.gold+=int(quote.cashback)-price;run.shop[5]={}
+	run.bags=proposed;run.serial=next_serial;run.gold+=int(quote.cashback)-price;run.shop[offer_index]={}
 	return true
 
 static func available_bags(inv,run: Dictionary) -> Array:
@@ -287,9 +287,9 @@ static func _apply_sell(inv,run: Dictionary,item: Dictionary) -> bool:
 	inv.clean_relay(run);ROUND_RULES._apply_claim_pending(inv,run)
 	return true
 
-static func plan_replace_bag(inv,run: Dictionary,target_uid: String,new_kind: String,rotation: int) -> Dictionary:
+static func plan_replace_bag(inv,run: Dictionary,target_uid: String,new_kind: String,rotation: int,offer_index:int=5) -> Dictionary:
 	var next=run.duplicate(true)
-	var value=_apply_replace_bag(inv,next,target_uid,new_kind,rotation)
+	var value=_apply_replace_bag(inv,next,target_uid,new_kind,rotation,offer_index)
 	return inv.operation_plan(run,next,value,value)
 
 static func plan_buy(inv,run: Dictionary,index: int) -> Dictionary:

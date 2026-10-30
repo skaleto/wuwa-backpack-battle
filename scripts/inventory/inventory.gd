@@ -139,11 +139,11 @@ func next_identity(run: Dictionary) -> Dictionary:
 	return {"serial":next_serial,"uid":uid}
 
 func new_run(leader: String, seed_value: int,pool_mode:String="full") -> Dictionary:
-	return new_run_supply(leader,seed_value,pool_mode,129)
+	return new_run_supply(leader,seed_value,pool_mode,140)
 
-func new_run_supply(leader:String,seed_value:int,pool_mode:String="full",supply_version:int=129)->Dictionary:
+func new_run_supply(leader:String,seed_value:int,pool_mode:String="full",supply_version:int=140)->Dictionary:
 	if not C.characters.has(leader):return {}
-	if supply_version not in [0,122,125,127,128,129]:return {}
+	if supply_version not in [0,122,125,127,128,129,140]:return {}
 	var run={"version":5,"ruleset":C.RULESET,"catalogue_hash":C.catalogue_hash,"leader":leader,"round":1,"wins":0,"losses":0,"gold":ECONOMY.starting_gold(),"seed":seed_value,"serial":2,"phase":"shop","items":[],"stash":[],"shop":[],"history":[],"relay":[],"primary":"i1","refreshes":0,"pending_gifts":[],"pending_rearrange":[],"golden_acquired":false,"roster":[],"supports":[],"recruited_round":0,"bags":[make_piece("satchel","b1")]}
 	if pool_mode not in ["full","focused"]:return {}
 	run.pool_mode=pool_mode
@@ -178,11 +178,11 @@ static func resale_value(piece:Dictionary)->int:
 func replacement_quote(run:Dictionary,target_uid:String,new_kind:String)->Dictionary:
 	return TRANSACTIONS.replacement_quote(self,run,target_uid,new_kind)
 
-func replace_bag(run: Dictionary,target_uid: String,new_kind: String,rotation: int) -> bool:
-	return bool(commit_operation(run,plan_replace_bag(run,target_uid,new_kind,rotation)).get("ok",false))
+func replace_bag(run: Dictionary,target_uid: String,new_kind: String,rotation: int,offer_index:int=5) -> bool:
+	return bool(commit_operation(run,plan_replace_bag(run,target_uid,new_kind,rotation,offer_index)).get("ok",false))
 
-func plan_replace_bag(run: Dictionary,target_uid: String,new_kind: String,rotation: int) -> Dictionary:
-	return TRANSACTIONS.plan_replace_bag(self,run,target_uid,new_kind,rotation)
+func plan_replace_bag(run: Dictionary,target_uid: String,new_kind: String,rotation: int,offer_index:int=5) -> Dictionary:
+	return TRANSACTIONS.plan_replace_bag(self,run,target_uid,new_kind,rotation,offer_index)
 
 func available_bags(run: Dictionary) -> Array:
 	return TRANSACTIONS.available_bags(self,run)
@@ -371,7 +371,7 @@ func validate_ghost(raw: Variant,allow_empty: bool=false) -> bool:
 	var expected_hash=C.catalogue_hash if accepted_catalogue_hash.is_empty() else accepted_catalogue_hash
 	if not raw is Dictionary or raw.get("version",0)!=5 or raw.get("ruleset","")!=C.RULESET or raw.get("catalogue_hash","")!=expected_hash or not C.characters.has(raw.get("leader","")) or not raw.get("items") is Array or not raw.get("bags") is Array:return false
 	if raw.get("pool_mode","full") not in ["full","focused"]:return false
-	if not bounded_integer(raw.get("supply_version",0),0,129) or int(raw.get("supply_version",0)) not in [0,122,125,127,128,129]:return false
+	if not bounded_integer(raw.get("supply_version",0),0,140) or int(raw.get("supply_version",0)) not in [0,122,125,127,128,129,140]:return false
 	if not raw.get("inactive",false) is bool or (raw.get("inactive",false) and not raw.items.is_empty()):return false
 	if not raw.has("roster") or not raw.has("supports") or not SUP.valid_team(raw):return false
 	if not preload("res://scripts/party/recruitment.gd").valid_state(self,raw):return false
@@ -426,7 +426,8 @@ func validate_run(raw: Variant) -> bool:
 		if not offer is Dictionary:return false
 		if offer.is_empty():continue
 		if not C.items.has(offer.get("kind","")) or not offer.get("locked",false) is bool:return false
-		if (n==5)!=C.is_tag(offer.kind,"bag") or C.is_tag(offer.kind,"keepsake"):return false
+		if C.is_tag(offer.kind,"keepsake"):return false
+		if int(raw.get("supply_version",0))<140 and (n==5)!=C.is_tag(offer.kind,"bag"):return false
 		if (not C.items[offer.kind].get("released",true) and not C.items[offer.kind].get("demo_available",false)) or (not shop_eligible(raw,offer.kind) and not legacy_offer(raw,offer)):return false
 		if offer.has("bundle"):
 			if n not in [3,4] or not offer.bundle is Array or offer.bundle.size()!=2 or not offer.bundle.all(func(k):return k is String and shop_eligible(raw,k)) or offer.bundle[0]!=offer.kind or offer.bundle[0]==offer.bundle[1]:return false

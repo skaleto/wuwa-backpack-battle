@@ -210,3 +210,5 @@ Kenney Particle Pack — https://kenney.nl/assets/particle-pack （CC0）
 	Request:  http://request.kenney.nl
 
 	Follow on Twitter for updates: @KenneyNL (www.twitter.com/kenneynl)
+
+2026-10-30：`assets/ui/recruitment/companion-card.png` 使用 OpenAI 图像生成工具，按用户选定的「01 简洁伙伴卡」生成独立空白卡底。角色与特色物品继续使用既有素材，不烘焙进底图；来源和参考见 `art_sources/recruitment-review-20261030/README.md`。

@@ -1,5 +1,6 @@
 extends RefCounted
 ## Approved probability policy. The planner owns RNG; pool math sees only facts.
+const SLOTS=preload("res://scripts/shop/supply_slots_v140.gd")
 const POOL=preload("res://scripts/shop/playtest_pool.gd")
 const C=preload("res://scripts/data/catalog.gd")
 const SUPPLY=preload("res://scripts/shop/supply_policy_v122.gd")
@@ -22,7 +23,7 @@ static func facts(run:Dictionary,inventory)->Dictionary:
 				var source=inventory.make_piece(other,"owned")
 				if partner_eligible(source,candidate,int(run.get("supply_version",0))) or partner_eligible(candidate,source,int(run.get("supply_version",0))):
 					partners.append(kind);break
-	return {"round":int(run.round),"supply_version":int(run.get("supply_version",0)),"eligible":eligible,"unlocked":unlocked,"owned":owned,"partners":partners}
+	return {"round":int(run.round),"supply_version":int(run.get("supply_version",0)),"eligible":eligible,"unlocked":unlocked,"owned":owned,"partners":partners,"bags":inventory.available_bags(run)}
 
 static func partner_eligible(source:Dictionary,target:Dictionary,version:int)->bool:
 	return preload("res://scripts/battle/build_rules.gd").accepts_star(source.kind,C.items[source.kind],C.supply_profile(source.kind,version),target.kind,C.items[target.kind],C.supply_profile(target.kind,version))
@@ -44,7 +45,7 @@ static func ordinary_pool(data:Dictionary,slot:int)->Dictionary:
 		if not groups[i].is_empty():norm+=float(mix[i])
 	if norm<=0:return result
 	for i in 4:
-		if int(data.get("supply_version",0)) in [127,128,129]:
+		if int(data.get("supply_version",0)) in [127,128,129,140]:
 			var shares=preload("res://scripts/shop/supply_policy_v127.gd").shares(groups[i])
 			for kind in shares:result[kind]=float(mix[i])/norm*shares[kind]
 		elif int(data.get("supply_version",0))==125:
@@ -66,6 +67,10 @@ static func missing_from(data:Dictionary)->Array:
 	return result
 
 static func pool(data:Dictionary,slot:int)->Dictionary:
+	if int(data.get("supply_version",0))==SLOTS.VERSION:
+		var groups=[]
+		for category in 3:groups.append(SUPPLY.weighted(ordinary_pool(data,category),data,slot))
+		return SLOTS.mix(groups,data.get("bags",[]))
 	var result=ordinary_pool(data,slot)
 	if SUPPLY.enabled(data):return SUPPLY.weighted(result,data,slot)
 	# Focused playtest: half of one slot offers a new compatible star partner.
@@ -99,7 +104,7 @@ static func roll(data:Dictionary,previous:Array,bag_choices:Array,rng:RandomNumb
 		if slot<previous.size() and previous[slot].get("locked",false):
 			result.append(previous[slot].duplicate(true));continue
 		var kind=""
-		if slot<5:kind=draw(pool(data,slot),rng)
+		if int(data.get("supply_version",0))==SLOTS.VERSION or slot<5:kind=draw(pool(data,slot),rng)
 		elif not bag_choices.is_empty():kind=bag_choices[rng.randi_range(0,bag_choices.size()-1)]
 		result.append({"kind":kind,"locked":false} if not kind.is_empty() else {})
 	return result

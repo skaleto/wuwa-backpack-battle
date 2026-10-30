@@ -238,6 +238,7 @@ var relay_mode = false
 var relay_draft: Array = []
 var material_page = 0
 var replacement_kind = ""
+var replacement_offer_index=5
 var replacement_target = ""
 var replacement_rotation = 0
 var material_uid = ""
@@ -451,9 +452,8 @@ func _draw() -> void:
 		_basis();paint_alpha=1;paint_offset=Vector2.ZERO
 		review_buttons=REVIEW_VIEW.draw(self,_review_snapshot(),font,_draw_icon)
 	if matching:
-		_basis();draw_rect(Rect2(0,0,1440,960),Color("292348",.32))
-		_panel(Rect2(566,421,308,94),Color("f3e6fd"),Color("b69acf"),2,18)
-		_text("寻找对手"+"·".repeat(1+int(age*3)%3),Vector2(620,477),27,SKIN.PLUM)
+		_basis()
+		preload("res://scripts/ui/matchmaking_view.gd").draw(self,font,str(run.get("leader",selected_leader)),age)
 	elif screen=="game" and game_mode=="async" and not review.active and not run.get("pvp",{}).get("source","").is_empty():
 		_basis();_text("玩家阵容" if run.pvp.source=="player" else "练习对手补位",Vector2(910,88),16,CREAM)
 
@@ -497,19 +497,20 @@ func _chibi_portrait(role:String,rect:Rect2,alpha:float=1.0,face_only:bool=false
 		T.surface(self,Rect2(rect.position+paint_offset,rect.size),"portrait_frame",alpha*paint_alpha)
 		rect=rect.grow(-4)
 	if face_only:
-		source=preload("res://scripts/ui/portraits/portrait_framing.gd").head_source(source)
+		var framing=preload("res://scripts/ui/portraits/portrait_framing.gd")
+		framing.draw(self,texture,Rect2(rect.position+paint_offset,rect.size),framing.head_source(source),Color(1,1,1,alpha*paint_alpha))
+		return
 	var ratio=minf(rect.size.x/source.size.x,rect.size.y/source.size.y)
 	var size=source.size*ratio
 	var clock_value=_portrait_clock()
-	var bob=0.0 if face_only else sin(clock_value*2.2)*2.4
+	var bob=sin(clock_value*2.2)*2.4
 	var hurt=0.0 if side<0 else clampf(float(motion.hit[side])/.22,0,1)
 	var shift=Vector2.ZERO if side<0 else Vector2(sin(hurt*PI)*8*(-1 if side==0 else 1),0)
 	var lean=0.0 if side<0 else lunge[side]*.035*(1 if side==0 else -1)
 	var pose=Transform2D(lean,Vector2(-1 if flip else 1,1),0,Vector2(rect.get_center().x,rect.end.y+bob)+paint_offset+shift)
 	draw_set_transform_matrix(draw_basis*pose)
 	var tint=Color.WHITE.lerp(Color("ffd7c5"),pow(hurt,2)*.65);tint.a=alpha*paint_alpha
-	if face_only:preload("res://scripts/ui/portraits/portrait_framing.gd").draw(self,texture,Rect2(Vector2(-size.x*.5,-size.y),size),source,tint)
-	else:draw_texture_rect_region(texture,Rect2(Vector2(-size.x*.5,-size.y),size),source,tint)
+	draw_texture_rect_region(texture,Rect2(Vector2(-size.x*.5,-size.y),size),source,tint)
 	draw_set_transform_matrix(draw_basis)
 
 func _draw_camp() -> void:
@@ -1124,7 +1125,7 @@ func _draw_shop() -> void:
 		if over>0.01:T.fade(self,rect,Color(T.tone(T.PAPER),over*.09),Color(T.tone(T.PAPER),0))
 		var kind=offer.kind
 		var selected=detail_origin=="shop" and detail_offer_index==n and item_selection_age<ITEM_SELECTION_DURATION
-		if n==5:
+		if C.is_tag(kind,"bag"):
 			var icon_rect=Rect2(rect.position+Vector2(8,6)+shift,Vector2(72,65))
 			_draw_icon(kind,_selection_rect(icon_rect) if selected else icon_rect,0,t)
 			_text(POCKETS.profile(kind).name,rect.position+Vector2(95,35)+shift,17,T.tone(T.PAPER))
@@ -1882,8 +1883,8 @@ func _keyboard_action(key: int) -> bool:
 			_action("bag_mode");return true
 		if key>=KEY_1 and key<=KEY_6:
 			var index=key-KEY_1
-			if index==5 and not run.shop[5].is_empty() and _needs_replacement(run.shop[5].kind):
-				_begin_replacement(run.shop[5].kind)
+			if not run.shop[index].is_empty() and C.is_tag(run.shop[index].kind,"bag") and _needs_replacement(run.shop[index].kind):
+				_begin_replacement(run.shop[index].kind,index)
 				return true
 			if _begin_shop_drag(index):
 				var fitted=inventory.first_fit(dragging,run.items,run.bags)
@@ -2029,8 +2030,8 @@ func _needs_replacement(kind: String) -> bool:
 		if C.is_tag(item.kind,"bag"):total+=inventory.cells(item).size()
 	return total+inventory.cells({"kind":kind,"rotation":0}).size()>I.MAX_CAPACITY
 
-func _begin_replacement(kind: String) -> void:
-	replacement_kind=kind
+func _begin_replacement(kind: String,offer_index:int=5) -> void:
+	replacement_kind=kind;replacement_offer_index=offer_index
 	var options=inventory.replacement_options(run,kind)
 	replacement_target=options[0].bag_uid if not options.is_empty() else ""
 	replacement_rotation=int(options[0].rotation) if not options.is_empty() else 0
@@ -2411,7 +2412,7 @@ func _action(action: String) -> void:
 			if inventory.has_method("claim_pending"):
 				_commit_preparation(inventory.plan_claim_pending(run))
 		"replacement_confirm":
-			if _commit_preparation(inventory.plan_replace_bag(run,replacement_target,replacement_kind,replacement_rotation)).ok:
+			if _commit_preparation(inventory.plan_replace_bag(run,replacement_target,replacement_kind,replacement_rotation,replacement_offer_index)).ok:
 				overlay=""
 				_sound("purchase")
 				motion.emit("land",_board_to_screen(BOARD),GOLD)
@@ -3839,6 +3840,9 @@ func _draw_chibi_shop()->void:
 			_draw_icon(offer.bundle[0],Rect2(icon_rect.position+Vector2(0,0),Vector2(83,83)),0,icon_alpha,false,true)
 			_draw_icon(offer.bundle[1],Rect2(icon_rect.position+Vector2(42,35),Vector2(83,77)),0,icon_alpha,false,true)
 			_text("+",icon_rect.position+Vector2(90,30),19,SKIN.PLUM)
+		elif C.is_tag(offer.kind,"bag"):
+			var at=_selection_rect(icon_rect) if selected else icon_rect
+			TERMINAL.thumbnail(self,at,offer.kind,0,icon_alpha,36.0)
 		else:_draw_icon(offer.kind,_selection_rect(icon_rect) if selected else icon_rect,0,icon_alpha,false,true)
 		var price=QL.price(n);var tag=price.grow_individual(0,-3,0,-3)
 		var locked=bool(offer.get("locked",false))

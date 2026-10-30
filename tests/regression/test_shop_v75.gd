@@ -14,7 +14,7 @@ func _initialize():
 	if not FileAccess.file_exists("res://scripts/shop/shop_v75.gd"):quit(1);return
 	var shop=load("res://scripts/shop/shop_v75.gd")
 	for leader in C.selectable_leaders():
-		run=inv.new_run(leader,19)
+		run=inv.new_run_supply(leader,19,"full",129)
 		for round_no in range(1,9):
 			run.round=round_no
 			for slot in 5:

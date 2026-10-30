@@ -115,11 +115,12 @@ static func surface(c:CanvasItem,origin:Vector2,bags:Array,pitch:float,focus:Str
 		for e in GRID._edge_records(selection):
 			if e.count==1:GRID._band(c,origin+e.a*pitch,origin+e.b*pitch,e.inward,.95*u,Color(UI.PAPER,.66*alpha))
 
-static func thumbnail(c:CanvasItem,rect:Rect2,kind:String,turns:int,alpha:float) -> void:
+static func thumbnail(c:CanvasItem,rect:Rect2,kind:String,turns:int,alpha:float,max_pitch:float=0) -> void:
 	var bag={"kind":kind,"rotation":turns,"x":0,"y":0,"uid":"icon"}
 	var hi=Vector2.ONE
 	for cell in inventory.cells(bag):hi=hi.max(Vector2(cell)+Vector2.ONE)
 	var pitch=minf(rect.size.x/hi.x,rect.size.y/hi.y)
+	if max_pitch>0:pitch=minf(pitch,max_pitch)
 	surface(c,rect.get_center()-hi*pitch*.5,[bag],pitch,"",alpha)
 
 const DANGO_FILLS={"satchel":Color("c3b6d5"),"pouch":Color("e5d3a4"),"strip":Color("b1cfbd"),"corner":Color("aec5d9"),"travel":Color("dcb6c1")}

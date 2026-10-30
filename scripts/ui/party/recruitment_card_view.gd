@@ -8,9 +8,9 @@ var body_font:Font
 var selected=false
 var reward_kind=""
 const SIZE=Vector2(384,654)
-const NAME=Rect2(137,273,193,34)
-const ABILITY=Rect2(137,307,193,27)
-const BASE=Rect2(43,360,298,73)
+const NAME=Rect2(38,281,132,43)
+const ABILITY=Rect2(206,286,140,32)
+const BASE=Rect2(43,360,298,82)
 const BASE_BONDED=Rect2(43,361,298,55)
 const BOND_TITLE=Rect2(45,424,294,28)
 const BOND_TEXT=Rect2(49,454,286,52)
@@ -20,13 +20,14 @@ func show_card(value:Dictionary,title_font:Font,text_font:Font)->void:
 func _draw()->void:
 	if model.is_empty() or font==null:return
 	var accent=ART.color(model.get("icon_id",model.ability_id))
-	draw_texture_rect_region(ART.texture("invitation"),Rect2(0,22,384,632),Rect2(0,70,1006,1456))
+	draw_texture_rect_region(ART.texture("companion-card"),Rect2(0,22,384,632),Rect2(52,38,920,1464))
 	# The portrait is an independent layer above the card's portrait field.
 	var portrait=model.get("portrait")
 	if portrait:
-		preload("res://scripts/ui/portraits/portrait_framing.gd").draw(self,portrait,Rect2(33,2,318,276),model.head_source)
-	ART.emblem(self,model.get("icon_id",model.ability_id),Rect2(35,264,96,96))
-	ART.text(self,font,model.name,NAME,24,INK)
+		preload("res://scripts/ui/portraits/portrait_framing.gd").draw(self,portrait,Rect2(33,24,318,254),model.head_source)
+	var symbol={"link":"haste","volley":"charge","guard":"shield","artisan":"material","supply":"bag"}.get(model.get("icon_id","link"),"star")
+	preload("res://scripts/ui/ability_icons.gd").draw(self,symbol,Rect2(170,284,32,36))
+	ART.text(self,font,model.name,NAME,31,INK)
 	ART.text(self,font,model.ability_name,ABILITY,18,accent.darkened(.25))
 	var bonded=not str(model.get("bond_name","")).is_empty()
 	var short_text=str(model.get("display_base",model.get("base_text","")))
@@ -54,7 +55,9 @@ func _draw()->void:
 		for n in mini(list.size(),3):
 			var width=272.0/maxi(1,list.size());var rect=Rect2(56+n*width,547,width-8,61)
 			ART.fit(self,list[n].texture,rect,list[n].source)
-	if selected:ART.decor(self,"check",Rect2(323,22,55,55))
+	if selected:
+		draw_circle(Vector2(345,43),16,Color("f7d78f"))
+		draw_polyline(PackedVector2Array([Vector2(337,43),Vector2(343,49),Vector2(353,36)]),INK,3,true)
 
 func reward_at(point:Vector2)->String:
 	var choices:Array=model.get("reward_icons",[])

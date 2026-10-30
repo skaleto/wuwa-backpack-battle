@@ -630,5 +630,9 @@
   "test_desktop_resolution": {
     "path": "tests/regression/test_desktop_resolution.gd",
     "timeout": 30
+  },
+  "test_shop_random_v140": {
+    "path": "tests/regression/test_shop_random_v140.gd",
+    "timeout": 120
   }
 }

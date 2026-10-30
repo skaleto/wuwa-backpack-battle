@@ -8,8 +8,9 @@ func test():
  var Q=load("res://scripts/ui/visual_skin.gd")
  var I=load("res://scripts/inventory/inventory.gd")
  var P=load("res://scripts/online/async_pvp.gd")
+ ck(P.pool_id(I.new().new_run("aemeath",19))=="6782d653abb077bcc2680a872f723d69ee7239c1297977028dd2349062ab7b11","new random supply pool")
  ck(C.catalogue_hash=="16cf6ae5e46b9328761bf304624cd172bbf74e7da6f6bcc0a639e7c7ee46e82f","catalogue unchanged")
- ck(P.pool_id(I.new().new_run("aemeath",19))=="f38abbcaa0cf07b37a2731e5a98a4e79b41ba7cdef8ac6036d69420bcc9f88c8","online pool unchanged")
+ ck(P.pool_id(I.new().new_run_supply("aemeath",19,"full",129))=="f38abbcaa0cf07b37a2731e5a98a4e79b41ba7cdef8ac6036d69420bcc9f88c8","historical online pool unchanged")
  Q.configure([],"user://qa-v138-structure-export/")
  for id in C.items:
   var path=Q.item_path(id)

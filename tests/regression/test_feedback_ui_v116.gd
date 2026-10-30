@@ -73,7 +73,7 @@ func audit_items()->void:
  ck(' '.join(D.effects('pouch')).contains('每个已使用的口袋格'),'shield keeps actual occupied-cell description')
  ck(C.items==before,'display audit cannot mutate catalogue or hash inputs')
 func audit_card(m:Dictionary,label:String)->void:
- fit_text(m.name,CARD.NAME,24,g.font,label+' name',20)
+ fit_text(m.name,CARD.NAME,31,g.font,label+' name',20)
  fit_text(m.ability_name,CARD.ABILITY,18,g.font,label+' ability',16)
  var bonded=not str(m.get('bond_name','')).is_empty()
  fit_text(m.display_base,CARD.BASE_BONDED if bonded else CARD.BASE,18 if bonded else 21,g.body_font,label+' base',16)
@@ -84,11 +84,13 @@ func audit_card(m:Dictionary,label:String)->void:
  ck(not CARD.NAME.intersects(CARD.ABILITY),'name and ability rows separate '+label)
  ck(not CARD.BASE_BONDED.intersects(CARD.BOND_TITLE) and not CARD.BOND_TITLE.intersects(CARD.BOND_TEXT),'card text regions separate '+label)
 func audit_layouts()->void:
- for spec in [[CREW.TITLE,'队伍搭配',36],[INVITE.TITLE,'伙伴招募',38]]:
+ for spec in [[CREW.TITLE,'队伍搭配',36]]:
   var safe=ART.decor_text_rect('title',spec[0])
   fit_text(spec[1],safe,spec[2],g.font,spec[1],30)
   # The cream ribbon is above the lower edge of the full decorative crop.
   ck(safe.end.y<spec[0].end.y-25,'title remains inside cream ribbon '+spec[1])
+ fit_text('伙伴招募',INVITE.TITLE_TEXT,34,g.font,'companion heading',30)
+ ck(INVITE.TITLE.encloses(INVITE.TITLE_TEXT),'new heading stays inside actual label')
  for node in [3,6]:
   for role in ABILITIES.ROLES:
    var run=g.inventory.new_run('aemeath',116);run.round=node+1

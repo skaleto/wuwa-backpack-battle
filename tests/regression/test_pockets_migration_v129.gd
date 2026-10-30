@@ -52,7 +52,7 @@ func _initialize():
  for previous in [[C.v116_hash,'migrate_v124','resonance-v116'],[C.v124_hash,'migrate_v125','resonance-v124'],[C.v125_hash,'migrate_v127','resonance-v125'],[C.v127_hash,'migrate_v128','resonance-v127']]:
   var fake=inv.new_run_supply('aemeath',129,'full',0);fake.catalogue_hash=previous[0];fake.simulation_version=previous[2];fake.stash.append(inv.make_piece('pocket_single','i100'));fake.serial=100
   ck(store.call(previous[1],fake).is_empty(),'older published hashes reject new pocket '+previous[1])
- var current_run=inv.new_run('aemeath',129);current_run.gold=30
+ var current_run=inv.new_run_supply('aemeath',129,'full',129);current_run.gold=30
  for kind in KINDS:
   current_run.shop[5]={'kind':kind,'locked':false};ck(inv.buy(current_run,5),'new pocket public buy before save '+kind)
  store.save(current_run);var resumed=store.resume()
