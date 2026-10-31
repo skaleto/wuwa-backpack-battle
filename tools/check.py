@@ -23,6 +23,7 @@ def main():
     unknown=set(selected)-SUITES.keys()
     if unknown:parser.error('unknown suites: '+', '.join(sorted(unknown)))
     if compute()!=json.loads((ROOT/'data/release-hashes.json').read_text()):raise SystemExit('Stale release fingerprints')
+    subprocess.run([sys.executable, '-m', 'unittest', 'discover', '-s', 'tests', '-p', 'test_privacy.py'], cwd=ROOT, check=True)
     prepare_output_dirs();logs=ROOT/'build/qa/regression';logs.mkdir(parents=True,exist_ok=True)
     def run(name):
         start=time.monotonic();spec=SUITES[name]

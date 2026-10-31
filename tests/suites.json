@@ -634,5 +634,9 @@
   "test_shop_random_v140": {
     "path": "tests/regression/test_shop_random_v140.gd",
     "timeout": 120
+  },
+  "test_privacy_fingerprints": {
+    "path": "tests/regression/test_privacy_fingerprints.gd",
+    "timeout": 60
   }
 }

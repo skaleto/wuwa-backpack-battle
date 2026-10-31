@@ -5,6 +5,7 @@ No player profiles, credentials, server code, tests, or design documents are cop
 import argparse,hashlib,json,os,re,shutil,subprocess,tempfile
 from pathlib import Path
 from release_manifest import ROOT,compute
+from privacy import check_paths
 GODOT=os.environ.get('GODOT','/Applications/Godot.app/Contents/MacOS/Godot')
 def files():
  entries=json.loads((ROOT/'data/runtime-files.json').read_text())
@@ -21,6 +22,7 @@ def files():
 def stage(destination):
  if destination.exists():raise ValueError('staging destination must be new')
  if json.loads((ROOT/'data/release-hashes.json').read_text())!=compute():raise ValueError('stale release rule manifest')
+ check_paths([p.relative_to(ROOT) for p in files()])
  destination.mkdir(parents=True)
  inventory=[]
  for source in files():

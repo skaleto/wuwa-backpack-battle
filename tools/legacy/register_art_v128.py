@@ -6,6 +6,9 @@ import shutil
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[2]
+import sys
+sys.path.insert(0, str(ROOT / "tools"))
+from privacy import public_source
 DOC = ROOT / 'build/qa/wuwa-items-v128'
 results = json.loads((DOC / 'generation-results.json').read_text())
 spec = json.loads((ROOT / 'data/items/solaris.json').read_text())
@@ -40,10 +43,10 @@ for entry in results:
         'original_reference': src['asset_url'], 'source_page': src['source_page'],
         'angle': 0, 'status': 'generated_reviewed', 'tags': [item['category']],
         'shape': item['shape'], 'generator': 'built_in_image_gen',
-        'raw_path': str(source), 'sha256': digest,
+        'raw_path': public_source(source), 'sha256': digest,
     }
     entries.append({
-        **entry, 'output_path': rel, 'sha256': digest,
+        **entry, 'source_generated_path': public_source(source), 'output_path': rel, 'sha256': digest,
         'width': dimensions[0], 'height': dimensions[1],
         'alpha_bounds': bounds['res://' + rel], 'visible_alpha_bounds_16': visible,
         'generated_bytes_preserved': True, 'original_concept': False,

@@ -3,6 +3,9 @@ from pathlib import Path
 import json,hashlib
 from PIL import Image
 R=Path(__file__).resolve().parents[2]
+import sys
+sys.path.insert(0, str(R / "tools"))
+from privacy import public_source
 manifest=R/'assets/manifest.json'
 M=json.loads(manifest.read_text())
 C=json.loads((R/'data/catalog.json').read_text())
@@ -15,7 +18,7 @@ for key,path in raw.items():
     assert 'A' in im.getbands(),key+' missing alpha'
     alpha=im.getchannel('A')
     assert alpha.getextrema()[0]==0 and alpha.getextrema()[1]==255,key+' missing transparent border'
-    entry.update(path=str(p.relative_to(R)),raw_path=path,sha256=hashlib.sha256(p.read_bytes()).hexdigest(),
+    entry.update(path=str(p.relative_to(R)),raw_path=public_source(path),sha256=hashlib.sha256(p.read_bytes()).hexdigest(),
                  dimensions=list(im.size),has_alpha=True,alpha_bounds=list(alpha.getbbox()),
                  status='generated_reviewed',generator='built_in_image_gen',prompt=f'art_sources/originals/{key}-prompt.txt')
 for key,d in C['items'].items():

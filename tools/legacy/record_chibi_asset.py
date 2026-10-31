@@ -8,6 +8,9 @@ from pathlib import Path
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[2]
+import sys
+sys.path.insert(0, str(ROOT / "tools"))
+from privacy import public_source
 parser = argparse.ArgumentParser()
 parser.add_argument("section", choices=["items", "characters", "ui", "bags"])
 parser.add_argument("key")
@@ -26,7 +29,7 @@ shutil.copy2(args.source, target)
 entry.update({
     "status": "generated_pending_native_review",
     "generator": "built_in_image_gen",
-    "raw_path": str(args.source),
+    "raw_path": public_source(args.source),
     "sha256": hashlib.sha256(target.read_bytes()).hexdigest(),
     "dimensions": list(image.size),
     "has_alpha": alpha is not None,
