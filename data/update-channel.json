@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "sequence": 14100,
+  "version": "0.2.0-demo.1",
+  "base_id": "desktop-v141",
+  "runtime": 1,
+  "feed_url": "https://clear-raccoon-d2gqs87oabfed2a47-1302322545.tcloudbaseapp.com/updates/stable.json",
+  "hosts": [
+    "clear-raccoon-d2gqs87oabfed2a47-1302322545.tcloudbaseapp.com",
+    "github.com",
+    "release-assets.githubusercontent.com"
+  ],
+  "public_key": "-----BEGIN PUBLIC KEY-----\nMIIBojANBgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEAuPbzlyTGDkaUMNGLTjly\nxZgGAHWQQ+Ij9plnnDszM7VhlzTyttsUaF6Qfjqc5FKFr/2fkV4N0ZrDaOAU1SpB\nmxDUXs02fm4bzfZoIPETBYkD9xIZyBY32L7WxNgTjCR9dX4f5FGGw32p6ubIP78Q\neY9U3G2ojhZ6PSC68DjRixZbMdOTr6hPMeUa8gdnmaDqNyMMMVWiybTc58vCl180\nxrxuU52LpCwsvRUUjs5PMAkU/QKlS6xIhdLeiHplGmVg/P7MFHPCYBvk3QGKGkjk\nFuyvHzY12+Uwa+7YyIiw1VeVPfWYJlespPa2HHz6lishL1fvmKxZv0uag7Qyjw5b\npr0tlQHVPumssjzkmy7CdMYMyhnq4LIwOUl+jcBUnsA+Jb3y3TTxJi+4rMYvEnVC\n51BUV8h2qk7HycyDKJp4FNBrUEcAHWbXy9HDFRfKZJzgThjOewmyKkOqdj2Y6/V/\nw/VUpLCEx4NQIBi9c79KtwreNw2hQFweupLNjI3Cas5DAgMBAAE=\n-----END PUBLIC KEY-----\n"
+}

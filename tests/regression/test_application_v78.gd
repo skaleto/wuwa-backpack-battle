@@ -30,6 +30,8 @@ func ck(ok,label):
 func _initialize():
 	var files=MemoryFiles.new();var engine=B.new();var app=A.new(inv,files,engine)
 	var fixture=inv.new_run("aemeath",19)
+	# Current application opts into new pocket rules; frozen constructor stays legacy.
+	fixture.pocket_version=143
 	files.enemy=inv.practice(1,19)
 	var began=app.start("aemeath",19)
 	for piece in fixture.bags+fixture.items:piece.x+=2;piece.y+=2

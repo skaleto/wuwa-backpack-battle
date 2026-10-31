@@ -10,3 +10,5 @@ static func cleared(run:Dictionary)->bool:
 static func display_limits(run:Dictionary)->Dictionary:
  var historical=run.get("phase","")=="ending" and run.get("simulation_version","") in HISTORICAL_VERSIONS
  return {"wins":6 if historical else WIN_TARGET,"losses":3 if historical else LOSS_LIMIT}
+static func result_delta(winner:int)->Dictionary:
+ return {"wins":1 if winner==1 else 0,"losses":0 if winner==1 else 1}

@@ -42,3 +42,6 @@ export_credentials.cfg
 !/docs/design/**/*.md
 !/docs/development/**/*.md
 !/docs/release/**/*.md
+
+# Local play builds; published only after explicit acceptance.
+/releases/

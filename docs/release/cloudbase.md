@@ -1,5 +1,7 @@
 # CloudBase 网页试玩部署
 
+当前 V2 上传源为 `releases/V2/Web/`，三端 ZIP 统一位于 `downloads/v0.2.0/`。历史 Windows 下载路径保留，作为最新 V2 的兼容镜像。当前版本与校验和见 [V2 发行说明](v2.md)。以下记录属于历史部署，旧包大小和摘要不再适用于已替换的兼容链接。
+
 2026-10-30 部署压缩后的 Web 包，游戏代码与在线规则保持不变。
 
 试玩地址：https://clear-raccoon-d2gqs87oabfed2a47-1302322545.tcloudbaseapp.com/
@@ -14,7 +16,7 @@
 使用已授权的 CloudBase CLI 3.8.10：
 
 ```bash
-tcb hosting deploy build/web-optimization/web \
+tcb hosting deploy releases/V2/Web \
   -e clear-raccoon-d2gqs87oabfed2a47 \
   --concurrency 3 --retry-count 3 --verify --entry index.html --json
 ```
@@ -57,3 +59,9 @@ CloudBase 只托管公开前端；原 ECS 凭证服务和私有 OSS 阵容桶继
 ## 最新 Windows 下载（demo.3）
 
 [新版 Windows ZIP](https://clear-raccoon-d2gqs87oabfed2a47-1302322545.tcloudbaseapp.com/downloads/windows/v0.1.0-demo.3/SolarisBrawl-v0.1.0-demo.3-Windows-x86_64.zip)，897935685 字节。SHA-256：`c2b6f79fc76b3568755fd461fddb403daeb37916eb897060613d44711184b387`。使用独立版本前缀，不覆盖旧安装包或网页入口。本轮只更新 Windows 下载，不更新站点内的旧 Web 游戏。
+
+## 更新体验版 Windows 完整包（0.2.0-demo.3）
+
+[Windows 国内下载](https://clear-raccoon-d2gqs87oabfed2a47-1302322545.tcloudbaseapp.com/downloads/windows/v0.2.0-demo.3/SolarisBrawl-0.2.0-demo.3-Windows-x86_64.zip)，899,105,147 字节。SHA-256：`b252389a3272cee27ddde2fe6c96f44aa57345ba653308566c22b967974b5d6e`。
+
+用于绕过旧客户端缺少“结束本局”入口导致的首次升级阻塞。退出旧程序、完整解压新包后运行，沿用稳定用户存档目录，不需要删除存档。已上传并通过 CloudBase 2/2 对象校验；旧下载与 Web 入口不变。同版小补丁约 338 KiB，常规升级使用游戏内更新通道即可。

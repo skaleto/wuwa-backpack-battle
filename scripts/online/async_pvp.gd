@@ -7,6 +7,7 @@ const PREFIX="test/pools/"
 static func active(run:Dictionary)->bool:return run.get("mode","")=="async"
 static func pool_id(run:Dictionary)->String:
 	var parts=[C.RULESET,C.catalogue_hash,R.simulation_version(run),int(run.get("supply_version",0)),str(run.get("pool_mode","full")),int(run.get("recruitment",{}).get("version",0))]
+	if int(run.get("pocket_version",0))>0:parts.append({"pocket_version":int(run.pocket_version)})
 	return JSON.stringify(parts).sha256_text()
 static func digest(bytes:PackedByteArray)->String:
 	var context=HashingContext.new();context.start(HashingContext.HASH_SHA256);context.update(bytes);return context.finish().hex_encode()
@@ -55,6 +56,7 @@ static func _shape_safe(build:Variant,inv)->bool:
 		if not build.get(name) is String or build[name].length()>160:return false
 	for name in ["round","version","supply_version"]:
 		if not inv.bounded_integer(build.get(name),0,1000):return false
+	if build.has("pocket_version") and not inv.bounded_integer(build.pocket_version,0,143):return false
 	for name in ["roster","supports","relay"]:
 		if not build.get(name) is Array or build[name].size()>12:return false
 		for value in build[name]:

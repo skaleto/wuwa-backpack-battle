@@ -48,8 +48,7 @@ def main():
 
     # iPhone launch options live only in the exported staging project.
     project = staging / 'project.godot'
-    text = project.read_text().replace('[application]',
-        '[application]\nconfig/icon="res://assets/ui/base/glyph_ghost.png"').replace(
+    text = project.read_text().replace(
         'window/stretch/mode="canvas_items"',
         'window/stretch/mode="canvas_items"\n'
         'window/handheld/orientation=0')
@@ -67,7 +66,7 @@ name="iOS"
 platform="iOS"
 runnable=true
 export_filter="all_resources"
-include_filter="*.json,*.bin,*.sha256,*.md,*.txt"
+include_filter="*.json,*.bin,*.sha256,*.md,*.txt,*.ico,*.icns"
 exclude_filter="build/*,docs/*,art_sources/*,tests/*,tools/*,services/*,addons/*,.git/*"
 export_path=""
 script_export_mode=0

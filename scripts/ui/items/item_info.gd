@@ -4,7 +4,7 @@ extends RefCounted
 const V75=preload("res://scripts/ui/items/item_presentation_v75.gd")
 const C=preload("res://scripts/data/catalog.gd")
 const F=preload("res://scripts/crafting/craft.gd")
-const P=preload("res://scripts/inventory/pocket_rules.gd")
+const P=preload("res://scripts/inventory/pocket_rules_current.gd")
 const FEATURES=preload("res://scripts/run/demo_features.gd")
 const TYPES={"sword":"迅刀","broadblade":"长刃","pistol":"佩枪","gauntlet":"臂铠","rectifier":"音感仪"}
 const ELEMENTS={"aero":"气动","electro":"导电","spectro":"衍射","fusion":"热熔","glacio":"冷凝","havoc":"湮灭","neutral":"无属性"}
@@ -52,7 +52,7 @@ const FACTS={
 	"spectro_coin":[["条件","相邻衍射武器"],["施加光噪","1 层"],["每层伤害","1 / 2 秒"],["持续 / 层数上限","6 秒 / 6 层"]]
 }
 
-static func effects(kind:String) -> Array:
+static func effects(kind:String,build:Dictionary={"pocket_version":143}) -> Array:
 	if V75.has_profile(kind):return V75.effect_rows(kind)
 	if C.items[kind].get("v60",{}).get("active",false) and not C.is_tag(kind,"bag"):return live_effects(kind)
 	var d=C.items[kind]
@@ -71,9 +71,9 @@ static func effects(kind:String) -> Array:
 			"photo":return [["武器每 3 次普攻","治疗 %.2f"%(3*power)],["治疗触发间隔","3 秒"],["2 次有效治疗 → 下击","+%.2f / 护盾 +3"%(float(d.damage)*.25)]]
 			"burst":return [["解放后 10 秒内","3 次强化普攻"],["强化普攻","+%.2f"%(float(d.damage)*.4)]]
 	if C.is_tag(kind,"bag"):
-		var p=P.profile(kind)
+		var p=P.profile(kind,build)
 		match p.stat:
-			"shield":return [["开场护盾 / 已用格","+2"]]
+			"shield":return [["开场护盾 / 已用格","+"+number(p.amount)]]
 			"speed":return [["接触物品冷却","−"+number(float(p.amount)*100)+"%"],["叠加","同类不叠加"]]
 			"echo":return [["接触声骸出手伤害","+"+number(float(p.amount)*100)+"%"],["叠加","同类不叠加"]]
 			"weapon":return [["接触武器伤害","+"+number(float(p.amount)*100)+"%"],["叠加","同类不叠加"]]
@@ -81,7 +81,7 @@ static func effects(kind:String) -> Array:
 	if C.is_tag(kind,"craft_material"):return [["用途","合成材料"],["使用数量","见配方"]]
 	return FACTS.get(kind,[]).duplicate(true)
 
-static func rows(item:Dictionary) -> Array:
+static func rows(item:Dictionary,build:Dictionary={"pocket_version":143}) -> Array:
 	if V75.has_profile(item.kind):return V75.rows(item)
 	var kind=str(item.kind);var d=C.items[kind];var out:Array=[]
 	if d.get("v60",{}).get("active",false):
@@ -91,7 +91,7 @@ static func rows(item:Dictionary) -> Array:
 		elif cd>0:out.append(["间隔",String.num(cd,1)+" 秒"])
 		if float(d.get("heal",0))>0:out.append(["治疗",String.num(d.heal,1)])
 		if float(d.get("stamina",0))>0:out.append(["体力消耗",String.num(d.stamina,1)])
-		out.append_array(effects(kind))
+		out.append_array(effects(kind,build))
 		if C.is_tag(kind,"provision"):out.append(["使用次数","每场一次"])
 		return out
 	if C.is_tag(kind,"weapon"):out.append(["类型",TYPES.get(d.weapon_type,"")])
@@ -107,7 +107,7 @@ static func rows(item:Dictionary) -> Array:
 	if C.is_tag(kind,"echo") and not d.get("v60",{}).get("active",false):
 		out.append(["强化等级",str(int(item.get("level",0)))+" / 2"])
 		out.append(["调谐",{"fast":"迅捷","strong":"强效","":"无"}.get(item.get("tuning",""),"无")])
-	out.append_array(effects(kind))
+	out.append_array(effects(kind,build))
 	if C.is_tag(kind,"weapon") and d.get("strict_signature",false):
 		out.append(["专武关联"," / ".join(d.signature_owner_ids.map(func(id):return C.roster.get(id,{}).get("name",id)))])
 	if C.is_tag(kind,"provision"):out.append(["使用次数","每场一次"])

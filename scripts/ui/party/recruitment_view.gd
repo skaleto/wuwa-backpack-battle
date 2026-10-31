@@ -8,6 +8,7 @@ const SIZE=Vector2(1440,960)
 const TITLE=Rect2(515,36,410,78)
 const TITLE_TEXT=Rect2(540,50,360,49)
 const CONFIRM=Rect2(524,857,392,79)
+const HOME=Rect2(1200,40,190,55)
 const SATCHEL=Rect2(44,855,198,61)
 const CARD_POSITIONS=[Vector2(128,170),Vector2(528,170),Vector2(928,170)]
 const INK=Color("493367")
@@ -109,7 +110,9 @@ func input_intent(event:InputEvent)->Dictionary:
 		return {}
 	if not interactive():return {}
 	if event is InputEventKey and event.pressed and not event.echo:
-		if event.keycode==KEY_ESCAPE and peek:peek=false;return {"kind":"click"}
+		if event.keycode==KEY_ESCAPE:
+			if peek:peek=false;return {"kind":"click"}
+			return {"kind":"home"}
 		if event.keycode in [KEY_1,KEY_2,KEY_3] and not peek:select(event.keycode-KEY_1);return {"kind":"click"}
 		if event.keycode==KEY_ENTER and can_confirm():return confirmation()
 	if event is InputEventMouseButton and event.pressed:
@@ -120,6 +123,7 @@ func input_intent(event:InputEvent)->Dictionary:
 			elif event.button_index==MOUSE_BUTTON_LEFT and (Rect2(1120,120,150,50).has_point(pointer) or not Rect2(155,105,1130,700).has_point(pointer)):peek=false
 			return {"kind":"click"}
 		if event.button_index!=MOUSE_BUTTON_LEFT:return {}
+		if HOME.has_point(pointer):return {"kind":"home"}
 		if SATCHEL.has_point(pointer):peek=true;peek_page=0;return {"kind":"click"}
 		if CONFIRM.has_point(pointer) and can_confirm():return confirmation()
 		for n in cards.size():
@@ -146,6 +150,8 @@ func _draw()->void:
 		draw_circle(p,1.5 if n%3 else 2.5,Color("ffedbb",a))
 	W.face(self,TITLE,"label")
 	ART.text(self,font,"伙伴招募",TITLE_TEXT,34,INK)
+	W.face(self,HOME,"label")
+	ART.text(self,body_font,"返回主界面",HOME.grow(-8),21,INK)
 	ART.text(self,body_font,"第 %d 回合结束"%int(model.get("node",3)),Rect2(520,155,400,30),21,Color("fff1d8"))
 	_draw_team()
 	_draw_milestones()

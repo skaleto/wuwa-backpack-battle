@@ -20,7 +20,7 @@ func _initialize():
 	broken=run.duplicate(true);broken.catalogue_hash=C.v128_hash;s.write_json(s.root_path+"run.json",broken)
 	ck(s.resume().is_empty() and s.read_json(s.root_path+"run.json",{}).catalogue_hash==C.v128_hash,"online run never silently migrated to new rules pool")
 	var final_run=app.start("aemeath",71).run;final_run.round=4;final_run.wins=0;final_run.losses=3
-	app.prepare_match(final_run,"alice");var bot=inv.practice(4,11,"full",int(final_run.supply_version))
+	app.prepare_match(final_run,"alice");var bot=inv.practice(4,11,"full",int(final_run.supply_version),int(final_run.get("pocket_version",0)))
 	app.lock_opponent(final_run,bot,"bot","empty_pool");app.begin(final_run,bot)
 	final_run.combat.winner=-1;app.finish_replay(final_run);app.advance(final_run,final_run.combat)
 	app.preserve_result(final_run);var reloaded=s.resume();app.preserve_result(reloaded)

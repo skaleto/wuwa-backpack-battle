@@ -3,12 +3,12 @@ extends RefCounted
 const C=preload("res://scripts/data/catalog.gd")
 const INFO=preload("res://scripts/ui/items/item_info.gd")
 const ICONS=preload("res://scripts/ui/ability_icons.gd")
-const POCKETS=preload("res://scripts/inventory/pocket_rules.gd")
+const POCKETS=preload("res://scripts/inventory/pocket_rules_current.gd")
 const T=preload("res://scripts/ui/ui_theme.gd")
 const PRIORITY=["counter","charge","haste","shield","healing","break_shield","noise","frost","stamina","cleanse","max_hp","attack"]
-static func benefits(kind:String)->Array:
+static func benefits(kind:String,build:Dictionary={"pocket_version":143})->Array:
  if C.is_tag(kind,"bag"):
-  var stat=POCKETS.profile(kind).stat
+  var stat=POCKETS.profile(kind,build).stat
   return [{"capacity":["bag","扩容"],"shield":["shield","护盾"],"speed":["haste","加速"],"echo":["echo","声骸增强"],"weapon":["weapon","伤害增强"]}[stat]]
  var chips=INFO.type_chips(kind);var result=[]
  for key in PRIORITY:
@@ -20,8 +20,8 @@ static func benefits(kind:String)->Array:
 static func plate(canvas:CanvasItem,rect:Rect2,fill:Color,edge:Color,radius:int)->void:
  var style=StyleBoxFlat.new();style.bg_color=fill;style.border_color=edge;style.set_border_width_all(1);style.set_corner_radius_all(radius);style.anti_aliasing=true
  canvas.draw_style_box(style,rect)
-static func draw_benefits(canvas:CanvasItem,kind:String,rect:Rect2,font:Font)->void:
- var labels=benefits(kind);var widths=[];var total=0.0
+static func draw_benefits(canvas:CanvasItem,kind:String,rect:Rect2,font:Font,build:Dictionary={"pocket_version":143})->void:
+ var labels=benefits(kind,build);var widths=[];var total=0.0
  for label in labels:
   var w=font.get_string_size(label[1],HORIZONTAL_ALIGNMENT_LEFT,-1,13).x+24
   widths.append(w);total+=w

@@ -62,72 +62,69 @@ static func frame(g,title:String):
 	g._button(Rect2(1069,138,97,42),"返回","details_back")
 	T.rule(g,Vector2(271,192)+g.paint_offset,Vector2(1168,192)+g.paint_offset,.24*g.paint_alpha)
 
-static func detail_height(g,item:Dictionary)->float:
-	var lines=0
-	for line in D.effects(item.kind):lines+=A.lines(g,line,316,16).size()
-	var star_row=96 if not C.items[item.kind].get("stars",[]).is_empty() else 0
-	var requirement=50 if C.items[item.kind].get("strict_signature",false) else 0
-	return 160+(45 if not bundle_offer(g).is_empty() else 0)+(48 if not g._shop_recipe_partners().is_empty() else 0)+star_row+requirement+D.stats(item.kind).size()*32+clampf(lines*23+D.effects(item.kind).size()*7+84,130,280)+112
+# Legacy game adapter: query once, then hand detached values to the shared view.
+static func _bundle_for(g,item:Dictionary,origin:String,offer_index:int)->Dictionary:
+	if origin!="shop" or offer_index<0 or offer_index>=g.run.get("shop",[]).size():return {}
+	var offer=g.run.shop[offer_index]
+	return offer if offer.get("bundle",[]).size()==2 and offer.get("kind","")==item.get("kind","") else {}
 
 static func bundle_offer(g)->Dictionary:
-	if g.detail_origin!="shop" or g.detail_offer_index<0 or g.detail_offer_index>=g.run.get("shop",[]).size():return {}
-	var offer=g.run.shop[g.detail_offer_index]
-	return offer if offer.get("bundle",[]).size()==2 and offer.get("kind","")==g.detail_item.get("kind","") else {}
+	return _bundle_for(g,g.detail_item,g.detail_origin,g.detail_offer_index)
 
-static func details(g):
-	var item=g.detail_item
-	if item.is_empty():return
-	var rect=g._detail_card_rect();var at=rect.position
-	A.panel(g,rect);A.header(g,Rect2(at+Vector2(10,10),Vector2(rect.size.x-20,50)))
-	var name=C.items[item.kind].name
-	g._wrapped(name,at+Vector2(23,40),280,20,A.INK,2)
-	A.button(g,Rect2(at+Vector2(rect.size.x-48,19),Vector2(31,31)),"×","details_back")
-	g._draw_detail_icon(item,Rect2(at+Vector2(35,67),Vector2(rect.size.x-70,64)))
+static func detail_model(g,item:Dictionary,origin:String,offer_index:int=-1)->Dictionary:
 	var d=C.items[item.kind]
+	var bundle=_bundle_for(g,item,origin,offer_index)
+	var partners=preload("res://scripts/crafting/craft_handler.gd").shop_partners(g.run,offer_index,g.inventory) if origin=="shop" else []
 	var summary="%d格 · 标价%d"%[d.shape.size(),int(d.price)]
-	var bundle=bundle_offer(g)
-	if not bundle.is_empty():summary="两件组合 · 合价%d"%g.inventory.purchase_price(g.run,g.detail_offer_index)
+	if not bundle.is_empty():summary="两件组合 · 合价%d"%g.inventory.purchase_price(g.run,offer_index)
 	# UIDs are local to a build: enemy, shop and recipe records may reuse i1.
-	var owned=g.inventory.find_piece(g.run,item.get("uid","")) if g.detail_origin in ["board","stash","bag","pocket"] else {}
+	var owned=g.inventory.find_piece(g.run,item.get("uid","")) if origin in ["board","stash","bag","pocket"] else {}
 	if owned.get("kind","")==item.kind and owned.has("paid_cost"):
 		var basis="估值" if owned.get("cost_basis","") in ["legacy_estimate","mixed"] else "实付"
 		summary+=" · %s%d · 卖出%d"%[basis,int(owned.paid_cost),g.inventory.resale_value(owned)]
-	g._text(summary,at+Vector2((rect.size.x-g.font.get_string_size(summary,HORIZONTAL_ALIGNMENT_LEFT,-1,15).x)*.5,149),15,A.MUTED)
-	var y=160.0
-	if not bundle.is_empty():
-		var second=str(bundle.bundle[1])
-		A.box(g,Rect2(at+Vector2(22,y),Vector2(rect.size.x-44,39)),Color("e4eddf"),Color("aac7b1",.6),12)
-		g._draw_icon(second,Rect2(at+Vector2(29,y+3),Vector2(74,33)),0)
-		g._text("同时获得 · "+str(C.items[second].name),at+Vector2(111,y+25),14,A.INK)
-		y+=45
-	var partners=g._shop_recipe_partners()
-	if not partners.is_empty():
-		A.box(g,Rect2(at+Vector2(22,y),Vector2(rect.size.x-44,42)),Color("e4eddf"),Color("aac7b1",.6),12)
-		g._text("合成搭档",at+Vector2(33,y+27),15,A.GOOD)
-		for n in mini(3,partners.size()):g._draw_icon(partners[n].kind,Rect2(at+Vector2(115+n*65,y+3),Vector2(60,36)),0)
-		y+=48
-	for row in D.stats(item.kind):
-		A.stat(g,at+Vector2(22,y),rect.size.x-44,row[0],row[1],row[2]);y+=32
-	if not C.items[item.kind].get("stars",[]).is_empty():
-		star_diagram(g,item,g.detail_origin,Rect2(at+Vector2(22,y),Vector2(rect.size.x-44,90)));y+=96
-	if d.get("strict_signature",false):
-		TREE.requirement_row(g,item.kind,Rect2(at+Vector2(22,y),Vector2(rect.size.x-44,44)));y+=50
-	var effect_bottom=rect.size.y-112
-	A.box(g,Rect2(at+Vector2(20,y+6),Vector2(rect.size.x-40,effect_bottom-y-6)),Color("fff0d9",.6),Color("e8bd88",.55),14)
-	A.title(g,"口袋效果" if C.is_tag(item.kind,"bag") else "效果",at+Vector2(30,y+31),"bag" if C.is_tag(item.kind,"bag") else "star")
-	var clauses=D.effects(item.kind)
-	for row in g._item_battle_rows(item,g.detail_origin):clauses.append(str(row[0])+"："+str(row[1]))
-	if g._item_waiting(item,g.detail_origin):clauses.append("体力不足，等待恢复。")
-	var pages=A.pages(g,clauses,rect.size.x-58,effect_bottom-y-70,16)
-	g.detail_page=clampi(g.detail_page,0,pages.size()-1)
-	A.text_page(g,pages[g.detail_page],at+Vector2(29,y+45))
-	if pages.size()>1:
-		A.button(g,Rect2(at+Vector2(rect.size.x-109,effect_bottom-28),Vector2(27,23)),"‹","detail_prev",g.detail_page>0)
-		g._text("%d/%d"%[g.detail_page+1,pages.size()],at+Vector2(rect.size.x-76,effect_bottom-11),12,A.MUTED)
-		A.button(g,Rect2(at+Vector2(rect.size.x-45,effect_bottom-28),Vector2(27,23)),"›","detail_next",g.detail_page+1<pages.size())
-	apricot_chips(g,item.kind,at+Vector2(23,effect_bottom+12),rect.size.x-46)
-	var has_recipe=not INFO.recipes(item.kind).is_empty()
-	A.button(g,Rect2(at+Vector2(25,rect.size.y-51),Vector2(rect.size.x-50,34)),"合成配方" if has_recipe else "无合成配方","detail_recipes",has_recipe,true)
+	var effects=D.effects(item.kind,g.opponent if origin=="enemy" else g.run).duplicate(true)
+	var lines=0
+	for line in effects:lines+=A.lines(g,line,316,16).size()
+	var stars=g._item_star_snapshot(item,origin).duplicate(true) if not d.get("stars",[]).is_empty() else {}
+	var requirement=bool(d.get("strict_signature",false))
+	var stats=D.stats(item.kind).duplicate(true)
+	var height=160+(45 if not bundle.is_empty() else 0)+(48 if not partners.is_empty() else 0)+(96 if not stars.is_empty() else 0)+(50 if requirement else 0)+stats.size()*32+clampf(lines*23+effects.size()*7+84,130,280)+112
+	for row in g._item_battle_rows(item,origin):effects.append(str(row[0])+"："+str(row[1]))
+	if g._item_waiting(item,origin):effects.append("体力不足，等待恢复。")
+	return {"item":item.duplicate(true),"name":str(d.name),"summary":summary,"bundle":{} if bundle.is_empty() else {"kind":str(bundle.bundle[1]),"name":str(C.items[bundle.bundle[1]].name)},"partners":partners.map(func(v):return str(v.kind)),"stats":stats,"stars":stars,"requirement":requirement,"effects":effects,"is_bag":C.is_tag(item.kind,"bag"),"has_recipe":not INFO.recipes(item.kind).is_empty(),"height":height}
+
+static func detail_height(g,item:Dictionary)->float:
+	return detail_model(g,item,g.detail_origin,g.detail_offer_index).height
+
+static func card_rect(anchor:Rect2,height:float)->Rect2:
+	var x=anchor.end.x+12
+	if x+368>1432:x=anchor.position.x-380
+	return Rect2(Vector2(clampf(x,8,1064),clampf(anchor.position.y-20,8,952-height)),Vector2(368,height))
+
+static func details(g):
+	if g.detail_item.is_empty():return
+	var model=detail_model(g,g.detail_item,g.detail_origin,g.detail_offer_index)
+	g.detail_page=preload("res://scripts/ui/items/item_details_view.gd").draw(detail_painter(g),model,card_rect(g.detail_anchor,model.height),true,g.detail_page)
+
+static func detail_painter(g)->Dictionary:
+	return {
+		"panel":func(rect):A.panel(g,rect),
+		"header":func(rect):A.header(g,rect),
+		"box":func(rect,fill,edge,radius):A.box(g,rect,fill,edge,radius),
+		"title":func(value,at,icon):A.title(g,value,at,icon),
+		"text":func(value,at,size,color):g._text(value,at,size,color),
+		"wrapped":func(value,at,width,size,color,lines):g._wrapped(value,at,width,size,color,lines),
+		"width":func(value,size):return g.font.get_string_size(value,HORIZONTAL_ALIGNMENT_LEFT,-1,size).x,
+		"detail_icon":func(item,rect):g._draw_detail_icon(item,rect),
+		"icon":func(kind,rect):g._draw_icon(kind,rect,0),
+		"button":func(rect,value,id,enabled,primary):A.button(g,rect,value,id,enabled,primary),
+		"stat":func(at,width,label,value,icon):A.stat(g,at,width,label,value,icon),
+		"pages":func(clauses,width,height,size):return A.pages(g,clauses,width,height,size),
+		"text_page":func(content,at):A.text_page(g,content,at),
+		"stars":func(model,rect):draw_star_model(g,model,rect),
+		"requirement":func(kind,rect):TREE.requirement_row(g,kind,rect),
+		"chips":func(kind,at,width):apricot_chips(g,kind,at,width)
+	}
 
 static func star_diagram(g,item:Dictionary,origin:String,rect:Rect2)->void:
 	var model=g._item_star_snapshot(item,origin)

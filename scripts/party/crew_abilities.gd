@@ -3,7 +3,7 @@ extends RefCounted
 const C=preload("res://scripts/data/catalog.gd")
 const ACTIVITY=preload("res://scripts/battle/item_activity.gd")
 const BUILD=preload("res://scripts/battle/build_rules.gd")
-const POCKETS=preload("res://scripts/inventory/pocket_rules.gd")
+const POCKETS=preload("res://scripts/inventory/pocket_rules_current.gd")
 const NAMES=preload("res://scripts/battle/battle_v75_rules.gd")
 const SPECS={
  "stamina_relay":{"name":"交替接应","icon":"stamina","trigger":"不同武器交替出手累计 4 次","effect":"恢复 1 点体力","threshold":4.0,"period":4.0,"value":1.0},
@@ -32,7 +32,7 @@ static func profile(role_id:String)->Dictionary:
  return {}
 static func supplies(item:Dictionary,key:String,build:Dictionary)->bool:
  var d=C.items.get(item.get("kind",""),{});var n=d.get("v75",{});var geometry=BUILD.new()
- if item.kind=="pouch":return key=="shield" and POCKETS.shields(build,geometry).any(func(p):return p.uid==item.uid)
+ if POCKETS.profile(item.kind,build).stat=="shield":return key=="shield" and POCKETS.shields(build,geometry).any(func(p):return p.uid==item.uid)
  if n.is_empty():
   var old=d.get("v60",{})
   return old.get("active",false) and old.get("actions",[]).any(func(a):return a.get("type","")==key and float(a.get("value",0))>0)

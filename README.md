@@ -2,11 +2,13 @@
 
 鸣潮题材的非官方二创背包自动战斗 Demo，使用 Godot 4.7.2。通过购买、摆放、星位联动、连续合成和队友招募构建阵容，支持独立的人机与异步在线对战模式。
 
-当前功能基线为 **V138**，新局商店已升级为 **V140 随机货架**，招募改为简洁伙伴卡；见 [本轮改动](docs/development/polish-140.md)。在线免注册，后台建立安装身份并续期；客户端计算战斗，对手不足时明确使用练习对手补位。当前结构整理只调整组织方式，不改玩法、素材、存档及在线匹配池身份；目录与验证结果见 [结构说明](docs/development/structure.md)。
+当前版本 **V2 / 0.2.0**。支持悬停查看详情、点击固定详情、游戏内检查更新，以及固定物品后调整口袋的整理模式。本次新增小口袋差异效果、商店回收箱，并加强胜负反馈和战斗状态栏，见 [V2 发行说明](docs/release/v2.md)。旧局和历史战斗保留原规则，新局使用独立的口袋规则与在线匹配池。
 
 ## 获取和启动
 
-玩家下载：[最新 Windows 试玩版](https://github.com/skaleto/wuwa-backpack-battle/releases/tag/v0.1.0-demo.3)、[国内备用下载](https://clear-raccoon-d2gqs87oabfed2a47-1302322545.tcloudbaseapp.com/downloads/windows/v0.1.0-demo.3/SolarisBrawl-v0.1.0-demo.3-Windows-x86_64.zip)；macOS/Web 旧版见 [三端试玩版](https://github.com/skaleto/wuwa-backpack-battle/releases/tag/v0.1.0-demo.1)。Windows/macOS 包无需安装 Godot；Web 附件是需要 HTTP(S) 托管的部署包。启动方式、签名状态与 Web 联网前提见 [三端发布说明](docs/release/three-platform.md)。
+**本机试玩统一入口：`releases/V2/macOS/索拉里斯大乱斗.app`，也可双击根目录 `START.command`。** Windows 和 Web 同在 `releases/V2`，只保留最新一套。本地只保留最新 V2；发布包与源码对应同一个版本标签。构建与发布流程见 [本地 V2](docs/release/local-v2.md)。
+
+玩家下载：[V2 三端 Release](https://github.com/skaleto/wuwa-backpack-battle/releases/tag/v0.2.0)、[Windows 国内下载](https://clear-raccoon-d2gqs87oabfed2a47-1302322545.tcloudbaseapp.com/downloads/v0.2.0/SolarisBrawl-V2-Windows-x86_64.zip)、[macOS 国内下载](https://clear-raccoon-d2gqs87oabfed2a47-1302322545.tcloudbaseapp.com/downloads/v0.2.0/SolarisBrawl-V2-macOS-universal.zip)。Windows/macOS 包无需安装 Godot；Web 附件是需要 HTTP(S) 托管的部署包。[网页试玩](https://clear-raccoon-d2gqs87oabfed2a47-1302322545.tcloudbaseapp.com/index.html)。启动方式和签名状态见 [三端发布说明](docs/release/three-platform.md)。
 
 需要 Godot 4.7.2 与 Git LFS，素材通过 Git LFS 管理。
 
@@ -18,7 +20,7 @@ git lfs pull
 godot --editor --path .
 ```
 
-在编辑器运行主场景，或执行 `godot --path .`。macOS 安装 Godot 至 `/Applications/Godot.app` 后也可双击 `START.command`。自动生成的源码 ZIP 可能只包含 LFS 指针，不能视为完整可运行包。安装包发布至 [Releases](https://github.com/skaleto/wuwa-backpack-battle/releases)，不作为普通 Git 文件提交。
+开发时在编辑器运行主场景，或执行 `godot --path .`。本机试玩双击 `START.command`，它只打开 `releases/V2` 中的 Mac 完整客户端，无需 Godot。自动生成的源码 ZIP 可能只包含 LFS 指针，不能视为完整可运行包。安装包发布至 [Releases](https://github.com/skaleto/wuwa-backpack-battle/releases)，不作为普通 Git 文件提交。
 
 ## 目录约定
 
@@ -33,6 +35,7 @@ scripts/
   party/       # 角色、招募与队友能力
   ui/          # 画面、输入适配、动效与只读展示
   online/      # 安装身份、异步协议、匹配与上传队列
+  update/      # 签名更新、缓存与启动切换
   storage/     # 存档、归档与持久化
   run/         # 局内生命周期与统一提交
   compat/      # 仍需运行的历史校验与迁移适配
@@ -72,7 +75,7 @@ python3 tools/check.py --jobs 2
 python3 tools/build.py --stage /abs/new --pack
 ```
 
-`/abs/new` 替换为不存在的绝对目录。本轮独立干净源码验证：155/155 组游戏回归、68/68 项服务端测试、23 项本地客户端联调检查通过。测试默认无头、独立 `qa-*` 存档；需要图形时用隐藏不可聚焦原生画布，不抢用户焦点。历史版本工具不应被随手运行来覆盖当前目录或冻结数据。
+`/abs/new` 替换为不存在的绝对目录。V2 发布前重新运行的游戏回归为 170/170；完整包资源、签名更新清单和隐私扫描通过。服务端仅追加新规则池，健康检查通过。测试默认无头、独立 `qa-*` 存档；需要图形时用隐藏不可聚焦原生画布，不抢用户焦点。历史版本工具不应被随手运行来覆盖当前目录或冻结数据。
 
 凭证服务独立验证：
 

@@ -4,6 +4,7 @@ const SESSION=preload("res://scripts/run/run_session.gd")
 static func start(leader:String,seed_value:int,inventory,pool_mode:String="full")->Dictionary:
 	var next=inventory.new_run(leader,seed_value,pool_mode)
 	if next.is_empty():return {"ok":false}
+	next.pocket_version=preload("res://scripts/inventory/pocket_rules_current.gd").VERSION
 	# Existing new-game canvas placement; persisted layouts are never recentered.
 	for piece in next.bags+next.items:
 		piece.x+=2;piece.y+=2

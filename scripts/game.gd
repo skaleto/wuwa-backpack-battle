@@ -152,6 +152,13 @@ var music
 const SOUND_SETTINGS=preload("res://scripts/ui/audio/sound_settings.gd")
 const SETTINGS_VIEW=preload("res://scripts/ui/settings_view.gd")
 var sound_settings
+var update_client
+var startup_update_prompted=false
+var update_return_overlay="settings"
+var end_run_request:Dictionary={}
+const RUN_PROGRESS_VIEW=preload("res://scripts/ui/run_progress_view.gd")
+const UPDATE_VIEW=preload("res://scripts/ui/update_view.gd")
+const UPDATE_BOOT=preload("res://scripts/update/bootstrap.gd")
 var settings_return_overlay=""
 var settings_drag_channel=""
 var settings_focus_channel=""
@@ -194,6 +201,7 @@ var selected_leader = "aemeath"
 var buttons: Array = []
 var mouse = Vector2.ZERO
 var hovered: Dictionary = {}
+var hover_details=preload("res://scripts/ui/items/hover_details.gd").new()
 var hover_time = 0.0
 var dragging: Dictionary = {}
 var drag_pressed=false
@@ -230,6 +238,8 @@ var drag_target_angle=0.0
 var drag_turn_from=0.0
 var drag_turn_age=DRAG_TURN_DURATION
 var bag_mode = false
+var pocket_organizer=preload("res://scripts/inventory/pocket_organizer.gd").new()
+var organizing_icons:Dictionary={}
 const STASH_PAGE_SIZE = 6
 var stash_cursor = 0
 var stash_page = 0
@@ -276,6 +286,10 @@ func _ready() -> void:
 	if storage==null:storage=S.new(SKIN.profile_root(OS.get_cmdline_user_args()))
 	practice_storage=storage
 	sound_settings=SOUND_SETTINGS.new(storage.root_path)
+	update_client=preload("res://scripts/update/update_client.gd").new();add_child(update_client)
+	var channel=get_meta("update_channel",JSON.parse_string(FileAccess.get_file_as_string("res://data/update-channel.json")))
+	update_client.configure(channel,storage.root_path+"updates/","Web" if OS.has_feature("web") else OS.get_name(),get_meta("update_release",{}),live_start and get_meta("update_enabled",false))
+	if update_client.enabled:update_client.call_deferred("check")
 	online_storage=S.new(storage.root_path+"async/")
 	online_client=preload("res://scripts/online/async_pool_client.gd").new();add_child(online_client);online_client.configure(online_storage)
 	if live_start:online_client.call_deferred("start_identity")
@@ -303,6 +317,7 @@ func _ready() -> void:
 	dialog.use_native_dialog=true
 	dialog.file_selected.connect(_file_selected)
 	add_child(dialog)
+	set_meta("startup_complete",true)
 	queue_redraw()
 
 
@@ -410,6 +425,8 @@ func _process(delta: float) -> void:
 			review_tail=maxf(0,review_tail-feedback_delta)
 			if review_tail==0:_clear_feedback()
 		combat_time=review.time
+	_sync_hover_details(delta)
+	_maybe_prompt_update()
 	_update_music()
 	queue_redraw()
 
@@ -444,6 +461,7 @@ func _draw() -> void:
 		_basis()
 	if rejection_left>0 and rejection_rect.has_area():draw_rect(rejection_rect,Color("df8177",.34*rejection_left/.28))
 	_draw_effects()
+	_draw_hover_details()
 	if not overlay.is_empty() or motion.modal_value>0:_draw_overlay()
 	_draw_effects(true)
 	if transition_image and motion.transition_left>0:
@@ -458,6 +476,8 @@ func _draw() -> void:
 		_basis();_text("玩家阵容" if run.pvp.source=="player" else "练习对手补位",Vector2(910,88),16,CREAM)
 
 	_basis();paint_offset=Vector2.ZERO;paint_alpha=1.0
+	if screen=="camp" and overlay.is_empty() and update_client!=null and update_client.status in ["available","ready"]:
+		_button(Rect2(1245,100,164,44),"更新已就绪" if update_client.status=="ready" else "发现新版本","updates:open")
 	# Only the registry owns persistent item textures. Aliases serve this draw.
 	icons.clear();SKIN.end_frame()
 	_craft_frame_open=false;_craft_frame_model={}
@@ -536,7 +556,7 @@ func _draw_game() -> void:
 		if not SKIN.is_chibi() or not forge_output.is_empty():
 			_text(str(inventory.coverage(run.bags).size()) if forge_output.is_empty() else "取消 · Esc",Vector2(843,155) if SKIN.is_chibi() else Vector2(876 if not forge_output.is_empty() else 909,193),17,T.tone(T.MUTED))
 		_basis(_board_transform(0))
-		_draw_board(run,BOARD,0)
+		_draw_board(_organization_view(),BOARD,0)
 		_draw_relay(run,BOARD,0)
 		_draw_placement_stars()
 		if dragging.is_empty():
@@ -546,10 +566,10 @@ func _draw_game() -> void:
 		_draw_shop()
 		_draw_stash()
 		_draw_stash_transfers()
-		_button(QL.SORT if SKIN.is_chibi() else Rect2(355,853,66,58),"整理","bag_mode")
+		_button(QL.SORT if SKIN.is_chibi() else Rect2(355,853,66,58),"完成整理" if bag_mode else "整理","bag_mode")
 		if FEATURES.CONCERTO_ENABLED:_button(Rect2(457,853,66,58),"接力","relay_mode")
 		_button(QL.FORGE if SKIN.is_chibi() else Rect2(668,861,177,43),"合成","forge",true,true,GOLD)
-		_button(_sell_rect(),"卖出","sell_area")
+		if not SKIN.is_chibi():_button(_sell_rect(),"卖出","sell_area")
 		_button(QL.BATTLE if SKIN.is_chibi() else Rect2(1070,849,310,55),"开战","battle",not run.items.is_empty() and dragging.is_empty(),true,GOLD)
 		_button(Rect2(225,282,40,40) if SKIN.is_chibi() else Rect2(255,155,56,56),"对手影像","opponent",not opponent.is_empty())
 		if relay_mode:_text("依次点击武器、相邻声骸，再选相邻信物",Vector2(597,936),15,CREAM)
@@ -747,7 +767,7 @@ func _draw_board(build: Dictionary,origin: Vector2,side: int) -> void:
 	var pocket_pulses={}
 	for bag in bags:pocket_pulses[bag.uid]=maxf(float(flashes.get(str(side)+bag.uid,0.0)),float(motion.pulses.get(str(side)+bag.uid,0.0))/.28)
 	TERMINAL.surface(self,origin,bags,CELL,focus,paint_alpha,pocket_pulses)
-	if dragging.is_empty() and ((side==0 and hovered.get("origin","") in ["board","pocket"]) or (side==1 and hovered.get("origin","")=="enemy")):
+	if not bag_mode and dragging.is_empty() and ((side==0 and hovered.get("origin","") in ["board","pocket"]) or (side==1 and hovered.get("origin","")=="enemy")):
 		var focus_item=hovered.item
 		if C.is_tag(focus_item.kind,"bag"):
 			for item in build.items:
@@ -758,11 +778,11 @@ func _draw_board(build: Dictionary,origin: Vector2,side: int) -> void:
 	var forge_preview={}
 	if side==0 and not forge_output.is_empty():forge_preview=_forge_placement_preview()
 	var inline_preview=inline_craft.hit(_craft_view_model(),mouse) if side==0 else {}
-	if run.phase=="shop" and (dragging.is_empty() or side!=0):
+	if not bag_mode and run.phase=="shop" and (dragging.is_empty() or side!=0):
 		_draw_coord_links(forge_preview.get("run",build),origin)
 	for item in build.items:
 		if not dragging.is_empty() and dragging.uid==item.uid and side==0:continue
-		if side==0 and not dragging.is_empty() and C.is_tag(dragging.kind,"bag"):
+		if not bag_mode and side==0 and not dragging.is_empty() and C.is_tag(dragging.kind,"bag"):
 			var old_bag=run.bags.filter(func(b):return b.uid==dragging.uid)
 			if not old_bag.is_empty() and inventory.occupied(item).all(func(v):return v in inventory.occupied(old_bag[0])):continue
 		_draw_piece(item,origin,.23 if item.uid in forge_preview.get("consumed",[]) or item.uid in inline_preview.get("consumed",[]) else 1.0,side)
@@ -862,6 +882,8 @@ func _item_fx_clock()->float:
 	return review.time if review.active else combat_time if run.get("phase","") in ["battle","result","ending"] else motion.elapsed
 
 func _draw_piece(item: Dictionary,origin: Vector2,alpha: float = 1.0,side: int = -1,preview: bool = false,valid: bool = true) -> void:
+	if bag_mode and side==0 and not C.is_tag(item.kind,"bag"):
+		_draw_organizing_item(item,origin);return
 	alpha*=paint_alpha
 	if side==0:alpha*=fusion_view.output_alpha(str(item.get("uid","")))
 	if SKIN.is_chibi() and side==0:
@@ -1129,7 +1151,7 @@ func _draw_shop() -> void:
 			var icon_rect=Rect2(rect.position+Vector2(8,6)+shift,Vector2(72,65))
 			_draw_icon(kind,_selection_rect(icon_rect) if selected else icon_rect,0,t)
 			_text(POCKETS.profile(kind).name,rect.position+Vector2(95,35)+shift,17,T.tone(T.PAPER))
-			_text({"pouch":"盾 +2 / 格","strip":"冷却 −10%","corner":"声骸 +15%","travel":"武器 +8%"}.get(kind,POCKETS.profile(kind).effect),rect.position+Vector2(95,58)+shift,13,POCKETS.profile(kind).color.darkened(.4) if SKIN.is_chibi() else POCKETS.profile(kind).color)
+			_text({"pouch":"盾 +2 / 格","strip":"冷却 −10%","corner":"声骸 +15%","travel":"武器 +8%"}.get(kind,POCKETS.profile(kind,run).effect),rect.position+Vector2(95,58)+shift,13,POCKETS.profile(kind).color.darkened(.4) if SKIN.is_chibi() else POCKETS.profile(kind).color)
 		else:
 			var icon_rect=Rect2(rect.position+Vector2(4,4-over*2)+shift,Vector2(202,72))
 			_draw_icon(kind,_selection_rect(icon_rect) if selected else icon_rect,0,t*(.22 if not dragging.is_empty() and drag_origin=="shop" and drag_offer_index==n else 1.0))
@@ -1183,6 +1205,7 @@ func _draw_stash() -> void:
 		_button(Rect2(857,861,128,43),"领取 "+str(run.get("pending_gifts",[]).size()+run.get("pending_rearrange",[]).size()),"claim_gifts")
 
 func _stash_display_preview()->Dictionary:
+	if bag_mode:return {"run":_organization_view()}
 	if dragging.is_empty() or _shop_press_pending():return {}
 	if _stash_mat_rect().has_point(mouse) and drag_origin in ["board","bag"]:
 		var stored=inventory.stash_preview(run,dragging)
@@ -1258,6 +1281,7 @@ func _draw_result() -> void:
 		for n in rows.size():_draw_contribution(rows[n],Vector2(116+n*404,895),true)
 		_button(Rect2(603,339 if not fatigue.is_empty() else 324,234,42),"返回选择" if run.phase=="ending" else "继续","home" if run.phase=="ending" else "next",true,true,GOLD)
 		_button(Rect2(620,413,200,41),"战斗记录","battle_review",BATTLE_REVIEW.available(combat))
+		RUN_PROGRESS_VIEW.reward(self,_text,_run_progress_model())
 		return
 	T.plate(self,Rect2(106,823,1228,120),Color(T.tone(T.SHELL),.86),Color(T.tone(T.EDGE),.35),6)
 	T.rule(self,Vector2(116,817),Vector2(1324,817),.28)
@@ -1270,7 +1294,7 @@ func _draw_result() -> void:
 func _draw_drag() -> void:
 	if _shop_press_pending():
 		var rect=_shop_icon_rect(drag_offer_index);rect.position+=mouse-drag_press_at+Vector2(0,-2.5)
-		_draw_icon(dragging.kind,rect,0)
+		_draw_shop_item(dragging.kind,rect,1.0)
 		return
 	if SKIN.is_chibi():T.glyph(self,"rotate",Rect2(mouse+Vector2(22,17),Vector2.ONE*22),.8)
 	var pos=_drag_placement_cell()
@@ -1286,7 +1310,7 @@ func _draw_drag() -> void:
 		var preview_run=run
 		if drag_origin=="shop":
 			preview_run=run.duplicate(true);preview_run.stash.append(next)
-		bag_preview=inventory.bag_transaction(preview_run,next)
+		bag_preview=pocket_organizer.preview(run,next,"board",inventory) if bag_mode else inventory.bag_transaction(preview_run,next)
 	if near_board:
 		_basis(_board_transform())
 		var valid=false
@@ -1311,7 +1335,7 @@ func _draw_drag() -> void:
 			GRID.footprint(self,BOARD+Vector2(next.x,next.y)*CELL,inventory.cells(next),CELL,Color(T.tone(T.JADE),.25) if valid else Color(T.tone(T.ALERT),.3),false)
 		_basis()
 	if not item_preview.is_empty():_draw_transfer_preview(item_preview)
-	if _stash_mat_rect().has_point(mouse) and drag_origin in ["board","bag"]:
+	if not bag_mode and _stash_mat_rect().has_point(mouse) and drag_origin in ["board","bag"]:
 		_draw_transfer_preview(inventory.stash_preview(run,dragging))
 	var blocked_stash=_stash_drop_projection()
 	if blocked_stash.has_area():draw_rect(blocked_stash,Color("df8177",.3))
@@ -1324,7 +1348,7 @@ func _draw_drag() -> void:
 		if SKIN.is_chibi() and near_board and not bag_preview.ok:
 			GRID.footprint(self,Vector2.ZERO,inventory.cells(held),CELL,Color("e77773",.38),false)
 		var originals=run.bags.filter(func(v):return v.uid==dragging.uid)
-		if not originals.is_empty() and (not _stash_mat_rect().has_point(mouse) or not inventory.stash_preview(run,dragging).ok):
+		if not bag_mode and not originals.is_empty() and (not _stash_mat_rect().has_point(mouse) or not inventory.stash_preview(run,dragging).ok):
 			var owned_cells=inventory.occupied(originals[0])
 			var carried_ids=run.items.filter(func(v):return inventory.occupied(v).all(func(c):return c in owned_cells)).map(func(v):return v.uid)
 			for item in run.items:
@@ -1348,6 +1372,7 @@ func _item_drop_preview()->Dictionary:
 	return inventory.placement_preview(run,next,drag_offer_index if drag_origin=="shop" else -1)
 
 func _stash_drop_projection() -> Rect2:
+	if bag_mode:return Rect2()
 	if dragging.is_empty() or not _stash_mat_rect().has_point(mouse):return Rect2()
 	var preview=run.duplicate(true)
 	var valid=drag_origin=="stash"
@@ -1423,6 +1448,7 @@ func _star_click_age(item:Dictionary,origin:String)->float:
 	return star_click_elapsed if not star_click_uid.is_empty() and star_click_uid==str(item.get("uid","")) and star_click_origin==origin else -1.0
 
 func _open_item_details(item:Dictionary,origin:String) -> void:
+	hover_details.clear()
 	var from_held=not dragging.is_empty() and dragging.get("uid","")==item.get("uid","") and drag_origin==origin
 	if not from_held or _star_click_age(item,origin)<0:_start_star_click(item,origin)
 	if origin!="recipe":detail_history=[]
@@ -1474,10 +1500,24 @@ func _shop_recipe_partners()->Array:
 	return preload("res://scripts/crafting/craft_handler.gd").shop_partners(run,detail_offer_index,inventory)
 
 func _detail_card_rect()->Rect2:
-	var height=ITEM_PANEL.detail_height(self,detail_item)
-	var x=detail_anchor.end.x+12
-	if x+368>1432:x=detail_anchor.position.x-380
-	return Rect2(Vector2(clampf(x,8,1064),clampf(detail_anchor.position.y-20,8,952-height)),Vector2(368,height))
+	return ITEM_PANEL.card_rect(detail_anchor,ITEM_PANEL.detail_height(self,detail_item))
+
+func _hover_details_allowed()->bool:
+	return not bag_mode and hover_details.pointer_active and screen=="game" and overlay.is_empty() and motion.modal_value<=0 and dragging.is_empty() and not drag_pressed and not matching and not _preparation_frozen() and not recruitment_view.active and not crew_setup_view.active and not review.active and forge_output.is_empty() and not fusion_view.active() and not (is_instance_valid(dialog) and dialog.visible)
+
+func _sync_hover_details(delta:float)->void:
+	if not _hover_details_allowed():hover_details.clear();return
+	# Resolve again when content changes under a stationary pointer (e.g. shop reroll).
+	_update_hover()
+	if not hovered.has("item"):hover_details.clear();return
+	var source=_offer_rect(int(hovered.offer_index)) if hovered.origin=="shop" else _detail_source_rect(hovered.item,hovered.origin)
+	hover_details.update(hovered,source,delta)
+
+func _draw_hover_details()->void:
+	if not _hover_details_allowed() or not hover_details.visible():return
+	var target=hover_details.target
+	var model=ITEM_PANEL.detail_model(self,target.item,target.origin,int(target.get("offer_index",-1)))
+	preload("res://scripts/ui/items/item_details_view.gd").draw(ITEM_PANEL.detail_painter(self),model,ITEM_PANEL.card_rect(hover_details.anchor,model.height),false)
 
 func _close_item_details()->void:
 	overlay=detail_parent_overlay
@@ -1538,6 +1578,12 @@ func _draw_overlay() -> void:
 	paint_alpha=p
 	paint_offset=Vector2(116*(1-p),0)
 	var displayed=overlay if not overlay.is_empty() else motion.last_overlay
+	if displayed=="updates":
+		paint_offset=Vector2.ZERO
+		_draw_update_view()
+		paint_alpha=1.0
+		if overlay.is_empty():buttons=[]
+		return
 	if displayed=="settings":
 		paint_offset=Vector2.ZERO
 		SETTINGS_VIEW.draw(self,sound_settings,settings_focus_channel)
@@ -1570,13 +1616,23 @@ func _draw_overlay() -> void:
 	draw_rect(Rect2(0,0,1440,960),Color(T.tone(T.SHADOW),.68*p))
 	var tall=displayed in ["catalogue","crew","crew_skill","crew_original"]
 	_panel(Rect2(390,220 if tall else 260,660,590 if tall else 452),CREAM,Color("98aa7b"),2,24)
-	if displayed=="menu":
-		_text("暂停",Vector2(630,338),32,INK)
-		_button(Rect2(515,369,410,57),"继续游戏","close",true,true,GREEN)
-		_button(Rect2(515,434,410,57),"对战记录","history",run.get("phase","")!="battle")
-		_button(Rect2(515,499,410,57),"返回选择","home")
-		_button(Rect2(515,564,410,57),"设置","settings")
-		_button(Rect2(515,629,410,57),"退出游戏","quit")
+	if displayed=="end_run":
+		_text("结束本局？",Vector2(600,333),32,INK)
+		var target=end_run_request.get("run",{})
+		var mode_name="在线对战" if end_run_request.get("mode","")=="async" else "人机对战"
+		_text(mode_name+" · 第 %d 回合"%int(target.get("round",1)),Vector2(535,399),24,INK)
+		_text("奖杯 %d · 剩余生命 %d"%[int(target.get("wins",0)),maxi(0,4-int(target.get("losses",0)))],Vector2(535,444),23,INK)
+		_wrapped("结束后不能继续这一局。已完成的战斗记录会保留。",Vector2(490,498),470,22,INK,2)
+		_button(Rect2(485,603,220,56),"继续这一局","end_run:cancel")
+		_button(Rect2(735,603,220,56),"确认结束","end_run:confirm")
+	elif displayed=="menu":
+		_text("暂停",Vector2(630,328),32,INK)
+		_button(Rect2(515,355,410,46),"继续游戏","close",true,true,GREEN)
+		_button(Rect2(515,408,410,46),"对战记录","history",run.get("phase","")!="battle")
+		_button(Rect2(515,461,410,46),"返回主界面","home")
+		_button(Rect2(515,514,410,46),"设置","settings")
+		_button(Rect2(515,567,410,46),"结束本局","end_run",not run.is_empty() and run.get("phase","")!="ending")
+		_button(Rect2(515,620,410,46),"退出游戏","quit")
 	elif displayed=="ghosts":
 		_text("异步影像",Vector2(630,332),32,INK)
 		_text("本机影像池 · 可导入朋友的行囊",Vector2(527,373),21,T.tone(T.MUTED))
@@ -1763,14 +1819,25 @@ func _update_bag_style_title()->void:
 		get_window().title="索拉里斯大乱斗 · V109 · "+("01 薄袋平铺" if SKIN.bag_style=="flat" else "02 软布折口")+" · F7 切换"
 
 func _input(event: InputEvent) -> void:
+	if event is InputEventMouseMotion:hover_details.pointer_active=true
+	if (event is InputEventMouseButton and event.pressed) or (event is InputEventKey and event.pressed):hover_details.clear()
 	if overlay=="settings":
 		_settings_input(event);queue_redraw();return
+	if overlay=="updates":
+		_updates_input(event);queue_redraw();return
 	if matching:return
+	if overlay=="end_run":
+		if event is InputEventKey and event.pressed and event.keycode==KEY_ESCAPE:_cancel_end_run()
+		elif event is InputEventMouseButton and event.button_index==MOUSE_BUTTON_LEFT and event.pressed:
+			mouse=event.position
+			for button in buttons:
+				if button.enabled and button.action.begins_with("end_run:") and _button_contains(button,mouse):_action(button.action);break
+		queue_redraw();return
 	if _preparation_frozen():
 		if event is InputEventMouseButton and event.pressed and event.button_index==MOUSE_BUTTON_LEFT:
 			mouse=event.position
 			for button in buttons:
-				if button.enabled and _button_contains(button,mouse) and button.action in ["battle","home","menu","settings","close","quit"]:_action(button.action);break
+				if button.enabled and _button_contains(button,mouse) and button.action in ["battle","home","menu","settings","close","quit","end_run"]:_action(button.action);break
 		return
 	if event is InputEventKey and event.pressed and not event.echo and event.keycode==KEY_F7 and SKIN.bag_style in ["flat","fold"]:
 		_action("bag_style");queue_redraw();return
@@ -1813,6 +1880,7 @@ func _input(event: InputEvent) -> void:
 		mouse=event.position
 		if drag_pressed:drag_distance=maxf(drag_distance,mouse.distance_to(drag_press_at))
 		_update_hover()
+		_sync_hover_details(0.0)
 	elif event is InputEventMouseButton and event.button_index==MOUSE_BUTTON_LEFT:
 		mouse=event.position
 		if event.pressed:
@@ -1843,7 +1911,7 @@ func _input(event: InputEvent) -> void:
 			elif not overlay.is_empty():
 				overlay=""
 			elif bag_mode:
-				bag_mode=false
+				_cancel_organization()
 			elif relay_mode:
 				relay_mode=false
 				relay_draft=[]
@@ -1879,6 +1947,8 @@ func _keyboard_action(key: int) -> bool:
 			return true
 		return false
 	if run.phase=="shop":
+		if bag_mode and key not in [KEY_R,KEY_ESCAPE,KEY_ENTER]:return true
+		if bag_mode and key==KEY_ENTER:_finish_organization();return true
 		if key==KEY_R:
 			_action("bag_mode");return true
 		if key>=KEY_1 and key<=KEY_6:
@@ -1960,6 +2030,8 @@ func _mouse_down() -> void:
 		if hovered.has("item"):
 			_sound("click");_open_item_details(hovered.item,hovered.origin)
 		return
+	if bag_mode:
+		_organization_pick();return
 	for n in range(6):
 		if _offer_rect(n).has_point(mouse) and not run.shop[n].is_empty():
 			_begin_shop_drag(n)
@@ -2039,12 +2111,12 @@ func _begin_replacement(kind: String,offer_index:int=5) -> void:
 
 # A page is presentation only; absolute stash indices still identify owned items.
 func _stash_pages(count:int=-1)->int:
-	return maxi(1,ceili(float(run.get("stash",[]).size() if count<0 else count)/STASH_PAGE_SIZE))
+	return maxi(1,ceili(float(_organization_stash().size() if count<0 else count)/STASH_PAGE_SIZE))
 func _stash_current_page(count:int=-1)->int:
 	return clampi(stash_page,0,_stash_pages(count)-1)
 func _stash_indices()->Array:
 	var start=_stash_current_page()*STASH_PAGE_SIZE
-	return range(start,mini(start+STASH_PAGE_SIZE,run.get("stash",[]).size()))
+	return range(start,mini(start+STASH_PAGE_SIZE,_organization_stash().size()))
 func _stash_rect(index:int)->Rect2:
 	var slot=index-_stash_current_page()*STASH_PAGE_SIZE
 	if slot<0 or slot>=STASH_PAGE_SIZE:return Rect2()
@@ -2125,6 +2197,8 @@ func _rotate_drag() -> void:
 	drag_turn_from=drag_turn_remaining;drag_turn_age=0.0
 
 func _mouse_up() -> void:
+	if bag_mode:
+		_organization_drop();return
 	if carry_replacement:return
 	if dragging.is_empty():drag_pressed=false;return
 	# Inspection depends on intent (motion/rotation), never on hold duration.
@@ -2206,6 +2280,8 @@ func _pick_displaced(displaced:Array)->void:
 	hovered={};_sound("pick")
 
 func _update_hover() -> void:
+	if bag_mode:
+		hovered={};return
 	var old=hovered.get("item",{}).get("uid","")+hovered.get("origin","")+hovered.get("leader","")
 	hovered={}
 	if not dragging.is_empty():return
@@ -2224,7 +2300,7 @@ func _update_hover() -> void:
 	if run.phase=="shop":
 		for n in range(6):
 			if _offer_rect(n).has_point(mouse) and not run.shop[n].is_empty():
-				hovered={"item":{"kind":run.shop[n].kind,"uid":"shop"+str(n),"rotation":0,"x":0,"y":0},"origin":"shop"}
+				hovered={"item":{"kind":run.shop[n].kind,"uid":"shop"+str(n),"rotation":0,"x":0,"y":0},"origin":"shop","offer_index":n}
 		for n in _stash_indices():
 			if _stash_rect(n).has_point(mouse):
 				hovered={"item":run.stash[n],"origin":"stash"}
@@ -2250,8 +2326,15 @@ func _update_hover() -> void:
 		# Hover emphasizes an existing relation visually; only actual effects sound.
 
 func _action(action: String) -> void:
+	if update_client!=null and update_client.status=="installing":return
 	if matching:return
-	if _preparation_frozen() and action not in ["battle","home","menu","settings","close","quit"]:return
+	if bag_mode and action not in ["bag_mode","stash_prev","stash_next","battle","home","menu","settings","close","quit"]:return
+	if bag_mode and action in ["home","menu","settings","quit"]:_cancel_organization()
+	if action.begins_with("updates:"):_update_action(action);return
+	if action=="end_run":_request_end_run(game_mode,"menu");return
+	if action=="end_run:cancel":_cancel_end_run();return
+	if action=="end_run:confirm":_confirm_end_run();return
+	if _preparation_frozen() and action not in ["battle","home","menu","settings","close","quit","end_run"]:return
 	if action=="settings":
 		settings_return_overlay=overlay if overlay=="menu" else ""
 		settings_focus_channel="";settings_drag_channel="";overlay="settings";_update_music();return
@@ -2399,8 +2482,8 @@ func _action(action: String) -> void:
 				reroll_age=0.0
 				if int(run.gold)<refresh_gold:_sound("purchase")
 		"bag_mode":
-			bag_mode=not bag_mode
-			relay_mode=false
+			if bag_mode:_finish_organization()
+			else:_begin_organization()
 		"relay_mode","relay_done":
 			relay_mode=not relay_mode
 			bag_mode=false
@@ -2516,6 +2599,7 @@ func _action(action: String) -> void:
 			dialog.popup_centered(Vector2i(820,580))
 
 func _start_battle() -> void:
+	if bag_mode and not _finish_organization():return
 	toast_timer=0.0
 	if matching or run.phase!="shop" or run.items.is_empty() or not dragging.is_empty():
 		return
@@ -2535,7 +2619,7 @@ func _start_battle() -> void:
 			matching=true;queue_redraw()
 			var selected=await online_client.find_opponent(inventory,run.duplicate(true)) if identity_error.is_empty() else {"ok":false,"error":identity_error}
 			matching=false
-			var enemy=selected.opponent if selected.ok else inventory.practice(int(run.round),int(run.seed)%31,str(run.get("pool_mode","full")),int(run.get("supply_version",0)))
+			var enemy=selected.opponent if selected.ok else inventory.practice(int(run.round),int(run.seed)%31,str(run.get("pool_mode","full")),int(run.get("supply_version",0)),int(run.get("pocket_version",0)))
 			if not _application().lock_opponent(run,enemy,"player" if selected.ok else "bot",str(selected.get("error",""))).ok:_notify("对战保存失败，请重试");return
 			opponent=run.opponent.duplicate(true)
 		else:opponent=run.opponent.duplicate(true)
@@ -2978,6 +3062,8 @@ func _file_selected(path: String) -> void:
 	_application().checkpoint(run)
 
 func _notification(what: int) -> void:
+	if what in [NOTIFICATION_WM_MOUSE_EXIT,NOTIFICATION_WM_WINDOW_FOCUS_OUT]:
+		hover_details.pointer_active=false;hover_details.clear();hovered={};queue_redraw()
 	if what==NOTIFICATION_WM_CLOSE_REQUEST:
 		if sound_settings!=null and not settings_drag_channel.is_empty():_save_sound_settings()
 		if not history_return.is_empty():_close_archived_battle()
@@ -3009,6 +3095,10 @@ func _settings_action(action:String)->void:
 	if action=="settings:back":
 		if not settings_drag_channel.is_empty():_save_sound_settings()
 		settings_drag_channel="";overlay=settings_return_overlay;settings_return_overlay="";_update_music()
+	elif action=="settings:updates":
+		update_return_overlay="settings";overlay="updates"
+		if update_client.status in ["available","ready"]:startup_update_prompted=true
+		if update_client.status=="idle":update_client.check()
 	elif action=="settings:reset":
 		sound_settings.reset();_apply_sound_settings();_save_sound_settings()
 	elif action.begins_with("settings:toggle:"):
@@ -3180,6 +3270,7 @@ func _sync_recruitment()->void:
 
 func _recruitment_intent(intent:Dictionary)->void:
 	match intent.get("kind",""):
+		"home":_action("home")
 		"click":_sound("click")
 		"confirm":
 			var result=_application().confirm_recruit(run,intent.role_id,intent.get("reward",""))
@@ -3348,7 +3439,7 @@ func _draw_catalogue() -> void:
 		_draw_icon(selected,Rect2(476,215,531,392),0)
 		_text(def.name,Vector2(1018,249),27,INK)
 		T.rule(self,Vector2(1018,279)+paint_offset,Vector2(1361,279)+paint_offset,.25*paint_alpha)
-		ITEM_PANEL.rows(self,INFO.rows({"kind":selected}).slice(0,11),Vector2(1018,320),336,32,15,SKIN.PLUM.lerp(SKIN.CREAM,.12) if SKIN.is_chibi() else T.MUTED)
+		ITEM_PANEL.rows(self,INFO.rows({"kind":selected},run).slice(0,11),Vector2(1018,320),336,32,15,SKIN.PLUM.lerp(SKIN.CREAM,.12) if SKIN.is_chibi() else T.MUTED)
 		ITEM_PANEL.chips(self,selected,Vector2(1018,682))
 		_button(Rect2(1054,766,264,42),"物品详情","catalogue_detail:"+selected)
 
@@ -3459,6 +3550,7 @@ func _panel(rect: Rect2,fill: Color,border: Color,width: int = 2,corner: int = 1
 	T.plate(self,Rect2(rect.position+paint_offset,rect.size),Color(tint,tint.a*paint_alpha),Color(T.tone(T.EDGE),paint_alpha),6)
 
 func _button(rect: Rect2,label: String,action: String,enabled: bool = true,visible: bool = true,color: Color = T.SHELL) -> void:
+	if bag_mode and action not in ["bag_mode","stash_prev","stash_next","battle","home","menu","settings","close","quit"]:enabled=false
 	var visual_rect=Rect2(rect.position+paint_offset,rect.size)
 	var circular=SKIN.is_chibi() and action=="battle"
 	var entry={"rect":visual_rect,"action":action,"enabled":enabled,"modal":not overlay.is_empty(),"circle":circular}
@@ -3472,7 +3564,7 @@ func _button(rect: Rect2,label: String,action: String,enabled: bool = true,visib
 	if tools.has(action):
 		STAGE.tool(self,visual_rect,tools[action],hover,down,(action=="bag_mode" and bag_mode) or (action=="relay_mode" and relay_mode),enabled)
 		if hover>.7 or action=="bag_mode":
-			var caption={"bag_mode":"整理口袋","relay_mode":"接力","sell_area":"卖出","catalogue":"图鉴","reroll":"刷新 · F","menu":"菜单 · Esc","ghosts":"影像","opponent":"对手"}[action]
+			var caption={"bag_mode":"完成整理" if bag_mode else "整理口袋","relay_mode":"接力","sell_area":"卖出","catalogue":"图鉴","reroll":"刷新 · F","menu":"菜单 · Esc","ghosts":"影像","opponent":"对手"}[action]
 			var length=font.get_string_size(caption,HORIZONTAL_ALIGNMENT_LEFT,-1,14).x
 			var caption_pos=rect.position+Vector2((rect.size.x-length)/2,rect.size.y+22 if action=="bag_mode" else -9)
 			if SKIN.is_chibi() and action in ["bag_mode","sell_area","catalogue"]:_chibi_tool_caption(caption,caption_pos,14)
@@ -3823,6 +3915,10 @@ func _shop_icon_rect(index:int)->Rect2:
 	var t=clampf((reroll_age-index*.028)/.18,0,1)
 	return Rect2(QL.offer(index).position+Vector2(3,4+pow(1-t,3)*14),Vector2(122,111))
 
+func _draw_shop_item(kind:String,rect:Rect2,alpha:float)->void:
+	if C.is_tag(kind,"bag"):TERMINAL.thumbnail(self,rect,kind,0,alpha,36.0)
+	else:_draw_icon(kind,rect,0,alpha)
+
 func _draw_chibi_shop()->void:
 	_text("商店",Vector2(1042,190),27,SKIN.PLUM)
 	T.glyph(self,"sell",Rect2(993,158,34,34),1.0,SKIN.PLUM)
@@ -3841,15 +3937,16 @@ func _draw_chibi_shop()->void:
 			_draw_icon(offer.bundle[1],Rect2(icon_rect.position+Vector2(42,35),Vector2(83,77)),0,icon_alpha,false,true)
 			_text("+",icon_rect.position+Vector2(90,30),19,SKIN.PLUM)
 		elif C.is_tag(offer.kind,"bag"):
-			var at=_selection_rect(icon_rect) if selected else icon_rect
-			TERMINAL.thumbnail(self,at,offer.kind,0,icon_alpha,36.0)
+			var at=icon_rect
+			if selected:at.position.y-=2.5
+			_draw_shop_item(offer.kind,at,icon_alpha)
 		else:_draw_icon(offer.kind,_selection_rect(icon_rect) if selected else icon_rect,0,icon_alpha,false,true)
 		var price=QL.price(n);var tag=price.grow_individual(0,-3,0,-3)
 		var locked=bool(offer.get("locked",false))
 		preload("res://scripts/ui/apricot_ui.gd").box(self,tag,Color("ffe2a7") if locked else Color("ac82a2").lightened(over*.10),Color("d5aa6f") if locked else Color("825b8d"),12)
 		_coin(price.position+Vector2(15,18),12)
 		_text(str(inventory.purchase_price(run,n)),price.position+Vector2(44,26),22,SKIN.PLUM if locked else SKIN.LIGHT)
-		SHOP_PRESENTATION.draw_benefits(self,offer.kind,Rect2(rect.position+Vector2(0,116),Vector2(128,23)),font)
+		SHOP_PRESENTATION.draw_benefits(self,offer.kind,Rect2(rect.position+Vector2(0,116),Vector2(128,23)),font,run)
 		var control=QL.offer_control(n)
 		_button(control,"","lock:"+str(n),true,false)
 		var lock_event=lock_animation.get(n,{})
@@ -3858,6 +3955,10 @@ func _draw_chibi_shop()->void:
 	_button(QL.REFRESH,"刷新","reroll",free or run.gold>=1)
 	_text("免费" if free else "1 贝币",Vector2(1323 if free else 1312,724),17,SKIN.PLUM)
 	_button(QL.CATALOGUE,"图鉴","catalogue")
+	var recycle=preload("res://scripts/ui/shop_recycle_view.gd")
+	var owned=recycle.accepts(dragging,drag_origin)
+	var opening=motion.hover("recycle:open",owned and _sell_rect().has_point(mouse))
+	recycle.draw(self,_text,_sell_rect(),opening,inventory.resale_value(dragging) if owned else 0,owned)
 
 func _draw_chibi_utility(rect:Rect2,label:String,action:String,hover:float,down:float)->void:
 	var on_paper=action=="catalogue"
@@ -3884,13 +3985,7 @@ func _draw_chibi_hud()->void:
 	T.glyph(self,"ghost",Rect2(46,27,52,52),1.0,SKIN.LIGHT)
 	draw_line(Vector2(225,35),Vector2(225,69),Color(SKIN.LIGHT,.45),1,true)
 	_text("第 %d 回合"%int(run.round),Vector2(251,62),24,SKIN.LIGHT)
-	for n in int(limits.wins):
-		var pos=Vector2(384+n*28,51)
-		var color=SKIN.HONEY if n<int(run.wins) else Color(SKIN.LIGHT,.65)
-		var points=PackedVector2Array([pos+Vector2(0,-6),pos+Vector2(6,0),pos+Vector2(0,6),pos-Vector2(6,0)])
-		if n<int(run.wins):draw_colored_polygon(points,color)
-		else:draw_polyline(PackedVector2Array(Array(points)+[points[0]]),color,1,true)
-	for n in int(limits.losses):_heart(Vector2(630+n*30,51),Color("eea0ae") if n<int(limits.losses)-int(run.losses) else Color(SKIN.LIGHT,.2),11)
+	RUN_PROGRESS_VIEW.hud(self,_text,_run_progress_model())
 	_coin(_wallet_position(),16)
 	_text(str(int(run.gold)),_wallet_position()+Vector2(29,10),27,SKIN.LIGHT)
 	_button(Rect2(1255,25,57,57),"菜单 · Esc","menu")
@@ -4117,3 +4212,150 @@ func _draw_placement_stars()->void:
 		if marker.cell.x<0 or marker.cell.x>=I.WIDTH or marker.cell.y<0 or marker.cell.y>=I.HEIGHT:continue
 		var fade=1.0-smoothstep(placement_stars.FADE_START,placement_stars.DURATION,marker.age)
 		Q_STAR.draw(self,BOARD+marker.center,17,"lit",motion.elapsed,fade,marker.age)
+
+func _update_restart_safe()->bool:
+	return screen=="camp" and not matching and camp_saves.values().all(func(value):return value.is_empty() or value.get("phase","")=="ending")
+
+func _update_action(action:String)->void:
+	if action.begins_with("updates:end:"):
+		_request_end_run(action.trim_prefix("updates:end:"),"updates");return
+	match action:
+		"updates:open":update_return_overlay=overlay;overlay="updates";startup_update_prompted=true
+		"updates:back":overlay=update_return_overlay
+		"updates:check":update_client.check()
+		"updates:download":
+			update_client.download()
+			if update_client.platform=="Web":update_client.restart(_update_restart_safe() and UPDATE_BOOT.safe_to_activate(practice_storage.root_path))
+		"updates:files":update_client.open_download_folder()
+		"updates:retry":
+			if not update_client.full_ready.is_empty():update_client.status="ready"
+			elif update_client.artifact.is_empty():update_client.check()
+			else:update_client.download()
+		"updates:cancel":update_client.cancel()
+		"updates:restart":update_client.restart(_update_restart_safe() and UPDATE_BOOT.safe_to_activate(practice_storage.root_path))
+
+func _draw_update_view()->void:
+	var model=update_client.snapshot();model.alpha=paint_alpha;model.safe=_update_restart_safe()
+	model.dismiss_label="稍后" if update_return_overlay.is_empty() else "返回"
+	model.unfinished=_unfinished_update_runs()
+	var paint={"rect":draw_rect,"line":draw_line,"text":_text,"wrapped":_wrapped,"button":_button,
+		"surface":func(rect,skin,alpha):T.surface(self,rect,skin,alpha)}
+	UPDATE_VIEW.draw(paint,model)
+
+func _updates_input(event:InputEvent)->void:
+	if update_client.status=="installing":return
+	if event is InputEventMouseMotion:mouse=event.position
+	elif event is InputEventMouseButton and event.button_index==MOUSE_BUTTON_LEFT and event.pressed:
+		mouse=event.position
+		for button in buttons:
+			if button.enabled and str(button.action).begins_with("updates:") and _button_contains(button,mouse):
+				motion.press(button.action);_update_action(button.action);_sound("click");return
+	elif event is InputEventKey and event.pressed and not event.echo and event.keycode==KEY_ESCAPE:_update_action("updates:back")
+
+# Organizing owns only a temporary pocket layout, never a second live run.
+func _organization_view()->Dictionary:
+	if not bag_mode:return run
+	var view=run.duplicate(false);view.bags=pocket_organizer.bags;view.stash=pocket_organizer.stash
+	return view
+func _organization_stash()->Array:
+	return pocket_organizer.stash if bag_mode else run.get("stash",[])
+func _begin_organization()->void:
+	if not dragging.is_empty() or _preparation_frozen() or not pocket_organizer.begin(run):return
+	bag_mode=true;relay_mode=false;hovered={};hover_details.clear()
+	organizing_icons.clear()
+	for item in run.items:
+		if organizing_icons.has(item.kind) or not _ensure_icon(item.kind):continue
+		var img=icons[item.kind].get_image()
+		if img.is_compressed():img.decompress()
+		img.adjust_bcs(1.0,1.0,0.0)
+		organizing_icons[item.kind]=ImageTexture.create_from_image(img)
+func _cancel_organization()->void:
+	bag_mode=false;pocket_organizer.clear();organizing_icons.clear()
+	dragging={};drag_pressed=false;_clear_held_pose();hovered={}
+	stash_page=_stash_current_page()
+func _finish_organization()->bool:
+	if not dragging.is_empty():return false
+	var before=run.items.duplicate(true)
+	var previous=run.stash.map(func(v):return v.uid)
+	var result=_commit_preparation(pocket_organizer.finish(run,inventory))
+	if not result.ok:return false
+	_cancel_organization();_sync_stash_view(previous);_enqueue_stash_transfers(before);_update_hover()
+	return true
+func _organization_pick()->void:
+	for n in _stash_indices():
+		if _stash_rect(n).has_point(mouse):
+			var item=pocket_organizer.stash[n]
+			if C.is_tag(item.kind,"bag"):
+				dragging=item.duplicate(true);drag_origin="stash";drag_offset=Vector2i.ZERO
+			return
+	var pos=_board_cell(mouse)
+	for bag in pocket_organizer.bags:
+		if pos in inventory.occupied(bag):
+			dragging=bag.duplicate(true);drag_origin="bag"
+			drag_offset=pos-Vector2i(int(bag.x),int(bag.y));return
+func _organization_drop()->void:
+	drag_pressed=false
+	if dragging.is_empty():return
+	var item=dragging.duplicate(true);var pos=_drag_placement_cell()
+	item.x=pos.x;item.y=pos.y
+	var destination="board" if _drag_over_board() else "stash" if _stash_mat_rect().has_point(mouse) else ""
+	if not destination.is_empty():
+		if pocket_organizer.move(run,item,destination,inventory):_sound("bag_drop")
+		else:
+			rejection_piece=item if destination=="board" else {};rejection_left=.28;_sound("reject")
+	dragging={};_clear_held_pose();stash_page=_stash_current_page()
+func _draw_organizing_item(item:Dictionary,origin:Vector2)->void:
+	if not organizing_icons.has(item.kind):return
+	var at=origin+Vector2(item.x,item.y)*CELL
+	var fitted=_projection_for(item.kind,int(item.rotation),CELL)
+	var basis=draw_basis
+	var tint=Color(.82,.82,.88,.64*paint_alpha)
+	if bool(C.items[item.kind].get("combat_v15",false)):
+		draw_set_transform_matrix(basis*Transform2D(0,at)*Transform2D(fitted.transform))
+		draw_texture(organizing_icons[item.kind],Vector2.ZERO,tint)
+	else:PROJECTION.draw(self,organizing_icons[item.kind],inventory.cells(item),at,CELL,fitted,tint)
+	draw_set_transform_matrix(basis)
+
+func _run_progress_model()->Dictionary:
+	return RUN_PROGRESS_VIEW.model(run,combat,phase_age,review.active)
+
+func _maybe_prompt_update()->void:
+	if startup_update_prompted or update_client==null or not update_client.enabled:return
+	if update_client.status not in ["available","ready"]:return
+	if screen!="camp" or not overlay.is_empty() or matching or not dragging.is_empty() or motion.modal_value>0:return
+	startup_update_prompted=true;update_return_overlay="";overlay="updates"
+
+func _unfinished_update_runs()->Array:
+	var result=[]
+	for mode in ["practice","async"]:
+		var value=run if screen=="game" and mode==game_mode else camp_saves.get(mode,{})
+		if not value.is_empty() and value.get("phase","")!="ending":
+			result.append({"mode":mode,"label":"在线对战" if mode=="async" else "人机对战","round":int(value.round)})
+	return result
+
+func _request_end_run(mode:String,return_to:String)->void:
+	if matching or mode not in ["practice","async"]:return
+	var value=run if screen=="game" and mode==game_mode else camp_saves.get(mode,{})
+	if value.is_empty() or value.get("phase","")=="ending":return
+	end_run_request={"mode":mode,"run":value.duplicate(true),"stamp":APPLICATION.SESSION.stamp(value),"return":return_to}
+	overlay="end_run";hover_details.clear()
+
+func _cancel_end_run()->void:
+	overlay=end_run_request.get("return","");end_run_request={}
+
+func _confirm_end_run()->void:
+	if end_run_request.is_empty() or matching:return
+	var mode=str(end_run_request.mode)
+	var files=online_storage if mode=="async" else practice_storage
+	var app=ASYNC_APPLICATION.new(inventory,files,engine) if mode=="async" else APPLICATION.new(inventory,files,engine)
+	var current=run if screen=="game" and mode==game_mode else camp_saves.get(mode,{})
+	var result=app.abandon(current,end_run_request.stamp)
+	if not result.ok:
+		_notify("未能结束本局，进度已保留，请重试。");return
+	var return_to=str(end_run_request.get("return",""));end_run_request={}
+	if mode==game_mode:
+		run={};combat={};opponent={};saved={};dragging={};_clear_held_pose()
+		recruitment_view.clear();crew_setup_view.close();_clear_feedback();screen="camp";camp_age=0
+	_refresh_camp_saves()
+	overlay="updates" if return_to=="updates" else ""
+	if overlay=="updates":update_return_overlay=""

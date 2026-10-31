@@ -309,6 +309,7 @@ func normalize_async_recruitment(build:Dictionary)->void:
 func normalize_owned(build:Dictionary)->void:
 	# Called only after validation, for runs, the ghost pool and imports alike.
 	if build.has("supply_version"):build.supply_version=int(build.supply_version)
+	if build.has("pocket_version"):build.pocket_version=int(build.pocket_version)
 	for key in I.OWNED_COLLECTIONS:
 		for item in build.get(key,[]):
 			if item.has("crew_star"):item.crew_star=int(item.crew_star)
@@ -730,11 +731,11 @@ func opponent(run: Dictionary) -> Dictionary:
 		var key=str(run.round)+":"+str(int(run.seed)%31)+":"+run.get("pool_mode","full")
 		if not legacy_practice_cache.has(key):legacy_practice_cache[key]=I.PB.build(inventory,int(run.round),int(run.seed)%31,run.get("pool_mode","full"),true)
 		return legacy_practice_cache[key].duplicate(true)
-	return matchmaking.choose(int(run.round),int(run.seed),pool() if int(run.round)>3 else [],owner,run.get("pool_mode","full"),int(run.get("supply_version",0)))
+	return matchmaking.choose(int(run.round),int(run.seed),pool() if int(run.round)>3 else [],owner,run.get("pool_mode","full"),int(run.get("supply_version",0)),int(run.get("pocket_version",0)))
 func practice_v114(round_number:int,seed_value:int,pool_mode:String="full")->Dictionary:
 	return I.PB.build(inventory,round_number,seed_value,pool_mode,false,114)
 func practice_opponent(run:Dictionary)->Dictionary:
-	return matchmaking.practice(int(run.round),int(run.seed),run.get("pool_mode","full"),int(run.get("supply_version",0)))
+	return matchmaking.practice(int(run.round),int(run.seed),run.get("pool_mode","full"),int(run.get("supply_version",0)),int(run.get("pocket_version",0)))
 
 func import_ghost(path: String,publish_import:bool=true) -> Dictionary:
 	if not FileAccess.file_exists(path) or FileAccess.get_file_as_bytes(path).size()>30000:return {}
@@ -931,3 +932,18 @@ func migrate_v129(old:Variant,ghost:bool=false)->Dictionary:
 		next.opponent=migrate_v129(next.opponent,true)
 		if next.opponent.is_empty():return {}
 	return next
+
+func abandon_run(expected:Dictionary)->bool:
+	# Ending a run is explicit; unknown/corrupt or changed disk state is preserved.
+	if expected.is_empty() or not inventory.validate_run(expected):return false
+	var path=root_path+"run.json"
+	if not FileAccess.file_exists(path):return false
+	var old=read_json(path,null)
+	if not old is Dictionary:return false
+	var compared=old.duplicate(true)
+	if compared.get("phase","")=="battle" and expected.get("phase","")=="result":compared.phase="result"
+	if compared!=JSON.parse_string(JSON.stringify(expected)):return false
+	if not backup_run(root_path+"run-abandoned.json"):return false
+	if DirAccess.remove_absolute(path)!=OK:return false
+	resume_status="missing"
+	return true

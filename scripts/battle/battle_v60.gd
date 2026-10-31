@@ -3,7 +3,7 @@ extends RefCounted
 const C=preload("res://scripts/data/catalog.gd")
 const BUILD=preload("res://scripts/battle/build_rules.gd")
 const SUP=preload("res://scripts/party/supports.gd")
-const POCKETS=preload("res://scripts/inventory/pocket_rules.gd")
+const POCKETS=preload("res://scripts/inventory/pocket_rules_current.gd")
 const STEP=0.1
 const EPS=0.000001
 var inventory=BUILD.new()

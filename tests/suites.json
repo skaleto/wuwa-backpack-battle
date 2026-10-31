@@ -638,5 +638,45 @@
   "test_privacy_fingerprints": {
     "path": "tests/regression/test_privacy_fingerprints.gd",
     "timeout": 60
+  },
+  "test_hover_details": {
+    "path": "tests/regression/test_hover_details.gd",
+    "timeout": 90
+  },
+  "test_update_protocol": {
+    "path": "tests/regression/test_update_protocol.gd",
+    "timeout": 90
+  },
+  "test_update_store": {
+    "path": "tests/regression/test_update_store.gd",
+    "timeout": 90
+  },
+  "test_update_bootstrap": {
+    "path": "tests/regression/test_update_bootstrap.gd",
+    "timeout": 90
+  },
+  "test_update_client": {
+    "path": "tests/regression/test_update_client.gd",
+    "timeout": 90
+  },
+  "test_update_ui": {
+    "path": "tests/regression/test_update_ui.gd",
+    "timeout": 90
+  },
+  "test_update_pack": {
+    "path": "tests/regression/test_update_pack.gd",
+    "timeout": 90
+  },
+  "test_pocket_organizer": {
+    "path": "tests/regression/test_pocket_organizer.gd",
+    "timeout": 90
+  },
+  "test_release_feedback": {
+    "path": "tests/regression/test_release_feedback.gd",
+    "timeout": 90
+  },
+  "test_polish_v143": {
+    "path": "tests/regression/test_polish_v143.gd",
+    "timeout": 90
   }
 }

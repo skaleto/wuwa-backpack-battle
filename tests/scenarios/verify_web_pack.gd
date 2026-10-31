@@ -7,7 +7,8 @@ var errors:Array=[]
 
 func _initialize():
 	var args=OS.get_cmdline_user_args()
-	if args.size()!=1:
+	var desktop=args.size()==2 and args[1]=="--desktop"
+	if args.size()!=1 and not desktop:
 		printerr("Expected original staging manifest path")
 		quit(1)
 		return
@@ -19,6 +20,12 @@ func _initialize():
 		var rel:String=entry.path
 		var path="res://"+rel
 		if rel.begins_with("assets/generated/silhouettes/"):
+			if desktop:
+				if FileAccess.get_sha256(path)!=str(entry.sha256):errors.append("changed cache bytes: "+rel)
+				var data=GEO.read_cache(path)
+				if not data is Array or data.size()!=4:errors.append("unreadable cache geometry: "+rel)
+				cache_count+=1
+				continue
 			var file=FileAccess.open_compressed(path,FileAccess.READ)
 			if file==null:
 				errors.append("missing compressed cache: "+rel)
@@ -31,7 +38,7 @@ func _initialize():
 			var data=GEO.read_cache(path)
 			if not data is Array or data.size()!=4:errors.append("unreadable cache geometry: "+rel)
 			cache_count+=1
-		elif rel.get_extension() in ["png","jpg","webp","wav","ogg","json","sha256"]:
+		elif rel.get_extension() in ["png","jpg","webp","wav","ogg","json","sha256","ico","icns"]:
 			if FileAccess.get_sha256(path)!=str(entry.sha256):errors.append("changed/missing raw bytes: "+rel)
 			raw_count+=1
 			if rel.get_extension() in ["png","jpg","webp"]:

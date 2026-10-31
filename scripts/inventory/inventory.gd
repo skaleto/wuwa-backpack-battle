@@ -8,7 +8,7 @@ const FEATURES=preload("res://scripts/run/demo_features.gd")
 const C = preload("res://scripts/data/catalog.gd")
 const SUP = preload("res://scripts/party/supports.gd")
 const PB = preload("res://scripts/shop/practice_budget.gd")
-const POCKETS = preload("res://scripts/inventory/pocket_rules.gd")
+const POCKETS = preload("res://scripts/inventory/pocket_rules_current.gd")
 const FORGE = preload("res://scripts/crafting/craft.gd")
 static var legacy_items: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://data/compat/catalog-v3.json")).items
 const WIDTH = SPACE.WIDTH
@@ -371,6 +371,7 @@ func validate_ghost(raw: Variant,allow_empty: bool=false) -> bool:
 	var expected_hash=C.catalogue_hash if accepted_catalogue_hash.is_empty() else accepted_catalogue_hash
 	if not raw is Dictionary or raw.get("version",0)!=5 or raw.get("ruleset","")!=C.RULESET or raw.get("catalogue_hash","")!=expected_hash or not C.characters.has(raw.get("leader","")) or not raw.get("items") is Array or not raw.get("bags") is Array:return false
 	if raw.get("pool_mode","full") not in ["full","focused"]:return false
+	if not bounded_integer(raw.get("pocket_version",0),0,143) or int(raw.get("pocket_version",0)) not in [0,143]:return false
 	if not bounded_integer(raw.get("supply_version",0),0,140) or int(raw.get("supply_version",0)) not in [0,122,125,127,128,129,140]:return false
 	if not raw.get("inactive",false) is bool or (raw.get("inactive",false) and not raw.items.is_empty()):return false
 	if not raw.has("roster") or not raw.has("supports") or not SUP.valid_team(raw):return false
@@ -441,6 +442,7 @@ func snapshot(run: Dictionary,owner: String,name: String="") -> Dictionary:
 	var ghost={"version":5,"ruleset":C.RULESET,"catalogue_hash":C.catalogue_hash,"leader":run.leader,"round":run.round,"bags":[],"items":[],"relay":run.get("relay",[]).duplicate(),"primary":primary_weapon(run).get("uid",""),"golden_acquired":bool(run.get("golden_acquired",false)) or run.items.any(func(v):return C.is_tag(v.kind,"golden")),"roster":run.get("roster",[]).duplicate(),"supports":run.get("supports",[]).duplicate(),"owner":owner,"name":name if not name.is_empty() else C.characters[run.leader].name+"的行囊"}
 	ghost.pool_mode=run.get("pool_mode","full")
 	if run.has("supply_version"):ghost.supply_version=int(run.supply_version)
+	if run.has("pocket_version"):ghost.pocket_version=int(run.pocket_version)
 	if run.get("recruitment_legacy",false):ghost.recruitment_legacy=true
 	if run.has("recruitment"):
 		ghost.recruitment=run.recruitment.duplicate(true)
@@ -459,8 +461,10 @@ func snapshot(run: Dictionary,owner: String,name: String="") -> Dictionary:
 			ghost[key].append(clean)
 	return ghost
 
-func practice(round_number: int,seed_value: int,pool_mode:String="full",supply_version:int=0) -> Dictionary:
-	return PB.build(self,round_number,seed_value,pool_mode,false,115,supply_version)
+func practice(round_number: int,seed_value: int,pool_mode:String="full",supply_version:int=0,pocket_version:int=0) -> Dictionary:
+	var build=PB.build(self,round_number,seed_value,pool_mode,false,115,supply_version)
+	if pocket_version>0:build.pocket_version=pocket_version
+	return build
 # Pure plan metadata and the compatibility commit boundary. Historical builders
 # pass incomplete snapshots; their operation-specific checks remain authoritative.
 # A complete source receives full validation as well. Application commits always

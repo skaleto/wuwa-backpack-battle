@@ -2,6 +2,9 @@ config_version=5
 
 [application]
 config/name="索拉里斯大乱斗"
+config/icon="res://assets/ui/branding/app-icon.png"
+config/windows_native_icon="res://assets/ui/branding/app-icon.ico"
+config/macos_native_icon="res://assets/ui/branding/app-icon.icns"
 config/use_custom_user_dir=true
 config/custom_user_dir_name="ResonancePackNextV60"
 run/main_scene="res://main.tscn"

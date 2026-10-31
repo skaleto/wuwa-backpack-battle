@@ -9,6 +9,6 @@ func _export_file(path:String,_type:String,_features:PackedStringArray)->void:
   # Keep normal imports for fonts, fallback audio, and authored rig textures.
   if "web" in _features and path.get_extension().to_lower() in ["png","jpg","jpeg","webp"]:
    for root in ["res://assets/items/","res://assets/ui/","res://assets/vfx/","res://assets/characters/"]:
-    if path.begins_with(root) and not path.contains("/rigs/"):
+    if path.begins_with(root) and not path.contains("/rigs/") and not path.begins_with("res://assets/ui/branding/"):
      skip()
      break

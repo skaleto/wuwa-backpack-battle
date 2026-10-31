@@ -1,7 +1,7 @@
 extends RefCounted
 ## Read-only build queries; no transactions, save access or battle execution.
 const C=preload("res://scripts/data/catalog.gd")
-const POCKETS=preload("res://scripts/inventory/pocket_rules.gd")
+const POCKETS=preload("res://scripts/inventory/pocket_rules_current.gd")
 const SPACE=preload("res://scripts/inventory/item_space.gd")
 const FILTERS=preload("res://scripts/battle/star_filters.gd")
 var space

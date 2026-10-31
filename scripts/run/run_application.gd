@@ -26,8 +26,8 @@ func resume(saved:Dictionary)->Dictionary:
 	var method=inventory.PB.METHOD+"-crew114" if previous else inventory.PB.METHOD+"-legacy" if legacy else inventory.PB.METHOD
 	if int(saved.get("supply_version",0))>0:method+="-supply"+str(int(saved.supply_version))
 	var enemy=saved.opponent if saved.has("opponent") else storage.opponent(saved)
-	if saved.phase=="shop" and (enemy.get("simulation_version","")!=version or enemy.get("pool_mode","full")!=saved.get("pool_mode","full") or int(enemy.get("supply_version",0))!=int(saved.get("supply_version",0))):enemy=storage.opponent(saved)
-	var builder=func(round_number,seed_value):return inventory.PB.build(inventory,round_number,seed_value,saved.get("pool_mode","full"),true) if legacy else inventory.PB.build(inventory,round_number,seed_value,saved.get("pool_mode","full"),false,114) if previous else inventory.practice(round_number,seed_value,saved.get("pool_mode","full"),int(saved.get("supply_version",0)))
+	if saved.phase=="shop" and (enemy.get("simulation_version","")!=version or enemy.get("pool_mode","full")!=saved.get("pool_mode","full") or int(enemy.get("supply_version",0))!=int(saved.get("supply_version",0)) or int(enemy.get("pocket_version",0))!=int(saved.get("pocket_version",0))):enemy=storage.opponent(saved)
+	var builder=func(round_number,seed_value):return inventory.PB.build(inventory,round_number,seed_value,saved.get("pool_mode","full"),true) if legacy else inventory.PB.build(inventory,round_number,seed_value,saved.get("pool_mode","full"),false,114) if previous else inventory.practice(round_number,seed_value,saved.get("pool_mode","full"),int(saved.get("supply_version",0)),int(saved.get("pocket_version",0)))
 	return LIFE.resume(saved,enemy,builder,method)
 func begin(run:Dictionary,opponent:Dictionary)->Dictionary:
 	var plan=LIFE.begin(run,opponent,engine.simulate)
@@ -53,7 +53,7 @@ func import_opponent(run:Dictionary,path:String)->Dictionary:
 	var ghost=storage.import_ghost(path,false)
 	if ghost.is_empty():return {"status":"invalid"}
 	if ghost.get("inactive",false):return {"status":"inactive"}
-	if ghost.get("pool_mode","full")!=run.get("pool_mode","full") or int(ghost.get("supply_version",0))!=int(run.get("supply_version",0)):return {"status":"version"}
+	if ghost.get("pool_mode","full")!=run.get("pool_mode","full") or int(ghost.get("supply_version",0))!=int(run.get("supply_version",0)) or int(ghost.get("pocket_version",0))!=int(run.get("pocket_version",0)):return {"status":"version"}
 	if absi(int(ghost.round)-int(run.round))>1:return {"status":"round"}
 	if ghost.get("simulation_version",preload("res://scripts/data/catalog.gd").SIMULATION_VERSION)!=preload("res://scripts/party/recruitment.gd").simulation_version(run):return {"status":"version"}
 	if not storage.publish(ghost):return {"status":"invalid"}
@@ -66,3 +66,10 @@ func confirm_recruit(run:Dictionary,role:String,reward:String="")->Dictionary:
 	return result
 func configure_crew(run:Dictionary,config:Dictionary)->Dictionary:
 	return commit(run,preload("res://scripts/party/recruitment.gd").plan_configure(inventory,run,config))
+
+func abandon(run:Dictionary,expected_stamp:String)->Dictionary:
+	if run.is_empty() or run.get("phase","")=="ending" or SESSION.stamp(run)!=expected_stamp:return {"ok":false,"error":"stale"}
+	if not preserve_result(run):return {"ok":false,"error":"history_save"}
+	if not storage.abandon_run(run):return {"ok":false,"error":"save_failed"}
+	run.clear()
+	return {"ok":true}

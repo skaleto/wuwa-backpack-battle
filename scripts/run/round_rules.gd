@@ -29,8 +29,8 @@ static func _apply_finish(inv,run: Dictionary,winner: int) -> Dictionary:
 	if run.get("phase","")!="result" or winner not in [-1,0,1]:return {}
 	var used=run.get("combat",{}).get("used",[[],[]])
 	# used records per-battle provision activations, never an inventory deletion list.
-	if winner==1:run.wins+=1
-	else:run.losses+=1
+	var delta=PROGRESSION.result_delta(winner)
+	run.wins+=delta.wins;run.losses+=delta.losses
 	if run.wins>=PROGRESSION.WIN_TARGET or run.losses>=PROGRESSION.LOSS_LIMIT:run.phase="ending"
 	else:
 		run.simulation_version=preload("res://scripts/party/recruitment.gd").simulation_version(run)

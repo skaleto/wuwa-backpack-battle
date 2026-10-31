@@ -44,8 +44,8 @@ func run():
 		game.reset_slice();game.set_visual_skin(skin,false);game.motion.modal_value=0;game.motion.modal_target=0
 		await move(at(2.5,.5));await tick(75)
 		check(game.hovered.get("item",{}).get("uid","")=="i2",skin+" actual item is hovered")
-		check(not game.visible_text.has(game.C.items.whiff.name),skin+" 1.25s item hover renders no name/attribute card")
-		await shot(skin+"-hover-no-popup")
+		check(game.visible_text.has(game.C.items.whiff.name),skin+" 1.25s item hover renders the item detail card")
+		await shot(skin+"-hover-details")
 		await move(game._prep_actor_rect().get_center());await tick(75)
 		check(not game.visible_text.any(func(t):return str(t).begins_with("60 能量")),skin+" leader hover renders no automatic skill card")
 		await move(at(.5,.5));await shot(skin+"-click-before")

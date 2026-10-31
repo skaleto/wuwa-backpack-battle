@@ -3,7 +3,7 @@ extends RefCounted
 const V75=preload("res://scripts/ui/items/item_presentation_v75.gd")
 const C=preload("res://scripts/data/catalog.gd")
 const I=preload("res://scripts/ui/items/item_info.gd")
-const P=preload("res://scripts/inventory/pocket_rules.gd")
+const P=preload("res://scripts/inventory/pocket_rules_current.gd")
 const TAGS={"attack":"攻击物品","provision":"补给","healing":"治疗物品","shielding":"护盾物品","weapon":"武器","echo":"声骸"}
 
 static func outcome(a:Dictionary)->String:
@@ -37,11 +37,11 @@ static func stats(kind:String,base:String="")->Array:
 		result.append(["占格",str(after) if before==after else str(before)+" → "+str(after),"bag"])
 	return result
 
-static func effects(kind:String)->Array:
+static func effects(kind:String,build:Dictionary={"pocket_version":143})->Array:
 	if V75.has_profile(kind):return V75.effects(kind)
 	var d=C.items[kind];var model=d.get("v60",{});var out=[]
 	if C.is_tag(kind,"bag"):
-		var profile=P.profile(kind);var percent=I.number(float(profile.amount)*100)+"%"
+		var profile=P.profile(kind,build);var percent=I.number(float(profile.amount)*100)+"%"
 		match str(profile.stat):
 			"shield":return ["开战时，每个已使用的口袋格提供"+I.number(profile.amount)+"点护盾。"]
 			"speed":return ["接触此口袋的物品冷却缩短"+percent+"；同类不叠加。"]

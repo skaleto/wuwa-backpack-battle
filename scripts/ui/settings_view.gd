@@ -33,9 +33,10 @@ static func draw(g,prefs,focus:String="")->void:
   g._text(str(roundi(amount*100))+"%",Vector2(992,r.position.y+26),21,Q.PLUM)
  g.draw_line(Vector2(404,565),Vector2(1040,565),Color("b49bcf",.38*a),1.5,true)
  g._text("索拉里斯大乱斗",Vector2(410,613),27,Q.PLUM)
- g._text("试玩版 · V138",Vector2(860,613),20,Q.PLUM)
+ g._text(g.update_client.version() if g.update_client!=null else "试玩版",Vector2(840,613),18,Q.PLUM)
  g._text("鸣潮题材非官方二创 · 使用 Godot 引擎制作",Vector2(410,655),20,Q.PLUM)
  g._text("原作角色与素材权利归原权利人所有。",Vector2(410,689),18,Color("78658b"))
+ g._button(Rect2(410,730,234,54),"检查更新","settings:updates")
  g._button(Rect2(785,730,254,54),"恢复默认音量","settings:reset")
 static func _sound_icon(g,at:Vector2,channel:String,ink:Color)->void:
  if channel=="music":

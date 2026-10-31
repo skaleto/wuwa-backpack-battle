@@ -28,12 +28,12 @@ func _initialize():
   ck(item.price=={'pocket_single':1,'pocket_double':2,'pocket_long_l':3,'pocket_long_j':3}[kind],'approved price '+kind)
   ck(inv.shop_eligible(run,kind) and kind in inv.available_bags(run),'all new shapes eligible in first shop '+kind)
   ck(P.profile(kind).stat=='capacity' and P.profile(kind).amount==0 and not P.applies(kind,'w_sword'),'no new combat bonus '+kind)
-  var shown=preload('res://scripts/inventory/pocket_profiles_v129.gd').profile(kind)
+  var shown=preload('res://scripts/inventory/pocket_profiles_v129.gd').profile(kind,run)
   ck(shown.name==item.name and shown.effect==str(SHAPES[kind].size())+' 格' and shown.stat=='capacity','display name and capacity agree '+kind)
   ck(preload('res://scripts/run/demo_features.gd').item_enabled(kind),'new capacity pocket appears in catalogue '+kind)
-  ck(preload('res://scripts/ui/shop_presentation.gd').benefits(kind)==[['bag','扩容']],'shop promises capacity only '+kind)
-  ck(preload('res://scripts/ui/items/item_info.gd').rows({'kind':kind})[0]==['占格 / 价格',str(SHAPES[kind].size())+' 格 / '+str(int(item.price))+' 贝币'],'detail area and price agree '+kind)
-  ck(preload('res://scripts/ui/items/item_description.gd').effects(kind)==['扩展物品可放置的区域。'],'detail promises no combat effect '+kind)
+  ck(preload('res://scripts/ui/shop_presentation.gd').benefits(kind,run)==[['bag','扩容']],'shop promises capacity only '+kind)
+  ck(preload('res://scripts/ui/items/item_info.gd').rows({'kind':kind},run)[0]==['占格 / 价格',str(SHAPES[kind].size())+' 格 / '+str(int(item.price))+' 贝币'],'detail area and price agree '+kind)
+  ck(preload('res://scripts/ui/items/item_description.gd').effects(kind,run)==['扩展物品可放置的区域。'],'detail promises no combat effect '+kind)
   var unique=[]
   for rotation in 4:
    var piece=inv.make_piece(kind,'p');piece.rotation=rotation
