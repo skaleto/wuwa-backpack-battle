@@ -9,6 +9,8 @@ class PrivacyTest(unittest.TestCase):
    self.assertTrue(findings(value.encode()))
  def test_secret(self):
   self.assertTrue(findings(('gh'+'p_'+'x'*36).encode()))
+ def test_private_generator_id(self):
+  self.assertTrue(findings(('exec-'+'a'*8+('-'+'b'*4)*3+'-'+'c'*12+'.png').encode()))
  def test_public_sources(self):
   self.assertFalse(findings(b'res://assets/items/example.png https://github.com/skaleto/wuwa-backpack-battle'))
   self.assertEqual(public_source(ROOT/'assets/example.png'),'assets/example.png')
