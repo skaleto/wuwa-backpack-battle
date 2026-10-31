@@ -1,0 +1,51 @@
+name: Attach verified release packages
+on:
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: Existing draft release tag, matching the domestic version directory
+        required: true
+        default: v0.2.0
+permissions:
+  contents: write
+concurrency:
+  group: release-assets-${{ inputs.release_tag }}
+  cancel-in-progress: false
+jobs:
+  attach:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      matrix:
+        artifact:
+          - SolarisBrawl-V2-Windows-x86_64.zip
+          - SolarisBrawl-V2-macOS-universal.zip
+          - SolarisBrawl-V2-Web.zip
+          - SHA256SUMS.txt
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+      RELEASE_TAG: ${{ inputs.release_tag }}
+      ARTIFACT: ${{ matrix.artifact }}
+      MIRROR: https://clear-raccoon-d2gqs87oabfed2a47-1302322545.tcloudbaseapp.com/downloads
+    steps:
+      - name: Validate target draft
+        shell: bash
+        run: |
+          set -euo pipefail
+          [[ "$RELEASE_TAG" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]]
+          test "$(gh release view "$RELEASE_TAG" --json isDraft --jq .isDraft)" = true
+      - name: Download and verify package
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --location --retry 5 --retry-all-errors --connect-timeout 30 --max-time 1800 "$MIRROR/$RELEASE_TAG/SHA256SUMS.txt" -o SHA256SUMS.txt
+          if [[ "$ARTIFACT" != SHA256SUMS.txt ]]; then
+            curl --fail --location --retry 5 --retry-all-errors --connect-timeout 30 --max-time 1800 "$MIRROR/$RELEASE_TAG/$ARTIFACT" -o "$ARTIFACT"
+            test "$(awk -v file="$ARTIFACT" '$2 == file {n++} END {print n+0}' SHA256SUMS.txt)" = 1
+            awk -v file="$ARTIFACT" '$2 == file {print}' SHA256SUMS.txt | sha256sum --check --strict
+          fi
+      - name: Attach to draft
+        shell: bash
+        run: gh release upload "$RELEASE_TAG" "$ARTIFACT" --clobber
