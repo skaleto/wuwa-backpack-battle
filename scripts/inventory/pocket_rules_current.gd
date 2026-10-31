@@ -37,7 +37,7 @@ static func bonus(item: Dictionary,build: Dictionary,inventory) -> Dictionary:
   var covered=inventory.occupied(bag).filter(func(c):return c in footprint and (p.stat!="shield" or c not in shield_cells))
   if covered.is_empty():continue
   if p.stat=="shield":shield_cells.append_array(covered)
-  
+
   var value=covered_value(bag.kind,covered.size(),footprint.size(),build)
   if p.stat!="shield":
    # Current small pockets must not mask a stronger touching pocket.

@@ -59,6 +59,17 @@ def check_package(output):
 
 
 def configure(runtime):
+    # Keep OS-visible package metadata aligned with the signed game version.
+    presets = runtime / 'export_presets.cfg'
+    text = presets.read_text()
+    for key, value in {'application/file_version': VERSION + '.' + str(SEQUENCE),
+                       'application/product_version': VERSION,
+                       'application/short_version': VERSION,
+                       'application/version': str(SEQUENCE)}.items():
+        text = re.sub(r'^' + re.escape(key) + r'=.*$', key + '=' + json.dumps(value), text, flags=re.M)
+    presets.write_text(text)
+    project = runtime / 'project.godot'
+    project.write_text(re.sub(r'^config/version=.*$', 'config/version=' + json.dumps(VERSION), project.read_text(), flags=re.M))
     path = runtime / 'data/update-channel.json'
     value = json.loads(path.read_text())
     value.update(version=VERSION, sequence=SEQUENCE, base_id=BASE_ID)
